@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -26,27 +26,27 @@ class PlotOptionsAreasplinerangeTooltip extends js.Object {
    * }</pre>
    * </p>
    */
-  var dateTimeLabelFormats: UndefOr[js.Object] = js.undefined
+  val dateTimeLabelFormats: UndefOr[js.Object] = js.undefined
   
   /**
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
    * <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p>
    * @since 3.0
    */
-  var followPointer: Boolean = false
+  val followPointer: Boolean = false
   
   /**
    * Whether the tooltip should follow the finger as it moves on a touch device. If <a href="#chart.zoomType">chart.zoomType</a> is set, it will override <code>followTouchMove</code>.
    * @since 3.0.1
    */
-  var followTouchMove: Boolean = true
+  val followTouchMove: Boolean = true
   
   /**
    * A string to append to the tooltip format.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/footerformat/" target="_blank">A table for value alignment</a>
    * @since 2.2
    */
-  var footerFormat: String = "false"
+  val footerFormat: String = "false"
   
   /**
    * <p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables			are <code>point.key</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects. The <code>point.key</code> variable contains the category name, x value or datetime string depending on the type of axis. For datetime axes, the <code>point.key</code> date format can be set using tooltip.xDateFormat.</p>
@@ -54,51 +54,51 @@ class PlotOptionsAreasplinerangeTooltip extends js.Object {
    * <p>Defaults to <code>&lt;span style="font-size: 10px"&gt;{point.key}&lt;/span&gt;&lt;br/&gt;</code></p>
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/footerformat/" target="_blank">A HTML table in the tooltip</a>
    */
-  var headerFormat: String = ""
+  val headerFormat: String = ""
   
   /**
    * The number of milliseconds to wait until the tooltip is hidden when mouse out from a point or chart. 
    * @since 3.0
    */
-  var hideDelay: Double = 500
+  val hideDelay: Double = 500
   
   /**
    * <p>The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.x, point.y, series.name and series.color and other properties on the same form. Furthermore,  point.y can be extended by the <code>tooltip.valuePrefix</code> and <code>tooltip.valueSuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units.</p>
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/pointformat/" target="_blank">A different point format with value suffix</a>
    * @since 2.2
    */
-  var pointFormat: String = "<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>"
+  val pointFormat: String = "<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>"
   
   /**
    * A callback function for formatting the HTML output for a single point in the tooltip. Like the <code>pointFormat</code> string, but with more flexibility.
    * @since 4.1.0
    */
-  var pointFormatter: UndefOr[js.Function] = js.undefined
+  val pointFormatter: UndefOr[js.Function] = js.undefined
   
   /**
    * How many decimals to show in each series' y value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
    * @since 2.2
    */
-  var valueDecimals: UndefOr[Double] = js.undefined
+  val valueDecimals: UndefOr[Double] = js.undefined
   
   /**
    * A string to prepend to each series' y value. Overridable in each series' tooltip options object.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
    * @since 2.2
    */
-  var valuePrefix: UndefOr[String] = js.undefined
+  val valuePrefix: UndefOr[String] = js.undefined
   
   /**
    * A string to append to each series' y value. Overridable in each series' tooltip options object.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
    * @since 2.2
    */
-  var valueSuffix: UndefOr[String] = js.undefined
+  val valueSuffix: UndefOr[String] = js.undefined
   
   /**
    * The format for the date in the tooltip header if the X axis is a datetime axis. The default is a best guess based on the smallest distance between points in the chart.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/xdateformat/" target="_blank">A different format</a>
    */
-  var xDateFormat: UndefOr[String] = js.undefined
+  val xDateFormat: UndefOr[String] = js.undefined
 }

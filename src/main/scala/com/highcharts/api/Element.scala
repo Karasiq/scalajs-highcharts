@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.api
@@ -47,7 +47,7 @@ trait Element extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/element-tofront/" target="_blank">Click an element to bring it to front</a>.
    * @since 2.0
    */
-  var toFront: UndefOr[Element] = js.native
+  val toFront: UndefOr[Element] = js.native
   
   /**
    * <p>Apply attributes to the SVG/VML elements. These attributes for the most parts correspond to SVG, but some are specific to Highcharts, like <code>zIndex</code> and <code>rotation</code>.</p>
@@ -65,12 +65,12 @@ trait Element extends js.Object {
    * Destroy the element and free up memory
    * @since 2.0
    */
-  var destroy: UndefOr[js.Any] = js.native
+  val destroy: UndefOr[js.Any] = js.native
   
   /**
    * Get the bounding box of the element
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-on-chart/" target="_blank">Draw a rectangle based on a text's bounding box</a>.
    * @since 2.0
    */
-  var getBBox: UndefOr[js.Object] = js.native
+  val getBBox: UndefOr[js.Object] = js.native
 }

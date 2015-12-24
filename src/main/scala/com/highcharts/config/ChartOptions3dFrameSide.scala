@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -14,11 +14,11 @@ class ChartOptions3dFrameSide extends js.Object {
    * The color of the panel.
    * @since 4.0
    */
-  var color: String = "transparent"
+  val color: String = "transparent"
   
   /**
    * The thickness of the panel.
    * @since 4.0
    */
-  var size: Double = 1
+  val size: Double = 1
 }

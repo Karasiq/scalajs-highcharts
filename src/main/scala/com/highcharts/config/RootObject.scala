@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -13,7 +13,7 @@ class RootObject extends js.Object {
   /**
    * Options regarding the chart area and plot area as well as general chart options.
    */
-  var chart: UndefOr[Chart] = js.undefined
+  val chart: UndefOr[Chart] = js.undefined
   
   /**
    * <p>An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again. Defaults to:
@@ -34,13 +34,13 @@ class RootObject extends js.Object {
    *    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']</pre></p>
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/colors/" target="_blank">Assign a global color theme</a>
    */
-  var colors: js.Array[String] = js.Array( "#7cb5ec" , "#434348" , "#90ed7d" , "#f7a35c" , "#8085e9" , "#f15c80" , "#e4d354" , "#2b908f" , "#f45b5b" , "#91e8e1")
+  val colors: js.Array[String] = js.Array( "#7cb5ec" , "#434348" , "#90ed7d" , "#f7a35c" , "#8085e9" , "#f15c80" , "#e4d354" , "#2b908f" , "#f45b5b" , "#91e8e1")
   
   /**
    * Highchart by default puts a credits label in the lower right corner of the chart.
    * 		This can be changed using these options.
    */
-  var credits: UndefOr[Credits] = js.undefined
+  val credits: UndefOr[Credits] = js.undefined
   
   /**
    * <p>The Data module provides a simplified interface for adding data to a chart from sources like CVS, HTML tables or grid views. See also the <a href="http://www.highcharts.com/docs/working-with-data/data-module">tutorial article on the Data module</a>.</p>
@@ -51,7 +51,7 @@ class RootObject extends js.Object {
    * @example Data from a <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/column-parsed/" target="_blank">HTML table</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/data/csv/" target="_blank">CSV</a>.
    * @since 4.0
    */
-  var data: UndefOr[Data] = js.undefined
+  val data: UndefOr[Data] = js.undefined
   
   /**
    * <p>Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices.</p>
@@ -60,12 +60,12 @@ class RootObject extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/basic/" target="_blank">Basic drilldown</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/multi-series/" target="_blank">multi series drilldown</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/column-drilldown/" target="_blank">generated column drilldown</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-drilldown/" target="_blank">pie drilldown</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/across-types/" target="_blank">drilldown across series types</a>.
    * @since 3.0.8
    */
-  var drilldown: UndefOr[Drilldown] = js.undefined
+  val drilldown: UndefOr[Drilldown] = js.undefined
   
   /**
    * Options for the exporting module. For an overview on the matter, see <a href="http://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.
    */
-  var exporting: UndefOr[Exporting] = js.undefined
+  val exporting: UndefOr[Exporting] = js.undefined
   
   /**
    * Global options that don't apply to each chart. These options, like the <code>lang</code>
@@ -76,12 +76,12 @@ class RootObject extends js.Object {
    * 	}
    * });</pre>
    */
-  var global: UndefOr[Global] = js.undefined
+  val global: UndefOr[Global] = js.undefined
   
   /**
    * HTML labels that can be positioned anywhere in the chart area.
    */
-  var labels: UndefOr[Labels] = js.undefined
+  val labels: UndefOr[Labels] = js.undefined
   
   /**
    * Language object. The language object is global and it can't
@@ -94,13 +94,13 @@ class RootObject extends js.Object {
    * 	}
    * });</pre>
    */
-  var lang: UndefOr[Lang] = js.undefined
+  val lang: UndefOr[Lang] = js.undefined
   
   /**
    * The legend is a box containing a symbol and name for each series item
    * 	or point item in the chart.
    */
-  var legend: UndefOr[Legend] = js.undefined
+  val legend: UndefOr[Legend] = js.undefined
   
   /**
    * The loading options control the appearance of the loading screen that covers the 
@@ -110,25 +110,25 @@ class RootObject extends js.Object {
    * 	via an XHR connection. The "Loading..." text itself is not part of this configuration
    * 	object, but part of the <code>lang</code> object.
    */
-  var loading: UndefOr[Loading] = js.undefined
+  val loading: UndefOr[Loading] = js.undefined
   
   /**
    * A collection of options for buttons and menus appearing in the exporting module.
    */
-  var navigation: UndefOr[Navigation] = js.undefined
+  val navigation: UndefOr[Navigation] = js.undefined
   
   /**
    * Options for displaying a message like "No data to display". This feature requires the file <code>no-data-to-display.js</code> to be loaded in the page. The actual text to display is set in the <a href="#lang.noData">lang.noData</a> option.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/no-data-to-display/no-data-line/" target="_blank">Line series</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/no-data-to-display/no-data-pie/" target="_blank">pie series</a>.
    * @since 3.0.8
    */
-  var noData: UndefOr[NoData] = js.undefined
+  val noData: UndefOr[NoData] = js.undefined
   
   /**
    * Applies only to polar charts and angular gauges. This configuration object holds general options for the combined X and Y axes set. Each xAxis or yAxis can reference the pane by index.
    * @since 2.3.0
    */
-  var pane: UndefOr[js.Object] = js.undefined
+  val pane: UndefOr[js.Object] = js.undefined
   
   /**
    * <p>The plotOptions is a wrapper object for config objects for each series type.
@@ -140,7 +140,7 @@ class RootObject extends js.Object {
    * 		Next, options for one single series are given in <a class="internal" href="#series">the 
    * 		series array</a>.</p>
    */
-  var plotOptions: UndefOr[PlotOptions] = js.undefined
+  val plotOptions: UndefOr[PlotOptions] = js.undefined
   
   /**
    * The actual series to append to the chart. In addition to 
@@ -149,176 +149,176 @@ class RootObject extends js.Object {
    * 	<code>lineWidth</code> is specified in <code>plotOptions.series</code>, an individual
    * 	<code>lineWidth</code> can be specified for each series.
    */
-  var series: UndefOr[js.Array[js.Object]] = js.undefined
+  val series: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>area</code> series. If the <a href="#series<area>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.area">plotOptions.area</a>.</p>
    */
-  var `series<area>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<area>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>arearange</code> series. If the <a href="#series<arearange>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.arearange">plotOptions.arearange</a>.</p>
    */
-  var `series<arearange>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<arearange>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>areaspline</code> series. If the <a href="#series<areaspline>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.areaspline">plotOptions.areaspline</a>.</p>
    */
-  var `series<areaspline>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<areaspline>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>areasplinerange</code> series. If the <a href="#series<areasplinerange>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.areasplinerange">plotOptions.areasplinerange</a>.</p>
    */
-  var `series<areasplinerange>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<areasplinerange>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>bar</code> series. If the <a href="#series<bar>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.bar">plotOptions.bar</a>.</p>
    */
-  var `series<bar>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<bar>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>boxplot</code> series. If the <a href="#series<boxplot>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.boxplot">plotOptions.boxplot</a>.</p>
    */
-  var `series<boxplot>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<boxplot>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>bubble</code> series. If the <a href="#series<bubble>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.bubble">plotOptions.bubble</a>.</p>
    */
-  var `series<bubble>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<bubble>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>column</code> series. If the <a href="#series<column>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.column">plotOptions.column</a>.</p>
    */
-  var `series<column>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<column>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>columnrange</code> series. If the <a href="#series<columnrange>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.columnrange">plotOptions.columnrange</a>.</p>
    */
-  var `series<columnrange>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<columnrange>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>errorbar</code> series. If the <a href="#series<errorbar>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.errorbar">plotOptions.errorbar</a>.</p>
    */
-  var `series<errorbar>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<errorbar>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>funnel</code> series. If the <a href="#series<funnel>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.funnel">plotOptions.funnel</a>.</p>
    */
-  var `series<funnel>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<funnel>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>gauge</code> series. If the <a href="#series<gauge>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.gauge">plotOptions.gauge</a>.</p>
    */
-  var `series<gauge>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<gauge>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>heatmap</code> series. If the <a href="#series<heatmap>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.heatmap">plotOptions.heatmap</a>.</p>
    */
-  var `series<heatmap>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<heatmap>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>line</code> series. If the <a href="#series<line>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.line">plotOptions.line</a>.</p>
    */
-  var `series<line>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<line>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>pie</code> series. If the <a href="#series<pie>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.pie">plotOptions.pie</a>.</p>
    */
-  var `series<pie>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<pie>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>polygon</code> series. If the <a href="#series<polygon>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.polygon">plotOptions.polygon</a>.</p>
    */
-  var `series<polygon>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<polygon>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>pyramid</code> series. If the <a href="#series<pyramid>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.pyramid">plotOptions.pyramid</a>.</p>
    */
-  var `series<pyramid>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<pyramid>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>scatter</code> series. If the <a href="#series<scatter>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.scatter">plotOptions.scatter</a>.</p>
    */
-  var `series<scatter>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<scatter>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>solidgauge</code> series. If the <a href="#series<solidgauge>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.solidgauge">plotOptions.solidgauge</a>.</p>
    */
-  var `series<solidgauge>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<solidgauge>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>spline</code> series. If the <a href="#series<spline>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.spline">plotOptions.spline</a>.</p>
    */
-  var `series<spline>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<spline>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>treemap</code> series. If the <a href="#series<treemap>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.treemap">plotOptions.treemap</a>.</p>
    */
-  var `series<treemap>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<treemap>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * <p>A <code>waterfall</code> series. If the <a href="#series<waterfall>.type">type</a> option is not specified, it is inherited from <a href="#chart.type">chart.type</a>.</p>
    * 
    * <p>For options that apply to multiple series, it is recommended to add them to the <a href="#pointOptions.series">pointOptions.series</a> options structure. To apply to all series of this specific type, apply it to <a href="#plotOptions.waterfall">plotOptions.waterfall</a>.</p>
    */
-  var `series<waterfall>`: UndefOr[js.Array[js.Object]] = js.undefined
+  val `series<waterfall>`: UndefOr[js.Array[js.Object]] = js.undefined
   
   /**
    * The chart's subtitle
    */
-  var subtitle: UndefOr[Subtitle] = js.undefined
+  val subtitle: UndefOr[Subtitle] = js.undefined
   
   /**
    * The chart's main title.
    */
-  var title: UndefOr[Title] = js.undefined
+  val title: UndefOr[Title] = js.undefined
   
   /**
    * Options for the tooltip that appears when the user hovers over a series or point.
    */
-  var tooltip: UndefOr[Tooltip] = js.undefined
+  val tooltip: UndefOr[Tooltip] = js.undefined
   
   /**
    * <p>The X axis or category axis. Normally this is the horizontal axis, though if the 
@@ -327,7 +327,7 @@ class RootObject extends js.Object {
    * 	<p>See <a class="internal" href="#axis.object">the Axis object</a> for programmatic
    * 	access to the axis.</p>
    */
-  var xAxis: UndefOr[XAxis] = js.undefined
+  val xAxis: UndefOr[XAxis] = js.undefined
   
   /**
    * <p>The Y axis or value axis. Normally this is the vertical axis, though if the 
@@ -336,5 +336,5 @@ class RootObject extends js.Object {
    * 	<p>See <a class="internal" href="#axis.object">the Axis object</a> for programmatic
    * 	access to the axis.</p>
    */
-  var yAxis: UndefOr[YAxis] = js.undefined
+  val yAxis: UndefOr[YAxis] = js.undefined
 }

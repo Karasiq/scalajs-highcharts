@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -13,5 +13,5 @@ class SeriesSplinePoint extends js.Object {
   /**
    * Events for each single point
    */
-  var events: UndefOr[SeriesSplinePointEvents] = js.undefined
+  val events: UndefOr[SeriesSplinePointEvents] = js.undefined
 }

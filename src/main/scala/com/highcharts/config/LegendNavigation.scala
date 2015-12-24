@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -16,7 +16,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
    * @since 2.2.4
    */
-  var activeColor: String = "#3E576F"
+  val activeColor: String = "#3E576F"
   
   /**
    * How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
@@ -24,7 +24,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
    * @since 2.2.4
    */
-  var animation: js.Any = true
+  val animation: js.Any = true
   
   /**
    * The pixel size of the up and down arrows in the legend paging navigation.  .
@@ -32,7 +32,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
    * @since 2.2.4
    */
-  var arrowSize: Double = 12
+  val arrowSize: Double = 12
   
   /**
    * The color of the inactive up or down arrow in the legend page navigation.  .
@@ -40,7 +40,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
    * @since 2.2.4
    */
-  var inactiveColor: String = "#CCC"
+  val inactiveColor: String = "#CCC"
   
   /**
    * Text styles for the legend page navigation.
@@ -48,5 +48,5 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
    * @since 2.2.4
    */
-  var style: UndefOr[js.Object] = js.undefined
+  val style: UndefOr[js.Object] = js.undefined
 }

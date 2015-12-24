@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.api
@@ -76,25 +76,25 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
    * The options structure for the chart.
    * @since 1.2.0
    */
-  var options: UndefOr[js.Object] = js.native
+  val options: UndefOr[js.Object] = js.native
   
   /**
    * An array of the chart's x axes. If only one x axis, it is referenced by <code>chart.xAxis[0]</code>.
    * @since 1.2.0
    */
-  var xAxis: UndefOr[js.Array[Axis]] = js.native
+  val xAxis: UndefOr[js.Array[Axis]] = js.native
   
   /**
    * An array of the chart's y axes. If only one y axis, it is referenced by <code>chart.yAxis[0]</code>.
    * @since 1.2.0
    */
-  var yAxis: UndefOr[js.Array[Axis]] = js.native
+  val yAxis: UndefOr[js.Array[Axis]] = js.native
   
   /**
    * A reference to the containing HTML element, dynamically inserted into the element given in <code>chart.renderTo</code>.
    * @since 1.2.5
    */
-  var container: UndefOr[js.Object] = js.native
+  val container: UndefOr[js.Object] = js.native
   
   /**
    * Exporting module required. Clears away other elements in the page and prints the chart as it is displayed. By default, when the exporting module is enabled, a button at the upper left calls this method.
@@ -167,7 +167,7 @@ The existing Point object from which the drilldown will start.
    * An array of all the chart's series.
    * @since 1.2.0
    */
-  var series: UndefOr[js.Array[Series]] = js.native
+  val series: UndefOr[js.Array[Series]] = js.native
   
   /**
    * Reflows the chart to its container. By default, the chart reflows automatically to its container following a <code>window.resize</code> event, as per the <a href="#chart.reflow">chart.reflow</a> option. However, there are no reliable events for div resize, so if the container is resized without a window resize event, this must be called explicitly. 

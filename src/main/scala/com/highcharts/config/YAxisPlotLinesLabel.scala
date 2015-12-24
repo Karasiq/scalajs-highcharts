@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -15,59 +15,59 @@ class YAxisPlotLinesLabel extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/" target="_blank">Aligned to the right</a>
    * @since 2.1
    */
-  var align: String = "left"
+  val align: String = "left"
   
   /**
    * Rotation of the text label in degrees. Defaults to 0 for horizontal plot lines and 90 for vertical lines.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/" target="_blank">Slanted text</a>
    * @since 2.1
    */
-  var rotation: UndefOr[Double] = js.undefined
+  val rotation: UndefOr[Double] = js.undefined
   
   /**
    * CSS styles for the text label.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-style/" target="_blank">Blue and bold label</a>
    * @since 2.1
    */
-  var style: UndefOr[js.Object] = js.undefined
+  val style: UndefOr[js.Object] = js.undefined
   
   /**
    * The text itself. A subset of HTML is supported.
    * @since 2.1
    */
-  var text: String = ""
+  val text: String = ""
   
   /**
    * The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed within the plot band, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are "left", "center" and "right". Defaults to the same as the <code>align</code> option.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-textalign/" target="_blank">Text label in bottom position</a>
    * @since 2.1
    */
-  var textAlign: UndefOr[String] = js.undefined
+  val textAlign: UndefOr[String] = js.undefined
   
   /**
    * <p>Whether to <a href="http://docs.highcharts.com/#formatting$html">use HTML</a> to render the labels.
    * @since 3.0.3
    */
-  var useHTML: Boolean = false
+  val useHTML: Boolean = false
   
   /**
    * Vertical alignment of the label relative to the plot band. Can be one of "top", "middle" or "bottom".
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-verticalalign-middle/" target="_blank">Vertically centered label</a>
    * @since 2.1
    */
-  var verticalAlign: String = "top"
+  val verticalAlign: String = "top"
   
   /**
    * Horizontal position relative the alignment. Default varies by orientation.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-align-right/" target="_blank">Aligned 10px from the right edge</a>
    * @since 2.1
    */
-  var x: UndefOr[Double] = js.undefined
+  val x: UndefOr[Double] = js.undefined
   
   /**
    * Vertical position of the text baseline relative to the alignment. Default varies by orientation.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-label-y/" target="_blank">Label below the plot line</a>
    * @since 2.1
    */
-  var y: UndefOr[Double] = js.undefined
+  val y: UndefOr[Double] = js.undefined
 }

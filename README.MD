@@ -4,7 +4,7 @@
 # How to use
 Add to your `build.sbt`:
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.2"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.3"
 ```
 
 Use in code:
@@ -16,22 +16,22 @@ import com.highcharts.config.{Chart, Title, SeriesBar, RootObject
 ⇒ HighchartsConfig}
 
 jQuery("#container").highcharts(new HighchartsConfig {
-  override var chart: js.UndefOr[Chart] = new Chart {
-    override var `type`: String = "bar"
+  override val chart: js.UndefOr[Chart] = new Chart {
+    override val `type`: String = "bar"
   }
 
-  override var title: js.UndefOr[Title] = new Title {
-    override var text: String = "Example chart"
+  override val title: js.UndefOr[Title] = new Title {
+    override val text: String = "Example chart"
   }
 
-  override var series: js.UndefOr[js.Array[js.Object]] = js.Array[js.Object](
+  override val series: js.UndefOr[js.Array[js.Object]] = js.Array[js.Object](
     new SeriesBar {
-      override var name: js.UndefOr[String] = "Jane"
-      override var data: js.UndefOr[js.Any] = js.Array(1, 0, 4)
+      override val name: js.UndefOr[String] = "Jane"
+      override val data: js.UndefOr[js.Any] = js.Array(1, 0, 4)
     },
     new SeriesBar {
-      override var name: js.UndefOr[String] = "John"
-      override var data: js.UndefOr[js.Any] = js.Array(5, 7, 3)
+      override val name: js.UndefOr[String] = "John"
+      override val data: js.UndefOr[js.Any] = js.Array(5, 7, 3)
     }
   )
 })

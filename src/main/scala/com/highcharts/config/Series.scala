@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -62,50 +62,50 @@ class Series extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-column-null-values/" target="_blank">4) 3D column with null values</a></li>
 </ul>
    */
-  var data: UndefOr[js.Any] = js.undefined
+  val data: UndefOr[js.Any] = js.undefined
   
   /**
    * This method is deprecated as of version 2.0. Instead, use options preprocessing as described in <a href="http://docs.highcharts.com/#preprocessing">the docs</a>.
    */
   @deprecated
-  var dataParser: UndefOr[js.Function] = js.undefined
+  val dataParser: UndefOr[js.Function] = js.undefined
   
   /**
    * This method is deprecated as of version 2.0. Instead, load the data using jQuery.ajax and use options preprocessing as described in <a href="http://docs.highcharts.com/#preprocessing">the docs</a>.
    */
   @deprecated
-  var dataURL: UndefOr[String] = js.undefined
+  val dataURL: UndefOr[String] = js.undefined
   
   /**
    * An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
    * @since 1.2.0
    */
-  var id: String = ""
+  val id: String = ""
   
   /**
    * The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
    * @since 2.3.0
    */
-  var index: UndefOr[Double] = js.undefined
+  val index: UndefOr[Double] = js.undefined
   
   /**
    * The sequential index of the series in the legend.  <div class="demo">Try it:  	<a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/" target="_blank">Legend in opposite order</a> </div>.
    */
-  var legendIndex: UndefOr[Double] = js.undefined
+  val legendIndex: UndefOr[Double] = js.undefined
   
   /**
    * The name of the series as shown in the legend, tooltip etc.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a>
    */
-  var name: UndefOr[String] = js.undefined
+  val name: UndefOr[String] = js.undefined
   
   /**
    * This option allows grouping series in a stacked chart. The stack option can be a string  or a number or anything else, as long as the grouped series' stack options match each other.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/stack/" target="_blank">Stacked and grouped columns</a>
    * @since 2.1
    */
-  var stack: UndefOr[String] = js.undefined
+  val stack: UndefOr[String] = js.undefined
   
   /**
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -113,23 +113,23 @@ class Series extends js.Object {
    *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>
    */
-  var `type`: UndefOr[String] = js.undefined
+  val `type`: UndefOr[String] = js.undefined
   
   /**
    * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first.
    */
-  var xAxis: js.Any = "0"
+  val xAxis: js.Any = "0"
   
   /**
    * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/yaxis/" target="_blank">Apply the column series to the secondary Y axis</a>
    */
-  var yAxis: js.Any = "0"
+  val yAxis: js.Any = "0"
   
   /**
    * Define the visual z index of the series.
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.
    */
-  var zIndex: UndefOr[Double] = js.undefined
+  val zIndex: UndefOr[Double] = js.undefined
 }

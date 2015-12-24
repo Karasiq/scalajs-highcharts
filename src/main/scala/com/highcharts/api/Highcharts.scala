@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.api
@@ -14,7 +14,7 @@ trait Highcharts extends js.Object {
    * An array containing the current chart objects in the page. A chart's position in the array is preserved throughout the page's lifetime. When a chart is destroyed, the array item becomes <code>undefined</code>.
    * @since 2.3.4
    */
-  var charts: UndefOr[js.Array[Chart]] = js.native
+  val charts: UndefOr[js.Array[Chart]] = js.native
   
   /**
    * Formats a JavaScript date timestamp (milliseconds since Jan 1st 1970) into a human readable date string. The format is a subset of the formats for <a href="http://php.net/manual/en/function.strftime.php">PHP's strftime function</a>. Additional formats can be given  in the Highcharts.dateFormats hook, see below.
@@ -29,7 +29,7 @@ trait Highcharts extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/global/dateformats/" target="_blank">Adding support for week number</a>
    * @since 3.0
    */
-  var dateFormats: UndefOr[js.Any] = js.native
+  val dateFormats: UndefOr[js.Any] = js.native
   
   /**
    * Sets the options globally for all charts created after this has been called. Takes an options JavaScript object structure as the argument. These options are merged with the default options and the result is returned.

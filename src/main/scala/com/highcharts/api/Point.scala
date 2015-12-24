@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.2 by Karasiq
+ * @author Highcharts Config Generator v1.0.3 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.api
@@ -14,13 +14,13 @@ trait Point extends js.Object {
    * The series object associated with the point.
    * @since 1.2.0
    */
-  var series: UndefOr[Series] = js.native
+  val series: UndefOr[Series] = js.native
   
   /**
    * The percentage for points in a stacked series or pies.
    * @since 1.2.0
    */
-  var percentage: UndefOr[Double] = js.native
+  val percentage: UndefOr[Double] = js.native
   
   /**
    * Remove the point from the series.
@@ -35,7 +35,7 @@ trait Point extends js.Object {
    * Whether the point is selected or not.
    * @since 1.2.0
    */
-  var selected: UndefOr[Boolean] = js.native
+  val selected: UndefOr[Boolean] = js.native
   
   /**
    * Slice out or set back in a pie chart slice. This is the default way of Highcharts to visualize that a pie point is selected.
@@ -51,24 +51,24 @@ trait Point extends js.Object {
    * The x value for the point.
    * @since 1.2.0
    */
-  var x: UndefOr[Double] = js.native
+  val x: UndefOr[Double] = js.native
   
   /**
    * The y value for the point.
    * @since 1.2.0
    */
-  var y: UndefOr[Double] = js.native
+  val y: UndefOr[Double] = js.native
   
   /**
    * For categorized axes this property holds the category name for the point. For other axis it holds the x value.
    * @since 1.2.0
    */
-  var category: UndefOr[js.Any] = js.native
+  val category: UndefOr[js.Any] = js.native
   
   /**
    * The total of a stack for stacked series, or pie in pie charts.
    */
-  var total: UndefOr[Double] = js.native
+  val total: UndefOr[Double] = js.native
   
   /**
    * Update the point with new values.
@@ -93,5 +93,5 @@ trait Point extends js.Object {
   /**
    * For certain series types, like pie. Whether the Point instance is visible.
    */
-  var visible: UndefOr[js.Any] = js.native
+  val visible: UndefOr[js.Any] = js.native
 }

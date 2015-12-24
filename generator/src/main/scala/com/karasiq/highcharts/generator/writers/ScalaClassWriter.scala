@@ -178,11 +178,7 @@ class ScalaClassWriter {
         if (cfg.params.exists(_.nonEmpty)) {
           writeToClass(s"def ${ScalaClassWriter.validScalaName(name)}(${params(classNames, cfg)}): $tpe = $value")
         } else {
-          if (scalaJsDefined) {
-            writeToClass(s"var ${ScalaClassWriter.validScalaName(name)}: $tpe = $value")
-          } else {
-            writeToClass(s"var ${ScalaClassWriter.validScalaName(name)}: $tpe = js.native")
-          }
+          writeToClass(s"val ${ScalaClassWriter.validScalaName(name)}: $tpe = ${if (scalaJsDefined) value else "js.native"}")
         }
       }
 
