@@ -10,7 +10,7 @@ object ScalaClassWriter {
   private val reserved = Set("abstract", "case", "catch", "class", "def", "do", "else", "extends", "false", "final", "finally", "for", "forSome", "if", "implicit", "import", "lazy", "match", "new", "null", "object", "override", "package", "private", "protected", "return", "sealed", "super", "this", "throw", "trait", "try", "true", "type", "val", "var", "while", "with", "yield")
 
   def validScalaName(name: String): String = {
-    if (!name.matches("\\w+") || reserved.contains(name)) {
+    if (name.nonEmpty && (!name.matches("\\w+") || reserved.contains(name))) {
       s"`$name`"
     } else {
       name
@@ -65,10 +65,16 @@ class ScalaClassWriter {
 
       case "Array" ⇒
         s"js.Array[${selfClass.getOrElse("js.Any")}]"
+
+      case "" if selfClass.nonEmpty ⇒
+        selfClass.get
+
+      case t if classes.contains(ScalaClassWriter.classNameFor(t)) ⇒
+        ScalaClassWriter.classNameFor(t)
     }
 
     tpe.orElse(Some("")).collect(stdTypes.orElse {
-      case "" if selfClass.nonEmpty ⇒
+      case "" if selfClass.exists(_.nonEmpty) ⇒
         selfClass.get
 
       case t if classes.contains(ScalaClassWriter.classNameFor(t)) ⇒
@@ -85,7 +91,12 @@ class ScalaClassWriter {
   }
 
   private def value(classes: Set[String], cfg: ConfigurationObject): (String, String) = {
-    val tpe: String = cfgScalaType(classes, cfg).getOrElse("js.Any")
+    def isMethod: Boolean = cfg.params.exists(_.nonEmpty)
+
+    val tpe: String = cfgScalaType(classes, cfg).getOrElse {
+      if (isMethod) "Unit"
+      else "js.Any"
+    }
 
     def wrapString(value: String) = {
       if (value.trim == "null") {
@@ -98,7 +109,7 @@ class ScalaClassWriter {
     }
 
     cfg.defaults match {
-      case _ if cfg.params.exists(_.nonEmpty) ⇒
+      case _ if isMethod ⇒
         // Method
         tpe → "js.native"
 
@@ -142,7 +153,7 @@ class ScalaClassWriter {
 
   def write(configObjects: List[ConfigurationObject], scalaJsDefined: Boolean)(writer: (String, String) ⇒ Unit): Unit = {
     val byClass = configObjects.groupBy(_.parent.getOrElse(""))
-    val classNames = byClass.keys.toSet
+    val classNames = byClass.keys.map(ScalaClassWriter.classNameFor).filter(_.nonEmpty).toSet
     val classes = for ((parent, parameters) <- byClass.toIterator if parent.nonEmpty) yield {
       val sw = new StringWriter(512)
       val pw = new PrintWriter(sw)
