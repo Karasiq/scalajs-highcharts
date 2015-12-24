@@ -152,7 +152,7 @@ class ScalaClassWriter {
   }
 
   def write(configObjects: List[ConfigurationObject], scalaJsDefined: Boolean)(writer: (String, String) ⇒ Unit): Unit = {
-    val byClass = configObjects.groupBy(_.parent.getOrElse(""))
+    val byClass = configObjects.groupBy(_.parent.getOrElse("RootObject"))
     val classNames = byClass.keys.map(ScalaClassWriter.classNameFor).filter(_.nonEmpty).toSet
     val classes = for ((parent, parameters) <- byClass.toIterator if parent.nonEmpty) yield {
       val sw = new StringWriter(512)
