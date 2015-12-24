@@ -4,7 +4,7 @@
 # How to use
 Add to your `build.sbt`:
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.3"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.4"
 ```
 
 Use in code:
