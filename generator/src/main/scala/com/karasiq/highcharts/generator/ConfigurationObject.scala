@@ -14,10 +14,12 @@ sealed trait ConfigurationObject {
   val defaults: Option[String]
   val demo: Option[String]
   val seeAlso: Option[String]
+  val params: Option[String]
+  val paramsDescription: Option[String]
 
   override def toString: String = {
     def opt(v: Option[String]): String = v.filter(_.nonEmpty).getOrElse("<none>")
-    s"ConfigurationObject(name = ${opt(name)}, fullName = ${opt(fullName)}, title = ${opt(title)}, parent = ${opt(parent)}, isParent = $isParent, returnType = ${opt(returnType)}, since = ${opt(since)}, deprecated = $deprecated, context = ${opt(context)}, defaults = ${opt(defaults)}, seeAlso = ${opt(seeAlso)})"
+    s"ConfigurationObject(name = ${opt(name)}, fullName = ${opt(fullName)}, title = ${opt(title)}, parent = ${opt(parent)}, isParent = $isParent, returnType = ${opt(returnType)}, since = ${opt(since)}, params = ${opt(params)}, deprecated = $deprecated, context = ${opt(context)}, defaults = ${opt(defaults)}, seeAlso = ${opt(seeAlso)})"
   }
 }
 
@@ -78,6 +80,10 @@ object ConfigurationObject {
         override val context: Option[String] = getString("context")
 
         override val parent: Option[String] = getString("parent")
+
+        override val params: Option[String] = getString("params")
+
+        override val paramsDescription: Option[String] = getString("paramsDescription")
       }
   }
 

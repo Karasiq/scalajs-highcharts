@@ -38,11 +38,16 @@ lazy val generatorSettings = Seq(
   mainClass in Compile := Some("com.karasiq.highcharts.generator.Main")
 )
 
+lazy val librarySettings = Seq(
+  libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.8.1",
+  name := "scalajs-highcharts"
+)
+
 lazy val generator = Project("generator", file("generator"))
   .settings(commonSettings, generatorSettings)
 
 lazy val library = Project("scalajs-library", file("scalajs-library"))
-  .settings(commonSettings, name := "scalajs-highcharts")
+  .settings(commonSettings, librarySettings)
   .enablePlugins(ScalaJSPlugin)
 
 lazy val root = Project("root", file("."))

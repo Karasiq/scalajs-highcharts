@@ -27,15 +27,14 @@ object ScalaClassWriter {
   }
 }
 
-class ScalaClassWriter extends ClassWriter {
-  private def scalaType(classes: Set[String], cfg: ConfigurationObject): Option[String] = {
+class ScalaClassWriter {
+  private def scalaType(classes: Set[String], tpe: Option[String], selfClass: Option[String] = None): Option[String] = {
     val array = """Array<(.+)>""".r
 
-    val selfClass = cfg.fullName
-      .map(ScalaClassWriter.classNameFor)
-      .filter(classes.contains)
-
     def stdTypes: PartialFunction[String, String] = {
+      case "String" ⇒
+        "String"
+
       case "Function" ⇒
         "js.Function"
 
@@ -68,17 +67,25 @@ class ScalaClassWriter extends ClassWriter {
         s"js.Array[${selfClass.getOrElse("js.Any")}]"
     }
 
-    cfg.returnType.orElse(Some("")).collect(stdTypes.orElse {
-      case "" if cfg.fullName.nonEmpty && classes.contains(ScalaClassWriter.classNameFor(cfg.fullName.get)) ⇒
-        ScalaClassWriter.classNameFor(cfg.fullName.get)
+    tpe.orElse(Some("")).collect(stdTypes.orElse {
+      case "" if selfClass.nonEmpty ⇒
+        selfClass.get
 
       case t if classes.contains(ScalaClassWriter.classNameFor(t)) ⇒
         ScalaClassWriter.classNameFor(t)
     })
   }
 
+  private def cfgScalaType(classes: Set[String], cfg: ConfigurationObject): Option[String] = {
+    val selfClass = cfg.fullName
+      .map(ScalaClassWriter.classNameFor)
+      .filter(classes.contains)
+
+    scalaType(classes, cfg.returnType, selfClass)
+  }
+
   private def value(classes: Set[String], cfg: ConfigurationObject): (String, String) = {
-    val tpe: String = scalaType(classes, cfg).getOrElse("js.Any")
+    val tpe: String = cfgScalaType(classes, cfg).getOrElse("js.Any")
 
     def wrapString(value: String) = {
       if (value.trim == "null") {
@@ -91,6 +98,10 @@ class ScalaClassWriter extends ClassWriter {
     }
 
     cfg.defaults match {
+      case _ if cfg.params.exists(_.nonEmpty) ⇒
+        // Method
+        tpe → "js.native"
+
       case Some(array) if array.startsWith("[") && array.endsWith("]") ⇒
         // Parse JS array value
         tpe → s"js.Array(${array.drop(1).dropRight(1)})"
@@ -107,7 +118,29 @@ class ScalaClassWriter extends ClassWriter {
     }
   }
 
-  override def write(configObjects: List[ConfigurationObject])(writer: (String, String) ⇒ Unit): Unit = {
+  private def params(classes: Set[String], cfg: ConfigurationObject): String = {
+    val jsParams = cfg.params.map(_.replaceAll("[\\(\\)\\[\\]]", ""))
+      .toSeq.flatMap(_.split(", "))
+      .filter(_.nonEmpty)
+
+    val params = for (jsParam <- jsParams) yield {
+      val (tpe, name) = jsParam.split(" ", 2) match {
+        case Array(jsType, jsName) ⇒
+          scalaType(classes, Some(jsType)).getOrElse("js.Any") → jsName
+
+        case Array(jsName) ⇒
+          "js.Any" → jsName
+      }
+      tpe → ScalaClassWriter.validScalaName(name)
+    }
+
+    params.map {
+      case (tpe, name) ⇒
+        s"$name: UndefOr[$tpe] = js.undefined"
+    }.mkString(", ")
+  }
+
+  def write(configObjects: List[ConfigurationObject], scalaJsDefined: Boolean)(writer: (String, String) ⇒ Unit): Unit = {
     val byClass = configObjects.groupBy(_.parent.getOrElse(""))
     val classNames = byClass.keys.toSet
     val classes = for ((parent, parameters) <- byClass.toIterator if parent.nonEmpty) yield {
@@ -115,8 +148,13 @@ class ScalaClassWriter extends ClassWriter {
       val pw = new PrintWriter(sw)
 
       val className = ScalaClassWriter.classNameFor(parent)
-      pw.println("@ScalaJSDefined")
-      pw.println(s"class $className extends js.Object {")
+      if (scalaJsDefined) {
+        pw.println("@js.annotation.ScalaJSDefined")
+        pw.println(s"class $className extends js.Object {")
+      } else {
+        pw.println("@js.native")
+        pw.println(s"trait $className extends js.Object {")
+      }
 
       val writeToClass = (str: String) ⇒ pw.println("  " + str)
       val docWriter = new ScalaDocWriter
@@ -124,7 +162,17 @@ class ScalaClassWriter extends ClassWriter {
         val (tpe, value) = this.value(classNames, cfg)
         writeToClass("") // Empty string
         docWriter.writeDocumentation(cfg)(writeToClass)
-        writeToClass(s"var ${ScalaClassWriter.validScalaName(name)}: $tpe = $value")
+        if (cfg.deprecated) writeToClass("@deprecated")
+
+        if (cfg.params.exists(_.nonEmpty)) {
+          writeToClass(s"def ${ScalaClassWriter.validScalaName(name)}(${params(classNames, cfg)}): $tpe = $value")
+        } else {
+          if (scalaJsDefined) {
+            writeToClass(s"var ${ScalaClassWriter.validScalaName(name)}: $tpe = $value")
+          } else {
+            writeToClass(s"var ${ScalaClassWriter.validScalaName(name)}: $tpe = js.native")
+          }
+        }
       }
 
       pw.println("}")
