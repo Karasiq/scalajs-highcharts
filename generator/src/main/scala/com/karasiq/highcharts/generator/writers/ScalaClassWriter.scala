@@ -124,7 +124,12 @@ class ScalaClassWriter {
         val df = wrapString(default)
         tpe → (if (df.nonEmpty) df else s"new $tpe")
 
+      case _ if cfg.isParent && tpe == "js.Any" ⇒
+        // Series
+        tpe → "js.Array()"
+
       case _ if cfg.isParent ⇒
+        // Sub-container
         tpe → s"new $tpe"
 
       case _ ⇒

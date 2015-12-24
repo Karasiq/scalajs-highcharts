@@ -89,7 +89,7 @@ class SeriesErrorbar extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: js.Any = new js.Any
+  val data: js.Any = js.Array()
   
   /**
    * Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.

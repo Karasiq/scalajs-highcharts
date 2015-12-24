@@ -71,7 +71,7 @@ class SeriesGauge extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: js.Any = new js.Any
+  val data: js.Any = js.Array()
   
   /**
    * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.

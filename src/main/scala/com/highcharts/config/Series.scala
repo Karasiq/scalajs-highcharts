@@ -62,7 +62,7 @@ class Series extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-column-null-values/" target="_blank">4) 3D column with null values</a></li>
 </ul>
    */
-  val data: js.Any = new js.Any
+  val data: js.Any = js.Array()
   
   /**
    * This method is deprecated as of version 2.0. Instead, use options preprocessing as described in <a href="http://docs.highcharts.com/#preprocessing">the docs</a>.
