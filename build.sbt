@@ -46,10 +46,6 @@ lazy val librarySettings = Seq(
 lazy val generator = Project("generator", file("generator"))
   .settings(commonSettings, generatorSettings)
 
-lazy val library = Project("scalajs-library", file("scalajs-library"))
+lazy val library = Project("scalajs-library", file("."))
   .settings(commonSettings, librarySettings)
   .enablePlugins(ScalaJSPlugin)
-
-lazy val root = Project("root", file("."))
-  .settings(commonSettings)
-  .aggregate(library)

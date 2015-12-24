@@ -34,7 +34,7 @@ object Main extends App {
           |
       |""".stripMargin
 
-    val outputDir = Paths.get(System.getProperty("highcharts-generator.output", "scalajs-library/src/main/scala"), pkg.split("\\."):_*)
+    val outputDir = Paths.get(System.getProperty("highcharts-generator.output", "src/main/scala"), pkg.split("\\."):_*)
     Files.createDirectories(outputDir)
     writer.write(configs, scalaJsDefined) {
       case (className, source) ⇒
