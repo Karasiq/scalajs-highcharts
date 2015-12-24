@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.1 by Karasiq
+ * @author Highcharts Config Generator v1.0.2 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -89,7 +89,7 @@ class YAxisLabels extends js.Object {
   
   /**
    * Rotation of the labels in degrees.
-   * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/labels-rotation/" target="_blank">X axis labels rotated 90°</a>
+   * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/labels-rotation/" target="_blank">X axis labels rotated 90Â°</a>
    */
   var rotation: Double = 0
   

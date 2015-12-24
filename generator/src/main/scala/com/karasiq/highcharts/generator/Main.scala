@@ -1,6 +1,6 @@
 package com.karasiq.highcharts.generator
 
-import java.io.FileWriter
+import java.io.{PrintWriter, FileWriter}
 import java.nio.file.{Files, Paths}
 
 import com.karasiq.highcharts.generator.writers.ScalaClassWriter
@@ -25,14 +25,14 @@ object Main extends App {
     val header =
       s"""/**
           | * Automatically generated file. Please do not edit.
-          | * @author Highcharts Config Generator v1.0.1 by Karasiq
+          | * @author Highcharts Config Generator v1.0.2 by Karasiq
           | * @see [[http://api.highcharts.com/highcharts]]
           | */
           |package $pkg
           |
-      |import scalajs.js, js.UndefOr
+          |import scalajs.js, js.UndefOr
           |
-      |""".stripMargin
+          |""".stripMargin
 
     val outputDir = Paths.get(System.getProperty("highcharts-generator.output", "src/main/scala"), pkg.split("\\."):_*)
     Files.createDirectories(outputDir)
@@ -40,10 +40,10 @@ object Main extends App {
       case (className, source) ⇒
         val file = outputDir.resolve(className + ".scala")
         println(s"Writing $file...")
-        val writer = new FileWriter(file.toFile)
+        val writer = new PrintWriter(file.toFile, "UTF-8")
         Exception.allCatch.andFinally(writer.close()) {
-          writer.write(header)
-          writer.write(source)
+          writer.print(header)
+          writer.print(source)
         }
     }
   }
