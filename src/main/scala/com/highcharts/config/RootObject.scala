@@ -1,6 +1,6 @@
 /**
  * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.0 by Karasiq
+ * @author Highcharts Config Generator v1.0.1 by Karasiq
  * @see [[http://api.highcharts.com/highcharts]]
  */
 package com.highcharts.config
@@ -89,7 +89,7 @@ class RootObject extends js.Object {
    * 		set it before any chart is initiated. 
    * <pre>Highcharts.setOptions({
    * 	lang: {
-   * 		months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+   * 		months: ['Janvier', 'F?vrier', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Ao?t', 'Septembre', 'Octobre', 'Novembre', 'D?cembre'],
    * 		weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
    * 	}
    * });</pre>
