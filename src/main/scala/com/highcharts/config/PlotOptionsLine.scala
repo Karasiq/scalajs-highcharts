@@ -92,7 +92,7 @@ class PlotOptionsLine extends js.Object {
    */
   val dashStyle: String = "Solid"
   
-  val dataLabels: UndefOr[PlotOptionsLineDataLabels] = js.undefined
+  val dataLabels: PlotOptionsLineDataLabels = new PlotOptionsLineDataLabels
   
   /**
    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -100,7 +100,7 @@ class PlotOptionsLine extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsLineEvents] = js.undefined
+  val events: PlotOptionsLineEvents = new PlotOptionsLineEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -134,7 +134,7 @@ class PlotOptionsLine extends js.Object {
    */
   val linkedTo: String = ""
   
-  val marker: UndefOr[PlotOptionsLineMarker] = js.undefined
+  val marker: PlotOptionsLineMarker = new PlotOptionsLineMarker
   
   /**
    * The color for the parts of the graph or points that are below the <a href="#plotOptions.series.threshold">threshold</a>.
@@ -146,7 +146,7 @@ class PlotOptionsLine extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsLinePoint] = js.undefined
+  val point: PlotOptionsLinePoint = new PlotOptionsLinePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -232,7 +232,7 @@ class PlotOptionsLine extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Whether to apply steps to the line. Possible values are <code>left</code>, <code>center</code> and <code>right</code>. Prior to 2.3.5, only <code>left</code> was supported.
@@ -264,7 +264,7 @@ class PlotOptionsLine extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
@@ -293,5 +293,5 @@ class PlotOptionsLine extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsLineZones]] = js.undefined
+  val zones: js.Array[PlotOptionsLineZones] = new js.Array[PlotOptionsLineZones]
 }

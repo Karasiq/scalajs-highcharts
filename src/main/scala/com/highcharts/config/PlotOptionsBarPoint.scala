@@ -13,5 +13,5 @@ class PlotOptionsBarPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsBarPointEvents] = js.undefined
+  val events: PlotOptionsBarPointEvents = new PlotOptionsBarPointEvents
 }

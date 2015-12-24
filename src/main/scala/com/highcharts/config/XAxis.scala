@@ -32,7 +32,7 @@ class XAxis extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-simple/" target="_blank">Simple break</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-visualized/" target="_blank">advanced with callback</a>
    * @since 4.1.0
    */
-  val breaks: UndefOr[js.Array[XAxisBreaks]] = js.undefined
+  val breaks: js.Array[XAxisBreaks] = new js.Array[XAxisBreaks]
   
   /**
    * <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href="#series.data">name</a> and setting axis <a href="#xAxis.type">type</a> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array.</p>
@@ -90,7 +90,7 @@ class XAxis extends js.Object {
   /**
    * Event handlers for the axis.
    */
-  val events: UndefOr[XAxisEvents] = js.undefined
+  val events: XAxisEvents = new XAxisEvents
   
   /**
    * The lowest allowed value for automatically computed axis extremes.
@@ -134,7 +134,7 @@ class XAxis extends js.Object {
   /**
    * The axis labels show the number or category for each tick.
    */
-  val labels: UndefOr[XAxisLabels] = js.undefined
+  val labels: XAxisLabels = new XAxisLabels
   
   /**
    * The color of the line marking the axis itself.
@@ -291,12 +291,12 @@ class XAxis extends js.Object {
    * 
    * <p>In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.</p>
    */
-  val plotBands: UndefOr[js.Array[js.Object]] = js.undefined
+  val plotBands: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * An array of lines stretching across the plot area, marking a specific value on one of the axes.
    */
-  val plotLines: UndefOr[js.Array[js.Object]] = js.undefined
+  val plotLines: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default.
@@ -415,7 +415,7 @@ class XAxis extends js.Object {
   /**
    * The axis title, showing next to the axis line.
    */
-  val title: UndefOr[XAxisTitle] = js.undefined
+  val title: XAxisTitle = new XAxisTitle
   
   /**
    * The type of axis. Can be one of <code>"linear"</code>, <code>"logarithmic"</code>, <code>"datetime"</code> or <code>"category"</code>. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed 		on appropriate values like full hours or days. In a category axis, the <a href="#series.data">point names</a> of the chart's series are used for categories, if not a <a href="#xAxis.categories">categories</a> array is defined.

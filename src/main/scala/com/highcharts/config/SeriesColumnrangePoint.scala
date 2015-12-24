@@ -13,5 +13,5 @@ class SeriesColumnrangePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesColumnrangePointEvents] = js.undefined
+  val events: SeriesColumnrangePointEvents = new SeriesColumnrangePointEvents
 }

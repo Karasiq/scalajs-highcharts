@@ -13,5 +13,5 @@ class SeriesAreasplinerangeStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesAreasplinerangeStatesHover] = js.undefined
+  val hover: SeriesAreasplinerangeStatesHover = new SeriesAreasplinerangeStatesHover
 }

@@ -13,5 +13,5 @@ class SeriesWaterfallPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesWaterfallPointEvents] = js.undefined
+  val events: SeriesWaterfallPointEvents = new SeriesWaterfallPointEvents
 }

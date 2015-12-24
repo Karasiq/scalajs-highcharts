@@ -54,7 +54,7 @@ class PlotOptionsPyramid extends js.Object {
    */
   val cursor: UndefOr[String] = js.undefined
   
-  val dataLabels: UndefOr[PlotOptionsPyramidDataLabels] = js.undefined
+  val dataLabels: PlotOptionsPyramidDataLabels = new PlotOptionsPyramidDataLabels
   
   /**
    * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
@@ -69,7 +69,7 @@ class PlotOptionsPyramid extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsPyramidEvents] = js.undefined
+  val events: PlotOptionsPyramidEvents = new PlotOptionsPyramidEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -107,7 +107,7 @@ class PlotOptionsPyramid extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsPyramidPoint] = js.undefined
+  val point: PlotOptionsPyramidPoint = new PlotOptionsPyramidPoint
   
   /**
    * The pyramid is reversed by default, as opposed to the funnel, which shares the layout engine, and is not reversed.
@@ -143,7 +143,7 @@ class PlotOptionsPyramid extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -159,7 +159,7 @@ class PlotOptionsPyramid extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Set the initial visibility of the series.
@@ -185,5 +185,5 @@ class PlotOptionsPyramid extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsPyramidZones]] = js.undefined
+  val zones: js.Array[PlotOptionsPyramidZones] = new js.Array[PlotOptionsPyramidZones]
 }

@@ -13,5 +13,5 @@ class PlotOptionsAreasplineStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsAreasplineStatesHover] = js.undefined
+  val hover: PlotOptionsAreasplineStatesHover = new PlotOptionsAreasplineStatesHover
 }

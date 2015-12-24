@@ -13,5 +13,5 @@ class PlotOptionsColumnrangePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsColumnrangePointEvents] = js.undefined
+  val events: PlotOptionsColumnrangePointEvents = new PlotOptionsColumnrangePointEvents
 }

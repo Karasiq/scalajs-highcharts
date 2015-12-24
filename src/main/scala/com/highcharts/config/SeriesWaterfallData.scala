@@ -32,7 +32,7 @@ class SeriesWaterfallData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesWaterfallDataEvents] = js.undefined
+  val events: SeriesWaterfallDataEvents = new SeriesWaterfallDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.

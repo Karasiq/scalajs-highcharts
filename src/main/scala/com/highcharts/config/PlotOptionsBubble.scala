@@ -78,7 +78,7 @@ class PlotOptionsBubble extends js.Object {
    */
   val dashStyle: String = "Solid"
   
-  val dataLabels: UndefOr[PlotOptionsBubbleDataLabels] = js.undefined
+  val dataLabels: PlotOptionsBubbleDataLabels = new PlotOptionsBubbleDataLabels
   
   /**
    * Whether to display negative sized bubbles. The threshold is given by the <a href="#plotOptions.bubble.zThreshold">zThreshold</a> option, and negative bubbles can be visualized by setting <a href="#plotOptions.bubble.negativeColor">negativeColor</a>.
@@ -93,7 +93,7 @@ class PlotOptionsBubble extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsBubbleEvents] = js.undefined
+  val events: PlotOptionsBubbleEvents = new PlotOptionsBubbleEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -122,7 +122,7 @@ class PlotOptionsBubble extends js.Object {
    */
   val linkedTo: String = ""
   
-  val marker: UndefOr[PlotOptionsBubbleMarker] = js.undefined
+  val marker: PlotOptionsBubbleMarker = new PlotOptionsBubbleMarker
   
   /**
    * Maximum bubble size. Bubbles will automatically size between the <code>minSize</code> and <code>maxSize</code> to reflect the <code>z</code> value of each bubble. Can be either pixels (when no unit is given), or a percentage of the smallest one of the plot width and height. 
@@ -148,7 +148,7 @@ class PlotOptionsBubble extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsBubblePoint] = js.undefined
+  val point: PlotOptionsBubblePoint = new PlotOptionsBubblePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -224,7 +224,7 @@ class PlotOptionsBubble extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -246,7 +246,7 @@ class PlotOptionsBubble extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Set the initial visibility of the series.
@@ -287,5 +287,5 @@ class PlotOptionsBubble extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsBubbleZones]] = js.undefined
+  val zones: js.Array[PlotOptionsBubbleZones] = new js.Array[PlotOptionsBubbleZones]
 }

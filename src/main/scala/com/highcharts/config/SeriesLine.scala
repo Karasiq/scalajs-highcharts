@@ -133,9 +133,9 @@ class SeriesLine extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
-  val dataLabels: UndefOr[SeriesLineDataLabels] = js.undefined
+  val dataLabels: SeriesLineDataLabels = new SeriesLineDataLabels
   
   /**
    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -143,7 +143,7 @@ class SeriesLine extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesLineEvents] = js.undefined
+  val events: SeriesLineEvents = new SeriesLineEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -195,7 +195,7 @@ class SeriesLine extends js.Object {
    */
   val linkedTo: String = ""
   
-  val marker: UndefOr[SeriesLineMarker] = js.undefined
+  val marker: SeriesLineMarker = new SeriesLineMarker
   
   /**
    * The name of the series as shown in the legend, tooltip etc.
@@ -213,7 +213,7 @@ class SeriesLine extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesLinePoint] = js.undefined
+  val point: SeriesLinePoint = new SeriesLinePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -306,7 +306,7 @@ class SeriesLine extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Whether to apply steps to the line. Possible values are <code>left</code>, <code>center</code> and <code>right</code>. Prior to 2.3.5, only <code>left</code> was supported.
@@ -338,7 +338,7 @@ class SeriesLine extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
@@ -393,5 +393,5 @@ class SeriesLine extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesLineZones]] = js.undefined
+  val zones: js.Array[SeriesLineZones] = new js.Array[SeriesLineZones]
 }

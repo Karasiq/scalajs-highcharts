@@ -13,5 +13,5 @@ class PlotOptionsLinePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsLinePointEvents] = js.undefined
+  val events: PlotOptionsLinePointEvents = new PlotOptionsLinePointEvents
 }

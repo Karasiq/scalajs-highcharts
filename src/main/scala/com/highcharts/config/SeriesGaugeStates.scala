@@ -13,5 +13,5 @@ class SeriesGaugeStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesGaugeStatesHover] = js.undefined
+  val hover: SeriesGaugeStatesHover = new SeriesGaugeStatesHover
 }

@@ -13,5 +13,5 @@ class SeriesBubblePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesBubblePointEvents] = js.undefined
+  val events: SeriesBubblePointEvents = new SeriesBubblePointEvents
 }

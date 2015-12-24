@@ -74,7 +74,7 @@ class PlotOptionsBoxplot extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsBoxplotEvents] = js.undefined
+  val events: PlotOptionsBoxplotEvents = new PlotOptionsBoxplotEvents
   
   /**
    * The fill color of the box.
@@ -162,7 +162,7 @@ class PlotOptionsBoxplot extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsBoxplotPoint] = js.undefined
+  val point: PlotOptionsBoxplotPoint = new PlotOptionsBoxplotPoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -244,7 +244,7 @@ class PlotOptionsBoxplot extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used.
@@ -284,7 +284,7 @@ class PlotOptionsBoxplot extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
@@ -334,5 +334,5 @@ class PlotOptionsBoxplot extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsBoxplotZones]] = js.undefined
+  val zones: js.Array[PlotOptionsBoxplotZones] = new js.Array[PlotOptionsBoxplotZones]
 }

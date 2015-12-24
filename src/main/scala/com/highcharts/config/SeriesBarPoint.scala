@@ -13,5 +13,5 @@ class SeriesBarPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesBarPointEvents] = js.undefined
+  val events: SeriesBarPointEvents = new SeriesBarPointEvents
 }

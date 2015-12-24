@@ -127,9 +127,9 @@ class SeriesTreemap extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
-  val dataLabels: UndefOr[SeriesTreemapDataLabels] = js.undefined
+  val dataLabels: SeriesTreemapDataLabels = new SeriesTreemapDataLabels
   
   /**
    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -137,7 +137,7 @@ class SeriesTreemap extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesTreemapEvents] = js.undefined
+  val events: SeriesTreemapEvents = new SeriesTreemapEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -201,7 +201,7 @@ class SeriesTreemap extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling dataLabels and borders</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/treemap-with-levels/" target="_blank">Different layoutAlgorithm</a>
    * @since 4.1.0
    */
-  val levels: UndefOr[js.Array[js.Object]] = js.undefined
+  val levels: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -226,7 +226,7 @@ class SeriesTreemap extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesTreemapPoint] = js.undefined
+  val point: SeriesTreemapPoint = new SeriesTreemapPoint
   
   /**
    * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -263,7 +263,7 @@ class SeriesTreemap extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -278,7 +278,7 @@ class SeriesTreemap extends js.Object {
    */
   val stickyTracking: Boolean = true
   
-  val tooltip: UndefOr[SeriesTreemapTooltip] = js.undefined
+  val tooltip: SeriesTreemapTooltip = new SeriesTreemapTooltip
   
   /**
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
@@ -333,5 +333,5 @@ class SeriesTreemap extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesTreemapZones]] = js.undefined
+  val zones: js.Array[SeriesTreemapZones] = new js.Array[SeriesTreemapZones]
 }

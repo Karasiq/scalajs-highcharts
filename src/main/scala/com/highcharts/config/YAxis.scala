@@ -32,7 +32,7 @@ class YAxis extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-simple/" target="_blank">Simple break</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-visualized/" target="_blank">advanced with callback</a>
    * @since 4.1.0
    */
-  val breaks: UndefOr[js.Array[YAxisBreaks]] = js.undefined
+  val breaks: js.Array[YAxisBreaks] = new js.Array[YAxisBreaks]
   
   /**
    * <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href="#series.data">name</a> and setting axis <a href="#xAxis.type">type</a> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array.</p>
@@ -88,7 +88,7 @@ class YAxis extends js.Object {
    */
   val endOnTick: Boolean = true
   
-  val events: UndefOr[YAxisEvents] = js.undefined
+  val events: YAxisEvents = new YAxisEvents
   
   /**
    * The lowest allowed value for automatically computed axis extremes.
@@ -135,7 +135,7 @@ class YAxis extends js.Object {
    */
   val id: UndefOr[String] = js.undefined
   
-  val labels: UndefOr[YAxisLabels] = js.undefined
+  val labels: YAxisLabels = new YAxisLabels
   
   /**
    * The color of the line marking the axis itself.
@@ -308,12 +308,12 @@ class YAxis extends js.Object {
   /**
    * An array of objects defining plot bands on the Y axis.
    */
-  val plotBands: UndefOr[js.Array[js.Object]] = js.undefined
+  val plotBands: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * An array of objects representing plot lines on the X axis
    */
-  val plotLines: UndefOr[js.Array[js.Object]] = js.undefined
+  val plotLines: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default.
@@ -352,7 +352,7 @@ class YAxis extends js.Object {
    * 	positive columns and below negative columns. In case of an inverted column chart or a bar chart the label is placed to 
    * 	the right of positive bars and to the left of negative bars.
    */
-  val stackLabels: UndefOr[YAxisStackLabels] = js.undefined
+  val stackLabels: YAxisStackLabels = new YAxisStackLabels
   
   /**
    * For datetime axes, this decides where to put the tick between weeks. 0 = Sunday, 1 = Monday.
@@ -452,7 +452,7 @@ class YAxis extends js.Object {
    */
   val tickmarkPlacement: String = null.asInstanceOf[String]
   
-  val title: UndefOr[YAxisTitle] = js.undefined
+  val title: YAxisTitle = new YAxisTitle
   
   /**
    * The type of axis. Can be one of <code>"linear"</code>, <code>"logarithmic"</code>, <code>"datetime"</code> or <code>"category"</code>. In a datetime axis, the numbers are given in milliseconds, and tick marks are placed 		on appropriate values like full hours or days. In a category axis, the <a href="#series.data">point names</a> of the chart's series are used for categories, if not a <a href="#xAxis.categories">categories</a> array is defined.

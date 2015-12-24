@@ -32,7 +32,7 @@ class SeriesBubbleData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesBubbleDataEvents] = js.undefined
+  val events: SeriesBubbleDataEvents = new SeriesBubbleDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.

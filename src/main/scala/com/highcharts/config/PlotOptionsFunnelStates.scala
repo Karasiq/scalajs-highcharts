@@ -13,5 +13,5 @@ class PlotOptionsFunnelStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsFunnelStatesHover] = js.undefined
+  val hover: PlotOptionsFunnelStatesHover = new PlotOptionsFunnelStatesHover
 }

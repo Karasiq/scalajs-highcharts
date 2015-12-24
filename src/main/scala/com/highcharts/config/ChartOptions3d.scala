@@ -41,7 +41,7 @@ class ChartOptions3d extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/3d/column-frame/">Framed column chart</a>
    * @since 4.0
    */
-  val frame: UndefOr[ChartOptions3dFrame] = js.undefined
+  val frame: ChartOptions3dFrame = new ChartOptions3dFrame
   
   /**
    * Defines the distance the viewer is standing in front of the chart, this setting is important to calculate the perspective effect in column and scatter charts.

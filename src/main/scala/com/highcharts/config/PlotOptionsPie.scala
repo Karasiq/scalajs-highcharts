@@ -71,7 +71,7 @@ class PlotOptionsPie extends js.Object {
    */
   val cursor: UndefOr[String] = js.undefined
   
-  val dataLabels: UndefOr[PlotOptionsPieDataLabels] = js.undefined
+  val dataLabels: PlotOptionsPieDataLabels = new PlotOptionsPieDataLabels
   
   /**
    * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
@@ -93,7 +93,7 @@ class PlotOptionsPie extends js.Object {
    */
   val endAngle: Double = null.asInstanceOf[Double]
   
-  val events: UndefOr[PlotOptionsPieEvents] = js.undefined
+  val events: PlotOptionsPieEvents = new PlotOptionsPieEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -143,7 +143,7 @@ class PlotOptionsPie extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsPiePoint] = js.undefined
+  val point: PlotOptionsPiePoint = new PlotOptionsPiePoint
   
   /**
    * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -186,7 +186,7 @@ class PlotOptionsPie extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -202,7 +202,7 @@ class PlotOptionsPie extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Set the initial visibility of the series.
@@ -222,5 +222,5 @@ class PlotOptionsPie extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsPieZones]] = js.undefined
+  val zones: js.Array[PlotOptionsPieZones] = new js.Array[PlotOptionsPieZones]
 }

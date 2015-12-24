@@ -32,7 +32,7 @@ class SeriesColumnrangeData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesColumnrangeDataEvents] = js.undefined
+  val events: SeriesColumnrangeDataEvents = new SeriesColumnrangeDataEvents
   
   /**
    * The high or maximum value for each data point.

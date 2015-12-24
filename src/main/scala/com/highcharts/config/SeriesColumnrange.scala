@@ -129,13 +129,13 @@ class SeriesColumnrange extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
   /**
    * Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually. 
    * @since 2.3.0
    */
-  val dataLabels: UndefOr[js.Object] = js.undefined
+  val dataLabels: js.Object = new js.Object
   
   /**
    * Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.
@@ -160,7 +160,7 @@ class SeriesColumnrange extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesColumnrangeEvents] = js.undefined
+  val events: SeriesColumnrangeEvents = new SeriesColumnrangeEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -244,7 +244,7 @@ class SeriesColumnrange extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesColumnrangePoint] = js.undefined
+  val point: SeriesColumnrangePoint = new SeriesColumnrangePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -332,7 +332,7 @@ class SeriesColumnrange extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -351,7 +351,7 @@ class SeriesColumnrange extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
@@ -406,5 +406,5 @@ class SeriesColumnrange extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesColumnrangeZones]] = js.undefined
+  val zones: js.Array[SeriesColumnrangeZones] = new js.Array[SeriesColumnrangeZones]
 }

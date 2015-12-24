@@ -65,7 +65,7 @@ class Drilldown extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/drillupbutton/" target="_blank">Drill up button</a>
    * @since 3.0.8
    */
-  val drillUpButton: UndefOr[js.Object] = js.undefined
+  val drillUpButton: js.Object = new js.Object
   
   /**
    * An array of series configurations for the drill down. Each series configuration uses the same syntax as the <a href="#series">series</a> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.

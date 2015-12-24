@@ -13,5 +13,5 @@ class SeriesHeatmapPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesHeatmapPointEvents] = js.undefined
+  val events: SeriesHeatmapPointEvents = new SeriesHeatmapPointEvents
 }

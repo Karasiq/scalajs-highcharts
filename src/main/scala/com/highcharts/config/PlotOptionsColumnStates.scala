@@ -13,5 +13,5 @@ class PlotOptionsColumnStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsColumnStatesHover] = js.undefined
+  val hover: PlotOptionsColumnStatesHover = new PlotOptionsColumnStatesHover
 }

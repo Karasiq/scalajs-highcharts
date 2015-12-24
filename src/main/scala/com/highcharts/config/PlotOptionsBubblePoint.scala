@@ -13,5 +13,5 @@ class PlotOptionsBubblePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsBubblePointEvents] = js.undefined
+  val events: PlotOptionsBubblePointEvents = new PlotOptionsBubblePointEvents
 }

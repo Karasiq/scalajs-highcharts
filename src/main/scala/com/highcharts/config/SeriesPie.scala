@@ -100,9 +100,9 @@ class SeriesPie extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
-  val dataLabels: UndefOr[SeriesPieDataLabels] = js.undefined
+  val dataLabels: SeriesPieDataLabels = new SeriesPieDataLabels
   
   /**
    * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
@@ -124,7 +124,7 @@ class SeriesPie extends js.Object {
    */
   val endAngle: Double = null.asInstanceOf[Double]
   
-  val events: UndefOr[SeriesPieEvents] = js.undefined
+  val events: SeriesPieEvents = new SeriesPieEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -198,7 +198,7 @@ class SeriesPie extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesPiePoint] = js.undefined
+  val point: SeriesPiePoint = new SeriesPiePoint
   
   /**
    * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -241,7 +241,7 @@ class SeriesPie extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -257,7 +257,7 @@ class SeriesPie extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -292,5 +292,5 @@ class SeriesPie extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesPieZones]] = js.undefined
+  val zones: js.Array[SeriesPieZones] = new js.Array[SeriesPieZones]
 }

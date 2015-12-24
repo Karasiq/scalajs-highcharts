@@ -13,5 +13,5 @@ class SeriesBubbleStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesBubbleStatesHover] = js.undefined
+  val hover: SeriesBubbleStatesHover = new SeriesBubbleStatesHover
 }

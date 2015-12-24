@@ -146,9 +146,9 @@ class SeriesWaterfall extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
-  val dataLabels: UndefOr[SeriesWaterfallDataLabels] = js.undefined
+  val dataLabels: SeriesWaterfallDataLabels = new SeriesWaterfallDataLabels
   
   /**
    * Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.
@@ -173,7 +173,7 @@ class SeriesWaterfall extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesWaterfallEvents] = js.undefined
+  val events: SeriesWaterfallEvents = new SeriesWaterfallEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -263,7 +263,7 @@ class SeriesWaterfall extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesWaterfallPoint] = js.undefined
+  val point: SeriesWaterfallPoint = new SeriesWaterfallPoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -366,7 +366,7 @@ class SeriesWaterfall extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -391,7 +391,7 @@ class SeriesWaterfall extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -443,5 +443,5 @@ class SeriesWaterfall extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesWaterfallZones]] = js.undefined
+  val zones: js.Array[SeriesWaterfallZones] = new js.Array[SeriesWaterfallZones]
 }

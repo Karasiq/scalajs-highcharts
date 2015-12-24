@@ -117,9 +117,9 @@ class SeriesBubble extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
-  val dataLabels: UndefOr[SeriesBubbleDataLabels] = js.undefined
+  val dataLabels: SeriesBubbleDataLabels = new SeriesBubbleDataLabels
   
   /**
    * Whether to display negative sized bubbles. The threshold is given by the <a href="#plotOptions.bubble.zThreshold">zThreshold</a> option, and negative bubbles can be visualized by setting <a href="#plotOptions.bubble.negativeColor">negativeColor</a>.
@@ -134,7 +134,7 @@ class SeriesBubble extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesBubbleEvents] = js.undefined
+  val events: SeriesBubbleEvents = new SeriesBubbleEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -181,7 +181,7 @@ class SeriesBubble extends js.Object {
    */
   val linkedTo: String = ""
   
-  val marker: UndefOr[SeriesBubbleMarker] = js.undefined
+  val marker: SeriesBubbleMarker = new SeriesBubbleMarker
   
   /**
    * Maximum bubble size. Bubbles will automatically size between the <code>minSize</code> and <code>maxSize</code> to reflect the <code>z</code> value of each bubble. Can be either pixels (when no unit is given), or a percentage of the smallest one of the plot width and height. 
@@ -213,7 +213,7 @@ class SeriesBubble extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesBubblePoint] = js.undefined
+  val point: SeriesBubblePoint = new SeriesBubblePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -289,7 +289,7 @@ class SeriesBubble extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -311,7 +311,7 @@ class SeriesBubble extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -378,5 +378,5 @@ class SeriesBubble extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesBubbleZones]] = js.undefined
+  val zones: js.Array[SeriesBubbleZones] = new js.Array[SeriesBubbleZones]
 }

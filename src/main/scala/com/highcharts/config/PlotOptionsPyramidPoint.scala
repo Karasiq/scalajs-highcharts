@@ -13,5 +13,5 @@ class PlotOptionsPyramidPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsPyramidPointEvents] = js.undefined
+  val events: PlotOptionsPyramidPointEvents = new PlotOptionsPyramidPointEvents
 }

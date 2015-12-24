@@ -14,17 +14,17 @@ class ChartOptions3dFrame extends js.Object {
    * Defines the back panel of the frame around 3D charts.
    * @since 4.0
    */
-  val back: UndefOr[ChartOptions3dFrameBack] = js.undefined
+  val back: ChartOptions3dFrameBack = new ChartOptions3dFrameBack
   
   /**
    * The bottom of the frame around a 3D chart.
    * @since 4.0
    */
-  val bottom: UndefOr[ChartOptions3dFrameBottom] = js.undefined
+  val bottom: ChartOptions3dFrameBottom = new ChartOptions3dFrameBottom
   
   /**
    * The side for the frame around a 3D chart.
    * @since 4.0
    */
-  val side: UndefOr[ChartOptions3dFrameSide] = js.undefined
+  val side: ChartOptions3dFrameSide = new ChartOptions3dFrameSide
 }

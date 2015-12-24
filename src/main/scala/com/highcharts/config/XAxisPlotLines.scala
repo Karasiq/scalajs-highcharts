@@ -39,7 +39,7 @@ class XAxisPlotLines extends js.Object {
   /**
    * Text labels for the plot bands
    */
-  val label: UndefOr[XAxisPlotLinesLabel] = js.undefined
+  val label: XAxisPlotLinesLabel = new XAxisPlotLinesLabel
   
   /**
    * The position of the line in axis units.

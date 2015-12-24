@@ -13,5 +13,5 @@ class PlotOptionsWaterfallStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsWaterfallStatesHover] = js.undefined
+  val hover: PlotOptionsWaterfallStatesHover = new PlotOptionsWaterfallStatesHover
 }

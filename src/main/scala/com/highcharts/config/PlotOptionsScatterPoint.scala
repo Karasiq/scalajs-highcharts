@@ -13,5 +13,5 @@ class PlotOptionsScatterPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsScatterPointEvents] = js.undefined
+  val events: PlotOptionsScatterPointEvents = new PlotOptionsScatterPointEvents
 }

@@ -13,5 +13,5 @@ class SeriesTreemapPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesTreemapPointEvents] = js.undefined
+  val events: SeriesTreemapPointEvents = new SeriesTreemapPointEvents
 }

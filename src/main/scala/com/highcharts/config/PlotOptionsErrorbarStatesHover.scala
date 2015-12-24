@@ -24,7 +24,7 @@ class PlotOptionsErrorbarStatesHover extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
    * @since 4.0
    */
-  val halo: UndefOr[js.Object] = js.undefined
+  val halo: js.Object = new js.Object
   
   /**
    * Pixel with of the graph line.
@@ -39,5 +39,5 @@ class PlotOptionsErrorbarStatesHover extends js.Object {
    */
   val lineWidthPlus: Double = 1
   
-  val marker: UndefOr[PlotOptionsErrorbarStatesHoverMarker] = js.undefined
+  val marker: PlotOptionsErrorbarStatesHoverMarker = new PlotOptionsErrorbarStatesHoverMarker
 }

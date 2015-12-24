@@ -13,7 +13,7 @@ class Navigation extends js.Object {
   /**
    * A collection of options for buttons appearing in the exporting module.
    */
-  val buttonOptions: UndefOr[NavigationButtonOptions] = js.undefined
+  val buttonOptions: NavigationButtonOptions = new NavigationButtonOptions
   
   /**
    * CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to 

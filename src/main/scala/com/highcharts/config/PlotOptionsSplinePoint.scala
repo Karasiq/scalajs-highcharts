@@ -13,5 +13,5 @@ class PlotOptionsSplinePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsSplinePointEvents] = js.undefined
+  val events: PlotOptionsSplinePointEvents = new PlotOptionsSplinePointEvents
 }

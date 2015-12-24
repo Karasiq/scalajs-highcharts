@@ -13,5 +13,5 @@ class SeriesScatterStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesScatterStatesHover] = js.undefined
+  val hover: SeriesScatterStatesHover = new SeriesScatterStatesHover
 }

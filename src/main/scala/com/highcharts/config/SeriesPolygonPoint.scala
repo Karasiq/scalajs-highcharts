@@ -13,5 +13,5 @@ class SeriesPolygonPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesPolygonPointEvents] = js.undefined
+  val events: SeriesPolygonPointEvents = new SeriesPolygonPointEvents
 }

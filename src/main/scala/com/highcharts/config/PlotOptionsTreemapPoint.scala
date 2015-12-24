@@ -13,5 +13,5 @@ class PlotOptionsTreemapPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsTreemapPointEvents] = js.undefined
+  val events: PlotOptionsTreemapPointEvents = new PlotOptionsTreemapPointEvents
 }

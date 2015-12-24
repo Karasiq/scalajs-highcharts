@@ -19,7 +19,7 @@ class SeriesErrorbarData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesErrorbarDataEvents] = js.undefined
+  val events: SeriesErrorbarDataEvents = new SeriesErrorbarDataEvents
   
   /**
    * The high or maximum value for each data point.

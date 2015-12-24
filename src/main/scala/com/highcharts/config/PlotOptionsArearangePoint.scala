@@ -13,5 +13,5 @@ class PlotOptionsArearangePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsArearangePointEvents] = js.undefined
+  val events: PlotOptionsArearangePointEvents = new PlotOptionsArearangePointEvents
 }

@@ -13,5 +13,5 @@ class SeriesTreemapStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesTreemapStatesHover] = js.undefined
+  val hover: SeriesTreemapStatesHover = new SeriesTreemapStatesHover
 }

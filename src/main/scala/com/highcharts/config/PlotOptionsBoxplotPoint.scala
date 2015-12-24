@@ -13,5 +13,5 @@ class PlotOptionsBoxplotPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsBoxplotPointEvents] = js.undefined
+  val events: PlotOptionsBoxplotPointEvents = new PlotOptionsBoxplotPointEvents
 }

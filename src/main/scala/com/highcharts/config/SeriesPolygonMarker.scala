@@ -48,7 +48,7 @@ class SeriesPolygonMarker extends js.Object {
    */
   val radius: Double = 4
   
-  val states: UndefOr[SeriesPolygonMarkerStates] = js.undefined
+  val states: SeriesPolygonMarkerStates = new SeriesPolygonMarkerStates
   
   /**
    * <p>A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down".</p>

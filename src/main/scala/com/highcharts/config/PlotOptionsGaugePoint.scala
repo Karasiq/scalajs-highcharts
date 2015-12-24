@@ -13,5 +13,5 @@ class PlotOptionsGaugePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsGaugePointEvents] = js.undefined
+  val events: PlotOptionsGaugePointEvents = new PlotOptionsGaugePointEvents
 }

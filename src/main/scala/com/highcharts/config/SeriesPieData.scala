@@ -32,7 +32,7 @@ class SeriesPieData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesPieDataEvents] = js.undefined
+  val events: SeriesPieDataEvents = new SeriesPieDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.

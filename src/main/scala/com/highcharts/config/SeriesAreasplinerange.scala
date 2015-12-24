@@ -124,13 +124,13 @@ class SeriesAreasplinerange extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
    */
-  val data: UndefOr[js.Any] = js.undefined
+  val data: js.Any = new js.Any
   
   /**
    * Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually. 
    * @since 2.3.0
    */
-  val dataLabels: UndefOr[js.Object] = js.undefined
+  val dataLabels: js.Object = new js.Object
   
   /**
    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -138,7 +138,7 @@ class SeriesAreasplinerange extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[SeriesAreasplinerangeEvents] = js.undefined
+  val events: SeriesAreasplinerangeEvents = new SeriesAreasplinerangeEvents
   
   /**
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
@@ -230,7 +230,7 @@ class SeriesAreasplinerange extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[SeriesAreasplinerangePoint] = js.undefined
+  val point: SeriesAreasplinerangePoint = new SeriesAreasplinerangePoint
   
   /**
    * <p>If no x values are given for the points in a series, pointInterval defines
@@ -294,7 +294,7 @@ class SeriesAreasplinerange extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Whether to apply steps to the line. Possible values are <code>left</code>, <code>center</code> and <code>right</code>. Prior to 2.3.5, only <code>left</code> was supported.
@@ -320,7 +320,7 @@ class SeriesAreasplinerange extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
@@ -381,5 +381,5 @@ class SeriesAreasplinerange extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[SeriesAreasplinerangeZones]] = js.undefined
+  val zones: js.Array[SeriesAreasplinerangeZones] = new js.Array[SeriesAreasplinerangeZones]
 }

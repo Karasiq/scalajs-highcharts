@@ -13,5 +13,5 @@ class PlotOptionsErrorbarPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsErrorbarPointEvents] = js.undefined
+  val events: PlotOptionsErrorbarPointEvents = new PlotOptionsErrorbarPointEvents
 }

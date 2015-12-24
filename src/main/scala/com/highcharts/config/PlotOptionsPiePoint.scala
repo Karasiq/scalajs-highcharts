@@ -13,5 +13,5 @@ class PlotOptionsPiePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsPiePointEvents] = js.undefined
+  val events: PlotOptionsPiePointEvents = new PlotOptionsPiePointEvents
 }

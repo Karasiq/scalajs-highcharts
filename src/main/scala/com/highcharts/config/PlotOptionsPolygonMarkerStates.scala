@@ -10,11 +10,11 @@ import scalajs.js, js.UndefOr
 @js.annotation.ScalaJSDefined
 class PlotOptionsPolygonMarkerStates extends js.Object {
   
-  val hover: UndefOr[PlotOptionsPolygonMarkerStatesHover] = js.undefined
+  val hover: PlotOptionsPolygonMarkerStatesHover = new PlotOptionsPolygonMarkerStatesHover
   
   /**
    * The appearance of the point marker when selected. In order to allow a point to be 
    * 		selected, set the <code>series.allowPointSelect</code> option to true.
    */
-  val select: UndefOr[PlotOptionsPolygonMarkerStatesSelect] = js.undefined
+  val select: PlotOptionsPolygonMarkerStatesSelect = new PlotOptionsPolygonMarkerStatesSelect
 }

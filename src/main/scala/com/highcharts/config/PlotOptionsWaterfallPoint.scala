@@ -13,5 +13,5 @@ class PlotOptionsWaterfallPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsWaterfallPointEvents] = js.undefined
+  val events: PlotOptionsWaterfallPointEvents = new PlotOptionsWaterfallPointEvents
 }

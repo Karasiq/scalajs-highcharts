@@ -32,7 +32,7 @@ class SeriesAreasplineData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesAreasplineDataEvents] = js.undefined
+  val events: SeriesAreasplineDataEvents = new SeriesAreasplineDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
@@ -41,7 +41,7 @@ class SeriesAreasplineData extends js.Object {
    */
   val id: UndefOr[String] = js.undefined
   
-  val marker: UndefOr[SeriesAreasplineDataMarker] = js.undefined
+  val marker: SeriesAreasplineDataMarker = new SeriesAreasplineDataMarker
   
   /**
    * <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>

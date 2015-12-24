@@ -13,5 +13,5 @@ class PlotOptionsFunnelPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsFunnelPointEvents] = js.undefined
+  val events: PlotOptionsFunnelPointEvents = new PlotOptionsFunnelPointEvents
 }

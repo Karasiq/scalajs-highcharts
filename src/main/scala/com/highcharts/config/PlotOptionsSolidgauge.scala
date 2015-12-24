@@ -38,7 +38,7 @@ class PlotOptionsSolidgauge extends js.Object {
    * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
    * @since 2.3.0
    */
-  val dataLabels: UndefOr[js.Object] = js.undefined
+  val dataLabels: js.Object = new js.Object
   
   /**
    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -46,7 +46,7 @@ class PlotOptionsSolidgauge extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsSolidgaugeEvents] = js.undefined
+  val events: PlotOptionsSolidgaugeEvents = new PlotOptionsSolidgaugeEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -71,7 +71,7 @@ class PlotOptionsSolidgauge extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsSolidgaugePoint] = js.undefined
+  val point: PlotOptionsSolidgaugePoint = new PlotOptionsSolidgaugePoint
   
   /**
    * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
@@ -96,7 +96,7 @@ class PlotOptionsSolidgauge extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -115,7 +115,7 @@ class PlotOptionsSolidgauge extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Set the initial visibility of the series.
@@ -141,5 +141,5 @@ class PlotOptionsSolidgauge extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsSolidgaugeZones]] = js.undefined
+  val zones: js.Array[PlotOptionsSolidgaugeZones] = new js.Array[PlotOptionsSolidgaugeZones]
 }

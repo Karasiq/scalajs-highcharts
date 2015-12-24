@@ -122,7 +122,10 @@ class ScalaClassWriter {
 
       case Some(default) if default != "undefined" && (default.nonEmpty || tpe == "String") ⇒
         val df = wrapString(default)
-        tpe → (if (df.nonEmpty) df else s"new $tpe()")
+        tpe → (if (df.nonEmpty) df else s"new $tpe")
+
+      case _ if cfg.isParent ⇒
+        tpe → s"new $tpe"
 
       case _ ⇒
         s"UndefOr[$tpe]" → "js.undefined"

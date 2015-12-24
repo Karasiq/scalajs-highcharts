@@ -13,5 +13,5 @@ class SeriesPieStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesPieStatesHover] = js.undefined
+  val hover: SeriesPieStatesHover = new SeriesPieStatesHover
 }

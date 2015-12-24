@@ -13,7 +13,7 @@ class Labels extends js.Object {
   /**
    * A HTML label that can be positioned anywhere in the chart area.
    */
-  val items: UndefOr[js.Array[js.Object]] = js.undefined
+  val items: js.Array[js.Object] = new js.Array[js.Object]
   
   /**
    * Shared CSS styles for all labels. Defaults to:

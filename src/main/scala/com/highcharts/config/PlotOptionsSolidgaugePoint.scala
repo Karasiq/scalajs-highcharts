@@ -13,5 +13,5 @@ class PlotOptionsSolidgaugePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsSolidgaugePointEvents] = js.undefined
+  val events: PlotOptionsSolidgaugePointEvents = new PlotOptionsSolidgaugePointEvents
 }

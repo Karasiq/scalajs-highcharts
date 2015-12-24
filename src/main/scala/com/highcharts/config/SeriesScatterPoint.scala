@@ -13,5 +13,5 @@ class SeriesScatterPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesScatterPointEvents] = js.undefined
+  val events: SeriesScatterPointEvents = new SeriesScatterPointEvents
 }

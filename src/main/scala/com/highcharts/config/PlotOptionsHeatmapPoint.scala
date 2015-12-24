@@ -13,5 +13,5 @@ class PlotOptionsHeatmapPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsHeatmapPointEvents] = js.undefined
+  val events: PlotOptionsHeatmapPointEvents = new PlotOptionsHeatmapPointEvents
 }

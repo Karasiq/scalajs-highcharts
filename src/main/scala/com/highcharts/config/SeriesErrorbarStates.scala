@@ -13,5 +13,5 @@ class SeriesErrorbarStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesErrorbarStatesHover] = js.undefined
+  val hover: SeriesErrorbarStatesHover = new SeriesErrorbarStatesHover
 }

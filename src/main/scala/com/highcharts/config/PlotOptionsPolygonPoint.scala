@@ -13,5 +13,5 @@ class PlotOptionsPolygonPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsPolygonPointEvents] = js.undefined
+  val events: PlotOptionsPolygonPointEvents = new PlotOptionsPolygonPointEvents
 }

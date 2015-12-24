@@ -13,5 +13,5 @@ class PlotOptionsBubbleStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsBubbleStatesHover] = js.undefined
+  val hover: PlotOptionsBubbleStatesHover = new PlotOptionsBubbleStatesHover
 }

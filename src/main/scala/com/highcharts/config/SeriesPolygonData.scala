@@ -32,7 +32,7 @@ class SeriesPolygonData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesPolygonDataEvents] = js.undefined
+  val events: SeriesPolygonDataEvents = new SeriesPolygonDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
@@ -41,7 +41,7 @@ class SeriesPolygonData extends js.Object {
    */
   val id: UndefOr[String] = js.undefined
   
-  val marker: UndefOr[SeriesPolygonDataMarker] = js.undefined
+  val marker: SeriesPolygonDataMarker = new SeriesPolygonDataMarker
   
   /**
    * <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>

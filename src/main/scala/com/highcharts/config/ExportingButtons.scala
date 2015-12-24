@@ -13,5 +13,5 @@ class ExportingButtons extends js.Object {
   /**
    * Options for the export button.
    */
-  val contextButton: UndefOr[ExportingButtonsContextButton] = js.undefined
+  val contextButton: ExportingButtonsContextButton = new ExportingButtonsContextButton
 }

@@ -13,5 +13,5 @@ class SeriesAreasplinePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesAreasplinePointEvents] = js.undefined
+  val events: SeriesAreasplinePointEvents = new SeriesAreasplinePointEvents
 }

@@ -13,5 +13,5 @@ class SeriesFunnelPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesFunnelPointEvents] = js.undefined
+  val events: SeriesFunnelPointEvents = new SeriesFunnelPointEvents
 }

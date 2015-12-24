@@ -156,7 +156,7 @@ class Legend extends js.Object {
   /**
    * Options for the paging or navigation appearing when the legend is overflown.
    */
-  val navigation: UndefOr[LegendNavigation] = js.undefined
+  val navigation: LegendNavigation = new LegendNavigation
   
   /**
    * The inner padding of the legend box.
@@ -223,7 +223,7 @@ class Legend extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/legend/title/" target="_blank">Legend title</a>
    * @since 3.0
    */
-  val title: UndefOr[LegendTitle] = js.undefined
+  val title: LegendTitle = new LegendTitle
   
   /**
    * <p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the legend item texts. Prior to 4.1.7, when using HTML, <a href="#legend.navigation">legend.navigation</a> was disabled.</p>

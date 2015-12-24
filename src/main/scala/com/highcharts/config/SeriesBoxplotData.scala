@@ -32,7 +32,7 @@ class SeriesBoxplotData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesBoxplotDataEvents] = js.undefined
+  val events: SeriesBoxplotDataEvents = new SeriesBoxplotDataEvents
   
   /**
    * The <code>high</code> value for each data point, signifying the highest value in the sample set. The top whisker is drawn here.

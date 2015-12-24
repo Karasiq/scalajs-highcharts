@@ -13,5 +13,5 @@ class SeriesPiePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesPiePointEvents] = js.undefined
+  val events: SeriesPiePointEvents = new SeriesPiePointEvents
 }

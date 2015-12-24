@@ -13,5 +13,5 @@ class SeriesColumnrangeStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesColumnrangeStatesHover] = js.undefined
+  val hover: SeriesColumnrangeStatesHover = new SeriesColumnrangeStatesHover
 }

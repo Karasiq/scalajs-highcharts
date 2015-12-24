@@ -54,7 +54,7 @@ class PlotOptionsFunnel extends js.Object {
    */
   val cursor: UndefOr[String] = js.undefined
   
-  val dataLabels: UndefOr[PlotOptionsFunnelDataLabels] = js.undefined
+  val dataLabels: PlotOptionsFunnelDataLabels = new PlotOptionsFunnelDataLabels
   
   /**
    * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
@@ -69,7 +69,7 @@ class PlotOptionsFunnel extends js.Object {
    */
   val enableMouseTracking: Boolean = true
   
-  val events: UndefOr[PlotOptionsFunnelEvents] = js.undefined
+  val events: PlotOptionsFunnelEvents = new PlotOptionsFunnelEvents
   
   /**
    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
@@ -119,7 +119,7 @@ class PlotOptionsFunnel extends js.Object {
   /**
    * Properties for each single point
    */
-  val point: UndefOr[PlotOptionsFunnelPoint] = js.undefined
+  val point: PlotOptionsFunnelPoint = new PlotOptionsFunnelPoint
   
   /**
    * A reversed funnel has the widest area down. A reversed funnel with no neck width and neck height is a pyramid.
@@ -155,7 +155,7 @@ class PlotOptionsFunnel extends js.Object {
   /**
    * A wrapper object for all the series options in specific states.
    */
-  val states: UndefOr[PlotOptionsSeriesStates] = js.undefined
+  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
   
   /**
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -171,7 +171,7 @@ class PlotOptionsFunnel extends js.Object {
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
    * @since 2.3
    */
-  val tooltip: UndefOr[js.Object] = js.undefined
+  val tooltip: js.Object = new js.Object
   
   /**
    * Set the initial visibility of the series.
@@ -197,5 +197,5 @@ class PlotOptionsFunnel extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
    * @since 4.1.0
    */
-  val zones: UndefOr[js.Array[PlotOptionsFunnelZones]] = js.undefined
+  val zones: js.Array[PlotOptionsFunnelZones] = new js.Array[PlotOptionsFunnelZones]
 }

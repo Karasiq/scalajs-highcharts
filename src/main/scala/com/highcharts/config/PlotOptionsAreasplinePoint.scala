@@ -13,5 +13,5 @@ class PlotOptionsAreasplinePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[PlotOptionsAreasplinePointEvents] = js.undefined
+  val events: PlotOptionsAreasplinePointEvents = new PlotOptionsAreasplinePointEvents
 }

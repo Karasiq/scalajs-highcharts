@@ -13,5 +13,5 @@ class SeriesPyramidPoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesPyramidPointEvents] = js.undefined
+  val events: SeriesPyramidPointEvents = new SeriesPyramidPointEvents
 }

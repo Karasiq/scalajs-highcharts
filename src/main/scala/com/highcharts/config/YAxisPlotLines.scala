@@ -39,7 +39,7 @@ class YAxisPlotLines extends js.Object {
   /**
    * Text labels for the plot bands
    */
-  val label: UndefOr[YAxisPlotLinesLabel] = js.undefined
+  val label: YAxisPlotLinesLabel = new YAxisPlotLinesLabel
   
   /**
    * The position of the line in axis units.

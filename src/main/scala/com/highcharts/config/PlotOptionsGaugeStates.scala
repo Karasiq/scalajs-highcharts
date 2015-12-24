@@ -13,5 +13,5 @@ class PlotOptionsGaugeStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsGaugeStatesHover] = js.undefined
+  val hover: PlotOptionsGaugeStatesHover = new PlotOptionsGaugeStatesHover
 }

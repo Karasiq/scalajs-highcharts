@@ -13,5 +13,5 @@ class PlotOptionsPyramidStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsPyramidStatesHover] = js.undefined
+  val hover: PlotOptionsPyramidStatesHover = new PlotOptionsPyramidStatesHover
 }

@@ -13,5 +13,5 @@ class SeriesHeatmapStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesHeatmapStatesHover] = js.undefined
+  val hover: SeriesHeatmapStatesHover = new SeriesHeatmapStatesHover
 }

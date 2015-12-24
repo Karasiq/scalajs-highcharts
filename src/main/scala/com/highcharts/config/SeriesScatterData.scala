@@ -32,7 +32,7 @@ class SeriesScatterData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesScatterDataEvents] = js.undefined
+  val events: SeriesScatterDataEvents = new SeriesScatterDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
@@ -41,7 +41,7 @@ class SeriesScatterData extends js.Object {
    */
   val id: UndefOr[String] = js.undefined
   
-  val marker: UndefOr[SeriesScatterDataMarker] = js.undefined
+  val marker: SeriesScatterDataMarker = new SeriesScatterDataMarker
   
   /**
    * <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>

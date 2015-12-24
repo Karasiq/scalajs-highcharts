@@ -32,7 +32,7 @@ class SeriesFunnelData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesFunnelDataEvents] = js.undefined
+  val events: SeriesFunnelDataEvents = new SeriesFunnelDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.

@@ -48,7 +48,7 @@ class PlotOptionsAreasplineMarker extends js.Object {
    */
   val radius: Double = 4
   
-  val states: UndefOr[PlotOptionsAreasplineMarkerStates] = js.undefined
+  val states: PlotOptionsAreasplineMarkerStates = new PlotOptionsAreasplineMarkerStates
   
   /**
    * <p>A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down".</p>

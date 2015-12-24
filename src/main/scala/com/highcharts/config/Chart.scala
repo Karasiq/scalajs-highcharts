@@ -79,7 +79,7 @@ class Chart extends js.Object {
   /**
    * Event listeners for the chart.
    */
-  val events: UndefOr[ChartEvents] = js.undefined
+  val events: ChartEvents = new ChartEvents
   
   /**
    * An explicit height for the chart. By default the height is calculated from the offset height of the containing element, or 400 pixels if the containing element's height is 0.
@@ -147,7 +147,7 @@ class Chart extends js.Object {
    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/3d/column/">Basic 3D columns</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/">basic 3D pie</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/3d/scatter/">basic 3D scatter chart</a>.
    * @since 4.0
    */
-  val options3d: UndefOr[ChartOptions3d] = js.undefined
+  val options3d: ChartOptions3d = new ChartOptions3d
   
   /**
    * Allows setting a key to switch between zooming and panning. 
@@ -227,7 +227,7 @@ class Chart extends js.Object {
   /**
    * The button that appears after a selection zoom, allowing the user to reset zoom.
    */
-  val resetZoomButton: UndefOr[ChartResetZoomButton] = js.undefined
+  val resetZoomButton: ChartResetZoomButton = new ChartResetZoomButton
   
   /**
    * The background color of the marker square when selecting (zooming in on) an area of the chart.

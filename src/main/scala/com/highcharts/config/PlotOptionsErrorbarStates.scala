@@ -13,5 +13,5 @@ class PlotOptionsErrorbarStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsErrorbarStatesHover] = js.undefined
+  val hover: PlotOptionsErrorbarStatesHover = new PlotOptionsErrorbarStatesHover
 }

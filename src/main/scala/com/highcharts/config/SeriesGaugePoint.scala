@@ -13,5 +13,5 @@ class SeriesGaugePoint extends js.Object {
   /**
    * Events for each single point
    */
-  val events: UndefOr[SeriesGaugePointEvents] = js.undefined
+  val events: SeriesGaugePointEvents = new SeriesGaugePointEvents
 }

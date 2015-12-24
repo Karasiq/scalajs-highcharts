@@ -10,11 +10,11 @@ import scalajs.js, js.UndefOr
 @js.annotation.ScalaJSDefined
 class SeriesAreaMarkerStates extends js.Object {
   
-  val hover: UndefOr[SeriesAreaMarkerStatesHover] = js.undefined
+  val hover: SeriesAreaMarkerStatesHover = new SeriesAreaMarkerStatesHover
   
   /**
    * The appearance of the point marker when selected. In order to allow a point to be 
    * 		selected, set the <code>series.allowPointSelect</code> option to true.
    */
-  val select: UndefOr[SeriesAreaMarkerStatesSelect] = js.undefined
+  val select: SeriesAreaMarkerStatesSelect = new SeriesAreaMarkerStatesSelect
 }

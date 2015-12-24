@@ -25,7 +25,7 @@ class SeriesGaugeData extends js.Object {
   /**
    * Individual point events
    */
-  val events: UndefOr[SeriesGaugeDataEvents] = js.undefined
+  val events: SeriesGaugeDataEvents = new SeriesGaugeDataEvents
   
   /**
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.

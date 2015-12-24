@@ -13,5 +13,5 @@ class PlotOptionsSplineStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[PlotOptionsSplineStatesHover] = js.undefined
+  val hover: PlotOptionsSplineStatesHover = new PlotOptionsSplineStatesHover
 }

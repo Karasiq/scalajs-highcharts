@@ -13,5 +13,5 @@ class SeriesBoxplotStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesBoxplotStatesHover] = js.undefined
+  val hover: SeriesBoxplotStatesHover = new SeriesBoxplotStatesHover
 }

@@ -13,5 +13,5 @@ class SeriesPolygonStates extends js.Object {
   /**
    * Options for the hovered series
    */
-  val hover: UndefOr[SeriesPolygonStatesHover] = js.undefined
+  val hover: SeriesPolygonStatesHover = new SeriesPolygonStatesHover
 }

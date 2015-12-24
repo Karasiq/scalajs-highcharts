@@ -10,11 +10,11 @@ import scalajs.js, js.UndefOr
 @js.annotation.ScalaJSDefined
 class PlotOptionsBubbleMarkerStates extends js.Object {
   
-  val hover: UndefOr[PlotOptionsBubbleMarkerStatesHover] = js.undefined
+  val hover: PlotOptionsBubbleMarkerStatesHover = new PlotOptionsBubbleMarkerStatesHover
   
   /**
    * The appearance of the point marker when selected. In order to allow a point to be 
    * 		selected, set the <code>series.allowPointSelect</code> option to true.
    */
-  val select: UndefOr[PlotOptionsBubbleMarkerStatesSelect] = js.undefined
+  val select: PlotOptionsBubbleMarkerStatesSelect = new PlotOptionsBubbleMarkerStatesSelect
 }
