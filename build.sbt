@@ -60,4 +60,4 @@ lazy val library = Project("scalajs-library", file("."))
   .settings(commonSettings, librarySettings)
   .enablePlugins(ScalaJSPlugin)
 
-lazy val libraryTest = Project("scalajs-library-test", file("test"))
+lazy val libraryTest = Project("scalajs-highcharts-test", file("test"))

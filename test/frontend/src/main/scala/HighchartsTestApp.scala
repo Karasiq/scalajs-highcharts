@@ -1,7 +1,5 @@
 import com.greencatsoft.angularjs.Angular
 
-import scala.concurrent.duration._
-import scala.collection.JavaConversions._
 import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
 

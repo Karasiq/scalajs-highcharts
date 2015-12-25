@@ -16,4 +16,4 @@ html(ng-app='scalaJsHighchartsTest', data-framework='angularjs')
         .container#main-container: .row: .col-md-12
             +tab-content-container('navbar')
                 +tab-content('bar')(active = true)
-                    include index/bar
+                    highchart#bar-chart(config='barChartConfig')
