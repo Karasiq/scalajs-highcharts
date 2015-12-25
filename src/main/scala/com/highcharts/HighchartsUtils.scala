@@ -74,9 +74,9 @@ object HighchartsUtils {
     obj.asInstanceOf[T]
   }
 
-  def mkSeries(obj: js.Object*): js.Array[js.Object] = {
+  def mkSeries[T <: js.Object](obj: T*): js.Array[T] = {
     import js.JSConverters._
-    obj.map(cleanObject).toJSArray
+    obj.map(cleanObject).toJSArray.asInstanceOf[js.Array[T]]
   }
 
   type Cfg[T <: js.Object] = UndefOr[CleanJsObject[T]]
