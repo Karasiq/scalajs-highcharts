@@ -46,9 +46,14 @@ lazy val generatorSettings = Seq(
 )
 
 lazy val librarySettings = Seq(
-  libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.8.1",
+  libraryDependencies ++= Seq(
+    "be.doeraene" %%% "scalajs-jquery" % "0.8.1",
+    "com.lihaoyi" %%% "utest" % "0.3.0" % "test"
+  ),
   name := "scalajs-highcharts",
-  generate <<= (generate in generator)
+  generate <<= (generate in generator),
+  jsDependencies += RuntimeDOM,
+  testFrameworks += new TestFramework("utest.runner.Framework")
 )
 
 lazy val generator = Project("generator", file("generator"))

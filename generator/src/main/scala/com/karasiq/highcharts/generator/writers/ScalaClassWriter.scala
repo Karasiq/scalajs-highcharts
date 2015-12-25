@@ -36,7 +36,7 @@ class ScalaClassWriter extends ClassWriter {
           writeDoc(cfg)
           val args = arguments.collect {
             case ScalaJsValue(_, argName, argType, argValue) ⇒
-              argValue.fold(s"$argName: UndefOr[$argType] = js.undefined")(v ⇒ s"$argName: $argType = $v")
+              s"$argName: $argType = ${argValue.getOrElse(s"js.undefined.asInstanceOf[$argType]")}"
           }
           writer(tab + s"def $scalaName(${args.mkString(", ")}): $scalaType = js.native")
 
@@ -45,7 +45,7 @@ class ScalaClassWriter extends ClassWriter {
           if (isTrait) {
             writer(tab + s"val $scalaName: $scalaType = js.native")
           } else {
-            writer(tab + s"val $scalaName: $scalaType = ${value.getOrElse("js.native")}")
+            writer(tab + s"val $scalaName: $scalaType = ${value.getOrElse(s"js.undefined.asInstanceOf[$scalaType]")}")
           }
 
         case c: ScalaJsClass ⇒

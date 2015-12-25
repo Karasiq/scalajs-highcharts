@@ -19,7 +19,7 @@ object Main extends App {
     ConfigurationObject.fromJson(page.asString)
   }
 
-  def writeFiles(pkg: String, configs: List[ConfigurationObject], scalaJsDefined: Boolean = true): Unit = {
+  def writeFiles(pkg: String, configs: List[ConfigurationObject], rootObject: Option[String] = None): Unit = {
     val header =
       s"""/**
          |  * Automatically generated file. Please do not edit.
@@ -28,14 +28,14 @@ object Main extends App {
          |  */
          |package $pkg
          |
-         |import scalajs.js, js.UndefOr
+         |import scalajs.js
          |
          |""".stripMargin
 
     val outputDir = Paths.get(System.getProperty("highcharts-generator.output", "src/main/scala"), pkg.split("\\."):_*)
     Files.createDirectories(outputDir)
 
-    val classes = new ScalaJsClassBuilder().parse(configs)
+    val classes = new ScalaJsClassBuilder().parse(configs, rootObject)
     val classWriter = new ScalaClassWriter
     classes.foreach { scalaJsClass ⇒
       val file = outputDir.resolve(scalaJsClass.scalaName + ".scala")
@@ -52,12 +52,12 @@ object Main extends App {
 
   def writeConfigs(): Unit = {
     val configs = httpGet("http://api.highcharts.com/highcharts/option/dump.json")
-    writeFiles(s"$defaultPackage.config", configs, scalaJsDefined = true)
+    writeFiles(s"$defaultPackage.config", configs, Some("HighchartsConfig"))
   }
 
   def writeApis(): Unit = {
     val configs = httpGet("http://api.highcharts.com/highcharts/object/dump.json")
-    writeFiles(s"$defaultPackage.api", configs, scalaJsDefined = false)
+    writeFiles(s"$defaultPackage.api", configs)
   }
 
   writeConfigs()

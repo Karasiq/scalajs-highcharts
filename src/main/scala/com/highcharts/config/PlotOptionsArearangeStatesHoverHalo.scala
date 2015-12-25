@@ -1,30 +1,33 @@
 /**
- * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.4 by Karasiq
- * @see [[http://api.highcharts.com/highcharts]]
- */
+  * Automatically generated file. Please do not edit.
+  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @see [[http://api.highcharts.com/highcharts]]
+  */
 package com.highcharts.config
 
-import scalajs.js, js.UndefOr
+import scalajs.js
 
+/**
+  * @note JavaScript name: <code>plotOptions-arearange-states-hover-halo</code>
+  */
 @js.annotation.ScalaJSDefined
 class PlotOptionsArearangeStatesHoverHalo extends js.Object {
-  
+
   /**
-   * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
-   * @since 4.0
-   */
-  val attributes: UndefOr[js.Object] = js.undefined
-  
+    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
+    * @since 4.0
+    */
+  val attributes: js.Object = js.undefined.asInstanceOf[js.Object]
+
   /**
-   * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
-   * @since 4.0
-   */
+    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
+    * @since 4.0
+    */
   val opacity: Double = 0.25
-  
+
   /**
-   * The pixel size of the halo. For point markers this is the radius of the halo. For pie slices it is the width of the halo outside the slice. For bubbles it defaults to 5 and is the width of the halo outside the bubble.
-   * @since 4.0
-   */
+    * The pixel size of the halo. For point markers this is the radius of the halo. For pie slices it is the width of the halo outside the slice. For bubbles it defaults to 5 and is the width of the halo outside the bubble.
+    * @since 4.0
+    */
   val size: Double = 10
 }

@@ -1,43 +1,46 @@
 /**
- * Automatically generated file. Please do not edit.
- * @author Highcharts Config Generator v1.0.4 by Karasiq
- * @see [[http://api.highcharts.com/highcharts]]
- */
+  * Automatically generated file. Please do not edit.
+  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @see [[http://api.highcharts.com/highcharts]]
+  */
 package com.highcharts.config
 
-import scalajs.js, js.UndefOr
+import scalajs.js
 
+/**
+  * @note JavaScript name: <code>series&lt;pyramid&gt;-states-hover</code>
+  */
 @js.annotation.ScalaJSDefined
 class SeriesPyramidStatesHover extends js.Object {
-  
+
   /**
-   * Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-   * @example Disable hover on <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/" target="_blank">line</a>,
+    * Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
+    * @example Disable hover on <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/" target="_blank">line</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/" target="_blank">column</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/" target="_blank">pie</a>
-   * @since 1.2
-   */
+    * @since 1.2
+    */
   val enabled: Boolean = true
-  
+
   /**
-   * Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.
-   * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
-   * @since 4.0
-   */
+    * Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
+    * @since 4.0
+    */
   val halo: js.Object = new js.Object
-  
+
   /**
-   * Pixel with of the graph line.
-   * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/" target="_blank">5px line on hover</a>
-   */
+    * Pixel with of the graph line.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/" target="_blank">5px line on hover</a>
+    */
   val lineWidth: Double = 2
-  
+
   /**
-   * The additional line width for the graph of a hovered series.
-   * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">5 pixels wider</a>
-   * @since 4.0.3
-   */
+    * The additional line width for the graph of a hovered series.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">5 pixels wider</a>
+    * @since 4.0.3
+    */
   val lineWidthPlus: Double = 1
-  
+
   val marker: SeriesPyramidStatesHoverMarker = new SeriesPyramidStatesHoverMarker
 }

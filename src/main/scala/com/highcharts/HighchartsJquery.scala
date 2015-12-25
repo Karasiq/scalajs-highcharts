@@ -2,7 +2,13 @@ package com.highcharts
 
 import org.scalajs.jquery.JQuery
 
+import scala.language.implicitConversions
 import scala.scalajs.js
+
+@js.native
+trait HighchartsJQuery extends js.Object {
+  def highcharts(config: js.Object): Unit = js.native
+}
 
 /**
   * Allows calling `$("#container").highcharts({...})` function from ScalaJS
@@ -14,13 +20,7 @@ import scala.scalajs.js
   * }}}
   */
 object HighchartsJQuery {
-  /**
-    * JQuery extension class
-    * @param jq JQuery object
-    */
-  implicit class HighchartsJqueryOps(val jq: JQuery) extends AnyVal {
-    def highcharts(config: js.Object): Unit = {
-      jq.asInstanceOf[js.Dynamic].highcharts(config)
-    }
+  implicit def highchartsJQuery(jq: JQuery): HighchartsJQuery = {
+    jq.asInstanceOf[HighchartsJQuery]
   }
 }
