@@ -3,7 +3,7 @@ package com.karasiq.highcharts.generator
 import java.io.{PrintWriter, FileWriter}
 import java.nio.file.{Files, Paths}
 
-import com.karasiq.highcharts.generator.writers.ScalaClassWriter
+import com.karasiq.highcharts.generator.writers.ScalaJsClassBuilder$
 
 import scala.util.control.Exception
 import scalaj.http.{Http, HttpOptions}
@@ -20,7 +20,7 @@ object Main extends App {
   }
 
   def writeFiles(pkg: String, configs: List[ConfigurationObject], scalaJsDefined: Boolean = true): Unit = {
-    val writer = new ScalaClassWriter
+    val writer = new ScalaJsClassBuilder
 
     val header =
       s"""/**

@@ -7,7 +7,7 @@ class ScalaDocWriter extends DocWriter {
     for (desc <- cfg.description if desc.nonEmpty) {
       writer("/**")
       desc.split("""(\r\n|\r|\n)""").foreach { descLine ⇒
-        writer(" * " + descLine)
+        writer("  * " + descLine)
       }
 
       val paramRegex = """(\w+): (\w+)<br>([^\|]+)""".r
@@ -17,18 +17,18 @@ class ScalaDocWriter extends DocWriter {
       }
 
       for ((name, description) <- params) {
-        writer(s" * @param $name $description")
+        writer(s"  * @param $name $description")
       }
 
       for (demo <- cfg.demo if demo.nonEmpty) {
-        writer(" * @example " + demo)
+        writer("  * @example " + demo)
       }
 
       for (since <- cfg.since if since.nonEmpty) {
-        writer(" * @since " + since)
+        writer("  * @since " + since)
       }
 
-      writer(" */")
+      writer("  */")
     }
   }
 }
