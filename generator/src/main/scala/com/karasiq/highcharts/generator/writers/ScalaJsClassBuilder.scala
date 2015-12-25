@@ -159,7 +159,7 @@ class ScalaJsClassBuilder {
       ScalaJsValue(cfg, scalaName, scalaType, None)
   }
 
-  def parse(configObjects: List[ConfigurationObject]): Seq[ScalaJsClass] = {
+  def parse(configObjects: Seq[ConfigurationObject]): Seq[ScalaJsClass] = {
     // Class -> definitions map
     val byClass = configObjects.groupBy(_.parent.getOrElse("RootObject"))
 

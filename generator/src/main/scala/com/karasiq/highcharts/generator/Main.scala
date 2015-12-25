@@ -3,7 +3,7 @@ package com.karasiq.highcharts.generator
 import java.io.{PrintWriter, FileWriter}
 import java.nio.file.{Files, Paths}
 
-import com.karasiq.highcharts.generator.writers.ScalaJsClassBuilder$
+import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder, ScalaJsClassBuilder$}
 
 import scala.util.control.Exception
 import scalaj.http.{Http, HttpOptions}
@@ -20,31 +20,33 @@ object Main extends App {
   }
 
   def writeFiles(pkg: String, configs: List[ConfigurationObject], scalaJsDefined: Boolean = true): Unit = {
-    val writer = new ScalaJsClassBuilder
-
     val header =
       s"""/**
-          | * Automatically generated file. Please do not edit.
-          | * @author Highcharts Config Generator v1.0.4 by Karasiq
-          | * @see [[http://api.highcharts.com/highcharts]]
-          | */
-          |package $pkg
-          |
-          |import scalajs.js, js.UndefOr
-          |
-          |""".stripMargin
+         |  * Automatically generated file. Please do not edit.
+         |  * @author Highcharts Config Generator v1.0.5 by Karasiq
+         |  * @see [[http://api.highcharts.com/highcharts]]
+         |  */
+         |package $pkg
+         |
+         |import scalajs.js, js.UndefOr
+         |
+         |""".stripMargin
 
     val outputDir = Paths.get(System.getProperty("highcharts-generator.output", "src/main/scala"), pkg.split("\\."):_*)
     Files.createDirectories(outputDir)
-    writer.write(configs, scalaJsDefined) {
-      case (className, source) ⇒
-        val file = outputDir.resolve(className + ".scala")
-        println(s"Writing $file...")
-        val writer = new PrintWriter(file.toFile, "UTF-8")
-        Exception.allCatch.andFinally(writer.close()) {
-          writer.print(header)
-          writer.print(source)
+
+    val classes = new ScalaJsClassBuilder().parse(configs)
+    val classWriter = new ScalaClassWriter
+    classes.foreach { scalaJsClass ⇒
+      val file = outputDir.resolve(scalaJsClass.scalaName + ".scala")
+      println(s"Writing $file...")
+      val writer = new PrintWriter(file.toFile, "UTF-8")
+      Exception.allCatch.andFinally(writer.close()) {
+        writer.print(header)
+        classWriter.writeClass(scalaJsClass) { line ⇒
+          writer.println(line)
         }
+      }
     }
   }
 

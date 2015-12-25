@@ -1,24 +1,20 @@
 package com.karasiq.highcharts.generator.writers
 
+import com.karasiq.highcharts.generator.ConfigurationObject
 import com.karasiq.highcharts.generator.ast.{ScalaJsClass, ScalaJsMethod, ScalaJsValue}
+import org.apache.commons.lang3.StringEscapeUtils
 
 class ScalaClassWriter extends ClassWriter {
   override def writeClass(scalaClass: ScalaJsClass)(writer: (String) ⇒ Unit): Unit = scalaClass match {
     case ScalaJsClass(jsName, className, definitions) ⇒
       writer(
         s"""/**
-           |  * @note JavaScript name: $jsName
+           |  * @note JavaScript name: <code>${StringEscapeUtils.escapeHtml4(jsName)}</code>
            |  */""".stripMargin
       )
 
       // Abstract native JS trait
-      val isTrait: Boolean = definitions.forall {
-        case ScalaJsMethod(_, _, _, _) ⇒
-          true
-
-        case ScalaJsValue(_, _, _, value) ⇒
-          value.isEmpty
-      }
+      val isTrait: Boolean = definitions.exists(_.isInstanceOf[ScalaJsMethod])
 
       if (isTrait) {
         writer("@js.native")
@@ -30,9 +26,14 @@ class ScalaClassWriter extends ClassWriter {
 
       val tab = "  " // Tabulation
       val docWriter = new ScalaDocWriter
+
+      def writeDoc(cfg: ConfigurationObject): Unit = {
+        writer("") // Empty line
+        docWriter.writeDocumentation(cfg)(str ⇒ writer(tab + str)) // ScalaDoc
+      }
       definitions.foreach {
         case ScalaJsMethod(cfg, scalaName, scalaType, arguments) ⇒
-          docWriter.writeDocumentation(cfg)(str ⇒ writer(tab + str))
+          writeDoc(cfg)
           val args = arguments.collect {
             case ScalaJsValue(_, argName, argType, argValue) ⇒
               argValue.fold(s"$argName: UndefOr[$argType] = js.undefined")(v ⇒ s"$argName: $argType = $v")
@@ -40,16 +41,15 @@ class ScalaClassWriter extends ClassWriter {
           writer(tab + s"def $scalaName(${args.mkString(", ")}): $scalaType = js.native")
 
         case ScalaJsValue(cfg, scalaName, scalaType, value) ⇒
-          docWriter.writeDocumentation(cfg)(str ⇒ writer(tab + str))
+          writeDoc(cfg)
           if (isTrait) {
             writer(tab + s"val $scalaName: $scalaType = js.native")
-          } else value match {
-            case Some(v) ⇒
-              writer(tab + s"val $scalaName: $scalaType = $v")
-
-            case None ⇒
-              writer(tab + s"val $scalaName: UndefOr[$scalaType] = js.undefined")
+          } else {
+            writer(tab + s"val $scalaName: $scalaType = ${value.getOrElse("js.native")}")
           }
+
+        case c: ScalaJsClass ⇒
+          writeClass(c)(str ⇒ writer(tab + str))
       }
 
       writer("}")
