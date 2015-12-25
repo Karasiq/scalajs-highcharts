@@ -1,3 +1,5 @@
+lazy val generate = inputKey[Unit]("Generates Scala.js sources")
+
 val commonSettings = Seq(
   organization := "com.github.karasiq",
   isSnapshot := false,
@@ -35,12 +37,18 @@ lazy val generatorSettings = Seq(
     "com.lihaoyi" %% "upickle" % "0.3.6",
     "org.apache.commons" % "commons-lang3" % "3.4"
   ),
-  mainClass in Compile := Some("com.karasiq.highcharts.generator.Main")
+  mainClass in Compile := Some("com.karasiq.highcharts.generator.Main"),
+  fullRunInputTask(generate, Compile, "com.karasiq.highcharts.generator.Main"),
+  javaOptions in generate ++= Seq(
+    "-Dhighcharts-generator.output=src/main/scala",
+    "-Dhighcharts-generator.package=com.highcharts"
+  )
 )
 
 lazy val librarySettings = Seq(
   libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.8.1",
-  name := "scalajs-highcharts"
+  name := "scalajs-highcharts",
+  generate <<= (generate in generator)
 )
 
 lazy val generator = Project("generator", file("generator"))
