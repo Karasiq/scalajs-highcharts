@@ -1,0 +1,19 @@
+include macro/bootstrap
+include macro/common
+
+doctype html
+html(ng-app='sjshctest', data-framework='angularjs')
+    head
+        base(href='/')
+        title Scala.JS highcharts test
+        include _static_includes
+
+    body: div(ng-controller='testCtrl')
+        +navbar('Test panel')
+            +navbar-left
+                +navbar-tab('bar', 'Bar chart')(active = true, icon = 'briefcase')
+
+        .container#main-container: .row: .col-md-12
+            +tab-content-container('navbar')
+                +tab-content('bar')(active = true)
+                    include index/bar

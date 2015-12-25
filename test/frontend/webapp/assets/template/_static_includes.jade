@@ -1,0 +1,30 @@
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+// Libraries
+// build:js js/lib.js
+script(src='bower/jquery/dist/jquery.js')
+script(src='bower/angular/angular.js')
+script(src='bower/bootstrap/dist/js/bootstrap.js')
+script(src='bower/angular-utils-pagination/dirPagination.js')
+script(src='bower/noty/js/noty/packaged/jquery.noty.packaged.js')
+script(src='bower/highcharts/highcharts.src.js')
+script(src='bower/highcharts/highcharts-more.src.js')
+script(src='bower/highcharts-ng/dist/highcharts-ng.js')
+script(src='bower/moment/min/moment-with-locales.js')
+script(src='bower/angular-moment/angular-moment.js')
+// endbuild
+
+// Main app files
+script(src='js/scalajs-highcharts-test-frontend-opt.js')
+script(src='js/scalajs-highcharts-test-frontend-launcher.js')
+
+// build:css css/style.css
+link(rel='stylesheet', href='bower/bootstrap/dist/css/bootstrap.css')
+link(rel='stylesheet', href='css/style.css')
+// endbuild
+
+script(type='text/javascript').
+    $(function () {
+        // Bootstrap fix
+        $('[data-toggle="tooltip"]').tooltip();
+    });

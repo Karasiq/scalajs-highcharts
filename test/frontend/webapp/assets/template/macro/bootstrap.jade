@@ -1,0 +1,244 @@
+include common
+
+mixin glyphicon(name)
+    span(class='glyphicon glyphicon-#{name}')&attributes(attributes || {})
+
+mixin glyphicon-href(name, url)
+    a(href=url || '', class='glyphicon-href')&attributes(attributes || {})
+        +glyphicon(name)
+        block
+
+-var _formInputId = 0;
+-var _panelId = 0;
+-var _buttonId = 0;
+-var _tableId = 0;
+
+mixin button(id, caption, style)
+    if id
+        -id_ = id
+    else
+        -id_ = 'button-' + _buttonId
+        -_buttonId = _buttonId + 1
+
+    -style_ = style || 'default'
+    -class_ = attributes.class || ''
+
+    button(id=id_, type='button', class='btn btn-#{style_} #{class_}')&attributes(attributes.attributes || {})= caption
+
+mixin panel(id)
+    // Bootstrap panel
+    -style_ = attributes.style || 'default'
+    if id
+        -id_ = id
+    else
+        -id_ = 'panel-' + _panelId
+        -_panelId = _panelId + 1
+
+    div(id=id_, class='panel panel-#{style_}')&attributes(attributes.attributes || {})
+        if attributes.header
+            if attributes.collapse
+                -attrs_={'data-toggle':'collapse', 'data-target': '#' + id_ + '-body'}
+                -body_class_ = 'collapse in'
+            .panel-heading&attributes(attrs_ || {}): h3.panel-title
+                if attributes.icon
+                    +glyphicon(attributes.icon)
+                    +nbsp
+                    +nbsp
+                =attributes.header
+        .panel-body(id='#{id_}-body', class=body_class_ || '')
+            block
+        if attributes.footer
+            .panel-footer: h3.panel-title
+                if attributes.icon
+                    +glyphicon(attributes.icon)
+                    +nbsp
+                    +nbsp
+                =attributes.footer
+
+mixin table(id, ...columns)
+    // Bootstrap table
+    -class_ = attributes.class || ''
+    if id
+        -id_ = id
+    else
+        -id_ = 'table-' + _tableId
+        -_tableId = _tableId + 1
+
+    .table-responsive: table(id=id, class='table #{class_}')&attributes(attributes.attributes || {})
+        if attributes.caption
+            caption= attributes.caption
+        thead
+            tr
+                each column in columns
+                    th= column
+        tbody(id='#{id}-tbody')
+            block
+
+mixin form(id)
+    // Bootstrap form
+    form(id=id, role='form', class=attributes.class)&attributes(attributes.attributes || {})
+        block
+
+mixin form-input(id, name, type)
+    if id
+        -id_ = id
+    else
+        -id_ = 'form-' + _formInputId
+        -_formInputId = _formInputId + 1
+
+    if attributes.state
+        -class_ = 'has-#{attributes.state}'
+    else
+        -class_ = ''
+
+    .form-group(class=class_ + (attributes.group_class || ''))
+        if attributes.label
+            label(for=id_)= attributes.label
+        input(type=type || 'text', name=name, class='form-control ' + (attributes.class || ''), id=id_, placeholder=attributes.placeholder)&attributes(attributes.attributes || {})
+        if attributes.help-block
+            p.help-block= attributes.help-block
+
+mixin form-radio(id, name, label)
+    -class_ = 'radio ' + (attributes.class || '')
+    if attributes.disabled
+        -class_ = class_ + ' disabled'
+        -attributes.attributes.disabled = true
+
+    div(class=class_)
+        label
+            input(type='radio', name=name, id=id, title=attributes.value || '', value=attributes.title || '')&attributes(attributes.attributes || {})
+            +nbsp
+            =label
+
+mixin form-checkbox(id, name, label)
+    -class_ = 'checkbox ' + (attributes.class || '')
+    if attributes.disabled
+        -class_ = class_ + ' disabled'
+        -attributes.attributes.disabled = true
+
+    div(class=class_)
+        label
+            input(type='checkbox', name=name, id=id, value=attributes.value || '', title=attributes.title || '',)&attributes(attributes.attributes || {})
+            +nbsp
+            =label
+
+mixin form-textarea(id, name, rows)
+    textarea.form-control(rows=rows, name=name)&attributes(attributes || {})
+
+mixin form-select(id, name, ...items)
+    select.form-control(id=id, name=name)&attributes(attributes || {})
+        each item in items
+            option(value=item.value)= item.caption
+
+mixin form-submit-button(caption, style)
+    -style_ = style || 'default'
+    -class_ = attributes.class || ''
+    button(id=attributes.id, type='submit', class='btn btn-#{style_} #{class_}')= caption
+
+mixin infodlg(id, title)
+    // Boostrap modal information window
+    -title_ = title || 'Information'
+    div(id=id, class='modal fade'): .modal-dialog: .modal-content
+        .modal-header
+            |<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            h4.modal-title= title
+        .modal-body
+            block
+        .modal-footer
+            |<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+mixin dialog(id, title)
+    // Bootstrap modal dialog window
+    -title_ = title || 'Confirmation'
+    div(id=id, class='modal fade'): .modal-dialog: .modal-content
+        .modal-header
+            |<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            h4.modal-title= title
+        .modal-body
+            block
+        .modal-footer
+            |<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            button.btn.btn-primary(id=id+'-ok-button', data-dismiss='modal')&attributes(attributes.okbutton) Submit
+
+mixin tabs(id)
+    // Bootstrap tab list container
+    ul.nav.nav-tabs(id = id + '-tablist', role='tablist')
+        block
+
+mixin tab(id, title)
+    if attributes.active
+        -li_class = 'active'
+    else
+        -li_class = ''
+
+    li(class = li_class, role='presentation')&attributes(attributes.attributes || {})
+        a(href='#' + id + '-tab', role='tab', data-toggle='tab')= title
+
+mixin tab-content-container(id)
+    // Bootstrap tab content container
+    .tab-content(id = id + '-tabcontent')&attributes(attributes || {})
+        block
+
+mixin tab-content(id)
+    if attributes.active
+        -fade_class = 'active fade in'
+    else
+        -fade_class = 'fade'
+
+    div(class = 'tab-pane ' + fade_class, id = id + '-tab', role = 'tabpanel')&attributes(attributes.attributes || {})
+        block
+
+
+mixin navbar(title)
+    // Bootstrap navigation bar
+    nav.navbar.navbar-default.navbar-fixed-top: .container
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='#')= title
+
+        #navbar.navbar-collapse.collapse
+            block
+
+mixin navbar-left
+    // Left part
+    ul.nav.navbar-nav: block
+
+mixin navbar-right
+    // Right part
+    ul.nav.navbar-nav.navbar-right: block
+
+mixin navbar-tab(id, title)
+    if attributes.active
+        -li_class = 'active'
+    else
+        -li_class = ''
+
+    li(class = li_class)
+        if attributes.icon
+            a(href='#' + id + '-tab', role='tab', data-toggle='tab')&attributes(attributes.attributes || {})
+                +glyphicon(attributes.icon)
+                +nbsp
+                =title
+        else
+            a(href='#' + id + '-tab', role='tab', data-toggle='tab')&attributes(attributes.attributes || {})= title
+
+mixin navbar-link(href, title)
+    if attributes.active
+        -li_class = 'active'
+    else
+        -li_class = ''
+
+    li(class = li_class)
+        if attributes.icon
+            a(href=href)&attributes(attributes.attributes || {})
+                +glyphicon(attributes.icon)
+                +nbsp
+                =title
+        else
+            a(href=href)&attributes(attributes.attributes || {})= title
+
+
