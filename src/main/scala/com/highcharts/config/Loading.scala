@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>loading</code>
@@ -18,21 +20,21 @@ class Loading extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
     * @since 1.2.0
     */
-  val hideDuration: Double = 100
+  val hideDuration: js.UndefOr[Double] = js.undefined
 
   /**
     * CSS styles for the loading label <code>span</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/loading/labelstyle/" target="_blank">Vertically centered</a>
     * @since 1.2.0
     */
-  val labelStyle: js.Object = js.eval("{ \"fontWeight\": \"bold\", \"position\": \"relative\", \"top\": \"45%\" }").asInstanceOf[js.Object]
+  val labelStyle: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The duration in milliseconds of the fade in effect.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
     * @since 1.2.0
     */
-  val showDuration: Double = 100
+  val showDuration: js.UndefOr[Double] = js.undefined
 
   /**
     * CSS styles for the loading screen that covers the plot area. Defaults to:
@@ -45,5 +47,5 @@ class Loading extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/loading/style/" target="_blank">Gray plot area, white text</a>
     * @since 1.2.0
     */
-  val style: js.Object = js.undefined.asInstanceOf[js.Object]
+  val style: js.UndefOr[js.Object] = js.undefined
 }

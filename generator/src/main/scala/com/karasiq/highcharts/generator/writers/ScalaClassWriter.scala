@@ -35,8 +35,14 @@ class ScalaClassWriter extends ClassWriter {
         case ScalaJsMethod(cfg, scalaName, scalaType, arguments) ⇒
           writeDoc(cfg)
           val args = arguments.collect {
-            case ScalaJsValue(_, argName, argType, argValue) ⇒
-              s"$argName: $argType = ${argValue.getOrElse(s"js.undefined.asInstanceOf[$argType]")}"
+            case ScalaJsValue(_, argName, argType, Some(argValue)) ⇒
+              s"$argName: $argType = $argValue"
+
+            case ScalaJsValue(_, argName, argType, None) ⇒
+              if (argType == "js.Any")
+                s"$argName: $argType = js.undefined"
+              else
+                s"$argName: js.UndefOr[$argType] = js.undefined"
           }
           writer(tab + s"def $scalaName(${args.mkString(", ")}): $scalaType = js.native")
 
@@ -44,8 +50,15 @@ class ScalaClassWriter extends ClassWriter {
           writeDoc(cfg)
           if (isTrait) {
             writer(tab + s"val $scalaName: $scalaType = js.native")
-          } else {
-            writer(tab + s"val $scalaName: $scalaType = ${value.getOrElse(s"js.undefined.asInstanceOf[$scalaType]")}")
+          } else value match {
+            case Some(v) ⇒
+              writer(tab + s"val $scalaName: $scalaType = $v")
+
+            case None if scalaType == "js.Any" ⇒
+              writer(tab + s"val $scalaName: $scalaType = js.undefined")
+
+            case None ⇒
+              writer(tab + s"val $scalaName: js.UndefOr[$scalaType] = js.undefined")
           }
 
         case c: ScalaJsClass ⇒

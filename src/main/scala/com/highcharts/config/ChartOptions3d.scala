@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>chart-options3d</code>
@@ -18,38 +20,38 @@ class ChartOptions3d extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-column-interactive/">Dynamic Angles</a>
     * @since 4.0
     */
-  val alpha: Double = 0
+  val alpha: js.UndefOr[Double] = js.undefined
 
   /**
     * One of the two rotation angles for the chart.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-column-interactive/">Dynamic Angles</a>
     * @since 4.0
     */
-  val beta: Double = 0
+  val beta: js.UndefOr[Double] = js.undefined
 
   /**
     * The total depth of the chart.
     * @since 4.0
     */
-  val depth: Double = 100
+  val depth: js.UndefOr[Double] = js.undefined
 
   /**
     * Wether to render the chart using the 3D functionality.
     * @since 4.0
     */
-  val enabled: Boolean = false
+  val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Provides the option to draw a frame around the charts by defining a bottom, front and back panel. 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/3d/column-frame/">Framed column chart</a>
     * @since 4.0
     */
-  val frame: ChartOptions3dFrame = new ChartOptions3dFrame
+  val frame: js.UndefOr[CleanJsObject[ChartOptions3dFrame]] = js.undefined
 
   /**
     * Defines the distance the viewer is standing in front of the chart, this setting is important to calculate the perspective effect in column and scatter charts.
     * It is not used for 3D pie charts.
     * @since 4.0
     */
-  val viewDistance: Double = 100
+  val viewDistance: js.UndefOr[Double] = js.undefined
 }

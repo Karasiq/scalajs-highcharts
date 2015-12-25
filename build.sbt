@@ -1,9 +1,11 @@
 lazy val generate = inputKey[Unit]("Generates Scala.js sources")
 
+lazy val runTestServer = inputKey[Unit]("Starts test server on 127.0.0.1:9000")
+
 val commonSettings = Seq(
   organization := "com.github.karasiq",
-  isSnapshot := false,
-  version := "1.0.5",
+  isSnapshot := true,
+  version := "1.0.6-SNAPSHOT",
   scalaVersion := "2.11.7",
   publishMavenStyle := true,
   publishTo := {
@@ -50,7 +52,8 @@ lazy val librarySettings = Seq(
     "be.doeraene" %%% "scalajs-jquery" % "0.8.1"
   ),
   name := "scalajs-highcharts",
-  generate <<= (generate in generator)
+  generate <<= (generate in generator),
+  runTestServer <<= (run in Compile in libraryTest)
 )
 
 lazy val generator = Project("generator", file("generator"))

@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>legend-title</code>
@@ -17,11 +19,11 @@ class LegendTitle extends js.Object {
     * Generic CSS styles for the legend title.
     * @since 3.0
     */
-  val style: js.Object = js.eval("{\"fontWeight\":\"bold\"}").asInstanceOf[js.Object]
+  val style: js.UndefOr[js.Object] = js.undefined
 
   /**
     * A text or HTML string for the title. 
     * @since 3.0
     */
-  val text: String = null.asInstanceOf[String]
+  val text: js.UndefOr[String] = js.undefined
 }

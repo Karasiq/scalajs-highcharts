@@ -65,20 +65,14 @@ class ScalaJsClassBuilder {
       case "Array" ⇒
         s"js.Array[${selfClass.getOrElse("js.Any")}]"
 
-      case "" if selfClass.nonEmpty ⇒
-        selfClass.get
+      case "" if selfClass.exists(_.nonEmpty) ⇒
+        s"CleanJsObject[${selfClass.get}]"
 
-      case t if classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
-        ScalaJsClassBuilder.classNameFor(t)
+      case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
+        s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
     }
 
-    tpe.orElse(Some("")).collect(stdTypes.orElse {
-      case "" if selfClass.exists(_.nonEmpty) ⇒
-        selfClass.get
-
-      case t if classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
-        ScalaJsClassBuilder.classNameFor(t)
-    })
+    tpe.orElse(Some("")).collect(stdTypes)
   }
 
   private def cfgScalaType(classes: Set[String], cfg: ConfigurationObject): Option[String] = {
@@ -110,7 +104,7 @@ class ScalaJsClassBuilder {
       }
     }
 
-    cfg.defaults match {
+    /* cfg.defaults match {
       case _ if isMethod ⇒
         // Method
         scalaType → None
@@ -120,23 +114,20 @@ class ScalaJsClassBuilder {
         scalaType → Some(s"js.Array(${array.drop(1).dropRight(1)})")
 
       case Some(obj) if obj.startsWith("{") && obj.endsWith("}") && scalaType == "js.Object" ⇒
-        scalaType → Some(s"js.eval(${ScalaJsClassBuilder.escapeString(obj)}).asInstanceOf[$scalaType]")
+        // Parse object
+        scalaType → Some(s"js.JSON.parse(${ScalaJsClassBuilder.escapeString(obj)}).asInstanceOf[$scalaType]")
 
-      case Some(default) if default != "undefined" && (default.nonEmpty || scalaType == "String") ⇒
-        val df = wrapString(default)
-        scalaType → Some(if (df.nonEmpty) df else s"new $scalaType")
+      case Some("") if scalaType == "String" ⇒
+        // Empty string
+        scalaType → Some("\"\"")
 
-      case _ if cfg.isParent && scalaType == "js.Any" ⇒
-        // Series
-        scalaType → Some("js.Array()")
-
-      case _ if cfg.isParent ⇒
-        // Sub-container
-        scalaType → Some(s"new $scalaType")
+      case Some(default) if default != "undefined" && default.nonEmpty ⇒
+        scalaType → Some(wrapString(default))
 
       case _ ⇒
         scalaType → None
-    }
+    } */
+    scalaType → None // TODO: fix default values
   }
 
   private def methodArguments(classes: Set[String], cfg: ConfigurationObject): Seq[ScalaJsValue] = {

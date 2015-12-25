@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>plotOptions-area-marker-states</code>
@@ -13,11 +15,11 @@ import scalajs.js
 @js.annotation.ScalaJSDefined
 class PlotOptionsAreaMarkerStates extends js.Object {
 
-  val hover: PlotOptionsAreaMarkerStatesHover = new PlotOptionsAreaMarkerStatesHover
+  val hover: js.UndefOr[CleanJsObject[PlotOptionsAreaMarkerStatesHover]] = js.undefined
 
   /**
     * The appearance of the point marker when selected. In order to allow a point to be 
     * 		selected, set the <code>series.allowPointSelect</code> option to true.
     */
-  val select: PlotOptionsAreaMarkerStatesSelect = new PlotOptionsAreaMarkerStatesSelect
+  val select: js.UndefOr[CleanJsObject[PlotOptionsAreaMarkerStatesSelect]] = js.undefined
 }

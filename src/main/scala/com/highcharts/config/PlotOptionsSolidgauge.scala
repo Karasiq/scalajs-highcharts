@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>plotOptions-solidgauge</code>
@@ -27,7 +29,7 @@ class PlotOptionsSolidgauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-slower/" target="_blank">slower animation</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-easing/" target="_blank">easing "easeOutBounce" through jQuery UI</a>.
     */
-  val animation: Boolean = true
+  val animation: js.UndefOr[Boolean] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -35,71 +37,71 @@ class PlotOptionsSolidgauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-column/" target="_blank">on columns</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/" target="_blank">on scatter markers</a>
     */
-  val cursor: String = js.undefined.asInstanceOf[String]
+  val cursor: js.UndefOr[String] = js.undefined
 
   /**
     * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
     * @since 2.3.0
     */
-  val dataLabels: js.Object = new js.Object
+  val dataLabels: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
     */
-  val enableMouseTracking: Boolean = true
+  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
 
-  val events: PlotOptionsSolidgaugeEvents = new PlotOptionsSolidgaugeEvents
+  val events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugeEvents]] = js.undefined
 
   /**
     * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
     * @since 4.1.6
     */
-  val getExtremesFromAll: Boolean = false
+  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-keys/" target="_blank">An extended data array with keys</a>
     * @since 4.1.6
     */
-  val keys: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val keys: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-overshoot/" target="_blank">Allow 5 degrees overshoot</a>
     * @since 3.0.10
     */
-  val overshoot: Double = 0
+  val overshoot: js.UndefOr[Double] = js.undefined
 
   /**
     * Properties for each single point
     */
-  val point: PlotOptionsSolidgaugePoint = new PlotOptionsSolidgaugePoint
+  val point: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePoint]] = js.undefined
 
   /**
     * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-selected/" target="_blank">One out of two series selected</a>
     * @since 1.2.0
     */
-  val selected: Boolean = false
+  val selected: js.UndefOr[Boolean] = js.undefined
 
   /**
     * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/" target="_blank">Show select box</a>
     * @since 1.2.0
     */
-  val showCheckbox: Boolean = false
+  val showCheckbox: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Defaults to false for gauge series.
     * @since 2.3.0
     */
-  val showInLegend: Boolean = js.undefined.asInstanceOf[Boolean]
+  val showInLegend: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A wrapper object for all the series options in specific states.
     */
-  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
+  val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined
 
   /**
     * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -112,37 +114,37 @@ class PlotOptionsSolidgauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/" target="_blank">false</a>
     * @since 2.0
     */
-  val stickyTracking: Boolean = true
+  val stickyTracking: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.Object = new js.Object
+  val tooltip: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Set the initial visibility of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-visible/" target="_blank">Two series, one hidden and one visible</a>
     */
-  val visible: Boolean = true
+  val visible: js.UndefOr[Boolean] = js.undefined
 
   /**
     * When this option is <code>true</code>, the dial will wrap around the axes. For instance, in a full-range gauge going from 0 to 360, a value of 400 will point to 40. When <code>wrap</code> is <code>false</code>, the dial stops at 360.
     * @since 3.0
     */
-  val wrap: Boolean = true
+  val wrap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Defines the Axis on which the zones are applied.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/" target="_blank">Zones on the X-Axis</a>
     * @since 4.1.0
     */
-  val zoneAxis: String = "y"
+  val zoneAxis: js.UndefOr[String] = js.undefined
 
   /**
     * An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.Array[PlotOptionsSolidgaugeZones] = new js.Array[PlotOptionsSolidgaugeZones]
+  val zones: js.UndefOr[js.Array[PlotOptionsSolidgaugeZones]] = js.undefined
 }

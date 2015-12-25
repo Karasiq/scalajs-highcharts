@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>series&lt;pie&gt;</code>
@@ -20,7 +22,7 @@ class SeriesPie extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/" target="_blank">pie</a>
     * @since 1.2.0
     */
-  val allowPointSelect: Boolean = false
+  val allowPointSelect: js.UndefOr[Boolean] = js.undefined
 
   /**
     * <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods.		The following properties are supported:</p>
@@ -36,13 +38,13 @@ class SeriesPie extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-slower/" target="_blank">slower animation</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-easing/" target="_blank">easing "easeOutBounce" through jQuery UI</a>.
     */
-  val animation: Boolean = true
+  val animation: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The color of the border surrounding each slice. When <code>null</code>, the border takes the same color as the slice fill. This can be used together with a <code>borderWidth</code> to fill drawing gaps created by antialiazing artefacts in borderless pies.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/" target="_blank">Black border</a>
     */
-  val borderColor: String = "#FFFFFF"
+  val borderColor: js.UndefOr[String] = js.undefined
 
   /**
     * <p>The width of the border surrounding each slice.</p>
@@ -50,21 +52,21 @@ class SeriesPie extends js.Object {
     * <p>When setting the border width to 0, there may be small gaps between the slices due to SVG antialiasing artefacts. To work around this, keep the border width at 0.5 or 1, but set the <code>borderColor</code> to <code>null</code> instead.</p>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-borderwidth/" target="_blank">3px border</a>
     */
-  val borderWidth: Double = 1
+  val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
     * The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to <code>["50%", "50%"]</code>.
     * 		 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-center/" target="_blank">Centered at 100, 100</a>
     */
-  val center: js.Any = js.Array(null, null)
+  val center: js.Any = js.undefined
 
   /**
     * A series specific or series type specific color set to use instead of the global <a href="#colors">colors</a>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-monochrome/" target="_blank">Set default colors for all pies</a>
     * @since 3.0
     */
-  val colors: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val colors: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -72,7 +74,7 @@ class SeriesPie extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-column/" target="_blank">on columns</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/" target="_blank">on scatter markers</a>
     */
-  val cursor: String = js.undefined.asInstanceOf[String]
+  val cursor: js.UndefOr[String] = js.undefined
 
   /**
     * An array of data points for the series. For the <code>pie</code> series type, points can be given in the following ways:
@@ -103,44 +105,44 @@ class SeriesPie extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
     */
-  val data: js.Any = js.Array()
+  val data: js.Any = js.undefined
 
-  val dataLabels: SeriesPieDataLabels = new SeriesPieDataLabels
+  val dataLabels: js.UndefOr[CleanJsObject[SeriesPieDataLabels]] = js.undefined
 
   /**
     * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/">Basic 3D pie chart</a>
     * @since 4.0
     */
-  val depth: Double = 0
+  val depth: js.UndefOr[Double] = js.undefined
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
     */
-  val enableMouseTracking: Boolean = true
+  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to <code>startAngle</code> plus 360.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-semi-circle/" target="_blank">Semi-circle donut</a>
     * @since 1.3.6
     */
-  val endAngle: Double = null.asInstanceOf[Double]
+  val endAngle: js.UndefOr[Double] = js.undefined
 
-  val events: SeriesPieEvents = new SeriesPieEvents
+  val events: js.UndefOr[CleanJsObject[SeriesPieEvents]] = js.undefined
 
   /**
     * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
     * @since 4.1.6
     */
-  val getExtremesFromAll: Boolean = false
+  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
 
   /**
     * An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
     * @since 1.2.0
     */
-  val id: String = ""
+  val id: js.UndefOr[String] = js.undefined
 
   /**
     * <p>Equivalent to <a href="#chart.ignoreHiddenSeries">chart.ignoreHiddenSeries</a>, this option tells whether the series shall be redrawn as if the hidden point were <code>null</code>.</p>
@@ -148,13 +150,13 @@ class SeriesPie extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-ignorehiddenpoint/" target="_blank">True, the hiddden point is ignored</a>
     * @since 2.3.0
     */
-  val ignoreHiddenPoint: Boolean = true
+  val ignoreHiddenPoint: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
     * @since 2.3.0
     */
-  val index: Double = js.undefined.asInstanceOf[Double]
+  val index: js.UndefOr[Double] = js.undefined
 
   /**
     * <p>The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. Can be a percentage or pixel value. Percentages are relative to the pie size. Pixel values are given as integers.</p>
@@ -165,86 +167,86 @@ class SeriesPie extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie-donut/" target="_blank">3D donut</a>.
     * @since 2.0
     */
-  val innerSize: js.Any = "0"
+  val innerSize: js.Any = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-keys/" target="_blank">An extended data array with keys</a>
     * @since 4.1.6
     */
-  val keys: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val keys: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * The sequential index of the series in the legend.  <div class="demo">Try it:  	<a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/" target="_blank">Legend in opposite order</a> </div>.
     */
-  val legendIndex: Double = js.undefined.asInstanceOf[Double]
+  val legendIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/arearange-line/" target="_blank">Linked series</a>
     * @since 3.0
     */
-  val linkedTo: String = ""
+  val linkedTo: js.UndefOr[String] = js.undefined
 
   /**
     * The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
     * @since 3.0
     */
-  val minSize: Double = 80
+  val minSize: js.UndefOr[Double] = js.undefined
 
   /**
     * The name of the series as shown in the legend, tooltip etc.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a>
     */
-  val name: String = js.undefined.asInstanceOf[String]
+  val name: js.UndefOr[String] = js.undefined
 
   /**
     * Properties for each single point
     */
-  val point: SeriesPiePoint = new SeriesPiePoint
+  val point: js.UndefOr[CleanJsObject[SeriesPiePoint]] = js.undefined
 
   /**
     * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-selected/" target="_blank">One out of two series selected</a>
     * @since 1.2.0
     */
-  val selected: Boolean = false
+  val selected: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = false
+  val shadow: js.Any = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-showinlegend/" target="_blank">One series in the legend, one hidden</a>
     */
-  val showInLegend: Boolean = false
+  val showInLegend: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example <code>"75%"</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-size/" target="_blank">Smaller pie</a>
     */
-  val size: js.Any = " "
+  val size: js.Any = js.undefined
 
   /**
     * If a point is sliced, moved out from the center, how many pixels should  it be moved?.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/" target="_blank">20px offset</a>
     */
-  val slicedOffset: Double = 10
+  val slicedOffset: js.UndefOr[Double] = js.undefined
 
   /**
     * The start angle of the pie slices in degrees where 0 is top and 90 right. 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-startangle-90/" target="_blank">Start from right</a>
     * @since 2.3.4
     */
-  val startAngle: Double = 0
+  val startAngle: js.UndefOr[Double] = js.undefined
 
   /**
     * A wrapper object for all the series options in specific states.
     */
-  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
+  val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined
 
   /**
     * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -254,13 +256,13 @@ class SeriesPie extends js.Object {
     *  This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the 
     *  tooltip will be hidden when moving the mouse between series.
     */
-  val stickyTracking: Boolean = false
+  val stickyTracking: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.Object = new js.Object
+  val tooltip: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -268,32 +270,32 @@ class SeriesPie extends js.Object {
     *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>
     */
-  val `type`: String = js.undefined.asInstanceOf[String]
+  val `type`: js.UndefOr[String] = js.undefined
 
   /**
     * Set the initial visibility of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-visible/" target="_blank">Two series, one hidden and one visible</a>
     */
-  val visible: Boolean = true
+  val visible: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Define the visual z index of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.
     */
-  val zIndex: Double = js.undefined.asInstanceOf[Double]
+  val zIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * Defines the Axis on which the zones are applied.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/" target="_blank">Zones on the X-Axis</a>
     * @since 4.1.0
     */
-  val zoneAxis: String = "y"
+  val zoneAxis: js.UndefOr[String] = js.undefined
 
   /**
     * An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.Array[SeriesPieZones] = new js.Array[SeriesPieZones]
+  val zones: js.UndefOr[js.Array[SeriesPieZones]] = js.undefined
 }

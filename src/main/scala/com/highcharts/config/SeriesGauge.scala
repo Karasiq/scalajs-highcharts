@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>series&lt;gauge&gt;</code>
@@ -27,7 +29,7 @@ class SeriesGauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-slower/" target="_blank">slower animation</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-animation-easing/" target="_blank">easing "easeOutBounce" through jQuery UI</a>.
     */
-  val animation: Boolean = true
+  val animation: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
@@ -35,7 +37,7 @@ class SeriesGauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-color-specific/" target="_blank">one specific series</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-color-area/" target="_blank">area color</a>
     */
-  val color: String = js.undefined.asInstanceOf[String]
+  val color: js.UndefOr[String] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -43,7 +45,7 @@ class SeriesGauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-column/" target="_blank">on columns</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/" target="_blank">on scatter markers</a>
     */
-  val cursor: String = js.undefined.asInstanceOf[String]
+  val cursor: js.UndefOr[String] = js.undefined
 
   /**
     * An array of data points for the series. For the <code>gauge</code> series type, points can be given in the following ways:
@@ -74,121 +76,121 @@ class SeriesGauge extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
     */
-  val data: js.Any = js.Array()
+  val data: js.Any = js.undefined
 
   /**
     * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
     * @since 2.3.0
     */
-  val dataLabels: js.Object = new js.Object
+  val dataLabels: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Options for the dial or arrow pointer of the gauge.
     * @since 2.3.0
     */
-  val dial: js.Object = new js.Object
+  val dial: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
     */
-  val enableMouseTracking: Boolean = true
+  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
 
-  val events: SeriesGaugeEvents = new SeriesGaugeEvents
+  val events: js.UndefOr[CleanJsObject[SeriesGaugeEvents]] = js.undefined
 
   /**
     * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
     * @since 4.1.6
     */
-  val getExtremesFromAll: Boolean = false
+  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
 
   /**
     * An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
     * @since 1.2.0
     */
-  val id: String = ""
+  val id: js.UndefOr[String] = js.undefined
 
   /**
     * The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
     * @since 2.3.0
     */
-  val index: Double = js.undefined.asInstanceOf[Double]
+  val index: js.UndefOr[Double] = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-keys/" target="_blank">An extended data array with keys</a>
     * @since 4.1.6
     */
-  val keys: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val keys: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * The sequential index of the series in the legend.  <div class="demo">Try it:  	<a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/" target="_blank">Legend in opposite order</a> </div>.
     */
-  val legendIndex: Double = js.undefined.asInstanceOf[Double]
+  val legendIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/arearange-line/" target="_blank">Linked series</a>
     * @since 3.0
     */
-  val linkedTo: String = ""
+  val linkedTo: js.UndefOr[String] = js.undefined
 
   /**
     * The name of the series as shown in the legend, tooltip etc.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a>
     */
-  val name: String = js.undefined.asInstanceOf[String]
+  val name: js.UndefOr[String] = js.undefined
 
   /**
     * The color for the parts of the graph or points that are below the <a href="#plotOptions.series.threshold">threshold</a>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-negative-color/" target="_blank">Spline, area and column</a> - <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/" target="_blank">arearange</a>.
     * @since 3.0
     */
-  val negativeColor: String = null.asInstanceOf[String]
+  val negativeColor: js.UndefOr[String] = js.undefined
 
   /**
     * Allow the dial to overshoot the end of the perimeter axis by this many degrees. Say if the gauge axis goes from 0 to 60, a value of 100, or 1000, will show 5 degrees beyond the end of the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-overshoot/" target="_blank">Allow 5 degrees overshoot</a>
     * @since 3.0.10
     */
-  val overshoot: Double = 0
+  val overshoot: js.UndefOr[Double] = js.undefined
 
   /**
     * Options for the pivot or the center point of the gauge.
     * @since 2.3.0
     */
-  val pivot: js.Object = new js.Object
+  val pivot: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Properties for each single point
     */
-  val point: SeriesGaugePoint = new SeriesGaugePoint
+  val point: js.UndefOr[CleanJsObject[SeriesGaugePoint]] = js.undefined
 
   /**
     * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-selected/" target="_blank">One out of two series selected</a>
     * @since 1.2.0
     */
-  val selected: Boolean = false
+  val selected: js.UndefOr[Boolean] = js.undefined
 
   /**
     * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/" target="_blank">Show select box</a>
     * @since 1.2.0
     */
-  val showCheckbox: Boolean = false
+  val showCheckbox: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Defaults to false for gauge series.
     * @since 2.3.0
     */
-  val showInLegend: Boolean = js.undefined.asInstanceOf[Boolean]
+  val showInLegend: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A wrapper object for all the series options in specific states.
     */
-  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
+  val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined
 
   /**
     * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -201,19 +203,19 @@ class SeriesGauge extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/" target="_blank">false</a>
     * @since 2.0
     */
-  val stickyTracking: Boolean = true
+  val stickyTracking: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The threshold, also called zero level or base level. For line type series this is only used in conjunction with <a href="#plotOptions.series.negativeColor">negativeColor</a>.
     * @since 3.0
     */
-  val threshold: Double = 0
+  val threshold: js.UndefOr[Double] = js.undefined
 
   /**
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.Object = new js.Object
+  val tooltip: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -221,49 +223,49 @@ class SeriesGauge extends js.Object {
     *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>
     */
-  val `type`: String = js.undefined.asInstanceOf[String]
+  val `type`: js.UndefOr[String] = js.undefined
 
   /**
     * Set the initial visibility of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-visible/" target="_blank">Two series, one hidden and one visible</a>
     */
-  val visible: Boolean = true
+  val visible: js.UndefOr[Boolean] = js.undefined
 
   /**
     * When this option is <code>true</code>, the dial will wrap around the axes. For instance, in a full-range gauge going from 0 to 360, a value of 400 will point to 40. When <code>wrap</code> is <code>false</code>, the dial stops at 360.
     * @since 3.0
     */
-  val wrap: Boolean = true
+  val wrap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first.
     */
-  val xAxis: js.Any = "0"
+  val xAxis: js.Any = js.undefined
 
   /**
     * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/yaxis/" target="_blank">Apply the column series to the secondary Y axis</a>
     */
-  val yAxis: js.Any = "0"
+  val yAxis: js.Any = js.undefined
 
   /**
     * Define the visual z index of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.
     */
-  val zIndex: Double = js.undefined.asInstanceOf[Double]
+  val zIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * Defines the Axis on which the zones are applied.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/" target="_blank">Zones on the X-Axis</a>
     * @since 4.1.0
     */
-  val zoneAxis: String = "y"
+  val zoneAxis: js.UndefOr[String] = js.undefined
 
   /**
     * An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.Array[SeriesGaugeZones] = new js.Array[SeriesGaugeZones]
+  val zones: js.UndefOr[js.Array[SeriesGaugeZones]] = js.undefined
 }

@@ -1,12 +1,15 @@
 import com.greencatsoft.angularjs.core.Scope
 import com.greencatsoft.angularjs.{Controller, inject, injectable}
+import com.highcharts.HighchartsUtils._
+import com.highcharts.config._
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.{Any, UndefOr}
 
 @js.native
 trait TestChartsScope extends Scope {
-  var barChartConfig: js.Any = js.native
+  var barChartConfig: js.Object = js.native
 }
 
 @JSExport
@@ -16,32 +19,34 @@ class HighchartsTestController extends Controller[TestChartsScope] {
   var scope: TestChartsScope = _
 
   override def initialize(): Unit = {
-    import com.highcharts.config._
+    // TODO: more charts
     super.initialize()
 
-    // Bar chart config
-    scope.barChartConfig = new HighchartsConfig {
-      // Chart config
-      override val chart: Chart = new Chart {
-        override val `type`: String = "bar"
+    scope.barChartConfig = cleanObject(new HighchartsNgConfig {
+      override val options: Cfg[HighchartsConfig] = new HighchartsConfig {
+        // Chart config
+        override val chart: Cfg[Chart] = new Chart {
+          override val `type`: UndefOr[String] = "bar"
+        }
+
+        // Chart title
+        override val title: Cfg[Title] = new Title {
+          override val text: UndefOr[String] = "Test chart"
+        }
       }
 
-      // Chart title
-      override val title: Title = new Title {
-        override val text: String = "Test chart"
-      }
-
-      // Series
-      override val series: js.Array[js.Object] = js.Array[js.Object](
+      override val series: Any = mkSeries(
         new SeriesBar {
-          override val name: String = "Jane"
+          override val name: js.UndefOr[String] = "Jane"
           override val data: js.Any = js.Array(1, 0, 4)
         },
         new SeriesBar {
-          override val name: String = "John"
+          override val name: js.UndefOr[String] = "John"
           override val data: js.Any = js.Array(5, 7, 3)
         }
       )
-    }
+    })
+
+    org.scalajs.dom.console.log(scope.barChartConfig)
   }
 }

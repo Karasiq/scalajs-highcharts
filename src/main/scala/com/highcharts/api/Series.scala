@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>Series</code>
@@ -19,7 +21,7 @@ trait Series extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-addpoint-append/" target="_blank">Append point</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-addpoint-append-and-shift/" target="_blank">append and shift</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-addpoint-x-and-y/" target="_blank">both x and y values given</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-addpoint-pie/" target="_blank">append pie slice</a>
     * @since 1.2.0
     */
-  def addPoint(options: js.Object = js.undefined.asInstanceOf[js.Object], redraw: Boolean = js.undefined.asInstanceOf[Boolean], shift: Boolean = js.undefined.asInstanceOf[Boolean], animation: js.Any = js.undefined.asInstanceOf[js.Any]): Unit = js.native
+  def addPoint(options: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, shift: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
 
   /**
     * Hides the series if visible. If the <code>chart.ignoreHiddenSeries</code> option is true,the chart is redrawn without this series.
@@ -45,7 +47,7 @@ trait Series extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-select/" target="_blank">Select a series from a button</a>
     * @since 1.2.0
     */
-  def select(`selected|null`: Boolean = js.undefined.asInstanceOf[Boolean]): Unit = js.native
+  def select(`selected|null`: js.UndefOr[Boolean] = js.undefined): Unit = js.native
 
   /**
     * Read only. The series' selected state as set by <code>series.select()</code>.
@@ -58,7 +60,7 @@ trait Series extends js.Object {
     * @param visible Whether to show or hide the series. If undefined, the visibility is toggled.
     * @param redraw Defaults to <code>true</code>. Whether to redraw the chart after the series is altered.If doing more operations on the chart, it is a good idea to set redraw to false and call <code>chart.redraw()</code> after.
     */
-  def setVisible(visible: Boolean = js.undefined.asInstanceOf[Boolean], redraw: Boolean = js.undefined.asInstanceOf[Boolean]): Unit = js.native
+  def setVisible(visible: js.UndefOr[Boolean] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
 
   /**
     * Shows the series if hidden.
@@ -82,7 +84,7 @@ New options that will be merged into the series' existing options.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-update/" target="_blank">Updating series options</a>
     * @since 3.0
     */
-  def update(options: js.Object = js.undefined.asInstanceOf[js.Object], redraw: Boolean = js.undefined.asInstanceOf[Boolean]): Unit = js.native
+  def update(options: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
 
   /**
     * Read only. The series' visibility state as set by <code>series.show()</code>, <code>series.hide()</code>, or the initial configuration.
@@ -96,31 +98,31 @@ New options that will be merged into the series' existing options.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-remove/" target="_blank">Remove first series from a button</a>
     * @since 1.2.0
     */
-  def remove(redraw: Boolean = js.undefined.asInstanceOf[Boolean]): Unit = js.native
+  def remove(redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
 
   /**
     * Read only. The chart that the series belongs to.
     * @since 1.2.0
     */
-  val chart: Chart = js.native
+  val chart: CleanJsObject[Chart] = js.native
 
   /**
     * Read only. An array with the series' data point objects.
     * @since 1.2.0
     */
-  val data: js.Array[Point] = js.native
+  val data: js.Array[CleanJsObject[Point]] = js.native
 
   /**
     * Read only. The unique xAxis object associated with the series.
     * @since 1.2.0
     */
-  val xAxis: Axis = js.native
+  val xAxis: CleanJsObject[Axis] = js.native
 
   /**
     * Read only. The unique yAxis object associated with the series.
     * @since 1.2.0
     */
-  val yAxis: Axis = js.native
+  val yAxis: CleanJsObject[Axis] = js.native
 
   /**
     * Remove a point from the series. Unlike the <a href="#Point.remove">Point.remove</a> method, this can also be done on a point that is not instanciated because it is outside the view or subject to data grouping.
@@ -128,12 +130,12 @@ New options that will be merged into the series' existing options.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-removepoint/" target="_blank">Remove cropped point</a>
     * @since 4.1.0
     */
-  def removePoint(index: js.Object = js.undefined.asInstanceOf[js.Object], redraw: Boolean = js.undefined.asInstanceOf[Boolean], animation: js.Any = js.undefined.asInstanceOf[js.Any]): Unit = js.native
+  def removePoint(index: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
 
   /**
     * Apply a new set of data to the series and optionally redraw it. Note that this method throws away all points and creates new ones. For updating the values of existing points, use <a href="#Point.update()">Point.update()</a> instead. To keep memory usage low, Highcharts mutates the passed data array instead of copying it, so if you are going to reuse the same array it is a good idea to pass a clone to <code>setData</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-setdata/" target="_blank">Set new data from a button</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-setdata-pie/" target="_blank">set data in a pie</a>
     * @since 1.2.0
     */
-  def setData(data: js.Any = js.undefined.asInstanceOf[js.Any], redraw: Boolean = js.undefined.asInstanceOf[Boolean], animation: js.Any = js.undefined.asInstanceOf[js.Any], updatePoints: Boolean = js.undefined.asInstanceOf[Boolean]): Unit = js.native
+  def setData(data: js.Any = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined, updatePoints: js.UndefOr[Boolean] = js.undefined): Unit = js.native
 }

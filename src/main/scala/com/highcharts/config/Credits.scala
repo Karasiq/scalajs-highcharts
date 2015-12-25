@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>credits</code>
@@ -17,13 +19,13 @@ class Credits extends js.Object {
     * Whether to show the credits text.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/credits/enabled-false/" target="_blank">Credits disabled</a>
     */
-  val enabled: Boolean = true
+  val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The URL for the credits label.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
     */
-  val href: String = "http://www.highcharts.com"
+  val href: js.UndefOr[String] = js.undefined
 
   /**
     * Position configuration for the credits label. Supported properties are  <code>align</code>, <code>verticalAlign</code>, <code>x</code> and <code>y</code>. Defaults to 
@@ -36,7 +38,7 @@ class Credits extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/credits/position-left/" target="_blank">Left aligned</a>
     * @since 2.1
     */
-  val position: js.Object = js.undefined.asInstanceOf[js.Object]
+  val position: js.UndefOr[js.Object] = js.undefined
 
   /**
     * CSS styles for the credits label. Defaults to:
@@ -47,11 +49,11 @@ class Credits extends js.Object {
     * 
     * }</pre>
     */
-  val style: js.Object = js.undefined.asInstanceOf[js.Object]
+  val style: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The text for the credits label.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
     */
-  val text: String = "Highcharts.com"
+  val text: js.UndefOr[String] = js.undefined
 }

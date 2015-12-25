@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>labels</code>
@@ -16,7 +18,7 @@ class Labels extends js.Object {
   /**
     * A HTML label that can be positioned anywhere in the chart area.
     */
-  val items: js.Array[js.Object] = new js.Array[js.Object]
+  val items: js.UndefOr[js.Array[js.Object]] = js.undefined
 
   /**
     * Shared CSS styles for all labels. Defaults to:
@@ -24,5 +26,5 @@ class Labels extends js.Object {
     * 	color: '#3E576F'
     * }</pre>
     */
-  val style: js.Object = js.undefined.asInstanceOf[js.Object]
+  val style: js.UndefOr[js.Object] = js.undefined
 }

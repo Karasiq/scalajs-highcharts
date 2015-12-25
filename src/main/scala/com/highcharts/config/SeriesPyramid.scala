@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>series&lt;pyramid&gt;</code>
@@ -20,13 +22,13 @@ class SeriesPyramid extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/" target="_blank">pie</a>
     * @since 1.2.0
     */
-  val allowPointSelect: Boolean = false
+  val allowPointSelect: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The color of the border surrounding each slice. When <code>null</code>, the border takes the same color as the slice fill. This can be used together with a <code>borderWidth</code> to fill drawing gaps created by antialiazing artefacts in borderless pies.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-bordercolor-black/" target="_blank">Black border</a>
     */
-  val borderColor: String = "#FFFFFF"
+  val borderColor: js.UndefOr[String] = js.undefined
 
   /**
     * <p>The width of the border surrounding each slice.</p>
@@ -34,20 +36,20 @@ class SeriesPyramid extends js.Object {
     * <p>When setting the border width to 0, there may be small gaps between the slices due to SVG antialiasing artefacts. To work around this, keep the border width at 0.5 or 1, but set the <code>borderColor</code> to <code>null</code> instead.</p>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-borderwidth/" target="_blank">3px border</a>
     */
-  val borderWidth: Double = 1
+  val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
     * The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
     * @since 3.0
     */
-  val center: js.Any = js.Array("50%", "50%")
+  val center: js.Any = js.undefined
 
   /**
     * A series specific or series type specific color set to use instead of the global <a href="#colors">colors</a>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-monochrome/" target="_blank">Set default colors for all pies</a>
     * @since 3.0
     */
-  val colors: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val colors: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -55,7 +57,7 @@ class SeriesPyramid extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-column/" target="_blank">on columns</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/" target="_blank">on scatter markers</a>
     */
-  val cursor: String = js.undefined.asInstanceOf[String]
+  val cursor: js.UndefOr[String] = js.undefined
 
   /**
     * An array of data points for the series. For the <code>pyramid</code> series type, points can be given in the following ways:
@@ -86,122 +88,122 @@ class SeriesPyramid extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
     */
-  val data: js.Any = js.Array()
+  val data: js.Any = js.undefined
 
-  val dataLabels: SeriesPyramidDataLabels = new SeriesPyramidDataLabels
+  val dataLabels: js.UndefOr[CleanJsObject[SeriesPyramidDataLabels]] = js.undefined
 
   /**
     * The thickness of a 3D pie. Requires <code>highcharts-3d.js</code>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/">Basic 3D pie chart</a>
     * @since 4.0
     */
-  val depth: Double = 0
+  val depth: js.UndefOr[Double] = js.undefined
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
     */
-  val enableMouseTracking: Boolean = true
+  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
 
-  val events: SeriesPyramidEvents = new SeriesPyramidEvents
+  val events: js.UndefOr[CleanJsObject[SeriesPyramidEvents]] = js.undefined
 
   /**
     * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
     * @since 4.1.6
     */
-  val getExtremesFromAll: Boolean = false
+  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/funnel/" target="_blank">Funnel demo</a>
     * @since 3.0
     */
-  val height: js.Any = js.undefined.asInstanceOf[js.Any]
+  val height: js.Any = js.undefined
 
   /**
     * An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
     * @since 1.2.0
     */
-  val id: String = ""
+  val id: js.UndefOr[String] = js.undefined
 
   /**
     * The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
     * @since 2.3.0
     */
-  val index: Double = js.undefined.asInstanceOf[Double]
+  val index: js.UndefOr[Double] = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-keys/" target="_blank">An extended data array with keys</a>
     * @since 4.1.6
     */
-  val keys: js.Array[String] = js.undefined.asInstanceOf[js.Array[String]]
+  val keys: js.UndefOr[js.Array[String]] = js.undefined
 
   /**
     * The sequential index of the series in the legend.  <div class="demo">Try it:  	<a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/" target="_blank">Legend in opposite order</a> </div>.
     */
-  val legendIndex: Double = js.undefined.asInstanceOf[Double]
+  val legendIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/arearange-line/" target="_blank">Linked series</a>
     * @since 3.0
     */
-  val linkedTo: String = ""
+  val linkedTo: js.UndefOr[String] = js.undefined
 
   /**
     * The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area, but only to this size.
     * @since 3.0
     */
-  val minSize: Double = 80
+  val minSize: js.UndefOr[Double] = js.undefined
 
   /**
     * The name of the series as shown in the legend, tooltip etc.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/name/" target="_blank">Series name</a>
     */
-  val name: String = js.undefined.asInstanceOf[String]
+  val name: js.UndefOr[String] = js.undefined
 
   /**
     * Properties for each single point
     */
-  val point: SeriesPyramidPoint = new SeriesPyramidPoint
+  val point: js.UndefOr[CleanJsObject[SeriesPyramidPoint]] = js.undefined
 
   /**
     * The pyramid is reversed by default, as opposed to the funnel, which shares the layout engine, and is not reversed.
     * @since 3.0.10
     */
-  val reversed: Boolean = true
+  val reversed: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-selected/" target="_blank">One out of two series selected</a>
     * @since 1.2.0
     */
-  val selected: Boolean = false
+  val selected: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = false
+  val shadow: js.Any = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-showinlegend/" target="_blank">One series in the legend, one hidden</a>
     */
-  val showInLegend: Boolean = false
+  val showInLegend: js.UndefOr[Boolean] = js.undefined
 
   /**
     * If a point is sliced, moved out from the center, how many pixels should  it be moved?.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-slicedoffset-20/" target="_blank">20px offset</a>
     */
-  val slicedOffset: Double = 10
+  val slicedOffset: js.UndefOr[Double] = js.undefined
 
   /**
     * A wrapper object for all the series options in specific states.
     */
-  val states: PlotOptionsSeriesStates = new PlotOptionsSeriesStates
+  val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined
 
   /**
     * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
@@ -211,13 +213,13 @@ class SeriesPyramid extends js.Object {
     *  This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the 
     *  tooltip will be hidden when moving the mouse between series.
     */
-  val stickyTracking: Boolean = false
+  val stickyTracking: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.Object = new js.Object
+  val tooltip: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -225,38 +227,38 @@ class SeriesPyramid extends js.Object {
     *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>
     */
-  val `type`: String = js.undefined.asInstanceOf[String]
+  val `type`: js.UndefOr[String] = js.undefined
 
   /**
     * Set the initial visibility of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-visible/" target="_blank">Two series, one hidden and one visible</a>
     */
-  val visible: Boolean = true
+  val visible: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
     * @since 3.0
     */
-  val width: js.Any = "90%"
+  val width: js.Any = js.undefined
 
   /**
     * Define the visual z index of the series.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex-default/" target="_blank">With no z index, the series defined last are on top</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-zindex/" target="_blank">with a z index, the series with the highest z index is on top</a>.
     */
-  val zIndex: Double = js.undefined.asInstanceOf[Double]
+  val zIndex: js.UndefOr[Double] = js.undefined
 
   /**
     * Defines the Axis on which the zones are applied.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/" target="_blank">Zones on the X-Axis</a>
     * @since 4.1.0
     */
-  val zoneAxis: String = "y"
+  val zoneAxis: js.UndefOr[String] = js.undefined
 
   /**
     * An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.Array[SeriesPyramidZones] = new js.Array[SeriesPyramidZones]
+  val zones: js.UndefOr[js.Array[SeriesPyramidZones]] = js.undefined
 }

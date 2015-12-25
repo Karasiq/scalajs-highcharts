@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>chart-options3d-frame</code>
@@ -17,17 +19,17 @@ class ChartOptions3dFrame extends js.Object {
     * Defines the back panel of the frame around 3D charts.
     * @since 4.0
     */
-  val back: ChartOptions3dFrameBack = new ChartOptions3dFrameBack
+  val back: js.UndefOr[CleanJsObject[ChartOptions3dFrameBack]] = js.undefined
 
   /**
     * The bottom of the frame around a 3D chart.
     * @since 4.0
     */
-  val bottom: ChartOptions3dFrameBottom = new ChartOptions3dFrameBottom
+  val bottom: js.UndefOr[CleanJsObject[ChartOptions3dFrameBottom]] = js.undefined
 
   /**
     * The side for the frame around a 3D chart.
     * @since 4.0
     */
-  val side: ChartOptions3dFrameSide = new ChartOptions3dFrameSide
+  val side: js.UndefOr[CleanJsObject[ChartOptions3dFrameSide]] = js.undefined
 }

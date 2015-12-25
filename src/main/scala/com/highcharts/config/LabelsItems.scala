@@ -1,11 +1,13 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.5 by Karasiq
+  * @author Highcharts Config Generator v1.0.6 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
 import scalajs.js
+import com.highcharts.CleanJsObject
+import com.highcharts.HighchartsUtils._
 
 /**
   * @note JavaScript name: <code>labels-items</code>
@@ -16,7 +18,7 @@ class LabelsItems extends js.Object {
   /**
     * Inner HTML or text for the label.
     */
-  val html: String = js.undefined.asInstanceOf[String]
+  val html: js.UndefOr[String] = js.undefined
 
   /**
     * CSS styles for each label. To position the label, use left and top like this:
@@ -25,5 +27,5 @@ class LabelsItems extends js.Object {
     * 	top: '100px'
     * }</pre>
     */
-  val style: js.Object = js.undefined.asInstanceOf[js.Object]
+  val style: js.UndefOr[js.Object] = js.undefined
 }
