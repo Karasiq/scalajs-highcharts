@@ -4,7 +4,7 @@
 # How to use
 Add dependency to your `build.sbt`
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.7"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.8"
 ```
 
 Include the JavaScript files in the `<head>` section of your web page as shown below

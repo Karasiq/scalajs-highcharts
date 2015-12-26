@@ -23,7 +23,7 @@ object Main extends App {
     val header =
       s"""/**
          |  * Automatically generated file. Please do not edit.
-         |  * @author Highcharts Config Generator v1.0.7 by Karasiq
+         |  * @author Highcharts Config Generator v1.0.8 by Karasiq
          |  * @see [[http://api.highcharts.com/highcharts]]
          |  */
          |package $pkg
