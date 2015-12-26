@@ -5,20 +5,11 @@ import com.karasiq.highcharts.generator.ast.{ScalaJsClass, ScalaJsDefinition, Sc
 import org.apache.commons.lang3.StringEscapeUtils
 
 object ScalaJsClassBuilder {
-  // Scala keywords
-  private val reserved = Set("abstract", "case", "catch", "class", "def", "do", "else", "extends", "false", "final", "finally", "for", "forSome", "if", "implicit", "import", "lazy", "match", "new", "null", "object", "override", "package", "private", "protected", "return", "sealed", "super", "this", "throw", "trait", "try", "true", "type", "val", "var", "while", "with", "yield")
-
-  def validScalaName(name: String): String = {
-    if (name.nonEmpty && (!name.matches("\\w+") || reserved.contains(name))) {
-      s"`$name`"
-    } else {
-      name
-    }
-  }
-
   def classNameFor(jsName: String): String = {
-    this.validScalaName(jsName.split("[-<>\\.]").filter(_.nonEmpty)
-      .map(str ⇒ str.head.toUpper + str.tail).mkString)
+    jsName.split("[-<>\\.]")
+      .filter(_.nonEmpty)
+      .map(str ⇒ str.head.toUpper + str.tail)
+      .mkString
   }
 
   def escapeString(str: String): String = {
@@ -169,7 +160,7 @@ class ScalaJsClassBuilder {
         case Array(jsName) ⇒
           "js.Any" → jsName
       }
-      tpe → ScalaJsClassBuilder.validScalaName(name)
+      tpe → name
     }
 
     for ((scalaType, scalaName) <- params) yield
@@ -192,9 +183,9 @@ class ScalaJsClassBuilder {
       val definitions: Seq[ScalaJsDefinition] = for (cfg <- parameters; name <- cfg.title) yield {
         val (tpe, value) = this.typeAndValue(classNames, cfg)
         if (cfg.params.exists(_.nonEmpty)) {
-          ScalaJsMethod(cfg, ScalaJsClassBuilder.validScalaName(name), tpe, methodArguments(classNames, cfg))
+          ScalaJsMethod(cfg, name, tpe, methodArguments(classNames, cfg))
         } else {
-          ScalaJsValue(cfg, ScalaJsClassBuilder.validScalaName(name), tpe, value)
+          ScalaJsValue(cfg, name, tpe, value)
         }
       }
 
