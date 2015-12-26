@@ -47,36 +47,69 @@ class ScalaClassWriter extends ClassWriter {
         docWriter.writeDocumentation(cfg)(str ⇒ writer(tab + str)) // ScalaDoc
       }
 
-      definitions.foreach {
+      def writeValue(scalaName: String, scalaType: String, value: Option[String]): Unit = {
+        if (isTrait) {
+          writer(tab + s"val $scalaName: $scalaType = js.native")
+        } else value match {
+          case Some(v) ⇒
+            writer(tab + s"val $scalaName: $scalaType = $v")
+
+          case None if scalaType == "js.Any" ⇒
+            writer(tab + s"val $scalaName: $scalaType = js.undefined")
+
+          case None ⇒
+            writer(tab + s"val $scalaName: js.UndefOr[$scalaType] = js.undefined")
+        }
+      }
+
+      def writeMethod(scalaName: String, scalaType: String, arguments: Seq[ScalaJsValue]): Unit = {
+        val args = arguments.collect {
+          case ScalaJsValue(_, argName, argType, Some(argValue)) ⇒
+            s"${validScalaName(argName)}: $argType = $argValue"
+
+          case ScalaJsValue(_, argName, argType, None) ⇒
+            if (argType == "js.Any")
+              s"${validScalaName(argName)}: $argType = js.undefined"
+            else
+              s"${validScalaName(argName)}: js.UndefOr[$argType] = js.undefined"
+        }
+        writer(tab + s"def $scalaName(${args.mkString(", ")}): $scalaType = js.native")
+      }
+
+      /*
+        For pseudo values like series<area>, series<spline>, etc
+        Will generate very long signature, like this:
+        val series: js.UndefOr[js.Array[CleanJsObject[SeriesArea]] | js.Array[CleanJsObject[SeriesArearange]] | js.Array[CleanJsObject[SeriesAreaspline]] | js.Array[CleanJsObject[SeriesAreasplinerange]] | js.Array[CleanJsObject[SeriesBar]] | js.Array[CleanJsObject[SeriesBoxplot]] | js.Array[CleanJsObject[SeriesBubble]] | js.Array[CleanJsObject[SeriesColumn]] | js.Array[CleanJsObject[SeriesColumnrange]] | js.Array[CleanJsObject[SeriesErrorbar]] | js.Array[CleanJsObject[SeriesFunnel]] | js.Array[CleanJsObject[SeriesGauge]] | js.Array[CleanJsObject[SeriesHeatmap]] | js.Array[CleanJsObject[SeriesLine]] | js.Array[CleanJsObject[SeriesPie]] | js.Array[CleanJsObject[SeriesPolygon]] | js.Array[CleanJsObject[SeriesPyramid]] | js.Array[CleanJsObject[SeriesScatter]] | js.Array[CleanJsObject[SeriesSolidgauge]] | js.Array[CleanJsObject[SeriesSpline]] | js.Array[CleanJsObject[SeriesTreemap]] | js.Array[CleanJsObject[SeriesWaterfall]]]
+       */
+      val compoundValueName = "(\\w+)<(\\w+)>".r
+      val compoundValues = definitions.collect {
+        case ScalaJsValue(cfg, compoundValueName(baseName, typeArg), scalaType, value) ⇒
+          baseName → scalaType
+      }.groupBy(_._1).mapValues(_.unzip._2)
+
+      compoundValues.foreach {
+        case (baseName, types) ⇒
+          val scalaType = ScalaJsClassBuilder.unionType(types.toList)
+          val config = definitions.collectFirst {
+            case ScalaJsValue(cfg, name, _, _) if name == baseName ⇒
+              cfg
+          }
+          config.foreach(writeDoc)
+          writeValue(validScalaName(baseName), scalaType, None)
+      }
+
+      val otherDefinitions = definitions.filterNot { df ⇒
+        compoundValues.contains(df.scalaName) || compoundValueName.findFirstIn(df.scalaName).isDefined
+      }
+
+      otherDefinitions.foreach {
         case ScalaJsMethod(cfg, scalaName, scalaType, arguments) ⇒
           writeDoc(cfg)
-          val args = arguments.collect {
-            case ScalaJsValue(_, argName, argType, Some(argValue)) ⇒
-              s"${validScalaName(argName)}: $argType = $argValue"
+          writeMethod(validScalaName(scalaName), scalaType, arguments)
 
-            case ScalaJsValue(_, argName, argType, None) ⇒
-              if (argType == "js.Any")
-                s"${validScalaName(argName)}: $argType = js.undefined"
-              else
-                s"${validScalaName(argName)}: js.UndefOr[$argType] = js.undefined"
-          }
-          writer(tab + s"def ${validScalaName(scalaName)}(${args.mkString(", ")}): $scalaType = js.native")
-
-        case ScalaJsValue(cfg, name, scalaType, value) ⇒
-          val scalaName: String = validScalaName(name)
+        case ScalaJsValue(cfg, scalaName, scalaType, value) ⇒
           writeDoc(cfg)
-          if (isTrait) {
-            writer(tab + s"val $scalaName: $scalaType = js.native")
-          } else value match {
-            case Some(v) ⇒
-              writer(tab + s"val $scalaName: $scalaType = $v")
-
-            case None if scalaType == "js.Any" ⇒
-              writer(tab + s"val $scalaName: $scalaType = js.undefined")
-
-            case None ⇒
-              writer(tab + s"val $scalaName: js.UndefOr[$scalaType] = js.undefined")
-          }
+          writeValue(validScalaName(scalaName), scalaType, value)
 
         case c: ScalaJsClass ⇒
           writeClass(c)(str ⇒ writer(tab + str))

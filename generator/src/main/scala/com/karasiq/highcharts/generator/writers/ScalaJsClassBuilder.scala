@@ -15,6 +15,22 @@ object ScalaJsClassBuilder {
   def escapeString(str: String): String = {
     "\"" + StringEscapeUtils.escapeJava(str) + "\""
   }
+
+  def unionType(types: List[String]): String = types match {
+    case Nil ⇒
+      throw new IllegalArgumentException
+
+    case type1 :: Nil ⇒
+      type1
+
+    case type1 :: type2 :: Nil ⇒
+      //s"js.`|`[$type1, $type2]"
+      s"$type1 | $type2"
+
+    case type1 :: ts ⇒
+      //s"js.`|`[$type1, ${unionType(ts)}]"
+      s"$type1 | ${unionType(ts)}"
+  }
 }
 
 class ScalaJsClassBuilder {
@@ -57,28 +73,11 @@ class ScalaJsClassBuilder {
         "js.Array[js.Any]"
 
       case t if t.contains("|") ⇒ // Union type
-        def unionType(types: List[String]): String = types match {
-          case Nil ⇒
-            throw new IllegalArgumentException(t)
-
-          case type1 :: Nil ⇒
-            type1
-
-          case type1 :: type2 :: Nil ⇒
-            //s"js.`|`[$type1, $type2]"
-            s"$type1 | $type2"
-
-          case type1 :: ts ⇒
-            //s"js.`|`[$type1, ${unionType(ts)}]"
-            s"$type1 | ${unionType(ts)}"
-        }
-
         val tokens: Array[String] = t.split("\\|")
           .map(_.trim)
           .filter(_.nonEmpty)
           .collect(stdTypes)
-
-        unionType(tokens.toList)
+        ScalaJsClassBuilder.unionType(tokens.toList)
 
       case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
         s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
@@ -121,30 +120,42 @@ class ScalaJsClassBuilder {
       }
     }
 
-    /* cfg.defaults match {
+    /* def extractValue(defaults: Option[String]): Option[String] = defaults match {
       case _ if isMethod ⇒
         // Method
-        scalaType → None
+        None
 
       case Some(array) if array.startsWith("[") && array.endsWith("]") ⇒
         // Parse JS array value
-        scalaType → Some(s"js.Array(${array.drop(1).dropRight(1)})")
+        Some(s"js.Array(${array.drop(1).dropRight(1)})")
 
       case Some(obj) if obj.startsWith("{") && obj.endsWith("}") && scalaType == "js.Object" ⇒
         // Parse object
-        scalaType → Some(s"js.JSON.parse(${ScalaJsClassBuilder.escapeString(obj)}).asInstanceOf[$scalaType]")
+        Some(s"js.JSON.parse(${ScalaJsClassBuilder.escapeString(obj)}).asInstanceOf[$scalaType]")
 
       case Some("") if scalaType == "String" ⇒
         // Empty string
-        scalaType → Some("\"\"")
+        Some("\"\"")
 
       case Some(default) if default != "undefined" && default.nonEmpty ⇒
-        scalaType → Some(wrapString(default))
+        Some(wrapString(default))
 
       case _ ⇒
-        scalaType → None
+        None
     } */
-    scalaType → None // TODO: fix default values
+
+    // Extract `type` field
+    val defaultValue = if (cfg.title.contains("type") && cfg.returnType.contains("String") && cfg.defaults.isEmpty) {
+      val compoundValueName = "(\\w+)<(\\w+)>".r
+      cfg.parent.collect {
+        case compoundValueName(baseName, typeArg) ⇒
+          wrapString(typeArg)
+      }
+    } else {
+      None
+    }
+
+    scalaType → defaultValue
   }
 
   private def methodArguments(classes: Set[String], cfg: ConfigurationObject): Seq[ScalaJsValue] = {
