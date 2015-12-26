@@ -1,3 +1,5 @@
+package com.highcharts.test.frontend
+
 import com.highcharts.HighchartsUtils._
 import com.highcharts.config.{HighchartsConfig, Title, XAxis}
 
@@ -24,7 +26,7 @@ class HighchartsNgConfig extends js.Object {
   /**
     * Series object (optional) - a list of series using normal Highcharts series options.
     */
-  val series: js.Any = js.undefined.asInstanceOf[js.Any]
+  val series: SeriesCfg = js.undefined
 
   /**
     * Title configuration (optional)

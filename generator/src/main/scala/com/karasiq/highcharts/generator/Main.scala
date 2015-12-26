@@ -1,9 +1,9 @@
 package com.karasiq.highcharts.generator
 
-import java.io.{PrintWriter, FileWriter}
+import java.io.PrintWriter
 import java.nio.file.{Files, Paths}
 
-import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder, ScalaJsClassBuilder$}
+import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder}
 
 import scala.util.control.Exception
 import scalaj.http.{Http, HttpOptions}
@@ -23,7 +23,7 @@ object Main extends App {
     val header =
       s"""/**
          |  * Automatically generated file. Please do not edit.
-         |  * @author Highcharts Config Generator v1.0.6 by Karasiq
+         |  * @author Highcharts Config Generator v1.0.7 by Karasiq
          |  * @see [[http://api.highcharts.com/highcharts]]
          |  */
          |package $pkg

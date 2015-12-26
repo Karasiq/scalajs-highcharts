@@ -1,3 +1,5 @@
+package com.highcharts.test.frontend
+
 import com.greencatsoft.angularjs.Angular
 
 import scala.scalajs.js.JSApp
