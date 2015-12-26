@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -157,7 +157,7 @@ class PlotOptionsTreemap extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling dataLabels and borders</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/treemap-with-levels/" target="_blank">Different layoutAlgorithm</a>
     * @since 4.1.0
     */
-  val levels: js.UndefOr[js.Array[js.Object]] = js.undefined
+  val levels: js.UndefOr[js.Array[CleanJsObject[PlotOptionsTreemapLevels]]] = js.undefined
 
   /**
     * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -189,7 +189,7 @@ class PlotOptionsTreemap extends js.Object {
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
@@ -257,5 +257,5 @@ class PlotOptionsTreemap extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[PlotOptionsTreemapZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsTreemapZones]]] = js.undefined
 }

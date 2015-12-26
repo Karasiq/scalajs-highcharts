@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -63,14 +63,14 @@ class Drilldown extends js.Object {
     *  </dl>
     * @since 3.0.8
     */
-  val animation: js.Any = js.undefined
+  val animation: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * Options for the drill up button that appears when drilling down on a series. The text for the button is defined in <a href="#lang.drillUpText">lang.drillUpText</a>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/drillupbutton/" target="_blank">Drill up button</a>
     * @since 3.0.8
     */
-  val drillUpButton: js.UndefOr[js.Object] = js.undefined
+  val drillUpButton: js.UndefOr[CleanJsObject[DrilldownDrillUpButton]] = js.undefined
 
   /**
     * An array of series configurations for the drill down. Each series configuration uses the same syntax as the <a href="#series">series</a> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.

@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -44,7 +44,7 @@ class SeriesSolidgaugeData extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/solidgauge-radius/" target="_blank">Individual radius and innerRadius</a>
     * @since 4.1.6
     */
-  val innerRadius: js.Any = js.undefined
+  val innerRadius: js.UndefOr[Double | String] = js.undefined
 
   /**
     * <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>
@@ -59,7 +59,7 @@ class SeriesSolidgaugeData extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/solidgauge-radius/" target="_blank">Individual radius and innerRadius</a>
     * @since 4.1.6
     */
-  val radius: js.Any = js.undefined
+  val radius: js.UndefOr[Double | String] = js.undefined
 
   /**
     * Whether the data point is selected initially.

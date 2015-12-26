@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -51,13 +51,13 @@ class PlotOptionsGauge extends js.Object {
     * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
     * @since 2.3.0
     */
-  val dataLabels: js.UndefOr[js.Object] = js.undefined
+  val dataLabels: js.UndefOr[CleanJsObject[PlotOptionsGaugeDataLabels]] = js.undefined
 
   /**
     * Options for the dial or arrow pointer of the gauge.
     * @since 2.3.0
     */
-  val dial: js.UndefOr[js.Object] = js.undefined
+  val dial: js.UndefOr[CleanJsObject[PlotOptionsGaugeDial]] = js.undefined
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -105,7 +105,7 @@ class PlotOptionsGauge extends js.Object {
     * Options for the pivot or the center point of the gauge.
     * @since 2.3.0
     */
-  val pivot: js.UndefOr[js.Object] = js.undefined
+  val pivot: js.UndefOr[CleanJsObject[PlotOptionsGaugePivot]] = js.undefined
 
   /**
     * Properties for each single point
@@ -160,7 +160,7 @@ class PlotOptionsGauge extends js.Object {
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.UndefOr[js.Object] = js.undefined
+  val tooltip: js.UndefOr[CleanJsObject[PlotOptionsGaugeTooltip]] = js.undefined
 
   /**
     * Set the initial visibility of the series.
@@ -186,5 +186,5 @@ class PlotOptionsGauge extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[PlotOptionsGaugeZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsGaugeZones]]] = js.undefined
 }

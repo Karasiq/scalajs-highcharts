@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -29,7 +29,7 @@ class PlotOptionsColumnStatesHover extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
     * @since 4.0
     */
-  val halo: js.UndefOr[js.Object] = js.undefined
+  val halo: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHoverHalo]] = js.undefined
 
   /**
     * Pixel with of the graph line.

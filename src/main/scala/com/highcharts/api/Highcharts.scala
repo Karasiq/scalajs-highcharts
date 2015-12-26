@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -56,11 +56,11 @@ trait Highcharts extends js.Object {
   /**
     * This is the constructor for creating a new chart object.
     */
-  def Chart(renderTo: js.Any = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
+  def Chart(renderTo: js.UndefOr[String | js.Object] = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
 
   /**
     * As <code>Highcharts.Chart</code>, but without need for the <code>new</code> keyword.
     * @since 4.2.0
     */
-  def chart(renderTo: js.Any = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
+  def chart(renderTo: js.UndefOr[String | js.Object] = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
 }

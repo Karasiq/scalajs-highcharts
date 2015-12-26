@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -37,7 +37,7 @@ class XAxis extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-simple/" target="_blank">Simple break</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-visualized/" target="_blank">advanced with callback</a>
     * @since 4.1.0
     */
-  val breaks: js.UndefOr[js.Array[XAxisBreaks]] = js.undefined
+  val breaks: js.UndefOr[js.Array[CleanJsObject[XAxisBreaks]]] = js.undefined
 
   /**
     * <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href="#series.data">name</a> and setting axis <a href="#xAxis.type">type</a> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array.</p>
@@ -63,7 +63,7 @@ class XAxis extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/crosshair-both/" target="_blank">Crosshair on both axes</a>
     * @since 4.1
     */
-  val crosshair: js.Any = js.undefined
+  val crosshair: js.UndefOr[Boolean | CleanJsObject[XAxisCrosshair]] = js.undefined
 
   /**
     * For a datetime axis, the scale will automatically adjust to the appropriate unit.
@@ -256,7 +256,7 @@ class XAxis extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/" target="_blank">"auto"</a> on logarithmic Y axis,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/minortickinterval-log/" target="_blank">0.1</a> on logarithmic Y axis.
     */
-  val minorTickInterval: js.Any = js.undefined
+  val minorTickInterval: js.UndefOr[String | Double] = js.undefined
 
   /**
     * The pixel length of the minor tick marks.
@@ -295,12 +295,12 @@ class XAxis extends js.Object {
     * 
     * <p>In a gauge, a plot band on the Y axis (value axis) will stretch along the perimeter of the gauge.</p>
     */
-  val plotBands: js.UndefOr[js.Array[js.Object]] = js.undefined
+  val plotBands: js.UndefOr[js.Array[CleanJsObject[XAxisPlotBands]]] = js.undefined
 
   /**
     * An array of lines stretching across the plot area, marking a specific value on one of the axes.
     */
-  val plotLines: js.UndefOr[js.Array[js.Object]] = js.undefined
+  val plotLines: js.UndefOr[js.Array[CleanJsObject[XAxisPlotLines]]] = js.undefined
 
   /**
     * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default.

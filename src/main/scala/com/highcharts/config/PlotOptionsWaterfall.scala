@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -235,7 +235,7 @@ class PlotOptionsWaterfall extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/" target="_blank">Between in a column chart</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/" target="_blank">numeric placement for custom layout</a>.
     * @since 2.3.0
     */
-  val pointPlacement: js.Any = js.undefined
+  val pointPlacement: js.UndefOr[String | Double] = js.undefined
 
   /**
     * The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
@@ -270,7 +270,7 @@ class PlotOptionsWaterfall extends js.Object {
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
@@ -321,7 +321,7 @@ class PlotOptionsWaterfall extends js.Object {
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.UndefOr[js.Object] = js.undefined
+  val tooltip: js.UndefOr[CleanJsObject[PlotOptionsWaterfallTooltip]] = js.undefined
 
   /**
     * The color used specifically for positive point columns. When not specified, the general series color is used.
@@ -347,5 +347,5 @@ class PlotOptionsWaterfall extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[PlotOptionsWaterfallZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsWaterfallZones]]] = js.undefined
 }

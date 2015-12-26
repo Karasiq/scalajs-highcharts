@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -29,7 +29,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
-  val animation: js.Any = js.undefined
+  val animation: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * The pixel size of the up and down arrows in the legend paging navigation.  .

@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -59,7 +59,7 @@ class SeriesPie extends js.Object {
     * 		 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-center/" target="_blank">Centered at 100, 100</a>
     */
-  val center: js.Any = js.undefined
+  val center: js.UndefOr[js.Array[String | Double]] = js.undefined
 
   /**
     * A series specific or series type specific color set to use instead of the global <a href="#colors">colors</a>.
@@ -105,7 +105,7 @@ class SeriesPie extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
     */
-  val data: js.Any = js.undefined
+  val data: js.UndefOr[js.Array[CleanJsObject[SeriesPieData] | Double]] = js.undefined
 
   val dataLabels: js.UndefOr[CleanJsObject[SeriesPieDataLabels]] = js.undefined
 
@@ -167,7 +167,7 @@ class SeriesPie extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie-donut/" target="_blank">3D donut</a>.
     * @since 2.0
     */
-  val innerSize: js.Any = js.undefined
+  val innerSize: js.UndefOr[String | Double] = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
@@ -216,7 +216,7 @@ class SeriesPie extends js.Object {
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
@@ -228,7 +228,7 @@ class SeriesPie extends js.Object {
     * The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example <code>"75%"</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-size/" target="_blank">Smaller pie</a>
     */
-  val size: js.Any = js.undefined
+  val size: js.UndefOr[String | Double] = js.undefined
 
   /**
     * If a point is sliced, moved out from the center, how many pixels should  it be moved?.
@@ -262,7 +262,7 @@ class SeriesPie extends js.Object {
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.UndefOr[js.Object] = js.undefined
+  val tooltip: js.UndefOr[CleanJsObject[SeriesPieTooltip]] = js.undefined
 
   /**
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -297,5 +297,5 @@ class SeriesPie extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[SeriesPieZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[SeriesPieZones]]] = js.undefined
 }

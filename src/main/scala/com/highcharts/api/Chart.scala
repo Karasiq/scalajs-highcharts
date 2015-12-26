@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -53,7 +53,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
     * @since 1.2.0
     */
-  def get(id: js.UndefOr[String] = js.undefined): js.Any = js.native
+  def get(id: js.UndefOr[String] = js.undefined): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
 
   /**
     * Exporting module required. Get an SVG string representing the chart.

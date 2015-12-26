@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -27,7 +27,7 @@ class Pane extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/gauge-vu-meter/" target="_blank">Two gauges with different center</a>
     * @since 2.3.0
     */
-  val center: js.Any = js.undefined
+  val center: js.UndefOr[js.Array[String | Double]] = js.undefined
 
   /**
     * The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to <a href="#pane.startAngle">startAngle</a> + 360.
@@ -40,7 +40,7 @@ class Pane extends js.Object {
     * The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/gauge-vu-meter/" target="_blank">Smaller size</a>
     */
-  val size: js.Any = js.undefined
+  val size: js.UndefOr[Double | String] = js.undefined
 
   /**
     * The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.

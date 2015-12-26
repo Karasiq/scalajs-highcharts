@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -42,7 +42,7 @@ class Chart extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/animation-duration/" target="_blank">with a longer duration</a>,  
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/animation-easing/" target="_blank">with a jQuery UI easing</a>.
     */
-  val animation: js.Any = js.undefined
+  val animation: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * The background color or gradient for the outer chart area.
@@ -202,7 +202,7 @@ class Chart extends js.Object {
     * Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/plotshadow/" target="_blank">Plot shadow</a>
     */
-  val plotShadow: js.Any = js.undefined
+  val plotShadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * When true, cartesian charts like line, spline, area and column are transformed into the polar coordinate system. Requires <code>highcharts-more.js</code>.
@@ -226,7 +226,7 @@ class Chart extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/renderto-object/" target="_blank">object reference</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/renderto-jquery/" target="_blank">object reference through jQuery</a>,
     */
-  val renderTo: js.Any = js.undefined
+  val renderTo: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The button that appears after a selection zoom, allowing the user to reset zoom.
@@ -244,7 +244,7 @@ class Chart extends js.Object {
     *  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/shadow/" target="_blank">Shadow</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * Whether to show the axes initially. This only applies to empty charts where series are added dynamically, as axes are automatically added to cartesian series.

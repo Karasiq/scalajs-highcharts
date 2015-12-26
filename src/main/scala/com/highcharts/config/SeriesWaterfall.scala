@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -151,7 +151,7 @@ class SeriesWaterfall extends js.Object {
 <li><a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank"> Config objects</a></li>
 </ul>
     */
-  val data: js.Any = js.undefined
+  val data: js.UndefOr[js.Array[CleanJsObject[SeriesWaterfallData] | js.Array[js.Any] | Double]] = js.undefined
 
   val dataLabels: js.UndefOr[CleanJsObject[SeriesWaterfallDataLabels]] = js.undefined
 
@@ -303,7 +303,7 @@ class SeriesWaterfall extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/" target="_blank">Between in a column chart</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/" target="_blank">numeric placement for custom layout</a>.
     * @since 2.3.0
     */
-  val pointPlacement: js.Any = js.undefined
+  val pointPlacement: js.UndefOr[String | Double] = js.undefined
 
   /**
     * The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
@@ -338,7 +338,7 @@ class SeriesWaterfall extends js.Object {
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
@@ -396,7 +396,7 @@ class SeriesWaterfall extends js.Object {
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.UndefOr[js.Object] = js.undefined
+  val tooltip: js.UndefOr[CleanJsObject[SeriesWaterfallTooltip]] = js.undefined
 
   /**
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
@@ -421,13 +421,13 @@ class SeriesWaterfall extends js.Object {
   /**
     * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first.
     */
-  val xAxis: js.Any = js.undefined
+  val xAxis: js.UndefOr[Double | String] = js.undefined
 
   /**
     * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/yaxis/" target="_blank">Apply the column series to the secondary Y axis</a>
     */
-  val yAxis: js.Any = js.undefined
+  val yAxis: js.UndefOr[Double | String] = js.undefined
 
   /**
     * Define the visual z index of the series.
@@ -448,5 +448,5 @@ class SeriesWaterfall extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[SeriesWaterfallZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[SeriesWaterfallZones]]] = js.undefined
 }

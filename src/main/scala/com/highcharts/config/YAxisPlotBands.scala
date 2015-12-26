@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -56,7 +56,7 @@ class YAxisPlotBands extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-gauge" target="_blank">Gauge plot band</a>
     * @since 2.3
     */
-  val innerRadius: js.Any = js.undefined
+  val innerRadius: js.UndefOr[Double | String] = js.undefined
 
   /**
     * Text labels for the plot bands
@@ -68,14 +68,14 @@ class YAxisPlotBands extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-gauge" target="_blank">Gauge plot band</a>
     * @since 2.3
     */
-  val outerRadius: js.Any = js.undefined
+  val outerRadius: js.UndefOr[Double | String] = js.undefined
 
   /**
     * In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like <code>"10%"</code>, or as a pixel number, like <code>10</code>. The default value 10 is the same as the default <a href="#yAxis.tickLength">tickLength</a>, thus making the plot band act as a background for the tick markers. 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-gauge" target="_blank">Gauge plot band</a>
     * @since 2.3
     */
-  val thickness: js.Any = js.undefined
+  val thickness: js.UndefOr[Double | String] = js.undefined
 
   /**
     * The end position of the plot band in axis units.

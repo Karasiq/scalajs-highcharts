@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -68,7 +68,7 @@ trait Point extends js.Object {
     * For categorized axes this property holds the category name for the point. For other axis it holds the x value.
     * @since 1.2.0
     */
-  val category: js.Any = js.native
+  val category: String | Double = js.native
 
   /**
     * The total of a stack for stacked series, or pie in pie charts.

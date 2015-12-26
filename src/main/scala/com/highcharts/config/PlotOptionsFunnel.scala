@@ -1,11 +1,11 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.6 by Karasiq
+  * @author Highcharts Config Generator v1.0.7 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
 
-import scalajs.js
+import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 
@@ -42,7 +42,7 @@ class PlotOptionsFunnel extends js.Object {
     * The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
     * @since 3.0
     */
-  val center: js.Any = js.undefined
+  val center: js.UndefOr[js.Array[String | Double]] = js.undefined
 
   /**
     * A series specific or series type specific color set to use instead of the global <a href="#colors">colors</a>.
@@ -87,7 +87,7 @@ class PlotOptionsFunnel extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/funnel/" target="_blank">Funnel demo</a>
     * @since 3.0
     */
-  val height: js.Any = js.undefined
+  val height: js.UndefOr[Double | String] = js.undefined
 
   /**
     * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
@@ -112,14 +112,14 @@ class PlotOptionsFunnel extends js.Object {
   /**
     * The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.
     */
-  val neckHeight: js.Any = js.undefined
+  val neckHeight: js.UndefOr[Double | String] = js.undefined
 
   /**
     * The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/funnel/" target="_blank">Funnel demo</a>
     * @since 3.0
     */
-  val neckWidth: js.Any = js.undefined
+  val neckWidth: js.UndefOr[Double | String] = js.undefined
 
   /**
     * Properties for each single point
@@ -143,7 +143,7 @@ class PlotOptionsFunnel extends js.Object {
     * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-shadow/" target="_blank">Shadow enabled</a>
     */
-  val shadow: js.Any = js.undefined
+  val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
@@ -176,7 +176,7 @@ class PlotOptionsFunnel extends js.Object {
     * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
     * @since 2.3
     */
-  val tooltip: js.UndefOr[js.Object] = js.undefined
+  val tooltip: js.UndefOr[CleanJsObject[PlotOptionsFunnelTooltip]] = js.undefined
 
   /**
     * Set the initial visibility of the series.
@@ -188,7 +188,7 @@ class PlotOptionsFunnel extends js.Object {
     * The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
     * @since 3.0
     */
-  val width: js.Any = js.undefined
+  val width: js.UndefOr[Double | String] = js.undefined
 
   /**
     * Defines the Axis on which the zones are applied.
@@ -202,5 +202,5 @@ class PlotOptionsFunnel extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[PlotOptionsFunnelZones]] = js.undefined
+  val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsFunnelZones]]] = js.undefined
 }
