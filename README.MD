@@ -7,6 +7,11 @@ Add to your `build.sbt`:
 libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.6"
 ```
 
+Include the JavaScript files in the <head> section of your web page as shown below.
+```html
+<script src="http://code.highcharts.com/highcharts.js"></script>
+```
+
 Use in code:
 ```scala
 import scalajs.js, js.UndefOr
