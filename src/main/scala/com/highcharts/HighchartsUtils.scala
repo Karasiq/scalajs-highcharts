@@ -27,13 +27,24 @@ object HighchartsUtils extends HighchartsImplicits {
     }
   }
 
-  def mkSeries(obj: js.Object*): SeriesCfg = {
+  def mkSeries[T <: js.Object](obj: T*)(implicit ev: `|`.Evidence[js.Array[CleanJsObject[T]], AnySeries]): SeriesCfg = {
     import js.JSConverters._
-    obj.map(CleanJsObject.apply).toJSArray.asInstanceOf[SeriesCfg]
+
+    val array = obj.map(CleanJsObject.apply)
+      .toJSArray
+      .asInstanceOf[js.Array[CleanJsObject[T]]]
+
+    UndefOr.any2undefOrA(`|`.from(array)(ev))
   }
 
   type Cfg[T <: js.Object] = UndefOr[CleanJsObject[T]]
-  type SeriesCfg = js.UndefOr[js.Array[CleanJsObject[SeriesArea]] | js.Array[CleanJsObject[SeriesArearange]] | js.Array[CleanJsObject[SeriesAreaspline]] | js.Array[CleanJsObject[SeriesAreasplinerange]] | js.Array[CleanJsObject[SeriesBar]] | js.Array[CleanJsObject[SeriesBoxplot]] | js.Array[CleanJsObject[SeriesBubble]] | js.Array[CleanJsObject[SeriesColumn]] | js.Array[CleanJsObject[SeriesColumnrange]] | js.Array[CleanJsObject[SeriesErrorbar]] | js.Array[CleanJsObject[SeriesFunnel]] | js.Array[CleanJsObject[SeriesGauge]] | js.Array[CleanJsObject[SeriesHeatmap]] | js.Array[CleanJsObject[SeriesLine]] | js.Array[CleanJsObject[SeriesPie]] | js.Array[CleanJsObject[SeriesPolygon]] | js.Array[CleanJsObject[SeriesPyramid]] | js.Array[CleanJsObject[SeriesScatter]] | js.Array[CleanJsObject[SeriesSolidgauge]] | js.Array[CleanJsObject[SeriesSpline]] | js.Array[CleanJsObject[SeriesTreemap]] | js.Array[CleanJsObject[SeriesWaterfall]]]
+
+  // Copied from com.highcharts.config.HighchartsConfig
+  type AnySeries = js.Array[CleanJsObject[SeriesArea]] | js.Array[CleanJsObject[SeriesArearange]] | js.Array[CleanJsObject[SeriesAreaspline]] | js.Array[CleanJsObject[SeriesAreasplinerange]] | js.Array[CleanJsObject[SeriesBar]] | js.Array[CleanJsObject[SeriesBoxplot]] | js.Array[CleanJsObject[SeriesBubble]] | js.Array[CleanJsObject[SeriesColumn]] | js.Array[CleanJsObject[SeriesColumnrange]] | js.Array[CleanJsObject[SeriesErrorbar]] | js.Array[CleanJsObject[SeriesFunnel]] | js.Array[CleanJsObject[SeriesGauge]] | js.Array[CleanJsObject[SeriesHeatmap]] | js.Array[CleanJsObject[SeriesLine]] | js.Array[CleanJsObject[SeriesPie]] | js.Array[CleanJsObject[SeriesPolygon]] | js.Array[CleanJsObject[SeriesPyramid]] | js.Array[CleanJsObject[SeriesScatter]] | js.Array[CleanJsObject[SeriesSolidgauge]] | js.Array[CleanJsObject[SeriesSpline]] | js.Array[CleanJsObject[SeriesTreemap]] | js.Array[CleanJsObject[SeriesWaterfall]]
+
+  type SeriesCfg = js.UndefOr[AnySeries]
+
   type SeriesCfgData[T <: js.Object] = js.UndefOr[js.Array[CleanJsObject[T] | js.Array[js.Any] | Double]]
+
   type CategoriesCfg = js.UndefOr[js.Array[String]]
 }
