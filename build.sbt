@@ -1,7 +1,7 @@
 import sbt.Keys._
 
 // Tasks
-lazy val generate = inputKey[Unit]("Generates Scala.js sources")
+lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 
 // Settings
 lazy val commonSettings = Seq(
@@ -42,7 +42,7 @@ lazy val generatorSettings = Seq(
     "org.apache.commons" % "commons-lang3" % "3.4"
   ),
   mainClass in Compile := Some("com.karasiq.highcharts.generator.Main"),
-  fullRunInputTask(generate, Compile, "com.karasiq.highcharts.generator.Main"),
+  fullRunTask(generate, Compile, "com.karasiq.highcharts.generator.Main"),
   javaOptions in generate ++= Seq(
     "-Dhighcharts-generator.output=src/main/scala",
     "-Dhighcharts-generator.package=com.highcharts"
@@ -53,8 +53,7 @@ lazy val librarySettings = Seq(
   libraryDependencies ++= Seq(
     "be.doeraene" %%% "scalajs-jquery" % "0.8.1"
   ),
-  name := "scalajs-highcharts",
-  generate <<= (generate in generator)
+  name := "scalajs-highcharts"
 )
 
 lazy val libraryTestSettings = Seq(

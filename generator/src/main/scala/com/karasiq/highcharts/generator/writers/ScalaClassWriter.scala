@@ -79,7 +79,10 @@ class ScalaClassWriter extends ClassWriter {
       /*
         For pseudo values like series<area>, series<spline>, etc
         Will generate very long signature, like this:
-        val series: js.UndefOr[js.Array[CleanJsObject[SeriesArea]] | js.Array[CleanJsObject[SeriesArearange]] | js.Array[CleanJsObject[SeriesAreaspline]] | js.Array[CleanJsObject[SeriesAreasplinerange]] | js.Array[CleanJsObject[SeriesBar]] | js.Array[CleanJsObject[SeriesBoxplot]] | js.Array[CleanJsObject[SeriesBubble]] | js.Array[CleanJsObject[SeriesColumn]] | js.Array[CleanJsObject[SeriesColumnrange]] | js.Array[CleanJsObject[SeriesErrorbar]] | js.Array[CleanJsObject[SeriesFunnel]] | js.Array[CleanJsObject[SeriesGauge]] | js.Array[CleanJsObject[SeriesHeatmap]] | js.Array[CleanJsObject[SeriesLine]] | js.Array[CleanJsObject[SeriesPie]] | js.Array[CleanJsObject[SeriesPolygon]] | js.Array[CleanJsObject[SeriesPyramid]] | js.Array[CleanJsObject[SeriesScatter]] | js.Array[CleanJsObject[SeriesSolidgauge]] | js.Array[CleanJsObject[SeriesSpline]] | js.Array[CleanJsObject[SeriesTreemap]] | js.Array[CleanJsObject[SeriesWaterfall]]]
+        js.UndefOr[js.Array[CleanJsObject[SeriesArea]] | js.Array[CleanJsObject[SeriesArearange]] | js.Array[CleanJsObject[SeriesAreaspline]] | js.Array[CleanJsObject[SeriesAreasplinerange]] | js.Array[CleanJsObject[SeriesBar]] | js.Array[CleanJsObject[SeriesBoxplot]] | js.Array[CleanJsObject[SeriesBubble]] | js.Array[CleanJsObject[SeriesColumn]] | js.Array[CleanJsObject[SeriesColumnrange]] | js.Array[CleanJsObject[SeriesErrorbar]] | js.Array[CleanJsObject[SeriesFunnel]] | js.Array[CleanJsObject[SeriesGauge]] | js.Array[CleanJsObject[SeriesHeatmap]] | js.Array[CleanJsObject[SeriesLine]] | js.Array[CleanJsObject[SeriesPie]] | js.Array[CleanJsObject[SeriesPolygon]] | js.Array[CleanJsObject[SeriesPyramid]] | js.Array[CleanJsObject[SeriesScatter]] | js.Array[CleanJsObject[SeriesSolidgauge]] | js.Array[CleanJsObject[SeriesSpline]] | js.Array[CleanJsObject[SeriesTreemap]] | js.Array[CleanJsObject[SeriesWaterfall]]]
+
+        Fix: now signature looks like
+        js.UndefOr[js.Array[CleanJsObject[SeriesArea | SeriesArearange | SeriesAreaspline | SeriesAreasplinerange | SeriesBar | SeriesBoxplot | SeriesBubble | SeriesColumn | SeriesColumnrange | SeriesErrorbar | SeriesFunnel | SeriesGauge | SeriesHeatmap | SeriesLine | SeriesPie | SeriesPolygon | SeriesPyramid | SeriesScatter | SeriesSolidgauge | SeriesSpline | SeriesTreemap | SeriesWaterfall]]]
        */
       val compoundValueName = "(\\w+)<(\\w+)>".r
       val compoundValues = definitions.collect {
@@ -89,7 +92,39 @@ class ScalaClassWriter extends ClassWriter {
 
       compoundValues.foreach {
         case (baseName, types) ⇒
-          val scalaType = ScalaJsClassBuilder.unionType(types.toList)
+          // js.Array[CleanJsObject[ConfigType]] -> List(js.Array, CleanJsObject, ConfigType)
+          def unwrapTypes(tpe: String): List[String] = {
+            val regex = """([\w\.]+)\[([\w\.\[\]]+)\]""".r
+            tpe match {
+              case regex(name, typeArg) ⇒
+                List(name) ::: unwrapTypes(typeArg)
+
+              case name ⇒
+                List(name)
+            }
+          }
+          val unwrapped = types.map(unwrapTypes)
+          val typesHead = unwrapped.headOption.map(_.dropRight(1))
+          val canWrap: Boolean = unwrapped.tail.nonEmpty && unwrapped.tail.forall(tl ⇒ tl.length > 1 && typesHead.contains(tl.dropRight(1)))
+          val scalaType = if (canWrap) {
+            def wrap(types: List[String]): String = types match {
+              case Nil ⇒
+                throw new IllegalArgumentException
+
+              case tpe :: Nil ⇒
+                tpe
+
+              case tpe1 :: tpe2 :: Nil ⇒
+                s"$tpe1[$tpe2]"
+
+              case tpe :: ts ⇒
+                s"$tpe[${wrap(ts)}]"
+            }
+
+            wrap(typesHead.toList.flatten :+ ScalaJsClassBuilder.unionType(unwrapped.map(_.last).toList))
+          } else {
+            ScalaJsClassBuilder.unionType(types.toList)
+          }
           val config = definitions.collectFirst {
             case ScalaJsValue(cfg, name, _, _) if name == baseName ⇒
               cfg
