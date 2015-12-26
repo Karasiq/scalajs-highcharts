@@ -30,8 +30,14 @@ class ScalaJsClassBuilder {
   private def scalaType(classes: Set[String], tpe: Option[String], selfClass: Option[String] = None): Option[String] = {
     val array = """Array<(.+)>""".r
 
-    def stdTypes: PartialFunction[String, String] = {
-      case "String" ⇒
+    val selfTypeObject: PartialFunction[String, String] = {
+      case "" | "Object" if selfClass.nonEmpty ⇒
+//        println(selfClass)
+        s"CleanJsObject[${selfClass.get}]"
+    }
+
+    def stdTypes: PartialFunction[String, String] = selfTypeObject.orElse {
+      case "String" | "Color" ⇒
         "String"
 
       case "Function" ⇒
@@ -40,20 +46,14 @@ class ScalaJsClassBuilder {
       case "CSSObject" | "Object" ⇒
         "js.Object"
 
-      case "Color" ⇒
-        "String"
-
       case "Number" ⇒
         "Double"
 
       case "Boolean" ⇒
         "Boolean"
 
-      case t if t.contains("|") ⇒
-        "js.Any"
-
       case array(t) ⇒
-        val tpe = if (stdTypes.isDefinedAt(t)) {
+        val tpe: String = if (stdTypes.isDefinedAt(t)) {
           stdTypes(t)
         } else if (selfClass.nonEmpty) {
           selfClass.get
@@ -63,16 +63,42 @@ class ScalaJsClassBuilder {
         s"js.Array[$tpe]"
 
       case "Array" ⇒
-        s"js.Array[${selfClass.getOrElse("js.Any")}]"
+        "js.Array[js.Any]"
 
-      case "" if selfClass.exists(_.nonEmpty) ⇒
-        s"CleanJsObject[${selfClass.get}]"
+      case t if t.contains("|") ⇒ // Union type
+        def unionType(types: List[String]): String = types match {
+          case Nil ⇒
+            throw new IllegalArgumentException(t)
+
+          case type1 :: Nil ⇒
+            type1
+
+          case type1 :: type2 :: Nil ⇒
+            //s"js.`|`[$type1, $type2]"
+            s"$type1 | $type2"
+
+          case type1 :: ts ⇒
+            //s"js.`|`[$type1, ${unionType(ts)}]"
+            s"$type1 | ${unionType(ts)}"
+        }
+
+        val tokens: Array[String] = t.split("\\|")
+          .map(_.trim)
+          .filter(_.nonEmpty)
+          .collect(stdTypes)
+
+        unionType(tokens.toList)
 
       case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
         s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
     }
 
-    tpe.orElse(Some("")).collect(stdTypes)
+    val selfTypeArray: PartialFunction[String, String] = {
+      case "Array" if selfClass.nonEmpty ⇒
+        s"js.Array[CleanJsObject[${selfClass.get}]]"
+    }
+
+    tpe.orElse(Some("")).collect(selfTypeArray.orElse(stdTypes))
   }
 
   private def cfgScalaType(classes: Set[String], cfg: ConfigurationObject): Option[String] = {

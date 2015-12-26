@@ -1,10 +1,14 @@
 package com.highcharts
 
+import com.sun.org.apache.xpath.internal.operations.Or
+import org.scalajs.dom.svg
+import org.scalajs.dom.svg.A
 import org.scalajs.jquery.JQuery
 
 import scala.language.implicitConversions
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr
+import scala.scalajs.js.`|`.Evidence
 import scala.scalajs.js.annotation.JSExport
 
 @js.native
@@ -62,8 +66,16 @@ object HighchartsUtils {
       newObj
   }
 
+  implicit def highchartsUnionCleanObject[A <: js.Object, B1, B2](obj: A)(implicit ev: js.`|`.Evidence[CleanJsObject[A], js.`|`[B1, B2]]): js.`|`[B1, B2] = {
+    js.`|`.from(highchartsCleanObject(obj))
+  }
+
+  implicit def highchartsUndefOrUnion[A, B1, B2](v: A)(implicit ev: js.`|`.Evidence[A, js.`|`[B1, B2]]): UndefOr[js.`|`[B1, B2]] = {
+    UndefOr.any2undefOrA(js.`|`.from(v))
+  }
+
   implicit def highchartsUndefOrCleanObject[T <: js.Object](obj: T): UndefOr[CleanJsObject[T]] = {
-    cleanObject(obj).asInstanceOf[CleanJsObject[T]]
+    UndefOr.any2undefOrA(cleanObject(obj).asInstanceOf[CleanJsObject[T]])
   }
 
   implicit def highchartsCleanObject[T <: js.Object](obj: T): CleanJsObject[T] = {

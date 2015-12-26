@@ -28,7 +28,7 @@ object Main extends App {
          |  */
          |package $pkg
          |
-         |import scalajs.js
+         |import scalajs.js, js.`|`
          |import com.highcharts.CleanJsObject
          |import com.highcharts.HighchartsUtils._
          |
