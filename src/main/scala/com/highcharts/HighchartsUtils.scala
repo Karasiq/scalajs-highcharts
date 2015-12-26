@@ -1,14 +1,10 @@
 package com.highcharts
 
-import com.sun.org.apache.xpath.internal.operations.Or
-import org.scalajs.dom.svg
-import org.scalajs.dom.svg.A
 import org.scalajs.jquery.JQuery
 
 import scala.language.implicitConversions
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr
-import scala.scalajs.js.`|`.Evidence
 import scala.scalajs.js.annotation.JSExport
 
 @js.native
@@ -28,6 +24,10 @@ object HighchartsUtils {
   implicit class HighchartsJQuery(val jq: JQuery) extends AnyVal {
     def highcharts[T <: js.Object](config: CleanJsObject[T]): Unit = {
       jq.asInstanceOf[js.Dynamic].highcharts(config)
+    }
+
+    def highcharts(): UndefOr[com.highcharts.api.Chart] = {
+      jq.asInstanceOf[js.Dynamic].highcharts().asInstanceOf[UndefOr[com.highcharts.api.Chart]]
     }
   }
 
