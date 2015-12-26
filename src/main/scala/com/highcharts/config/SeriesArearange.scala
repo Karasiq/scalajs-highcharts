@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.7 by Karasiq
+  * @author Highcharts Config Generator v1.0.8 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -348,7 +348,7 @@ class SeriesArearange extends js.Object {
     *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/series/type/" target="_blank">Line and column in the same chart</a>
     */
-  val `type`: js.UndefOr[String] = js.undefined
+  val `type`: String = "arearange"
 
   /**
     * Set the initial visibility of the series.
