@@ -2,17 +2,17 @@
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
 # How to use
-Add to your `build.sbt`:
+Add dependency to your `build.sbt`
 ```scala
 libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.6"
 ```
 
-Include the JavaScript files in the <head> section of your web page as shown below.
+Include the JavaScript files in the `<head>` section of your web page as shown below
 ```html
 <script src="http://code.highcharts.com/highcharts.js"></script>
 ```
 
-Use in code:
+# Example
 ```scala
 import scalajs.js, js.UndefOr
 import org.scalajs.jquery.jQuery
