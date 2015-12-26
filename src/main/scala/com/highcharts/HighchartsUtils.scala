@@ -27,14 +27,16 @@ object HighchartsUtils extends HighchartsImplicits {
     }
   }
 
-  def mkSeries[T <: js.Object](obj: T*)(implicit ev: `|`.Evidence[T, AnySeries]): SeriesCfg = {
-    import js.JSConverters._
+  // Heterogeneous series build helper
+  implicit class SeriesBuilder(val series: js.Array[AnySeries]) extends AnyVal {
+    def addSeries[T <: js.Object](series: T*)(implicit ev: `|`.Evidence[T, AnySeries]): js.Array[AnySeries] = {
+      import scala.scalajs.js.JSConverters._
+      (this.series ++ series.map(CleanJsObject.apply).toJSArray).asInstanceOf[js.Array[AnySeries]]
+    }
+  }
 
-    val array = obj.map(CleanJsObject.apply)
-      .toJSArray
-      .asInstanceOf[js.Array[CleanJsObject[AnySeries]]]
-
-    UndefOr.any2undefOrA(array)
+  def mkSeries[T <: js.Object](series: T*)(implicit ev: `|`.Evidence[T, AnySeries]): js.Array[AnySeries] = {
+    js.Array[AnySeries]().addSeries[T](series:_*)
   }
 
   type Cfg[T <: js.Object] = UndefOr[CleanJsObject[T]]
