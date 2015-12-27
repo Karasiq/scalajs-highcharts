@@ -3,7 +3,7 @@ package com.highcharts
 import scala.scalajs.js
 
 @js.native
-trait CleanJsObject[T] extends scalajs.js.Object
+sealed trait CleanJsObject[+T] extends scalajs.js.Object
 
 object CleanJsObject {
   def apply(v: js.Object): js.Object = v match {

@@ -39,8 +39,8 @@ trait HighchartsImplicits {
     UndefOr.any2undefOrA(obj.asInstanceOf[js.Array[CleanJsObject[D] | js.Array[js.Any] | Double]])
   }
 
-  implicit def highchartsCfg[A <: js.Object, B](obj: B)(implicit ev: B <:< A): Cfg[A] = {
-    UndefOr.any2undefOrA(this.highchartsCleanObject(obj.asInstanceOf[A]))
+  implicit def highchartsCfg[A <: js.Object](obj: A): Cfg[A] = {
+    UndefOr.any2undefOrA(this.highchartsCleanObject(obj))
   }
 
   implicit def highchartsSeriesArray(arr: js.Array[AnySeries]): SeriesCfg = {
