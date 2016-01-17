@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.8 by Karasiq
+  * @author Highcharts Config Generator v1.0.9 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
@@ -29,7 +29,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-addaxis/" target="_blank">Add and remove axes</a>
     * @since 3.0
     */
-  def remove(redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def remove(redraw: Boolean = ???): Unit = js.native
 
   /**
     * Remove a plot band by its <code>id</code>.
@@ -37,7 +37,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-removeplotband/" target="_blank">Remove plot band by id</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/" target="_blank">Toggle the plot band from a button</a>
     * @since 1.2.0
     */
-  def removePlotBand(id: js.UndefOr[String] = js.undefined): Unit = js.native
+  def removePlotBand(id: String = ???): Unit = js.native
 
   /**
     * Remove a plot line by its <code>id</code>.
@@ -45,7 +45,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-id/" target="_blank">Remove plot line by id</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotline/" target="_blank">toggle the plot line from a button</a>
     * @since 1.2.0
     */
-  def removePlotLine(id: js.UndefOr[String] = js.undefined): Unit = js.native
+  def removePlotLine(id: String = ???): Unit = js.native
 
   /**
     * Set new categories for the axis.
@@ -54,7 +54,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-setcategories/" target="_blank">Set categories by click on a button</a>
     * @since 1.2.0
     */
-  def setCategories(cateories: js.UndefOr[js.Array[js.Any]] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def setCategories(cateories: js.Array[js.Any] = ???, redraw: Boolean = ???): Unit = js.native
 
   /**
     * Set the minimum and maximum of the axes after render time. If the <code>startOnTick</code> and <code>endOnTick</code> options are true, the minimum and maximum values are rounded off to the nearest tick. To prevent this, these options can be set to false before calling setExtremes. Also, <code>setExtremes</code> will not allow a range lower than the <a href="#xAxis.minRange">minRange</a> option, which by default is the range of five points.
@@ -65,7 +65,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-setextremes/" target="_blank">Set extremes from button</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-setextremes-datetime/" target="_blank">Set extremes on datetime axis</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-setextremes-off-ticks/" target="_blank">setting extremes off ticks</a>
     * @since 1.2.0
     */
-  def setExtremes(min: js.UndefOr[Double] = js.undefined, max: js.UndefOr[Double] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def setExtremes(min: Double = ???, max: Double = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * Translates a value in terms of axis units in to pixels within the chart.
@@ -73,7 +73,7 @@ Defaults to <code>true</code>. Whether to redraw the chart following the remove.
 A value in terms of axis units.
     * @since 3.0
     */
-  def toPixels(value: js.UndefOr[Double] = js.undefined, paneCoordinates: js.UndefOr[Boolean] = js.undefined): Double = js.native
+  def toPixels(value: Double = ???, paneCoordinates: Boolean = ???): Double = js.native
 
   /**
     * Translate a pixel position along the axis to a value in terms of axis units.
@@ -81,7 +81,7 @@ A value in terms of axis units.
 A pixel position along the axis.
     * @since 3.0
     */
-  def toValue(pixel: js.UndefOr[Double] = js.undefined, paneCoordinates: js.UndefOr[Boolean] = js.undefined): Double = js.native
+  def toValue(pixel: Double = ???, paneCoordinates: Boolean = ???): Double = js.native
 
   /**
     * Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.
@@ -90,7 +90,7 @@ The new options that will be merged in with existing options on the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-update/" target="_blank">Axis update demo</a>
     * @since 3.0
     */
-  def update(options: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
 
   /**
     * Update the title of the axis after render time.
@@ -99,7 +99,7 @@ The new options that will be merged in with existing options on the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-settitle/" target="_blank">Set a new Y axis title</a>
     * @since 2.2
     */
-  def setTitle(title: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def setTitle(title: js.Object = ???, redraw: Boolean = ???): Unit = js.native
 
   /**
     * Add a plot line after render time.
@@ -107,7 +107,7 @@ The new options that will be merged in with existing options on the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotline/" target="_blank">Toggle the plot line from a button</a>
     * @since 1.2.0
     */
-  def addPlotLine(options: js.UndefOr[js.Object] = js.undefined): Unit = js.native
+  def addPlotLine(options: js.Object = ???): Unit = js.native
 
   /**
     * Add a plot band after render time.
@@ -115,5 +115,5 @@ The new options that will be merged in with existing options on the axis.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/" target="_blank">Toggle the plot band from a button</a>
     * @since 1.2.0
     */
-  def addPlotBand(options: js.UndefOr[js.Object] = js.undefined): Unit = js.native
+  def addPlotBand(options: js.Object = ???): Unit = js.native
 }

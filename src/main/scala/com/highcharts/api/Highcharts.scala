@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.8 by Karasiq
+  * @author Highcharts Config Generator v1.0.9 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
@@ -27,7 +27,7 @@ trait Highcharts extends js.Object {
     * @param time The JavaScript time to format.
     * @param capitalize Whether to capitalize words in the return string.
     */
-  def dateFormat(format: js.UndefOr[String] = js.undefined, time: js.UndefOr[Double] = js.undefined, capitalize: js.UndefOr[Boolean] = js.undefined): String = js.native
+  def dateFormat(format: String = ???, time: Double = ???, capitalize: Boolean = ???): String = js.native
 
   /**
     * A hook for defining additional date format specifiers. New specifiers are defined as key-value pairs by using the specifier as key, and a function which takes the timestamp as value. This function returns the formatted portion of the date.
@@ -41,7 +41,7 @@ trait Highcharts extends js.Object {
     * @param options The chart configuration object.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/global/useutc-false/" target="_blank">Setting a global option</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/setoptions/" target="_blank">applying a general theme</a>
     */
-  def setOptions(options: js.UndefOr[js.Object] = js.undefined): js.Object = js.native
+  def setOptions(options: js.Object = ???): js.Object = js.native
 
   /**
     * Formats a JavaScript number with grouped thousands, a fixed amount of decimals and an optional decimal point. It is a port of PHP's function with the same name. See <a href="http://php.net/manual/en/function.number-format.php">PHP number_format</a> for a full explanation of the parameters.
@@ -51,16 +51,16 @@ trait Highcharts extends js.Object {
     * @param thousandsSep The thousands separator. Defaults to " " or to the string specified globally in options.lang.thousandsSep.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
     */
-  def numberFormat(number: js.UndefOr[Double] = js.undefined, decimals: js.UndefOr[Double] = js.undefined, decimalPoint: js.UndefOr[String] = js.undefined, thousandsSep: js.UndefOr[String] = js.undefined): String = js.native
+  def numberFormat(number: Double = ???, decimals: Double = ???, decimalPoint: String = ???, thousandsSep: String = ???): String = js.native
 
   /**
     * This is the constructor for creating a new chart object.
     */
-  def Chart(renderTo: js.UndefOr[String | js.Object] = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
+  def Chart(renderTo: String | js.Object = ???, options: js.Object = ???, callback: js.Function = ???): CleanJsObject[Chart] = js.native
 
   /**
     * As <code>Highcharts.Chart</code>, but without need for the <code>new</code> keyword.
     * @since 4.2.0
     */
-  def chart(renderTo: js.UndefOr[String | js.Object] = js.undefined, options: js.UndefOr[js.Object] = js.undefined, callback: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Chart] = js.native
+  def chart(renderTo: String | js.Object = ???, options: js.Object = ???, callback: js.Function = ???): CleanJsObject[Chart] = js.native
 }

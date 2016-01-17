@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation.JSName
 
 /**
   * Highstock API object
-  *
   * @see [[http://api.highcharts.com/highstock]]
   */
 @js.native

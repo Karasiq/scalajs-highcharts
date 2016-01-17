@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.8 by Karasiq
+  * @author Highcharts Config Generator v1.0.9 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
@@ -21,14 +21,14 @@ trait Element extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-g/" target="_blank">Elements added to a group</a>
     * @since 2.0
     */
-  def add(parent: js.UndefOr[js.Object] = js.undefined): CleanJsObject[Element] = js.native
+  def add(parent: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Apply numeric attributes to the SVG/VML element by animation. See <a href="#Element.attr()">Element.attr()</a> for more information on setting attributes.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/element-on/" target="_blank">Setting some attributes by animation</a>
     * @since 2.0
     */
-  def animate(attributes: js.UndefOr[js.Object] = js.undefined, animation: js.UndefOr[js.Object] = js.undefined): CleanJsObject[Element] = js.native
+  def animate(attributes: js.Object = ???, animation: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Apply some CSS properties to the element
@@ -36,7 +36,7 @@ trait Element extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-text-on-chart/" target="_blank">Styled text</a>
     * @since 2.0
     */
-  def css(hash: js.UndefOr[js.Object] = js.undefined): CleanJsObject[Element] = js.native
+  def css(hash: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Apply an event handler to the element
@@ -45,7 +45,7 @@ trait Element extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/element-on/" target="_blank">A clickable rectangle</a>.
     * @since 2.0
     */
-  def on(eventType: js.UndefOr[String] = js.undefined, handler: js.UndefOr[js.Function] = js.undefined): CleanJsObject[Element] = js.native
+  def on(eventType: String = ???, handler: js.Function = ???): CleanJsObject[Element] = js.native
 
   /**
     * Bring the element to the front. Alternatively, a zIndex attribute can be given.
@@ -64,7 +64,7 @@ trait Element extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/renderer-rect/" target="_blank">Setting some attributes</a>
     * @since 2.0
     */
-  def attr(hash: js.UndefOr[js.Object] = js.undefined): CleanJsObject[Element] = js.native
+  def attr(hash: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Destroy the element and free up memory

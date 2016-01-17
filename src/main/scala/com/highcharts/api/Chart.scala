@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.8 by Karasiq
+  * @author Highcharts Config Generator v1.0.9 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
@@ -22,7 +22,7 @@ The Axis options, as documented under <a href="#xAxis">xAxis</a> and <a href="#y
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-addaxis/" target="_blank">Add and remove axes</a>
     * @since 3.0
     */
-  def addAxis(options: js.UndefOr[js.Object] = js.undefined, isX: js.UndefOr[Boolean] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def addAxis(options: js.Object = ???, isX: Boolean = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initiated, add the series as a configuration option instead.
@@ -31,7 +31,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-addseries/" target="_blank">Add a series from a button</a>
     * @since 1.2.0
     */
-  def addSeries(options: js.UndefOr[js.Object] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): CleanJsObject[Series] = js.native
+  def addSeries(options: js.Object = ???, redraw: Boolean = ???, animation: js.Any = ???): CleanJsObject[Series] = js.native
 
   /**
     * Exporting module required. Submit an SVG version of the chart to a server along with some parameters for conversion.
@@ -45,7 +45,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart/" target="_blank">Export with no options</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-filename/" target="_blank">PDF type and custom filename</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-custom-background/" target="_blank">different chart background in export</a>
     * @since 2.0
     */
-  def exportChart(options: js.UndefOr[js.Object] = js.undefined, chartOptions: js.UndefOr[js.Object] = js.undefined): Unit = js.native
+  def exportChart(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
 
   /**
     * Get an axis, series or point by its <code>id</code> as given in the configuration options.
@@ -53,7 +53,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-id/" target="_blank">Get series by id</a>
     * @since 1.2.0
     */
-  def get(id: js.UndefOr[String] = js.undefined): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
+  def get(id: String = ???): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
 
   /**
     * Exporting module required. Get an SVG string representing the chart.
@@ -61,7 +61,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-getsvg/" target="_blank">View the SVG from a button</a>
     * @since 2.0
     */
-  def getSVG(additionalOptions: js.UndefOr[js.Object] = js.undefined): String = js.native
+  def getSVG(additionalOptions: js.Object = ???): String = js.native
 
   /**
     * Returns an array of all currently selected points in the chart. Points can be selected either programmatically by the <code>point.select()</code> method or by clicking.
@@ -115,14 +115,14 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
     * @param animation Defaults to true. When true, the resize will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-setsize-button/" target="_blank">Test resizing from buttons</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-setsize-jquery-resizable/" target="_blank">add a jQuery UI resizable</a>
     */
-  def setSize(width: js.UndefOr[Double] = js.undefined, height: js.UndefOr[Double] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def setSize(width: Double = ???, height: Double = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * Dim the chart's plot area and show a loading label text. Options for the loading screen are defined at <a class="internal" href="#loading">options.loading</a>. A custom text can be given as a parameter for loading.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-hideloading/" target="_blank">Show and hide loading from a button</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-showloading/" target="_blank">apply different text labels.</a>
     * @since 2.0.5
     */
-  def showLoading(str: js.UndefOr[String] = js.undefined): Unit = js.native
+  def showLoading(str: String = ???): Unit = js.native
 
   /**
     * This method is deprecated as of 2.0.1. Updating the chart position after a move operation is no longer necessary.
@@ -137,7 +137,7 @@ The existing Point object from which the drilldown will start.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/async/" target="_blank">Async drilldown</a>
     * @since 3.0.8
     */
-  def addSeriesAsDrilldown(point: js.UndefOr[js.Object] = js.undefined, seriesOptions: js.UndefOr[js.Object] = js.undefined): Unit = js.native
+  def addSeriesAsDrilldown(point: js.Object = ???, seriesOptions: js.Object = ???): Unit = js.native
 
   /**
     * When the chart is drilled down to a child series, calling <code>chart.drillUp()</code> will drill up to the parent series.
@@ -151,7 +151,7 @@ The existing Point object from which the drilldown will start.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-settitle/" target="_blank">Set title text and styles</a>
     * @since 2.1.0
     */
-  def setTitle(title: js.UndefOr[js.Object] = js.undefined, subtitle: js.Any = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def setTitle(title: js.Object = ???, subtitle: js.Any = ???, redraw: Boolean = ???): Unit = js.native
 
   /**
     * Returns an array of all currently selected series in the chart. Series can be selected either programmatically by the <code>series.select()</code> method or by checking the checkbox next to the legend item if <code>series.showCheckBox</code> is true.
@@ -184,5 +184,5 @@ The existing Point object from which the drilldown will start.
     * @param animation Defaults to true. When true, the update will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
     * @since 1.2.0
     */
-  def redraw(animation: js.Any = js.undefined): Unit = js.native
+  def redraw(animation: js.Any = ???): Unit = js.native
 }

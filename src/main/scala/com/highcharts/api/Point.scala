@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.8 by Karasiq
+  * @author Highcharts Config Generator v1.0.9 by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.api
@@ -34,7 +34,7 @@ trait Point extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-point-events-remove/" target="_blank">Remove point and confirm</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/point-remove/" target="_blank">Remove pie slice</a>
     * @since 1.2.0
     */
-  def remove(redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def remove(redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * Whether the point is selected or not.
@@ -50,7 +50,7 @@ trait Point extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/point-slice/" target="_blank">Slice and unslice a point from a button</a>
     * @since 1.2.0
     */
-  def slice(sliced: js.UndefOr[Boolean] = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def slice(sliced: Boolean = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * The x value for the point.
@@ -84,7 +84,7 @@ trait Point extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/point-update-column/" target="_blank">Update column value</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/point-update-pie/" target="_blank">update pie slice</a>
     * @since 1.2.0
     */
-  def update(options: js.Any = js.undefined, redraw: js.UndefOr[Boolean] = js.undefined, animation: js.Any = js.undefined): Unit = js.native
+  def update(options: js.Any = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * Select or unselect the point.
@@ -93,7 +93,7 @@ trait Point extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/point-select/" target="_blank">Select a point from a button</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/events-selection-points/" target="_blank">select a range of points through a drag selection</a>.
     * @since 1.2.0
     */
-  def select(select: js.UndefOr[Boolean] = js.undefined, accumulate: js.UndefOr[Boolean] = js.undefined): Unit = js.native
+  def select(select: Boolean = ???, accumulate: Boolean = ???): Unit = js.native
 
   /**
     * For certain series types, like pie. Whether the Point instance is visible.

@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation.JSName
 
 /**
   * Highmaps API object
-  *
   * @see [[http://api.highcharts.com/highmaps]]
   */
 @js.native
