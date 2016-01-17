@@ -68,10 +68,7 @@ class ScalaClassWriter extends ClassWriter {
             s"${validScalaName(argName)}: $argType = $argValue"
 
           case ScalaJsValue(_, argName, argType, None) ⇒
-            if (argType == "js.Any")
-              s"${validScalaName(argName)}: $argType = js.undefined"
-            else
-              s"${validScalaName(argName)}: js.UndefOr[$argType] = js.undefined"
+            s"${validScalaName(argName)}: $argType = ???"
         }
         writer(tab + s"def $scalaName(${args.mkString(", ")}): $scalaType = js.native")
       }
