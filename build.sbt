@@ -70,15 +70,43 @@ lazy val libraryTestSettings = Seq(
     )
   },
   mainClass in Compile := Some("com.karasiq.highcharts.test.backend.HighchartsTestApp"),
-  gulpAssets in Compile := file("test") / "frontend" / "webapp",
-  gulpCompile in Compile <<= (gulpCompile in Compile).dependsOn(fastOptJS in Compile in libraryTestFrontend)
+  scalaJsBundlerInline in Compile := true,
+  scalaJsBundlerCompile in Compile <<= (scalaJsBundlerCompile in Compile).dependsOn(fullOptJS in Compile in libraryTestFrontend),
+  scalaJsBundlerAssets in Compile += {
+    import com.karasiq.scalajsbundler.dsl._
+
+    Bundle("index",
+      // Static
+      Html from TestPageAssets.index,
+      Style from TestPageAssets.style,
+
+      // jQuery
+      Script from url("https://code.jquery.com/jquery-1.12.0.js"),
+
+      // Bootstrap
+      Style from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/css/bootstrap.css"),
+      Script from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/js/bootstrap.js"),
+      Static("fonts/glyphicons-halflings-regular.eot") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.eot"),
+      Static("fonts/glyphicons-halflings-regular.svg") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.svg"),
+      Static("fonts/glyphicons-halflings-regular.ttf") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.ttf"),
+      Static("fonts/glyphicons-halflings-regular.woff") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.woff"),
+      Static("fonts/glyphicons-halflings-regular.woff2") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.woff2"),
+
+      // Highcharts
+      Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts.src.js"),
+
+      // Scala.js app
+      Script from file("test") / "frontend" / "target" / "scala-2.11" / "scalajs-highcharts-test-frontend-opt.js",
+      Script from file("test") / "frontend" / "target" / "scala-2.11" / "scalajs-highcharts-test-frontend-launcher.js"
+    )
+  }
 )
 
 lazy val libraryTestFrontendSettings = Seq(
   persistLauncher in Compile := true,
   name := "scalajs-highcharts-test-frontend",
   libraryDependencies ++= Seq(
-    "com.greencatsoft" %%% "scalajs-angular" % "0.5"
+    "com.lihaoyi" %%% "scalatags" % "0.5.3"
   )
 )
 
@@ -92,7 +120,7 @@ lazy val library = Project("scalajs-library", file("."))
 
 lazy val libraryTest = Project("scalajs-highcharts-test", file("test"))
   .settings(commonSettings, libraryTestSettings)
-  .enablePlugins(GulpPlugin)
+  .enablePlugins(ScalaJSBundlerPlugin)
 
 lazy val libraryTestFrontend = Project("scalajs-highcharts-test-frontend", file("test") / "frontend")
   .settings(commonSettings, libraryTestFrontendSettings)

@@ -18,12 +18,14 @@ object HighchartsTestApp extends App {
   final class AppHandler extends Actor with HttpService {
     override def receive: Actor.Receive = runRoute {
       get {
-        // Index page
-        (pathSingleSlash & respondWithMediaType(MediaTypes.`text/html`)) {
-          getFromResource("webapp/index.html")
-        } ~
-        // Other resources
-        getFromResourceDirectory("webapp")
+        compressResponse() {
+          // Index page
+          (pathSingleSlash & respondWithMediaType(MediaTypes.`text/html`)) {
+            getFromResource("webapp/index.html")
+          } ~
+          // Other resources
+          getFromResourceDirectory("webapp")
+        }
       }
     }
 
