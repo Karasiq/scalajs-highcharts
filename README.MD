@@ -12,7 +12,7 @@ Include the JavaScript files in the `<head>` section of your web page as shown b
 <script src="http://code.highcharts.com/highcharts.js"></script>
 ```
 
-# Example
+# Basic example
 ```scala
 import scalajs.js, js.UndefOr
 import org.scalajs.jquery.jQuery
@@ -55,3 +55,6 @@ jQuery("#container").highcharts(new HighchartsConfig {
   )
 })
 ```
+
+# Full example with backend
+* [Project test server](https://github.com/Karasiq/scalajs-highcharts/tree/master/test) (see also [build.sbt configuration](https://github.com/Karasiq/scalajs-highcharts/blob/master/build.sbt#L59))
