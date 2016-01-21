@@ -48,5 +48,7 @@ object HighchartsUtils extends HighchartsImplicits {
 
   type SeriesCfgData[T <: js.Object] = js.UndefOr[js.Array[CleanJsObject[T] | js.Array[js.Any] | Double]]
 
+  type SeriesPieCfgData = js.UndefOr[js.Array[CleanJsObject[SeriesPieData] | Double]]
+
   type CategoriesCfg = js.UndefOr[js.Array[String]]
 }

@@ -1,9 +1,9 @@
 package com.highcharts.test.frontend
 
 import com.highcharts.HighchartsUtils._
-import com.highcharts.test.frontend.charts.TestBarChartConfig
+import com.highcharts.test.frontend.charts.{Test3dPieChartConfig, TestBarChartConfig}
 import org.scalajs.dom
-import org.scalajs.jquery.jQuery
+import org.scalajs.jquery._
 
 import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
@@ -25,9 +25,13 @@ object HighchartsTestApp extends JSApp {
       val barChart = div(`id` := "bar-chart-container").render
       jQuery(barChart).highcharts(new TestBarChartConfig)
 
+      val pieChart = div(`id` := "pie-chart-container").render
+      jQuery(pieChart).highcharts(new Test3dPieChartConfig)
+
       // Create navigation elements
       val tabs = new NavigationBar("highcharts-test",
-        NavigationTab("Bar chart", "bar", "briefcase", barChart, active = true)
+        NavigationTab("Bar chart", "bar", "briefcase", barChart, active = true),
+        NavigationTab("Pie chart", "pie", "adjust", pieChart)
       )
 
       // Bootstrap container
@@ -43,7 +47,7 @@ object HighchartsTestApp extends JSApp {
       body.append(container)
 
       // Size fix
-      resizeToContainer(container, barChart)
+      Seq(barChart, pieChart).foreach(resizeToContainer(container, _))
     })
   }
 }

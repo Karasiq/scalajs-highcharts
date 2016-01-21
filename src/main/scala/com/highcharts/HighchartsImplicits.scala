@@ -1,6 +1,6 @@
 package com.highcharts
 
-import com.highcharts.HighchartsUtils.{AnySeries, Cfg, SeriesCfg, SeriesCfgData}
+import com.highcharts.HighchartsUtils._
 
 import scala.language.implicitConversions
 import scala.scalajs.js
@@ -13,6 +13,10 @@ trait HighchartsImplicits {
 
   implicit def highchartsPlainObject[T](obj: CleanJsObject[T]): T = {
     obj.asInstanceOf[T]
+  }
+
+  implicit def highchartsCleanData[T <: js.Object, V](obj: js.Array[T])(implicit ev: js.`|`.Evidence[CleanJsObject[T], V]): js.UndefOr[js.Array[V]] = {
+    UndefOr.any2undefOrA(obj.map(o ⇒ highchartsCleanObject(o).asInstanceOf[V]))
   }
 
   implicit def highchartsSeriesCfgData[T, D <: js.Object](obj: js.Array[T])(implicit ev: js.`|`.Evidence[T, CleanJsObject[D] | js.Array[js.Any] | Double]): SeriesCfgData[D] = {

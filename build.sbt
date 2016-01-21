@@ -7,7 +7,7 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
   isSnapshot := false,
-  version := "1.0.9",
+  version := "1.0.10",
   scalaVersion := "2.11.7",
   publishMavenStyle := true,
   publishTo := {
@@ -94,6 +94,7 @@ lazy val libraryTestSettings = Seq(
 
       // Highcharts
       Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts.src.js"),
+      Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts-3d.src.js"),
 
       // Scala.js app
       Script from file("test") / "frontend" / "target" / "scala-2.11" / "scalajs-highcharts-test-frontend-opt.js",
