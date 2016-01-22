@@ -7,6 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.{UndefOr, `|`}
 
 trait HighchartsImplicits {
+  implicit def highchartsSizeCfg[V](obj: V)(implicit ev: js.`|`.Evidence[V, String | Double]): js.UndefOr[String | Double] = {
+    obj.asInstanceOf[String | Double]
+  }
+
   implicit def highchartsCleanObject[T <: js.Object](obj: T): CleanJsObject[T] = {
     CleanJsObject(obj).asInstanceOf[CleanJsObject[T]]
   }
