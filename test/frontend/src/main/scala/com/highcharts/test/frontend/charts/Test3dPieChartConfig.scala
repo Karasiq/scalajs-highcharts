@@ -9,7 +9,6 @@ import scala.scalajs.js.{UndefOr, |}
 
 /**
   * Example 3D pie chart config
- *
   * @see [[https://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/]]
   */
 @ScalaJSDefined
