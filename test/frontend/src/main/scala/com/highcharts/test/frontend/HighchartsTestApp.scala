@@ -1,6 +1,7 @@
 package com.highcharts.test.frontend
 
 import com.highcharts.HighchartsUtils._
+import com.highcharts.config.HighchartsConfig
 import com.highcharts.test.frontend.charts.{Test3dPieChartConfig, TestBarChartConfig}
 import org.scalajs.dom
 import org.scalajs.jquery._
@@ -18,15 +19,18 @@ object HighchartsTestApp extends JSApp {
     jQuery(chart).highcharts().foreach(_.setSize(width, height))
   }
 
+  private def renderChart(chartConfig: HighchartsConfig): dom.Element = {
+    val container = div().render
+    jQuery(container).highcharts(chartConfig)
+    container
+  }
+
   @JSExport
   override def main(): Unit = {
     jQuery(() ⇒ {
       // Create charts
-      val barChart = div(`id` := "bar-chart-container").render
-      jQuery(barChart).highcharts(new TestBarChartConfig)
-
-      val pieChart = div(`id` := "pie-chart-container").render
-      jQuery(pieChart).highcharts(new Test3dPieChartConfig)
+      val barChart = renderChart(new TestBarChartConfig)
+      val pieChart = renderChart(new Test3dPieChartConfig)
 
       // Create navigation elements
       val tabs = new NavigationBar("highcharts-test",
