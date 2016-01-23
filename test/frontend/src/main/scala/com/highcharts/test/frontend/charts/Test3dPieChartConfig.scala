@@ -4,11 +4,12 @@ import com.highcharts.HighchartsUtils._
 import com.highcharts.config._
 
 import scala.scalajs.js
-import scala.scalajs.js.UndefOr
 import scala.scalajs.js.annotation.ScalaJSDefined
+import scala.scalajs.js.{UndefOr, |}
 
 /**
   * Example 3D pie chart config
+ *
   * @see [[https://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/]]
   */
 @ScalaJSDefined
@@ -40,6 +41,7 @@ class Test3dPieChartConfig extends HighchartsConfig {
         override val enabled: UndefOr[Boolean] = true
         override val format: UndefOr[String] = "{point.name}"
       }
+      override val size: UndefOr[String | Double] = "100%"
     }
   }
 
