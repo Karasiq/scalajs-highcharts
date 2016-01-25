@@ -43,7 +43,7 @@ jQuery("#container").highcharts(new HighchartsConfig {
   }
 
   // Series
-  override val series: SeriesCfg = mkSeries(
+  override val series: SeriesCfg = js.Array[AnySeries](
     new SeriesBar {
       override val name: js.UndefOr[String] = "Jane"
       override val data: SeriesCfgData[SeriesBarData] = js.Array[Double](1, 0, 4)

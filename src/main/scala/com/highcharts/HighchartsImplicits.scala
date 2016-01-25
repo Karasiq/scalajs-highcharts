@@ -7,6 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.{UndefOr, `|`}
 
 trait HighchartsImplicits {
+  implicit def highchartsUnionCleanObject[V <: js.Object, U1, U2](obj: V)(implicit ev: js.`|`.Evidence[CleanJsObject[V], U1 | U2]): U1 | U2 = {
+    CleanJsObject(obj).asInstanceOf[U1 | U2]
+  }
+
   implicit def highchartsUnionCfg[V, U1, U2](obj: V)(implicit ev: js.`|`.Evidence[V, U1 | U2]): js.UndefOr[U1 | U2] = {
     UndefOr.any2undefOrA(obj.asInstanceOf[U1 | U2])
   }
@@ -32,6 +36,6 @@ trait HighchartsImplicits {
   }
 
   implicit def highchartsSeriesArray(arr: js.Array[AnySeries]): SeriesCfg = {
-    arr.asInstanceOf[SeriesCfg]
+    arr.map(obj ⇒ CleanJsObject(obj.asInstanceOf[js.Object])).asInstanceOf[SeriesCfg]
   }
 }

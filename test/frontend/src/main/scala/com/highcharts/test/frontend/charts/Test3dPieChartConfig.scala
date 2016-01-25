@@ -49,7 +49,7 @@ class Test3dPieChartConfig extends HighchartsConfig {
     override val name: UndefOr[String] = str
   }
 
-  override val series: SeriesCfg = mkSeries(new SeriesPie {
+  override val series: SeriesCfg = js.Array[AnySeries](new SeriesPie {
     override val name: UndefOr[String] = "Browser share"
 
     override val data: SeriesPieCfgData = js.Array[SeriesPieData](

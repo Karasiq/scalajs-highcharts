@@ -1,5 +1,6 @@
 package com.highcharts.test.frontend
 
+import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 import com.highcharts.config.HighchartsConfig
 import com.highcharts.test.frontend.charts.{Test3dPieChartConfig, TestBarChartConfig}
@@ -19,7 +20,8 @@ object HighchartsTestApp extends JSApp {
     jQuery(chart).highcharts().foreach(_.setSize(width, height))
   }
 
-  private def renderChart(chartConfig: HighchartsConfig): dom.Element = {
+  private def renderChart(chartConfig: CleanJsObject[HighchartsConfig]): dom.Element = {
+    dom.console.log(chartConfig)
     val container = div().render
     jQuery(container).highcharts(chartConfig)
     container
