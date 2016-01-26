@@ -3,7 +3,7 @@ package com.highcharts.test.frontend
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
 import com.highcharts.config.HighchartsConfig
-import com.highcharts.test.frontend.charts.{Test3dPieChartConfig, TestBarChartConfig}
+import com.highcharts.test.frontend.charts.{Test3dPieChartConfig, TestBarChartConfig, TestCombinationChartConfig}
 import org.scalajs.dom
 import org.scalajs.jquery._
 
@@ -33,11 +33,13 @@ object HighchartsTestApp extends JSApp {
       // Create charts
       val barChart = renderChart(new TestBarChartConfig)
       val pieChart = renderChart(new Test3dPieChartConfig)
+      val comboChart = renderChart(new TestCombinationChartConfig)
 
       // Create navigation elements
       val tabs = new NavigationBar("highcharts-test",
         NavigationTab("Bar chart", "bar", "briefcase", barChart, active = true),
-        NavigationTab("Pie chart", "pie", "adjust", pieChart)
+        NavigationTab("Pie chart", "pie", "adjust", pieChart),
+        NavigationTab("Combination chart", "combo", "tasks", comboChart)
       )
 
       // Bootstrap container
@@ -53,7 +55,7 @@ object HighchartsTestApp extends JSApp {
       body.append(container)
 
       // Size fix
-      Seq(barChart, pieChart).foreach(resizeToContainer(container, _))
+      Seq(barChart, pieChart, comboChart).foreach(resizeToContainer(container, _))
     })
   }
 }
