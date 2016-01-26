@@ -1,6 +1,9 @@
 # scalajs-highcharts
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
+# Demo page
+https://karasiq.github.io/scalajs-highcharts/
+
 # How to use
 Add dependency to your `build.sbt`
 ```scala
