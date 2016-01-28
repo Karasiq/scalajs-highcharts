@@ -1,5 +1,6 @@
 package com.highcharts.test.frontend.charts
 
+import com.highcharts.HighchartsAliases._
 import com.highcharts.HighchartsUtils._
 import com.highcharts.config._
 

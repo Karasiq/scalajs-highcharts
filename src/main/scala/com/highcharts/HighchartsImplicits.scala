@@ -1,12 +1,16 @@
 package com.highcharts
 
-import com.highcharts.HighchartsUtils._
+import com.highcharts.HighchartsAliases.SeriesCfgData
 
 import scala.language.implicitConversions
 import scala.scalajs.js
 import scala.scalajs.js.{UndefOr, `|`}
 
 trait HighchartsImplicits {
+  type Cfg[T <: js.Object] = UndefOr[CleanJsObject[T]]
+
+  type CfgArray[T <: js.Object] = UndefOr[js.Array[CleanJsObject[T]]]
+
   implicit def highchartsUnionCleanObject[V <: js.Object, U1, U2](obj: V)(implicit ev: js.`|`.Evidence[CleanJsObject[V], U1 | U2]): U1 | U2 = {
     CleanJsObject(obj).asInstanceOf[U1 | U2]
   }
@@ -35,7 +39,7 @@ trait HighchartsImplicits {
     UndefOr.any2undefOrA(this.highchartsCleanObject(obj))
   }
 
-  implicit def highchartsSeriesArray(arr: js.Array[AnySeries]): SeriesCfg = {
-    arr.map(obj ⇒ CleanJsObject(obj.asInstanceOf[js.Object])).asInstanceOf[SeriesCfg]
+  implicit def highchartsIntNumber(value: Int): UndefOr[Double] = {
+    value.toDouble
   }
 }

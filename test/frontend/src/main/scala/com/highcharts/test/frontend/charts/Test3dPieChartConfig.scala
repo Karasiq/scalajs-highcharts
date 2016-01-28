@@ -1,5 +1,6 @@
 package com.highcharts.test.frontend.charts
 
+import com.highcharts.HighchartsAliases._
 import com.highcharts.HighchartsUtils._
 import com.highcharts.config._
 
@@ -17,8 +18,8 @@ class Test3dPieChartConfig extends HighchartsConfig {
     override val `type`: UndefOr[String] = "pie"
 
     override val options3d: Cfg[ChartOptions3d] = new ChartOptions3d {
-      override val alpha: UndefOr[Double] = 45D
-      override val beta: UndefOr[Double] = 0D
+      override val alpha: UndefOr[Double] = 45
+      override val beta: UndefOr[Double] = 0
       override val enabled: UndefOr[Boolean] = true
     }
   }
@@ -35,7 +36,7 @@ class Test3dPieChartConfig extends HighchartsConfig {
     override val pie: Cfg[PlotOptionsPie] = new PlotOptionsPie {
       override val allowPointSelect: UndefOr[Boolean] = true
       override val cursor: UndefOr[String] = "pointer"
-      override val depth: UndefOr[Double] = 35D
+      override val depth: UndefOr[Double] = 35
       override val dataLabels: Cfg[PlotOptionsPieDataLabels] = new PlotOptionsPieDataLabels {
         override val enabled: UndefOr[Boolean] = true
         override val format: UndefOr[String] = "{point.name}"

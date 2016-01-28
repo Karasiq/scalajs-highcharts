@@ -7,7 +7,7 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
   isSnapshot := false,
-  version := "1.0.11",
+  version := "1.1.0",
   scalaVersion := "2.11.7",
   publishMavenStyle := true,
   publishTo := {
@@ -93,7 +93,7 @@ lazy val libraryTestSettings = Seq(
       Static("fonts/glyphicons-halflings-regular.woff2") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.woff2"),
 
       // Highcharts
-      Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts.src.js"),
+      Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highstock.src.js"),
       Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts-3d.src.js"),
 
       // Scala.js app

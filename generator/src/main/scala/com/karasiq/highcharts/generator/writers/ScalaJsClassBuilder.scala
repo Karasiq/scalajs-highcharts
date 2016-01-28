@@ -44,7 +44,10 @@ class ScalaJsClassBuilder {
     }
 
     def stdTypes: PartialFunction[String, String] = selfTypeObject.orElse {
-      case "String" | "Color" ⇒
+      case "Color" ⇒
+        "String | js.Object"
+
+      case "String" ⇒
         "String"
 
       case "Function" ⇒

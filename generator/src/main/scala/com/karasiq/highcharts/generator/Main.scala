@@ -1,8 +1,8 @@
 package com.karasiq.highcharts.generator
 
-import java.io.{OutputStreamWriter, BufferedWriter, FileOutputStream, PrintWriter}
-import java.nio.file.attribute.BasicFileAttributes
+import java.io.{BufferedWriter, FileOutputStream, OutputStreamWriter, PrintWriter}
 import java.nio.file._
+import java.nio.file.attribute.BasicFileAttributes
 
 import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder}
 
@@ -24,7 +24,7 @@ case class HighchartsApiDoc(library: String) {
     val header =
       s"""/**
           |  * Automatically generated file. Please do not edit.
-          |  * @author Highcharts Config Generator v1.0.9 by Karasiq
+          |  * @author Highcharts Config Generator v1.1.0 by Karasiq
           |  * @see [[http://api.highcharts.com/$library]]
           |  */
           |package $pkg

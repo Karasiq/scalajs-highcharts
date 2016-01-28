@@ -7,7 +7,7 @@ https://karasiq.github.io/scalajs-highcharts/
 # How to use
 Add dependency to your `build.sbt`
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.0.11"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.0"
 ```
 
 Include the JavaScript files in the `<head>` section of your web page as shown below
@@ -20,6 +20,7 @@ Include the JavaScript files in the `<head>` section of your web page as shown b
 import scalajs.js, js.UndefOr
 import org.scalajs.jquery.jQuery
 import com.highcharts.HighchartsUtils._
+import com.highcharts.HighchartsAliases._
 import com.highcharts.config._
 
 jQuery("#container").highcharts(new HighchartsConfig {
