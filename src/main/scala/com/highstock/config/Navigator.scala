@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -55,7 +55,7 @@ class Navigator extends js.Object {
     * The color of the mask covering the areas of the navigator series that are currently not visible in the main series. The default color is bluish with an opacity of 0.3 to see the series below.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/maskfill/" target="_blank">Blue, semi transparent mask</a>
     */
-  val maskFill: js.UndefOr[String] = js.undefined
+  val maskFill: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Whether the mask should be inside the range marking the zoomed range, or outside. In Highstock 1.x it was always <code>false</code>.
@@ -68,7 +68,7 @@ class Navigator extends js.Object {
     * The color of the line marking the currently zoomed area in the navigator.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/outline/" target="_blank">2px blue outline</a>
     */
-  val outlineColor: js.UndefOr[String] = js.undefined
+  val outlineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the currently zoomed area in the navigator.

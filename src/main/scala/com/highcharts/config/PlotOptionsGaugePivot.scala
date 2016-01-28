@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -20,14 +20,14 @@ class PlotOptionsGaugePivot extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
     * @since 2.3.0
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
     * @since 2.3.0
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border or stroke width of the pivot.

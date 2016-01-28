@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -38,7 +38,7 @@ class SeriesAreaspline extends js.Object {
   /**
     * The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Compare the values of the series against the first non-null, non-zero value in the visible range. The y axis will
@@ -139,7 +139,7 @@ class SeriesAreaspline extends js.Object {
   /**
     * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
     */
-  val fillColor: js.UndefOr[String] = js.undefined
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Fill opacity for the area. Note that when you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition.
@@ -181,7 +181,7 @@ class SeriesAreaspline extends js.Object {
   /**
     * A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>.
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Pixel with of the graph line.

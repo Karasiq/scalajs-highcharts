@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -48,7 +48,7 @@ class HighchartsConfig extends js.Object {
     *    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']</pre></p>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/colors/" target="_blank">Assign a global color theme</a>
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * Highchart by default puts a credits label in the lower right corner of the chart.

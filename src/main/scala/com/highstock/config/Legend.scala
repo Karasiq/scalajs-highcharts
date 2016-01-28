@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -27,13 +27,13 @@ class Legend extends js.Object {
     * The background color of the legend.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the drawn border around the legend.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border corner radius of the legend.

@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -25,13 +25,13 @@ class SeriesSplineDataMarkerStatesSelect extends js.Object {
     * The fill color of the point marker.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-marker-states-select-fillcolor/" target="_blank">Solid red discs for selected points</a>
     */
-  val fillColor: js.UndefOr[String] = js.undefined
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-marker-states-select-linecolor/" target="_blank">Red line color for selected points</a>
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the point marker's outline.

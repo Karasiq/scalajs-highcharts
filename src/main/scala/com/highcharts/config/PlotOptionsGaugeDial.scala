@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -20,7 +20,7 @@ class PlotOptionsGaugeDial extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-dial/" target="_blank">Dial options demonstrated</a>
     * @since 2.3.0
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The length of the dial's base part, relative to the total radius or length of the dial. 
@@ -41,7 +41,7 @@ class PlotOptionsGaugeDial extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/gauge-dial/" target="_blank">Dial options demonstrated</a>
     * @since 2.3.0
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the gauge dial border in pixels.

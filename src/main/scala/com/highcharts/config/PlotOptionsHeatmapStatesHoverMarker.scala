@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -26,7 +26,7 @@ class PlotOptionsHeatmapStatesHoverMarker extends js.Object {
     * The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/" target="_blank">White fill</a>
     */
-  val fillColor: js.UndefOr[String] = js.undefined
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set.
@@ -39,7 +39,7 @@ class PlotOptionsHeatmapStatesHoverMarker extends js.Object {
     * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/" target="_blank">Inherit from series color (null)</a>
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the point marker's outline.

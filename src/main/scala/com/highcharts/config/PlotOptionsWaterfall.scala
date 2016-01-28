@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -44,7 +44,7 @@ class PlotOptionsWaterfall extends js.Object {
     * The color of the border of each waterfall column.
     * @since 3.0
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the border surrounding each column or bar.
@@ -64,7 +64,7 @@ class PlotOptionsWaterfall extends js.Object {
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-color-specific/" target="_blank">one specific series</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-color-area/" target="_blank">area color</a>
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * When using automatic point colors pulled from the <code>options.colors</code>
@@ -80,7 +80,7 @@ class PlotOptionsWaterfall extends js.Object {
     * A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
     * @since 3.0
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -121,7 +121,7 @@ class PlotOptionsWaterfall extends js.Object {
   /**
     * 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
     */
-  val edgeColor: js.UndefOr[String] = js.undefined
+  val edgeColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * 3D columns only. The width of the colored edges.
@@ -174,7 +174,7 @@ class PlotOptionsWaterfall extends js.Object {
     * The color of the line that connects columns in a waterfall series.
     * @since 3.0
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
@@ -327,7 +327,7 @@ class PlotOptionsWaterfall extends js.Object {
     * The color used specifically for positive point columns. When not specified, the general series color is used.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/waterfall/" target="_blank">Waterfall</a>
     */
-  val upColor: js.UndefOr[String] = js.undefined
+  val upColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Set the initial visibility of the series.

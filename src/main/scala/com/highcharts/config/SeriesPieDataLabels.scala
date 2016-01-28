@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -20,14 +20,14 @@ class SeriesPieDataLabels extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border color for the data label. Defaults to <code>undefined</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border radius in pixels for the data label.
@@ -47,7 +47,7 @@ class SeriesPieDataLabels extends js.Object {
     * The text color for the data labels. Defaults to <code>null</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-color/" target="_blank">Red data labels</a>
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.

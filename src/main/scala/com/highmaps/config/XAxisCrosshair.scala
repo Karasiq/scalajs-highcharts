@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -20,7 +20,7 @@ class XAxisCrosshair extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
     * @since 1.1
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash style for the crosshair. See <a href="#plotOptions.series.dashStyle">series.dashStyle</a> for possible values.

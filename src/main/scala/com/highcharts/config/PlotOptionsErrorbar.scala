@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -29,7 +29,7 @@ class PlotOptionsErrorbar extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">Error bar styling</a>
     * @since 3.0
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * When using automatic point colors pulled from the <code>options.colors</code>
@@ -45,7 +45,7 @@ class PlotOptionsErrorbar extends js.Object {
     * A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
     * @since 3.0
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -65,7 +65,7 @@ class PlotOptionsErrorbar extends js.Object {
   /**
     * 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
     */
-  val edgeColor: js.UndefOr[String] = js.undefined
+  val edgeColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * 3D columns only. The width of the colored edges.
@@ -124,7 +124,7 @@ class PlotOptionsErrorbar extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-negative-color/" target="_blank">Spline, area and column</a> - <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/" target="_blank">arearange</a>.
     * @since 3.0
     */
-  val negativeColor: js.UndefOr[String] = js.undefined
+  val negativeColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Properties for each single point
@@ -205,7 +205,7 @@ class PlotOptionsErrorbar extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
     * @since 3.0
     */
-  val stemColor: js.UndefOr[String] = js.undefined
+  val stemColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash style of the stem, the vertical line extending from the box to the whiskers.
@@ -260,7 +260,7 @@ class PlotOptionsErrorbar extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>
     * @since 3.0
     */
-  val whiskerColor: js.UndefOr[String] = js.undefined
+  val whiskerColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.

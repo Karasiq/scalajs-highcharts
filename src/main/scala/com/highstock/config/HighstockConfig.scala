@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -47,7 +47,7 @@ class HighstockConfig extends js.Object {
     * <pre>colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', 
     *    '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']</pre></p>
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * Highchart by default puts a credits label in the lower right corner of the chart.

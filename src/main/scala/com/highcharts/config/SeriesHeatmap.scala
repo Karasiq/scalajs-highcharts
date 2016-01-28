@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -44,7 +44,7 @@ class SeriesHeatmap extends js.Object {
     * The color of the border surrounding each column or bar.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/column-bordercolor/" target="_blank">Dark gray border</a>
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the border surrounding each column or bar.
@@ -62,7 +62,7 @@ class SeriesHeatmap extends js.Object {
     * The main color of the series. In heat maps this color is rarely used, as we mostly use the color to denote the value of each point. Unless options are set in the <a href="#colorAxis">colorAxis</a>, the default value is pulled from the <a href="#colors">options.colors</a> array.
     * @since 4.0
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * When using automatic point colors pulled from the <code>options.colors</code>
@@ -78,7 +78,7 @@ class SeriesHeatmap extends js.Object {
     * A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
     * @since 3.0
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * The column size - how many X axis units each column in the heatmap should span.

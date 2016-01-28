@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -24,7 +24,7 @@ class SeriesSplineMarker extends js.Object {
   /**
     * The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
     */
-  val fillColor: js.UndefOr[String] = js.undefined
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set.
@@ -36,7 +36,7 @@ class SeriesSplineMarker extends js.Object {
   /**
     * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the point marker's outline.

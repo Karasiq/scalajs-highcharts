@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -70,7 +70,7 @@ class ExportingButtonsContextButton extends js.Object {
     * See <a class="internal" href="#navigation.buttonOptions">navigation.buttonOptions</a> =&gt; symbolFill.
     * @since 2.0
     */
-  val symbolFill: js.UndefOr[String] = js.undefined
+  val symbolFill: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel size of the symbol on the button.
@@ -84,7 +84,7 @@ class ExportingButtonsContextButton extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/navigation/buttonoptions-symbolstroke/" target="_blank">Blue symbol stroke</a>
     * @since 2.0
     */
-  val symbolStroke: js.UndefOr[String] = js.undefined
+  val symbolStroke: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel stroke width of the symbol on the button.

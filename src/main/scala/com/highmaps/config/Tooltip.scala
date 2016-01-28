@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -24,13 +24,13 @@ class Tooltip extends js.Object {
     * The background color or gradient for the tooltip.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the tooltip border. When <code>null</code>, the border takes the color of the corresponding series or point.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The radius of the rounded border corners.

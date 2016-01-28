@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -47,13 +47,13 @@ class Chart extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/backgroundcolor-color/" target="_blank">Color</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/backgroundcolor-gradient/" target="_blank">gradient</a>
     */
-  val backgroundColor: js.UndefOr[String] = js.undefined
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the outer chart border.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/border/" target="_blank">Brown border</a>
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the outer chart border.
@@ -141,7 +141,7 @@ class Chart extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/plotbackgroundcolor-color/" target="_blank">Color</a>,
 			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/plotbackgroundcolor-gradient/" target="_blank">gradient</a>
     */
-  val plotBackgroundColor: js.UndefOr[String] = js.undefined
+  val plotBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The URL for an image to use as the plot background. To set an image as the background for the entire chart, set a CSS background image to the container element. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server.
@@ -153,7 +153,7 @@ class Chart extends js.Object {
     * The color of the inner chart or plot area border.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/chart/plotborder/" target="_blank">Blue border</a>
     */
-  val plotBorderColor: js.UndefOr[String] = js.undefined
+  val plotBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel width of the plot area border.
@@ -188,7 +188,7 @@ class Chart extends js.Object {
     * The background color of the marker square when selecting (zooming in on) an area of the chart.
     * 		 Defaults to <code>rgba(69,114,167,0.25)</code>.
     */
-  val selectionMarkerFill: js.UndefOr[String] = js.undefined
+  val selectionMarkerFill: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Whether to apply a drop shadow to the outer chart area. Requires that 

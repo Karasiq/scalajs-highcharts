@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -19,12 +19,12 @@ class Scrollbar extends js.Object {
     * The background color of the scrollbar itself.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
-  val barBackgroundColor: js.UndefOr[String] = js.undefined
+  val barBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the scrollbar's border.
     */
-  val barBorderColor: js.UndefOr[String] = js.undefined
+  val barBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border rounding radius of the bar.
@@ -42,19 +42,19 @@ class Scrollbar extends js.Object {
     * The color of the small arrow inside the scrollbar buttons.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
-  val buttonArrowColor: js.UndefOr[String] = js.undefined
+  val buttonArrowColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of scrollbar buttons.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
-  val buttonBackgroundColor: js.UndefOr[String] = js.undefined
+  val buttonBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the border of the scrollbar buttons.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
-  val buttonBorderColor: js.UndefOr[String] = js.undefined
+  val buttonBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the scrollbar buttons.
@@ -95,13 +95,13 @@ class Scrollbar extends js.Object {
   /**
     * The color of the small rifles in the middle of the scrollbar.
     */
-  val rifleColor: js.UndefOr[String] = js.undefined
+  val rifleColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the track background.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
-  val trackBackgroundColor: js.UndefOr[String] = js.undefined
+  val trackBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the border of the scrollbar track.

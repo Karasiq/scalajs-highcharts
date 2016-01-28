@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -97,7 +97,7 @@ class RangeSelector extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     * @since 1.3.7
     */
-  val inputBoxBorderColor: js.UndefOr[String] = js.undefined
+  val inputBoxBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel height of the date input boxes.

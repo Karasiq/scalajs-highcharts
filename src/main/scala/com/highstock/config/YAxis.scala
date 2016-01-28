@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -30,7 +30,7 @@ class YAxis extends js.Object {
     * When using an alternate grid color, a band is painted across the plot area between every other grid line.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/alternategridcolor/" target="_blank">Alternate grid color on the Y axis</a>
     */
-  val alternateGridColor: js.UndefOr[String] = js.undefined
+  val alternateGridColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded.
@@ -92,7 +92,7 @@ class YAxis extends js.Object {
     * Color of the grid lines extending the ticks across the plot area.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/gridlinecolor/" target="_blank">Green lines</a>
     */
-  val gridLineColor: js.UndefOr[String] = js.undefined
+  val gridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -132,7 +132,7 @@ class YAxis extends js.Object {
     * The color of the line marking the axis itself.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/linecolor/" target="_blank">A red line on X axis</a>
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the axis itself.
@@ -201,7 +201,7 @@ class YAxis extends js.Object {
     * Color of the minor, secondary grid lines.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/minorgridlinecolor/" target="_blank">Bright grey lines from Y axis</a>
     */
-  val minorGridLineColor: js.UndefOr[String] = js.undefined
+  val minorGridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the minor grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -219,7 +219,7 @@ class YAxis extends js.Object {
     * Color for the minor tick marks.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/minorticks/" target="_blank">Black tick marks on Y axis</a>
     */
-  val minorTickColor: js.UndefOr[String] = js.undefined
+  val minorTickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>"auto"</code>, 
@@ -349,7 +349,7 @@ class YAxis extends js.Object {
     * Color for the main tick marks.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/ticks/" target="_blank">Formatted ticks on X axis</a>
     */
-  val tickColor: js.UndefOr[String] = js.undefined
+  val tickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the tickPixelInterval on linear and datetime axes. On categorized axes, a <code>null</code> tickInterval will default to 1, one category.  Note that datetime axes are based on milliseconds, so for  example an interval of one day is expressed as <code>24 * 3600 * 1000</code>.</p>

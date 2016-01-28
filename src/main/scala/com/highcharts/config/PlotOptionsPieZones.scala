@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -19,7 +19,7 @@ class PlotOptionsPieZones extends js.Object {
     * Defines the color of the series.
     * @since 4.1.0
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * A name for the dash style to use for the graph.
@@ -32,7 +32,7 @@ class PlotOptionsPieZones extends js.Object {
     * Defines the fill color for the series (in area type series)
     * @since 4.1.0
     */
-  val fillColor: js.UndefOr[String] = js.undefined
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The value up to where the zone extends, if undefined the zones stretches to the last value in the series.

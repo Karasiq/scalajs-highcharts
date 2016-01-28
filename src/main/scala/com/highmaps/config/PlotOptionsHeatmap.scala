@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -38,7 +38,7 @@ class PlotOptionsHeatmap extends js.Object {
     * The border color of the map areas.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Borders demo</a>
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border width of each map area.
@@ -50,7 +50,7 @@ class PlotOptionsHeatmap extends js.Object {
     * The main color of the series. In maps, this color is rarely used, as most choropleth maps use the color to denote the value of each point. The series color can however be used in a map with multiple series holding categorized data. The default value is pulled from the  <code>options.colors</code> array.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/category-map/" target="_blank">Category map by multiple series</a>
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The column size - how many X axis units each column in the heatmap should span.
@@ -78,7 +78,7 @@ class PlotOptionsHeatmap extends js.Object {
     * The color to apply to null points.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/all-areas-as-null/" target="_blank">Null color</a>
     */
-  val nullColor: js.UndefOr[String] = js.undefined
+  val nullColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Properties for each single point

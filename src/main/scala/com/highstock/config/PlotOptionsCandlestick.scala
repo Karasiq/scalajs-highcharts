@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -38,13 +38,13 @@ class PlotOptionsCandlestick extends js.Object {
   /**
     * The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
     * @since 1.3
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
@@ -96,7 +96,7 @@ class PlotOptionsCandlestick extends js.Object {
     * The color of the line/border of the candlestick. 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/plotoptions/candlestick-linecolor/" target="_blank">Candlestick line colors</a>
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel width of the candlestick line/border. Defaults to <code>1</code>.
@@ -244,14 +244,14 @@ class PlotOptionsCandlestick extends js.Object {
     * The fill color of the candlestick when values are rising. Defaults to <code>"white"</code>.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/plotoptions/candlestick-color/" target="_blank">Custom colors</a>
     */
-  val upColor: js.UndefOr[String] = js.undefined
+  val upColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The specific line color for up candle sticks. The default is to inherit the general <code>lineColor</code> setting.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/plotoptions/candlestick-linecolor/" target="_blank">Candlestick line colors</a>
     * @since 1.3.6
     */
-  val upLineColor: js.UndefOr[String] = js.undefined
+  val upLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Set the initial visibility of the series.

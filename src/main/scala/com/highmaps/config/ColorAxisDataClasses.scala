@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -19,7 +19,7 @@ class ColorAxisDataClasses extends js.Object {
     * The color of each data class. If not set, the color is pulled from the global or chart-specific <a href="#colors">colors</a> array.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/data-class-two-ranges/" target="_blank">Explicit colors</a>
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The start of the value range that the data class represents, relating to the point value.

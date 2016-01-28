@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -41,7 +41,7 @@ class ColorAxis extends js.Object {
     * Color of the grid lines extending from the axis across the gradient. 
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/coloraxis/gridlines/" target="_blank">Grid lines demonstrated</a>
     */
-  val gridLineColor: js.UndefOr[String] = js.undefined
+  val gridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -68,7 +68,7 @@ class ColorAxis extends js.Object {
   /**
     * The color of the line marking the axis itself.
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the axis itself.
@@ -112,7 +112,7 @@ class ColorAxis extends js.Object {
     * <p>If dataClasses are set, the color is based on minColor and maxColor unless a color is set for each data class, or the <a href="#colorAxis.dataClassColor">dataClassColor</a> is set.</p>
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/coloraxis/mincolor-maxcolor/" target="_blank">Min and max colors on scalar (gradient) axis</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/coloraxis/mincolor-maxcolor-dataclasses/" target="_blank">on data classes</a>.
     */
-  val minColor: js.UndefOr[String] = js.undefined
+  val minColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
@@ -122,7 +122,7 @@ class ColorAxis extends js.Object {
   /**
     * Color of the minor, secondary grid lines.
     */
-  val minorGridLineColor: js.UndefOr[String] = js.undefined
+  val minorGridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the minor grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -137,7 +137,7 @@ class ColorAxis extends js.Object {
   /**
     * Color for the minor tick marks.
     */
-  val minorTickColor: js.UndefOr[String] = js.undefined
+  val minorTickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>"auto"</code>, 
@@ -197,7 +197,7 @@ class ColorAxis extends js.Object {
   /**
     * Color for the main tick marks.
     */
-  val tickColor: js.UndefOr[String] = js.undefined
+  val tickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The interval of the tick marks in axis units. When <code>null</code>, the tick interval is computed to approximately follow the <code>tickPixelInterval</code>.

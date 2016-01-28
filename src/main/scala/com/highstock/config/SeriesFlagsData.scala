@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -18,7 +18,7 @@ class SeriesFlagsData extends js.Object {
   /**
     * Individual color for the point.
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   val events: js.UndefOr[CleanJsObject[SeriesFlagsDataEvents]] = js.undefined
 

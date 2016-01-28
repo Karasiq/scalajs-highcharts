@@ -24,7 +24,7 @@ case class HighchartsApiDoc(library: String) {
     val header =
       s"""/**
           |  * Automatically generated file. Please do not edit.
-          |  * @author Highcharts Config Generator v1.1.0 by Karasiq
+          |  * @author Highcharts Config Generator by Karasiq
           |  * @see [[http://api.highcharts.com/$library]]
           |  */
           |package $pkg

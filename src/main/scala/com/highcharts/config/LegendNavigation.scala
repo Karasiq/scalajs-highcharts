@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -21,7 +21,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
-  val activeColor: js.UndefOr[String] = js.undefined
+  val activeColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
@@ -45,7 +45,7 @@ class LegendNavigation extends js.Object {
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
-  val inactiveColor: js.UndefOr[String] = js.undefined
+  val inactiveColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Text styles for the legend page navigation.

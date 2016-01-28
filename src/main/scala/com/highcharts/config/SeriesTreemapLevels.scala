@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -19,7 +19,7 @@ class SeriesTreemapLevels extends js.Object {
     * Can set borderColor on all points which lies on the same level.
     * @since 4.1.0
     */
-  val borderColor: js.UndefOr[String] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Set the dash style of the border of all the point which lies on the level.
@@ -38,7 +38,7 @@ class SeriesTreemapLevels extends js.Object {
     * Can set a color on all points which lies on the same level.
     * @since 4.1.0
     */
-  val color: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Can set the options of dataLabels on each point which lies on the level.

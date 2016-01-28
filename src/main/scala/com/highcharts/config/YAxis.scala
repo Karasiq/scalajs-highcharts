@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highcharts]]
   */
 package com.highcharts.config
@@ -30,7 +30,7 @@ class YAxis extends js.Object {
     * When using an alternate grid color, a band is painted across the plot area between every other grid line.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/alternategridcolor/" target="_blank">Alternate grid color on the Y axis</a>
     */
-  val alternateGridColor: js.UndefOr[String] = js.undefined
+  val alternateGridColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded.
@@ -106,7 +106,7 @@ class YAxis extends js.Object {
     * Color of the grid lines extending the ticks across the plot area.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/gridlinecolor/" target="_blank">Green lines</a>
     */
-  val gridLineColor: js.UndefOr[String] = js.undefined
+  val gridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -146,7 +146,7 @@ class YAxis extends js.Object {
     * The color of the line marking the axis itself.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/linecolor/" target="_blank">A red line on Y axis</a>
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the axis itself.
@@ -174,7 +174,7 @@ class YAxis extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/" target="_blank">Min and max colors</a>
     * @since 4.0
     */
-  val maxColor: js.UndefOr[String] = js.undefined
+  val maxColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Padding of the max value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the highest data value to appear on the edge of the plot area.
@@ -204,7 +204,7 @@ class YAxis extends js.Object {
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/mincolor-maxcolor/" target="_blank">Min and max color</a>
     * @since 4.0
     */
-  val minColor: js.UndefOr[String] = js.undefined
+  val minColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Padding of the min value relative to the length of the axis. A padding of 0.05 will make a 100px axis 5px longer. This is useful when you don't want the lowest data value to appear on the edge of the plot area.
@@ -235,7 +235,7 @@ class YAxis extends js.Object {
     * Color of the minor, secondary grid lines.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/minorgridlinecolor/" target="_blank">Bright grey lines from Y axis</a>
     */
-  val minorGridLineColor: js.UndefOr[String] = js.undefined
+  val minorGridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the minor grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -254,7 +254,7 @@ class YAxis extends js.Object {
     * Color for the minor tick marks.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/minortickcolor/" target="_blank">Black tick marks on Y axis</a>
     */
-  val minorTickColor: js.UndefOr[String] = js.undefined
+  val minorTickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>"auto"</code>, 
@@ -394,7 +394,7 @@ class YAxis extends js.Object {
     * Color for the main tick marks.
     * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/tickcolor/" target="_blank">Red ticks on X axis</a>
     */
-  val tickColor: js.UndefOr[String] = js.undefined
+  val tickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval

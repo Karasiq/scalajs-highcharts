@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -23,7 +23,7 @@ class XAxis extends js.Object {
   /**
     * When using an alternate grid color, a band is painted across the plot area between every other grid line.
     */
-  val alternateGridColor: js.UndefOr[String] = js.undefined
+  val alternateGridColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Configure a crosshair that follows either the mouse pointer or the hovered point.
@@ -45,7 +45,7 @@ class XAxis extends js.Object {
   /**
     * Color of the grid lines extending the ticks across the plot area. Highmaps grid lines are hidden by default and can be enabled by setting the gridLineWidth option.
     */
-  val gridLineColor: js.UndefOr[String] = js.undefined
+  val gridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -71,7 +71,7 @@ class XAxis extends js.Object {
   /**
     * The color of the line marking the axis itself.
     */
-  val lineColor: js.UndefOr[String] = js.undefined
+  val lineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the axis itself.
@@ -118,7 +118,7 @@ class XAxis extends js.Object {
   /**
     * Color of the minor, secondary grid lines.
     */
-  val minorGridLineColor: js.UndefOr[String] = js.undefined
+  val minorGridLineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash or dot style of the minor grid lines. For possible values, see <a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-dashstyle-all/">this demonstration</a>.
@@ -133,7 +133,7 @@ class XAxis extends js.Object {
   /**
     * Color for the minor tick marks.
     */
-  val minorTickColor: js.UndefOr[String] = js.undefined
+  val minorTickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>Tick interval in scale units for the minor ticks. On a linear axis, if <code>"auto"</code>, 
@@ -202,7 +202,7 @@ class XAxis extends js.Object {
   /**
     * Color for the main tick marks.
     */
-  val tickColor: js.UndefOr[String] = js.undefined
+  val tickColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * <p>The interval of the tick marks in axis units. When <code>null</code>, the tick interval

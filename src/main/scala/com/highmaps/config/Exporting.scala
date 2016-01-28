@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -29,7 +29,7 @@ class Exporting extends js.Object {
   val buttons: js.UndefOr[CleanJsObject[ExportingButtons]] = js.undefined
 
   /**
-    * Additional chart options to be merged into an exported chart. For example, the exported chart can be given a specific width and height, or a printer-friendly color scheme.
+    * Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readaility of the exported chart, or to add a printer-friendly color scheme.
     */
   val chartOptions: js.UndefOr[js.Object] = js.undefined
 

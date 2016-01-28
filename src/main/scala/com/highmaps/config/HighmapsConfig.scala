@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highmaps]]
   */
 package com.highmaps.config
@@ -46,7 +46,7 @@ class HighmapsConfig extends js.Object {
     *    '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1']</pre>
     * </p>
     */
-  val colors: js.UndefOr[js.Array[String]] = js.undefined
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
 
   /**
     * Highchart by default puts a credits label in the lower right corner of the chart.

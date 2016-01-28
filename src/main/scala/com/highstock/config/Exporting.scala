@@ -1,6 +1,6 @@
 /**
   * Automatically generated file. Please do not edit.
-  * @author Highcharts Config Generator v1.0.9 by Karasiq
+  * @author Highcharts Config Generator by Karasiq
   * @see [[http://api.highcharts.com/highstock]]
   */
 package com.highstock.config
@@ -27,6 +27,12 @@ class Exporting extends js.Object {
     * Options for the export related buttons, print and export.
     */
   val buttons: js.UndefOr[CleanJsObject[ExportingButtons]] = js.undefined
+
+  /**
+    * Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readaility of the exported chart, or to add a printer-friendly color scheme.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/exporting/chartoptions-data-labels/" target="_blank">Added data labels</a>.
+    */
+  val chartOptions: js.UndefOr[js.Object] = js.undefined
 
   /**
     * Whether to enable the exporting module. Disabling the module will hide the context button, but API methods will still be available.
