@@ -1,4 +1,4 @@
-# scalajs-highcharts
+# scalajs-highcharts [![Dependencies](https://app.updateimpact.com/badge/692686982173822976/scalajs-highcharts.svg?config=compile)](https://app.updateimpact.com/latest/692686982173822976/scalajs-highcharts)
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
 # Demo page
