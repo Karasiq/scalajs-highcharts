@@ -29,8 +29,8 @@ class TestCombinationChartConfig extends HighchartsConfig {
       new LabelsItems {
         override val html: UndefOr[String] = "Total fruit consumption"
         override val style: UndefOr[Object] = js.Dynamic.literal(
-          left = "25px",
-          top = "0px",
+          left = "50px",
+          top = "18px",
           color = fromHighchartsTheme("black")(_.textColor)
         )
       }
@@ -78,7 +78,7 @@ class TestCombinationChartConfig extends HighchartsConfig {
           override val color: UndefOr[String | js.Object] = defaultColor(2)
         }
       )
-      override val center: UndefOr[js.Array[String | Double]] = js.Array[String | Double](100D, 100D)
+      override val center: UndefOr[js.Array[String | Double]] = js.Array[String | Double](100, 80)
       override val size: UndefOr[String | Double] = 100
       override val showInLegend: UndefOr[Boolean] = false
       override val dataLabels: Cfg[SeriesPieDataLabels] = new SeriesPieDataLabels {

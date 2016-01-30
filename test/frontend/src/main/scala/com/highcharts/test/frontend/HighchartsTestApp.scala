@@ -14,18 +14,17 @@ import scalatags.JsDom.all._
 
 @JSExport
 object HighchartsTestApp extends JSApp {
-  private def resizeToContainer(container: dom.Element, chart: dom.Element): Unit = {
-    val (width, height) = jQuery(container) match { case jq ⇒
-      (jq.width(), jq.height())
-    }
-    jQuery(chart).highcharts().foreach(_.setSize(width, height))
-  }
-
   private def renderChart(chartConfig: CleanJsObject[js.Object]): dom.Element = {
     dom.console.log(chartConfig)
     val container = div().render
     jQuery(container).highcharts(chartConfig)
     container
+  }
+
+  private def fixChartSizes(): Unit = {
+    jQuery("div[data-highcharts-chart]").each { (v: js.Any, e: dom.Element) ⇒
+      jQuery(e).highcharts().foreach(_.reflow()).asInstanceOf[js.Any]
+    }
   }
 
   @JSExport
@@ -53,17 +52,17 @@ object HighchartsTestApp extends JSApp {
       ).render
 
       // Render page
-      val body = jQuery(dom.document.body)
-      body.append(tabs.navbar("Scala.js Highcharts Test").render)
-      body.append(container)
-
-      // Size fix
-      Seq(barChart, pieChart, comboChart).foreach(resizeToContainer(container, _))
+      val body = dom.document.body
+      body.appendChild(tabs.navbar("Scala.js Highcharts Test").render)
+      body.appendChild(container)
 
       TestStockChartConfig.loadSampleData().foreach { data ⇒
         jQuery(stockChart).highstock(new TestStockChartConfig(data))
-        resizeToContainer(container, stockChart)
       }
+
+      // Size fix
+      jQuery(dom.document).on("shown.bs.tab", "a[data-toggle=\"tab\"]", (_: JQueryEventObject) ⇒ fixChartSizes())
+      fixChartSizes()
     })
   }
 }

@@ -20,6 +20,10 @@ class TestStockChartConfig(sampleData: js.Array[js.Array[js.Any]]) extends Highs
     override val text: UndefOr[String] = "AAPL stock price by minute"
   }
 
+  override val subtitle: Cfg[Subtitle] = new Subtitle {
+    override val text: UndefOr[String] = "Using ordinal X axis"
+  }
+
   override val xAxis: Cfg[XAxis] = new XAxis {
     override val gridLineWidth: UndefOr[Double] = 0
   }
