@@ -20,3 +20,15 @@ class PlotOptionsLinePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = js.undefined
 }
+
+object PlotOptionsLinePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = js.undefined): PlotOptionsLinePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = events
+    new PlotOptionsLinePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = eventsOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class PlotOptionsSolidgaugePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = js.undefined
 }
+
+object PlotOptionsSolidgaugePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = js.undefined): PlotOptionsSolidgaugePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = events
+    new PlotOptionsSolidgaugePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = eventsOuter
+    }
+  }
+}

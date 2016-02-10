@@ -101,3 +101,54 @@ class NavigationButtonOptions extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object NavigationButtonOptions {
+  /**
+    * @param align Alignment for the buttons.
+    * @param enabled Whether to enable buttons.
+    * @param height Pixel height of the buttons.
+    * @param symbolFill Fill color for the symbol within the button.
+    * @param symbolSize The pixel size of the symbol on the button.
+    * @param symbolStroke The color of the symbol's stroke or line.
+    * @param symbolStrokeWidth The pixel stroke width of the symbol on the button.
+    * @param symbolX The x position of the center of the symbol inside the button.
+    * @param symbolY The y position of the center of the symbol inside the button.
+    * @param text A text string to add to the individual button. 
+    * @param theme A configuration object for the button theme. The object accepts SVG properties like <code>stroke-width</code>, <code>stroke</code> and <code>fill</code>. Tri-state button styles are supported by the <code>states.hover</code> and <code>states.select</code> objects.
+    * @param verticalAlign The vertical alignment of the buttons. Can be one of "top", "middle" or "bottom".
+    * @param width The pixel width of the button.
+    * @param y The vertical offset of the button's position relative to its <code>verticalAlign</code>.			 .
+    */
+  def apply(align: js.UndefOr[String] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, height: js.UndefOr[Double] = js.undefined, symbolFill: js.UndefOr[String | js.Object] = js.undefined, symbolSize: js.UndefOr[Double] = js.undefined, symbolStroke: js.UndefOr[String | js.Object] = js.undefined, symbolStrokeWidth: js.UndefOr[Double] = js.undefined, symbolX: js.UndefOr[Double] = js.undefined, symbolY: js.UndefOr[Double] = js.undefined, text: js.UndefOr[String] = js.undefined, theme: js.UndefOr[js.Object] = js.undefined, verticalAlign: js.UndefOr[String] = js.undefined, width: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined): NavigationButtonOptions = {
+    val alignOuter: js.UndefOr[String] = align
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val heightOuter: js.UndefOr[Double] = height
+    val symbolFillOuter: js.UndefOr[String | js.Object] = symbolFill
+    val symbolSizeOuter: js.UndefOr[Double] = symbolSize
+    val symbolStrokeOuter: js.UndefOr[String | js.Object] = symbolStroke
+    val symbolStrokeWidthOuter: js.UndefOr[Double] = symbolStrokeWidth
+    val symbolXOuter: js.UndefOr[Double] = symbolX
+    val symbolYOuter: js.UndefOr[Double] = symbolY
+    val textOuter: js.UndefOr[String] = text
+    val themeOuter: js.UndefOr[js.Object] = theme
+    val verticalAlignOuter: js.UndefOr[String] = verticalAlign
+    val widthOuter: js.UndefOr[Double] = width
+    val yOuter: js.UndefOr[Double] = y
+    new NavigationButtonOptions {
+      override val align: js.UndefOr[String] = alignOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val height: js.UndefOr[Double] = heightOuter
+      override val symbolFill: js.UndefOr[String | js.Object] = symbolFillOuter
+      override val symbolSize: js.UndefOr[Double] = symbolSizeOuter
+      override val symbolStroke: js.UndefOr[String | js.Object] = symbolStrokeOuter
+      override val symbolStrokeWidth: js.UndefOr[Double] = symbolStrokeWidthOuter
+      override val symbolX: js.UndefOr[Double] = symbolXOuter
+      override val symbolY: js.UndefOr[Double] = symbolYOuter
+      override val text: js.UndefOr[String] = textOuter
+      override val theme: js.UndefOr[js.Object] = themeOuter
+      override val verticalAlign: js.UndefOr[String] = verticalAlignOuter
+      override val width: js.UndefOr[Double] = widthOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

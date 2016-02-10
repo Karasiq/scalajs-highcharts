@@ -20,3 +20,15 @@ class PlotOptionsBubblePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsBubblePointEvents]] = js.undefined
 }
+
+object PlotOptionsBubblePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsBubblePointEvents]] = js.undefined): PlotOptionsBubblePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsBubblePointEvents]] = events
+    new PlotOptionsBubblePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsBubblePointEvents]] = eventsOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class PlotOptionsCandlestickPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = js.undefined
 }
+
+object PlotOptionsCandlestickPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = js.undefined): PlotOptionsCandlestickPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = events
+    new PlotOptionsCandlestickPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = eventsOuter
+    }
+  }
+}

@@ -23,3 +23,17 @@ class SeriesScatterDataMarkerStates extends js.Object {
     */
   val select: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesSelect]] = js.undefined
 }
+
+object SeriesScatterDataMarkerStates {
+  /**
+    * @param select The appearance of the point marker when selected. In order to allow a point to be . 		selected, set the <code>series.allowPointSelect</code> option to true.
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesHover]] = js.undefined, select: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesSelect]] = js.undefined): SeriesScatterDataMarkerStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesHover]] = hover
+    val selectOuter: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesSelect]] = select
+    new SeriesScatterDataMarkerStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesHover]] = hoverOuter
+      override val select: js.UndefOr[CleanJsObject[SeriesScatterDataMarkerStatesSelect]] = selectOuter
+    }
+  }
+}

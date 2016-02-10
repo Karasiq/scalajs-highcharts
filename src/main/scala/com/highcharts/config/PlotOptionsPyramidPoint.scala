@@ -20,3 +20,15 @@ class PlotOptionsPyramidPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsPyramidPointEvents]] = js.undefined
 }
+
+object PlotOptionsPyramidPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsPyramidPointEvents]] = js.undefined): PlotOptionsPyramidPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsPyramidPointEvents]] = events
+    new PlotOptionsPyramidPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsPyramidPointEvents]] = eventsOuter
+    }
+  }
+}

@@ -37,3 +37,21 @@ class Global extends js.Object {
     */
   val useUTC: js.UndefOr[Boolean] = js.undefined
 }
+
+object Global {
+  /**
+    * @param VMLRadialGradientURL Path to the pattern image required by VML browsers in order to draw radial gradients.
+    * @param canvasToolsURL The URL to the additional file to lazy load for Android 2.x devices. These devices don't .  support SVG, so we download a helper file that contains <a href="http://code.google.com/p/canvg/">canvg</a>,.  its dependency rbcolor, and our own CanVG Renderer class. To avoid hotlinking to our site,.  you can install canvas-tools.js on your own server and change this option accordingly.
+    * @param useUTC Whether to use UTC time for axis scaling, tickmark placement and time display in .  <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time.  displays equally regardless of the user agent's time zone settings. Local time.  can be used when the data is loaded in real time or when correct Daylight Saving Time.  transitions are required.
+    */
+  def apply(VMLRadialGradientURL: js.UndefOr[String] = js.undefined, canvasToolsURL: js.UndefOr[String] = js.undefined, useUTC: js.UndefOr[Boolean] = js.undefined): Global = {
+    val VMLRadialGradientURLOuter: js.UndefOr[String] = VMLRadialGradientURL
+    val canvasToolsURLOuter: js.UndefOr[String] = canvasToolsURL
+    val useUTCOuter: js.UndefOr[Boolean] = useUTC
+    new Global {
+      override val VMLRadialGradientURL: js.UndefOr[String] = VMLRadialGradientURLOuter
+      override val canvasToolsURL: js.UndefOr[String] = canvasToolsURLOuter
+      override val useUTC: js.UndefOr[Boolean] = useUTCOuter
+    }
+  }
+}

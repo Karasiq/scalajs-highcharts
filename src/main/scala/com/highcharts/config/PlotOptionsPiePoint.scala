@@ -20,3 +20,15 @@ class PlotOptionsPiePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsPiePointEvents]] = js.undefined
 }
+
+object PlotOptionsPiePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsPiePointEvents]] = js.undefined): PlotOptionsPiePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsPiePointEvents]] = events
+    new PlotOptionsPiePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsPiePointEvents]] = eventsOuter
+    }
+  }
+}

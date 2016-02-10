@@ -20,3 +20,15 @@ class PlotOptionsColumnStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = js.undefined
 }
+
+object PlotOptionsColumnStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = js.undefined): PlotOptionsColumnStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = hover
+    new PlotOptionsColumnStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = hoverOuter
+    }
+  }
+}

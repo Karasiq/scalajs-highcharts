@@ -20,3 +20,15 @@ class SeriesGaugePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = js.undefined
 }
+
+object SeriesGaugePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = js.undefined): SeriesGaugePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = events
+    new SeriesGaugePoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = eventsOuter
+    }
+  }
+}

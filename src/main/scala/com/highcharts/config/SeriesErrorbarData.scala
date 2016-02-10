@@ -61,3 +61,36 @@ class SeriesErrorbarData extends js.Object {
     */
   val x: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesErrorbarData {
+  /**
+    * @param color Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
+    * @param events Individual point events
+    * @param high The high or maximum value for each data point.
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param low The low or minimum value for each data point.
+    * @param name <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>. . <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
+    * @param selected Whether the data point is selected initially.
+    * @param x The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesErrorbarDataEvents]] = js.undefined, high: js.UndefOr[Double] = js.undefined, id: js.UndefOr[String] = js.undefined, low: js.UndefOr[Double] = js.undefined, name: js.UndefOr[String] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, x: js.UndefOr[Double] = js.undefined): SeriesErrorbarData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesErrorbarDataEvents]] = events
+    val highOuter: js.UndefOr[Double] = high
+    val idOuter: js.UndefOr[String] = id
+    val lowOuter: js.UndefOr[Double] = low
+    val nameOuter: js.UndefOr[String] = name
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val xOuter: js.UndefOr[Double] = x
+    new SeriesErrorbarData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesErrorbarDataEvents]] = eventsOuter
+      override val high: js.UndefOr[Double] = highOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val low: js.UndefOr[Double] = lowOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val x: js.UndefOr[Double] = xOuter
+    }
+  }
+}

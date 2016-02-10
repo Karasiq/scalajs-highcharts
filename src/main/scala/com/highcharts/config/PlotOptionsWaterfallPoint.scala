@@ -20,3 +20,15 @@ class PlotOptionsWaterfallPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsWaterfallPointEvents]] = js.undefined
 }
+
+object PlotOptionsWaterfallPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsWaterfallPointEvents]] = js.undefined): PlotOptionsWaterfallPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsWaterfallPointEvents]] = events
+    new PlotOptionsWaterfallPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsWaterfallPointEvents]] = eventsOuter
+    }
+  }
+}

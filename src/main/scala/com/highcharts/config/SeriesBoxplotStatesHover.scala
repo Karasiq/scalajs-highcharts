@@ -46,3 +46,26 @@ class SeriesBoxplotStatesHover extends js.Object {
 
   val marker: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverMarker]] = js.undefined
 }
+
+object SeriesBoxplotStatesHover {
+  /**
+    * @param enabled Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
+    * @param halo Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.
+    * @param lineWidth Pixel with of the graph line.
+    * @param lineWidthPlus The additional line width for the graph of a hovered series.
+    */
+  def apply(enabled: js.UndefOr[Boolean] = js.undefined, halo: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverHalo]] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, lineWidthPlus: js.UndefOr[Double] = js.undefined, marker: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverMarker]] = js.undefined): SeriesBoxplotStatesHover = {
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val haloOuter: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverHalo]] = halo
+    val lineWidthOuter: js.UndefOr[Double] = lineWidth
+    val lineWidthPlusOuter: js.UndefOr[Double] = lineWidthPlus
+    val markerOuter: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverMarker]] = marker
+    new SeriesBoxplotStatesHover {
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val halo: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverHalo]] = haloOuter
+      override val lineWidth: js.UndefOr[Double] = lineWidthOuter
+      override val lineWidthPlus: js.UndefOr[Double] = lineWidthPlusOuter
+      override val marker: js.UndefOr[CleanJsObject[SeriesBoxplotStatesHoverMarker]] = markerOuter
+    }
+  }
+}

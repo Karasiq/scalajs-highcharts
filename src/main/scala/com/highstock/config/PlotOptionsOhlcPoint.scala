@@ -20,3 +20,15 @@ class PlotOptionsOhlcPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsOhlcPointEvents]] = js.undefined
 }
+
+object PlotOptionsOhlcPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsOhlcPointEvents]] = js.undefined): PlotOptionsOhlcPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsOhlcPointEvents]] = events
+    new PlotOptionsOhlcPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsOhlcPointEvents]] = eventsOuter
+    }
+  }
+}

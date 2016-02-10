@@ -31,3 +31,21 @@ class SeriesMaplineStates extends js.Object {
     */
   val select: js.UndefOr[CleanJsObject[SeriesMaplineStatesSelect]] = js.undefined
 }
+
+object SeriesMaplineStates {
+  /**
+    * @param hover Options for the hovered series
+    * @param normal Overrides for the normal state
+    * @param select Specific options for point in selected states, after being selected by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or programmatically. 
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesMaplineStatesHover]] = js.undefined, normal: js.UndefOr[CleanJsObject[SeriesMaplineStatesNormal]] = js.undefined, select: js.UndefOr[CleanJsObject[SeriesMaplineStatesSelect]] = js.undefined): SeriesMaplineStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesMaplineStatesHover]] = hover
+    val normalOuter: js.UndefOr[CleanJsObject[SeriesMaplineStatesNormal]] = normal
+    val selectOuter: js.UndefOr[CleanJsObject[SeriesMaplineStatesSelect]] = select
+    new SeriesMaplineStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesMaplineStatesHover]] = hoverOuter
+      override val normal: js.UndefOr[CleanJsObject[SeriesMaplineStatesNormal]] = normalOuter
+      override val select: js.UndefOr[CleanJsObject[SeriesMaplineStatesSelect]] = selectOuter
+    }
+  }
+}

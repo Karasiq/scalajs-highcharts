@@ -20,3 +20,15 @@ class SeriesHeatmapPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesHeatmapPointEvents]] = js.undefined
 }
+
+object SeriesHeatmapPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesHeatmapPointEvents]] = js.undefined): SeriesHeatmapPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesHeatmapPointEvents]] = events
+    new SeriesHeatmapPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesHeatmapPointEvents]] = eventsOuter
+    }
+  }
+}

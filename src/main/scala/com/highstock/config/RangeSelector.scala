@@ -28,8 +28,10 @@ class RangeSelector extends js.Object {
   val buttonSpacing: js.UndefOr[Double] = js.undefined
 
   /**
-    * A collection of attributes for the buttons. The object takes SVG attributes like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code>, as well as <code>style</code>, a collection of CSS properties for the text.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * <p>A collection of attributes for the buttons. The object takes SVG attributes like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code>, as well as <code>style</code>, a collection of CSS properties for the text.</p>
+    * 
+    * <p>The object can also be extended with states, so you can set presentational options for <code>hover</code>, <code>select</code> or <code>disabled</code> button states.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>.
     */
   val buttonTheme: js.UndefOr[js.Object] = js.undefined
 
@@ -169,4 +171,67 @@ class RangeSelector extends js.Object {
     * The index of the button to appear pre-selected.
     */
   val selected: js.UndefOr[Double] = js.undefined
+}
+
+object RangeSelector {
+  /**
+    * @param allButtonsEnabled Whether to enable all buttons from the start. By default buttons are only enabled if the corresponding time range exists on the X axis, but enabling all buttons allows for dynamically loading different time ranges.
+    * @param buttonSpacing The space in pixels between the buttons in the range selector.
+    * @param buttonTheme <p>A collection of attributes for the buttons. The object takes SVG attributes like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code>, as well as <code>style</code>, a collection of CSS properties for the text.</p>. . <p>The object can also be extended with states, so you can set presentational options for <code>hover</code>, <code>select</code> or <code>disabled</code> button states.</p>
+    * @param buttons An array of configuration objects for the buttons. The individual options for each item are:  . . <dl>.  	<dt><code>type</code></dt>.  	<dd>Defines the timespan, can be one of 'millisecond', 'second', 'minute', 'day', 'week',  		'month', 'ytd' (year to date), 'year' and 'all'.</dd>. .  	<dt><code>count</code></dt>.  	<dd>Defines how many units of the defined type to use.</dd>. .  	<dt><code>dataGrouping</code></dt>.  	<dd>A custom data grouping definition for the button.</dd>. .  	<dt><code>text</code></dt>.  	<dd>The text for the button itself</dd>.  . </dl>. . . Defaults to . <pre>buttons: [{. 	type: 'month',. 	count: 1,. 	text: '1m'. }, {. 	type: 'month',. 	count: 3,. 	text: '3m'. }, {. 	type: 'month',. 	count: 6,. 	text: '6m'. }, {. 	type: 'ytd',. 	text: 'YTD'. }, {. 	type: 'year',. 	count: 1,. 	text: '1y'. }, {. 	type: 'all',. 	text: 'All'. }]</pre>
+    * @param enabled Enable or disable the range selector.
+    * @param height The height of the range selector, used to reserve space for buttons and input.
+    * @param inputBoxBorderColor The border color of the date input boxes.
+    * @param inputBoxHeight The pixel height of the date input boxes.
+    * @param inputBoxStyle CSS for the container DIV holding the input boxes. Deprecated as of 1.2.5. Use <a href="#rangeSelector.inputPosition">inputPosition</a> instead.
+    * @param inputBoxWidth The pixel width of the date input boxes. 
+    * @param inputDateFormat The date format in the input boxes when not selected for editing.. 		 Defaults to <code>%b %e, %Y</code>.
+    * @param inputDateParser A custom callback function to parse values entered in the input boxes and return a valid JavaScript time as milliseconds since 1970.
+    * @param inputEditDateFormat The date format in the input boxes when they are selected for editing. This must be a format that.  is recognized by JavaScript Date.parse.
+    * @param inputEnabled Enable or disable the date input boxes. Defaults to enabled when there is enough space, disabled if not (typically mobile).
+    * @param inputPosition Positioning for the input boxes. Allowed properties are <code>align</code>, <code>verticalAlign</code>, <code>x</code> and <code>y</code>.
+    * @param inputStyle CSS for the HTML inputs in the range selector.
+    * @param labelStyle CSS styles for the labels - the Zoom, From and To texts.
+    * @param selected The index of the button to appear pre-selected.
+    */
+  def apply(allButtonsEnabled: js.UndefOr[Boolean] = js.undefined, buttonSpacing: js.UndefOr[Double] = js.undefined, buttonTheme: js.UndefOr[js.Object] = js.undefined, buttons: js.UndefOr[js.Array[js.Any]] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, height: js.UndefOr[Double] = js.undefined, inputBoxBorderColor: js.UndefOr[String | js.Object] = js.undefined, inputBoxHeight: js.UndefOr[Double] = js.undefined, inputBoxStyle: js.UndefOr[js.Object] = js.undefined, inputBoxWidth: js.UndefOr[Double] = js.undefined, inputDateFormat: js.UndefOr[String] = js.undefined, inputDateParser: js.UndefOr[js.Function] = js.undefined, inputEditDateFormat: js.UndefOr[String] = js.undefined, inputEnabled: js.UndefOr[Boolean] = js.undefined, inputPosition: js.UndefOr[js.Object] = js.undefined, inputStyle: js.UndefOr[js.Object] = js.undefined, labelStyle: js.UndefOr[js.Object] = js.undefined, selected: js.UndefOr[Double] = js.undefined): RangeSelector = {
+    val allButtonsEnabledOuter: js.UndefOr[Boolean] = allButtonsEnabled
+    val buttonSpacingOuter: js.UndefOr[Double] = buttonSpacing
+    val buttonThemeOuter: js.UndefOr[js.Object] = buttonTheme
+    val buttonsOuter: js.UndefOr[js.Array[js.Any]] = buttons
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val heightOuter: js.UndefOr[Double] = height
+    val inputBoxBorderColorOuter: js.UndefOr[String | js.Object] = inputBoxBorderColor
+    val inputBoxHeightOuter: js.UndefOr[Double] = inputBoxHeight
+    val inputBoxStyleOuter: js.UndefOr[js.Object] = inputBoxStyle
+    val inputBoxWidthOuter: js.UndefOr[Double] = inputBoxWidth
+    val inputDateFormatOuter: js.UndefOr[String] = inputDateFormat
+    val inputDateParserOuter: js.UndefOr[js.Function] = inputDateParser
+    val inputEditDateFormatOuter: js.UndefOr[String] = inputEditDateFormat
+    val inputEnabledOuter: js.UndefOr[Boolean] = inputEnabled
+    val inputPositionOuter: js.UndefOr[js.Object] = inputPosition
+    val inputStyleOuter: js.UndefOr[js.Object] = inputStyle
+    val labelStyleOuter: js.UndefOr[js.Object] = labelStyle
+    val selectedOuter: js.UndefOr[Double] = selected
+    new RangeSelector {
+      override val allButtonsEnabled: js.UndefOr[Boolean] = allButtonsEnabledOuter
+      override val buttonSpacing: js.UndefOr[Double] = buttonSpacingOuter
+      override val buttonTheme: js.UndefOr[js.Object] = buttonThemeOuter
+      override val buttons: js.UndefOr[js.Array[js.Any]] = buttonsOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val height: js.UndefOr[Double] = heightOuter
+      override val inputBoxBorderColor: js.UndefOr[String | js.Object] = inputBoxBorderColorOuter
+      override val inputBoxHeight: js.UndefOr[Double] = inputBoxHeightOuter
+      override val inputBoxStyle: js.UndefOr[js.Object] = inputBoxStyleOuter
+      override val inputBoxWidth: js.UndefOr[Double] = inputBoxWidthOuter
+      override val inputDateFormat: js.UndefOr[String] = inputDateFormatOuter
+      override val inputDateParser: js.UndefOr[js.Function] = inputDateParserOuter
+      override val inputEditDateFormat: js.UndefOr[String] = inputEditDateFormatOuter
+      override val inputEnabled: js.UndefOr[Boolean] = inputEnabledOuter
+      override val inputPosition: js.UndefOr[js.Object] = inputPositionOuter
+      override val inputStyle: js.UndefOr[js.Object] = inputStyleOuter
+      override val labelStyle: js.UndefOr[js.Object] = labelStyleOuter
+      override val selected: js.UndefOr[Double] = selectedOuter
+    }
+  }
 }

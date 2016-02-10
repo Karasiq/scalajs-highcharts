@@ -71,3 +71,39 @@ class SeriesSolidgaugeData extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesSolidgaugeData {
+  /**
+    * @param color Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
+    * @param dataLabels Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a>
+    * @param events Individual point events
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param innerRadius The inner radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
+    * @param name <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>. . <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
+    * @param radius The outer radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.
+    * @param selected Whether the data point is selected initially.
+    * @param y The y value of the point.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dataLabels: js.UndefOr[js.Object] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesSolidgaugeDataEvents]] = js.undefined, id: js.UndefOr[String] = js.undefined, innerRadius: js.UndefOr[Double | String] = js.undefined, name: js.UndefOr[String] = js.undefined, radius: js.UndefOr[Double | String] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, y: js.UndefOr[Double] = js.undefined): SeriesSolidgaugeData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dataLabelsOuter: js.UndefOr[js.Object] = dataLabels
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesSolidgaugeDataEvents]] = events
+    val idOuter: js.UndefOr[String] = id
+    val innerRadiusOuter: js.UndefOr[Double | String] = innerRadius
+    val nameOuter: js.UndefOr[String] = name
+    val radiusOuter: js.UndefOr[Double | String] = radius
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val yOuter: js.UndefOr[Double] = y
+    new SeriesSolidgaugeData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dataLabels: js.UndefOr[js.Object] = dataLabelsOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesSolidgaugeDataEvents]] = eventsOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val innerRadius: js.UndefOr[Double | String] = innerRadiusOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val radius: js.UndefOr[Double | String] = radiusOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

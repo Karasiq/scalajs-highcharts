@@ -20,3 +20,15 @@ class ExportingButtons extends js.Object {
     */
   val contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = js.undefined
 }
+
+object ExportingButtons {
+  /**
+    * @param contextButton Options for the export button.
+    */
+  def apply(contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = js.undefined): ExportingButtons = {
+    val contextButtonOuter: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = contextButton
+    new ExportingButtons {
+      override val contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = contextButtonOuter
+    }
+  }
+}

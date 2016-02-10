@@ -20,3 +20,15 @@ class SeriesPyramidPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesPyramidPointEvents]] = js.undefined
 }
+
+object SeriesPyramidPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesPyramidPointEvents]] = js.undefined): SeriesPyramidPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesPyramidPointEvents]] = events
+    new SeriesPyramidPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesPyramidPointEvents]] = eventsOuter
+    }
+  }
+}

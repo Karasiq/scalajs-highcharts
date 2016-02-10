@@ -20,3 +20,15 @@ class SeriesErrorbarStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[SeriesErrorbarStatesHover]] = js.undefined
 }
+
+object SeriesErrorbarStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesErrorbarStatesHover]] = js.undefined): SeriesErrorbarStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesErrorbarStatesHover]] = hover
+    new SeriesErrorbarStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesErrorbarStatesHover]] = hoverOuter
+    }
+  }
+}

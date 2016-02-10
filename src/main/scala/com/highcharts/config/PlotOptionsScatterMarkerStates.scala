@@ -23,3 +23,17 @@ class PlotOptionsScatterMarkerStates extends js.Object {
     */
   val select: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesSelect]] = js.undefined
 }
+
+object PlotOptionsScatterMarkerStates {
+  /**
+    * @param select The appearance of the point marker when selected. In order to allow a point to be . 		selected, set the <code>series.allowPointSelect</code> option to true.
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesHover]] = js.undefined, select: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesSelect]] = js.undefined): PlotOptionsScatterMarkerStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesHover]] = hover
+    val selectOuter: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesSelect]] = select
+    new PlotOptionsScatterMarkerStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesHover]] = hoverOuter
+      override val select: js.UndefOr[CleanJsObject[PlotOptionsScatterMarkerStatesSelect]] = selectOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class SeriesTreemapStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[SeriesTreemapStatesHover]] = js.undefined
 }
+
+object SeriesTreemapStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesTreemapStatesHover]] = js.undefined): SeriesTreemapStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesTreemapStatesHover]] = hover
+    new SeriesTreemapStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesTreemapStatesHover]] = hoverOuter
+    }
+  }
+}

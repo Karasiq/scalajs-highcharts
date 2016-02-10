@@ -42,7 +42,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
 <code>type</code>: the MIME type of the converted image, 
 <code>sourceWidth</code>: the width of the source (in-page) chart, 
 <code>sourceHeight</code>: the height of the source chart.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart/" target="_blank">Export with no options</a>,<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-filename/" target="_blank">PDF type and custom filename</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-custom-background/" target="_blank">different chart background in export</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart/" target="_blank">Export with no options</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-filename/" target="_blank">PDF type and custom filename</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-exportchart-custom-background/" target="_blank">different chart background in export</a>
     * @since 2.0
     */
   def exportChart(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
@@ -185,4 +185,9 @@ The existing Point object from which the drilldown will start.
     * @since 1.2.0
     */
   def redraw(animation: js.Any = ???): Unit = js.native
+
+  /**
+    * Export the chart to a PNG or SVG without sending it to a server. Requires <code>modules/exporting.js</code> and <code>modules/offline-exporting.js</code>.
+    */
+  def exportChartLocal(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
 }

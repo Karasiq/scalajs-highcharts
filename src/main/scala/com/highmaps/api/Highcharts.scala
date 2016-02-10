@@ -54,13 +54,13 @@ The GeoJSON structure to parse, represented as a JavaScript object rather than a
   def numberFormat(number: Double = ???, decimals: Double = ???, decimalPoint: String = ???, thousandsSep: String = ???): String = js.native
 
   /**
-    * This is the constructor for creating a new chart object.
-    */
-  def Chart(renderTo: String | js.Object = ???, options: js.Object = ???, callback: js.Function = ???): CleanJsObject[Chart] = js.native
-
-  /**
     * As <code>Highcharts.Chart</code>, but without need for the <code>new</code> keyword.
     * @since 4.2.0
     */
   def chart(renderTo: String | js.Object = ???, options: js.Object = ???, callback: js.Function = ???): CleanJsObject[Chart] = js.native
+
+  /**
+    * This is the constructor for creating a new chart object.
+    */
+  def Chart(renderTo: String | js.Object = ???, options: js.Object = ???, callback: js.Function = ???): CleanJsObject[Chart] = js.native
 }

@@ -23,3 +23,17 @@ class SeriesSplineMarkerStates extends js.Object {
     */
   val select: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesSelect]] = js.undefined
 }
+
+object SeriesSplineMarkerStates {
+  /**
+    * @param select The appearance of the point marker when selected. In order to allow a point to be . 		selected, set the <code>series.allowPointSelect</code> option to true.
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesHover]] = js.undefined, select: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesSelect]] = js.undefined): SeriesSplineMarkerStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesHover]] = hover
+    val selectOuter: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesSelect]] = select
+    new SeriesSplineMarkerStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesHover]] = hoverOuter
+      override val select: js.UndefOr[CleanJsObject[SeriesSplineMarkerStatesSelect]] = selectOuter
+    }
+  }
+}

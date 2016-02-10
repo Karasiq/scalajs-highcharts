@@ -27,3 +27,18 @@ class LegendTitle extends js.Object {
     */
   val text: js.UndefOr[String] = js.undefined
 }
+
+object LegendTitle {
+  /**
+    * @param style Generic CSS styles for the legend title.
+    * @param text A text or HTML string for the title. 
+    */
+  def apply(style: js.UndefOr[js.Object] = js.undefined, text: js.UndefOr[String] = js.undefined): LegendTitle = {
+    val styleOuter: js.UndefOr[js.Object] = style
+    val textOuter: js.UndefOr[String] = text
+    new LegendTitle {
+      override val style: js.UndefOr[js.Object] = styleOuter
+      override val text: js.UndefOr[String] = textOuter
+    }
+  }
+}

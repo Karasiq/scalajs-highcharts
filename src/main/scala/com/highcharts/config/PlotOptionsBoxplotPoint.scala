@@ -20,3 +20,15 @@ class PlotOptionsBoxplotPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPointEvents]] = js.undefined
 }
+
+object PlotOptionsBoxplotPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPointEvents]] = js.undefined): PlotOptionsBoxplotPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPointEvents]] = events
+    new PlotOptionsBoxplotPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPointEvents]] = eventsOuter
+    }
+  }
+}

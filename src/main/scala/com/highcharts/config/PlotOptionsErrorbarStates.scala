@@ -20,3 +20,15 @@ class PlotOptionsErrorbarStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[PlotOptionsErrorbarStatesHover]] = js.undefined
 }
+
+object PlotOptionsErrorbarStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsErrorbarStatesHover]] = js.undefined): PlotOptionsErrorbarStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsErrorbarStatesHover]] = hover
+    new PlotOptionsErrorbarStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsErrorbarStatesHover]] = hoverOuter
+    }
+  }
+}

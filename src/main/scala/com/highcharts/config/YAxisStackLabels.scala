@@ -97,3 +97,45 @@ class YAxisStackLabels extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object YAxisStackLabels {
+  /**
+    * @param align Defines the horizontal alignment of the stack total label.  Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>. The default value is calculated at runtime and depends on orientation and whether  the stack is positive or negative.
+    * @param enabled Enable or disable the stack total labels.
+    * @param format A <a href="http://docs.highcharts.com/#formatting">format string</a> for the data label. Available variables are the same as for <code>formatter</code>.
+    * @param formatter Callback JavaScript function to format the label. The value is  given by <code>this.total</code>. Defaults to: . <pre>function() {. 	return this.total;. }</pre>
+    * @param rotation Rotation of the labels in degrees.
+    * @param style CSS styles for the label.
+    * @param textAlign The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed with regards to the stack, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are <code>"left"</code>, <code>"center"</code> and <code>"right"</code>. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.
+    * @param useHTML Whether to <a href="http://docs.highcharts.com/#formatting$html">use HTML</a> to render the labels.
+    * @param verticalAlign Defines the vertical alignment of the stack total label. Can be one of <code>"top"</code>, <code>"middle"</code> or <code>"bottom"</code>. The default value is calculated at runtime and depends on orientation and whether  the stack is positive or negative.
+    * @param x The x position offset of the label relative to the left of the stacked bar. The default value is calculated at runtime and depends on orientation and whether the stack is positive or negative.
+    * @param y The y position offset of the label relative to the tick position on the axis. The default value is calculated at runtime and depends on orientation and whether  the stack is positive or negative.
+    */
+  def apply(align: js.UndefOr[String] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, format: js.UndefOr[String] = js.undefined, formatter: js.UndefOr[js.Function] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, textAlign: js.UndefOr[String] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, verticalAlign: js.UndefOr[String] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined): YAxisStackLabels = {
+    val alignOuter: js.UndefOr[String] = align
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val formatOuter: js.UndefOr[String] = format
+    val formatterOuter: js.UndefOr[js.Function] = formatter
+    val rotationOuter: js.UndefOr[Double] = rotation
+    val styleOuter: js.UndefOr[js.Object] = style
+    val textAlignOuter: js.UndefOr[String] = textAlign
+    val useHTMLOuter: js.UndefOr[Boolean] = useHTML
+    val verticalAlignOuter: js.UndefOr[String] = verticalAlign
+    val xOuter: js.UndefOr[Double] = x
+    val yOuter: js.UndefOr[Double] = y
+    new YAxisStackLabels {
+      override val align: js.UndefOr[String] = alignOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val format: js.UndefOr[String] = formatOuter
+      override val formatter: js.UndefOr[js.Function] = formatterOuter
+      override val rotation: js.UndefOr[Double] = rotationOuter
+      override val style: js.UndefOr[js.Object] = styleOuter
+      override val textAlign: js.UndefOr[String] = textAlignOuter
+      override val useHTML: js.UndefOr[Boolean] = useHTMLOuter
+      override val verticalAlign: js.UndefOr[String] = verticalAlignOuter
+      override val x: js.UndefOr[Double] = xOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

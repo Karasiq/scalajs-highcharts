@@ -27,3 +27,18 @@ class ChartOptions3dFrameBack extends js.Object {
     */
   val size: js.UndefOr[Double] = js.undefined
 }
+
+object ChartOptions3dFrameBack {
+  /**
+    * @param color The color of the panel.
+    * @param size Thickness of the panel.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, size: js.UndefOr[Double] = js.undefined): ChartOptions3dFrameBack = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val sizeOuter: js.UndefOr[Double] = size
+    new ChartOptions3dFrameBack {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val size: js.UndefOr[Double] = sizeOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class PlotOptionsOhlcStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[PlotOptionsOhlcStatesHover]] = js.undefined
 }
+
+object PlotOptionsOhlcStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsOhlcStatesHover]] = js.undefined): PlotOptionsOhlcStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsOhlcStatesHover]] = hover
+    new PlotOptionsOhlcStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsOhlcStatesHover]] = hoverOuter
+    }
+  }
+}

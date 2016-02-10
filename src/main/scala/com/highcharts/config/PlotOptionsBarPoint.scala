@@ -20,3 +20,15 @@ class PlotOptionsBarPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsBarPointEvents]] = js.undefined
 }
+
+object PlotOptionsBarPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsBarPointEvents]] = js.undefined): PlotOptionsBarPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsBarPointEvents]] = events
+    new PlotOptionsBarPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsBarPointEvents]] = eventsOuter
+    }
+  }
+}

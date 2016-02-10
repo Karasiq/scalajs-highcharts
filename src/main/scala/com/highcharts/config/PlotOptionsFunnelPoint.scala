@@ -20,3 +20,15 @@ class PlotOptionsFunnelPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = js.undefined
 }
+
+object PlotOptionsFunnelPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = js.undefined): PlotOptionsFunnelPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = events
+    new PlotOptionsFunnelPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = eventsOuter
+    }
+  }
+}

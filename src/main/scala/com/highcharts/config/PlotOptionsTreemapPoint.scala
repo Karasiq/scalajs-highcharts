@@ -20,3 +20,15 @@ class PlotOptionsTreemapPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsTreemapPointEvents]] = js.undefined
 }
+
+object PlotOptionsTreemapPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsTreemapPointEvents]] = js.undefined): PlotOptionsTreemapPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsTreemapPointEvents]] = events
+    new PlotOptionsTreemapPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsTreemapPointEvents]] = eventsOuter
+    }
+  }
+}

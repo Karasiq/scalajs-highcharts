@@ -54,3 +54,33 @@ class PlotOptionsSplineMarkerStatesHover extends js.Object {
     */
   val radiusPlus: js.UndefOr[Double] = js.undefined
 }
+
+object PlotOptionsSplineMarkerStatesHover {
+  /**
+    * @param enabled Enable or disable the point marker.
+    * @param fillColor The fill color of the point marker. When <code>null</code>, the series' or point's color is used.
+    * @param lineColor The color of the point marker's outline. When <code>null</code>, the series' or point's color is used.
+    * @param lineWidth The width of the point marker's outline.
+    * @param lineWidthPlus The additional line width for a hovered point.
+    * @param radius The radius of the point marker. In hover state, it defaults to the normal state's radius + 2 as per the <a href="#plotOptions.series.marker.states.hover.radiusPlus">radiusPlus</a> option.
+    * @param radiusPlus The number of pixels to increase the radius of the hovered point.
+    */
+  def apply(enabled: js.UndefOr[Boolean] = js.undefined, fillColor: js.UndefOr[String | js.Object] = js.undefined, lineColor: js.UndefOr[String | js.Object] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, lineWidthPlus: js.UndefOr[Double] = js.undefined, radius: js.UndefOr[Double] = js.undefined, radiusPlus: js.UndefOr[Double] = js.undefined): PlotOptionsSplineMarkerStatesHover = {
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val fillColorOuter: js.UndefOr[String | js.Object] = fillColor
+    val lineColorOuter: js.UndefOr[String | js.Object] = lineColor
+    val lineWidthOuter: js.UndefOr[Double] = lineWidth
+    val lineWidthPlusOuter: js.UndefOr[Double] = lineWidthPlus
+    val radiusOuter: js.UndefOr[Double] = radius
+    val radiusPlusOuter: js.UndefOr[Double] = radiusPlus
+    new PlotOptionsSplineMarkerStatesHover {
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val fillColor: js.UndefOr[String | js.Object] = fillColorOuter
+      override val lineColor: js.UndefOr[String | js.Object] = lineColorOuter
+      override val lineWidth: js.UndefOr[Double] = lineWidthOuter
+      override val lineWidthPlus: js.UndefOr[Double] = lineWidthPlusOuter
+      override val radius: js.UndefOr[Double] = radiusOuter
+      override val radiusPlus: js.UndefOr[Double] = radiusPlusOuter
+    }
+  }
+}

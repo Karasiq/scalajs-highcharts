@@ -20,3 +20,15 @@ class SeriesWaterfallPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = js.undefined
 }
+
+object SeriesWaterfallPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = js.undefined): SeriesWaterfallPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = events
+    new SeriesWaterfallPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = eventsOuter
+    }
+  }
+}

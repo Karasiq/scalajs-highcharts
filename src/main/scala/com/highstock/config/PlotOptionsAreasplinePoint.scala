@@ -20,3 +20,15 @@ class PlotOptionsAreasplinePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = js.undefined
 }
+
+object PlotOptionsAreasplinePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = js.undefined): PlotOptionsAreasplinePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = events
+    new PlotOptionsAreasplinePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = eventsOuter
+    }
+  }
+}

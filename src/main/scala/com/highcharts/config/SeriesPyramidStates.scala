@@ -20,3 +20,15 @@ class SeriesPyramidStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[SeriesPyramidStatesHover]] = js.undefined
 }
+
+object SeriesPyramidStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesPyramidStatesHover]] = js.undefined): SeriesPyramidStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesPyramidStatesHover]] = hover
+    new SeriesPyramidStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesPyramidStatesHover]] = hoverOuter
+    }
+  }
+}

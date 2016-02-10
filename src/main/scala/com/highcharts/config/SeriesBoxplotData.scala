@@ -94,3 +94,54 @@ class SeriesBoxplotData extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesBoxplotData {
+  /**
+    * @param color Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
+    * @param dataLabels Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a>
+    * @param drilldown The <code>id</code> of a series in the <a href="#drilldown.series">drilldown.series</a> array to use for a drilldown for this point.
+    * @param events Individual point events
+    * @param high The <code>high</code> value for each data point, signifying the highest value in the sample set. The top whisker is drawn here.
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param low The <code>low</code> value for each data point, signifying the lowest value in the sample set. The bottom whisker is drawn here.
+    * @param median The median for each data point. This is drawn as a line through the middle area of the box.
+    * @param name <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>. . <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
+    * @param q1 The lower quartile for each data point. This is the bottom of the box.
+    * @param q3 The higher quartile for each data point. This is the top of the box.
+    * @param selected Whether the data point is selected initially.
+    * @param x The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
+    * @param y The y value of the point.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dataLabels: js.UndefOr[js.Object] = js.undefined, drilldown: js.UndefOr[String] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesBoxplotDataEvents]] = js.undefined, high: js.UndefOr[Double] = js.undefined, id: js.UndefOr[String] = js.undefined, low: js.UndefOr[Double] = js.undefined, median: js.UndefOr[Double] = js.undefined, name: js.UndefOr[String] = js.undefined, q1: js.UndefOr[Double] = js.undefined, q3: js.UndefOr[Double] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined): SeriesBoxplotData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dataLabelsOuter: js.UndefOr[js.Object] = dataLabels
+    val drilldownOuter: js.UndefOr[String] = drilldown
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesBoxplotDataEvents]] = events
+    val highOuter: js.UndefOr[Double] = high
+    val idOuter: js.UndefOr[String] = id
+    val lowOuter: js.UndefOr[Double] = low
+    val medianOuter: js.UndefOr[Double] = median
+    val nameOuter: js.UndefOr[String] = name
+    val q1Outer: js.UndefOr[Double] = q1
+    val q3Outer: js.UndefOr[Double] = q3
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val xOuter: js.UndefOr[Double] = x
+    val yOuter: js.UndefOr[Double] = y
+    new SeriesBoxplotData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dataLabels: js.UndefOr[js.Object] = dataLabelsOuter
+      override val drilldown: js.UndefOr[String] = drilldownOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesBoxplotDataEvents]] = eventsOuter
+      override val high: js.UndefOr[Double] = highOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val low: js.UndefOr[Double] = lowOuter
+      override val median: js.UndefOr[Double] = medianOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val q1: js.UndefOr[Double] = q1Outer
+      override val q3: js.UndefOr[Double] = q3Outer
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val x: js.UndefOr[Double] = xOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

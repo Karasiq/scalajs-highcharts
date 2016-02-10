@@ -55,3 +55,37 @@ class SeriesAreaData extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesAreaData {
+  /**
+    * @param color Individual color for the point.
+    * @param dataLabels Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a>
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param name The name of the point as shown in the legend, tooltip, dataLabel etc.
+    * @param selected Whether the data point is selected initially.
+    * @param x The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
+    * @param y The y value of the point.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dataLabels: js.UndefOr[js.Object] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesAreaDataEvents]] = js.undefined, id: js.UndefOr[String] = js.undefined, marker: js.UndefOr[CleanJsObject[SeriesAreaDataMarker]] = js.undefined, name: js.UndefOr[String] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined): SeriesAreaData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dataLabelsOuter: js.UndefOr[js.Object] = dataLabels
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesAreaDataEvents]] = events
+    val idOuter: js.UndefOr[String] = id
+    val markerOuter: js.UndefOr[CleanJsObject[SeriesAreaDataMarker]] = marker
+    val nameOuter: js.UndefOr[String] = name
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val xOuter: js.UndefOr[Double] = x
+    val yOuter: js.UndefOr[Double] = y
+    new SeriesAreaData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dataLabels: js.UndefOr[js.Object] = dataLabelsOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesAreaDataEvents]] = eventsOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val marker: js.UndefOr[CleanJsObject[SeriesAreaDataMarker]] = markerOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val x: js.UndefOr[Double] = xOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

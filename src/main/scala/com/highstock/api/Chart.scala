@@ -133,4 +133,9 @@ trait Chart extends js.Object {
     * @param animation Defaults to true. When true, the update will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
     */
   def redraw(animation: js.Any = ???): Unit = js.native
+
+  /**
+    * Export the chart to a PNG or SVG without sending it to a server. Requires <code>modules/exporting.js</code> and <code>modules/offline-exporting.js</code>.
+    */
+  def exportChartLocal(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
 }

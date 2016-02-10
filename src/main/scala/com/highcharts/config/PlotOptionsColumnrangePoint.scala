@@ -20,3 +20,15 @@ class PlotOptionsColumnrangePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsColumnrangePointEvents]] = js.undefined
 }
+
+object PlotOptionsColumnrangePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsColumnrangePointEvents]] = js.undefined): PlotOptionsColumnrangePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsColumnrangePointEvents]] = events
+    new PlotOptionsColumnrangePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsColumnrangePointEvents]] = eventsOuter
+    }
+  }
+}

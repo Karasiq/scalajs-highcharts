@@ -20,3 +20,15 @@ class PlotOptionsErrorbarPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = js.undefined
 }
+
+object PlotOptionsErrorbarPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = js.undefined): PlotOptionsErrorbarPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = events
+    new PlotOptionsErrorbarPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = eventsOuter
+    }
+  }
+}

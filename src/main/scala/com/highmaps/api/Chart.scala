@@ -110,6 +110,11 @@ A <a href="#Point">point</a> object, or any object containing the properties <co
   def fromPointToLatLon(point: js.Object = ???): js.Object = js.native
 
   /**
+    * Export the chart to a PNG or SVG without sending it to a server. Requires <code>modules/exporting.js</code> and <code>modules/offline-exporting.js</code>.
+    */
+  def exportChartLocal(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
+
+  /**
     * When the chart is drilled down to a child series, calling <code>chart.drillUp()</code> will drill up to the parent series.
     */
   def drillUp(): Unit = js.native

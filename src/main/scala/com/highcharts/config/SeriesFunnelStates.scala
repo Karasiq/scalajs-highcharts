@@ -20,3 +20,15 @@ class SeriesFunnelStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[SeriesFunnelStatesHover]] = js.undefined
 }
+
+object SeriesFunnelStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesFunnelStatesHover]] = js.undefined): SeriesFunnelStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesFunnelStatesHover]] = hover
+    new SeriesFunnelStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesFunnelStatesHover]] = hoverOuter
+    }
+  }
+}

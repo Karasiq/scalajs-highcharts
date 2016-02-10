@@ -21,3 +21,15 @@ class SeriesMapbubbleStatesNormal extends js.Object {
     */
   val animation: js.UndefOr[js.Object | Boolean] = js.undefined
 }
+
+object SeriesMapbubbleStatesNormal {
+  /**
+    * @param animation Animation options for the fill color when returning from hover state to normal state. The animation adds some latency in order to reduce the effect of flickering when hovering in and out of for example an uneven coastline.
+    */
+  def apply(animation: js.UndefOr[js.Object | Boolean] = js.undefined): SeriesMapbubbleStatesNormal = {
+    val animationOuter: js.UndefOr[js.Object | Boolean] = animation
+    new SeriesMapbubbleStatesNormal {
+      override val animation: js.UndefOr[js.Object | Boolean] = animationOuter
+    }
+  }
+}

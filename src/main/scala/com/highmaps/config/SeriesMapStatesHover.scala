@@ -41,3 +41,27 @@ class SeriesMapStatesHover extends js.Object {
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 }
+
+object SeriesMapStatesHover {
+  /**
+    * @param borderColor The border color of the point in this state
+    * @param borderWidth The border width of the point in this state
+    * @param brightness The relative brightness of the point when hovered, relative to the normal point color.
+    * @param color The color of the shape in this state
+    * @param enabled Enable separate styles for the series in different states.
+    */
+  def apply(borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, brightness: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined): SeriesMapStatesHover = {
+    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val brightnessOuter: js.UndefOr[Double] = brightness
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    new SeriesMapStatesHover {
+      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val brightness: js.UndefOr[Double] = brightnessOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+    }
+  }
+}

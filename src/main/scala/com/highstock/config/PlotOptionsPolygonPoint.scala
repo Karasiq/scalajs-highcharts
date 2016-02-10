@@ -20,3 +20,15 @@ class PlotOptionsPolygonPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsPolygonPointEvents]] = js.undefined
 }
+
+object PlotOptionsPolygonPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsPolygonPointEvents]] = js.undefined): PlotOptionsPolygonPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsPolygonPointEvents]] = events
+    new PlotOptionsPolygonPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsPolygonPointEvents]] = eventsOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class PlotOptionsMaplinePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = js.undefined
 }
+
+object PlotOptionsMaplinePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = js.undefined): PlotOptionsMaplinePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = events
+    new PlotOptionsMaplinePoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = eventsOuter
+    }
+  }
+}

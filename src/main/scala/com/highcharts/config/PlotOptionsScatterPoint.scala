@@ -20,3 +20,15 @@ class PlotOptionsScatterPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = js.undefined
 }
+
+object PlotOptionsScatterPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = js.undefined): PlotOptionsScatterPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = events
+    new PlotOptionsScatterPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = eventsOuter
+    }
+  }
+}

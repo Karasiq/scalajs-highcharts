@@ -31,3 +31,21 @@ class PlotOptionsHeatmapStates extends js.Object {
     */
   val select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = js.undefined
 }
+
+object PlotOptionsHeatmapStates {
+  /**
+    * @param hover Options for the hovered series
+    * @param normal Overrides for the normal state
+    * @param select Specific options for point in selected states, after being selected by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or programmatically. 
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = js.undefined, normal: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = js.undefined, select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = js.undefined): PlotOptionsHeatmapStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = hover
+    val normalOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = normal
+    val selectOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = select
+    new PlotOptionsHeatmapStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = hoverOuter
+      override val normal: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = normalOuter
+      override val select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = selectOuter
+    }
+  }
+}

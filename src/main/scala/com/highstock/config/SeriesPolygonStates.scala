@@ -20,3 +20,15 @@ class SeriesPolygonStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[SeriesPolygonStatesHover]] = js.undefined
 }
+
+object SeriesPolygonStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[SeriesPolygonStatesHover]] = js.undefined): SeriesPolygonStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[SeriesPolygonStatesHover]] = hover
+    new SeriesPolygonStates {
+      override val hover: js.UndefOr[CleanJsObject[SeriesPolygonStatesHover]] = hoverOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class SeriesFunnelPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesFunnelPointEvents]] = js.undefined
 }
+
+object SeriesFunnelPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesFunnelPointEvents]] = js.undefined): SeriesFunnelPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesFunnelPointEvents]] = events
+    new SeriesFunnelPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesFunnelPointEvents]] = eventsOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class SeriesPiePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = js.undefined
 }
+
+object SeriesPiePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = js.undefined): SeriesPiePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = events
+    new SeriesPiePoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = eventsOuter
+    }
+  }
+}

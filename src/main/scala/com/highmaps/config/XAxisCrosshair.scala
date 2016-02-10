@@ -42,3 +42,24 @@ class XAxisCrosshair extends js.Object {
     */
   val zIndex: js.UndefOr[Double] = js.undefined
 }
+
+object XAxisCrosshair {
+  /**
+    * @param color The color of the crosshair.
+    * @param dashStyle The dash style for the crosshair. See <a href="#plotOptions.series.dashStyle">series.dashStyle</a> for possible values.
+    * @param width The pixel width of the crosshair. Defaults to 1 for numeric or datetime axes, and for one category width for category axes.
+    * @param zIndex The Z index of the crosshair. Higher Z indices allow drawing the crosshair on top of the series or behind the grid lines.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dashStyle: js.UndefOr[String] = js.undefined, width: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined): XAxisCrosshair = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dashStyleOuter: js.UndefOr[String] = dashStyle
+    val widthOuter: js.UndefOr[Double] = width
+    val zIndexOuter: js.UndefOr[Double] = zIndex
+    new XAxisCrosshair {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dashStyle: js.UndefOr[String] = dashStyleOuter
+      override val width: js.UndefOr[Double] = widthOuter
+      override val zIndex: js.UndefOr[Double] = zIndexOuter
+    }
+  }
+}

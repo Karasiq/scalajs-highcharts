@@ -43,3 +43,24 @@ class SeriesGaugePivot extends js.Object {
     */
   val radius: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesGaugePivot {
+  /**
+    * @param backgroundColor The background color or fill of the pivot.
+    * @param borderColor The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
+    * @param borderWidth The border or stroke width of the pivot.
+    * @param radius The pixel radius of the pivot.
+    */
+  def apply(backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, radius: js.UndefOr[Double] = js.undefined): SeriesGaugePivot = {
+    val backgroundColorOuter: js.UndefOr[String | js.Object] = backgroundColor
+    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val radiusOuter: js.UndefOr[Double] = radius
+    new SeriesGaugePivot {
+      override val backgroundColor: js.UndefOr[String | js.Object] = backgroundColorOuter
+      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val radius: js.UndefOr[Double] = radiusOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class SeriesTreemapPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = js.undefined
 }
+
+object SeriesTreemapPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = js.undefined): SeriesTreemapPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = events
+    new SeriesTreemapPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = eventsOuter
+    }
+  }
+}

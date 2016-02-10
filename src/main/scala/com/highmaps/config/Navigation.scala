@@ -53,3 +53,24 @@ class Navigation extends js.Object {
     */
   val menuStyle: js.UndefOr[js.Object] = js.undefined
 }
+
+object Navigation {
+  /**
+    * @param buttonOptions <p>A collection of options for buttons appearing in the exporting module.</p>. . <p>The examples below are using basic Highcharts, but the syntax is exactly the same for Highmaps.</p>
+    * @param menuItemHoverStyle CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to . <pre>menuItemHoverStyle: {. 	background: '#4572A5',. 	color: '#FFFFFF'. }</pre>
+    * @param menuItemStyle CSS styles for the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to . <pre>menuItemStyle: {. 	padding: '0 5px',. 	background: NONE,. 	color: '#303030'. }</pre>
+    * @param menuStyle CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML. Defaults to . <pre>menuStyle: {. 	border: '1px solid #A0A0A0',. 	background: '#FFFFFF'. }</pre>
+    */
+  def apply(buttonOptions: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = js.undefined, menuItemHoverStyle: js.UndefOr[js.Object] = js.undefined, menuItemStyle: js.UndefOr[js.Object] = js.undefined, menuStyle: js.UndefOr[js.Object] = js.undefined): Navigation = {
+    val buttonOptionsOuter: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = buttonOptions
+    val menuItemHoverStyleOuter: js.UndefOr[js.Object] = menuItemHoverStyle
+    val menuItemStyleOuter: js.UndefOr[js.Object] = menuItemStyle
+    val menuStyleOuter: js.UndefOr[js.Object] = menuStyle
+    new Navigation {
+      override val buttonOptions: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = buttonOptionsOuter
+      override val menuItemHoverStyle: js.UndefOr[js.Object] = menuItemHoverStyleOuter
+      override val menuItemStyle: js.UndefOr[js.Object] = menuItemStyleOuter
+      override val menuStyle: js.UndefOr[js.Object] = menuStyleOuter
+    }
+  }
+}

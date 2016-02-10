@@ -20,3 +20,15 @@ class SeriesScatterPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesScatterPointEvents]] = js.undefined
 }
+
+object SeriesScatterPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesScatterPointEvents]] = js.undefined): SeriesScatterPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesScatterPointEvents]] = events
+    new SeriesScatterPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesScatterPointEvents]] = eventsOuter
+    }
+  }
+}

@@ -20,3 +20,15 @@ class SeriesErrorbarPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesErrorbarPointEvents]] = js.undefined
 }
+
+object SeriesErrorbarPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesErrorbarPointEvents]] = js.undefined): SeriesErrorbarPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesErrorbarPointEvents]] = events
+    new SeriesErrorbarPoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesErrorbarPointEvents]] = eventsOuter
+    }
+  }
+}

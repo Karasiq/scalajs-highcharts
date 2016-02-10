@@ -69,3 +69,39 @@ class SeriesBarData extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesBarData {
+  /**
+    * @param color Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
+    * @param dataLabels Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a>
+    * @param drilldown The <code>id</code> of a series in the <a href="#drilldown.series">drilldown.series</a> array to use for a drilldown for this point.
+    * @param events Individual point events
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param name <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>. . <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
+    * @param selected Whether the data point is selected initially.
+    * @param x The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
+    * @param y The y value of the point.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dataLabels: js.UndefOr[js.Object] = js.undefined, drilldown: js.UndefOr[String] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesBarDataEvents]] = js.undefined, id: js.UndefOr[String] = js.undefined, name: js.UndefOr[String] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined): SeriesBarData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dataLabelsOuter: js.UndefOr[js.Object] = dataLabels
+    val drilldownOuter: js.UndefOr[String] = drilldown
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesBarDataEvents]] = events
+    val idOuter: js.UndefOr[String] = id
+    val nameOuter: js.UndefOr[String] = name
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val xOuter: js.UndefOr[Double] = x
+    val yOuter: js.UndefOr[Double] = y
+    new SeriesBarData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dataLabels: js.UndefOr[js.Object] = dataLabelsOuter
+      override val drilldown: js.UndefOr[String] = drilldownOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesBarDataEvents]] = eventsOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val x: js.UndefOr[Double] = xOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

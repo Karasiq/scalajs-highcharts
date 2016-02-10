@@ -25,3 +25,18 @@ class ColorAxisMarker extends js.Object {
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 }
+
+object ColorAxisMarker {
+  /**
+    * @param animation Animation for the marker as it moves between values. Set to <code>false</code> to disable animation. Defaults to <code>{ duration: 50 }</code>.
+    * @param color The color of the marker.
+    */
+  def apply(animation: js.UndefOr[js.Object | Boolean] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined): ColorAxisMarker = {
+    val animationOuter: js.UndefOr[js.Object | Boolean] = animation
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    new ColorAxisMarker {
+      override val animation: js.UndefOr[js.Object | Boolean] = animationOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+    }
+  }
+}

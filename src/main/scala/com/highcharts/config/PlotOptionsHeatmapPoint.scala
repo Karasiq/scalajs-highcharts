@@ -20,3 +20,15 @@ class PlotOptionsHeatmapPoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = js.undefined
 }
+
+object PlotOptionsHeatmapPoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = js.undefined): PlotOptionsHeatmapPoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = events
+    new PlotOptionsHeatmapPoint {
+      override val events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = eventsOuter
+    }
+  }
+}

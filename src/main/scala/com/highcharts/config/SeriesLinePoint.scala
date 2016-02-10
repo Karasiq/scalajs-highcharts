@@ -20,3 +20,15 @@ class SeriesLinePoint extends js.Object {
     */
   val events: js.UndefOr[CleanJsObject[SeriesLinePointEvents]] = js.undefined
 }
+
+object SeriesLinePoint {
+  /**
+    * @param events Events for each single point
+    */
+  def apply(events: js.UndefOr[CleanJsObject[SeriesLinePointEvents]] = js.undefined): SeriesLinePoint = {
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesLinePointEvents]] = events
+    new SeriesLinePoint {
+      override val events: js.UndefOr[CleanJsObject[SeriesLinePointEvents]] = eventsOuter
+    }
+  }
+}

@@ -340,3 +340,144 @@ class SeriesTreemap extends js.Object {
     */
   val zones: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapZones]]] = js.undefined
 }
+
+object SeriesTreemap {
+  /**
+    * @param allowDrillToNode When enabled the user can click on a point which is a parent and zoom in on its children.
+    * @param allowPointSelect Allow this series' points to be selected by clicking on the markers, bars or pie slices.
+    * @param alternateStartingDirection Enabling this option will make the treemap alternate the drawing direction between vertical and horizontal.. The next levels starting direction will always be the opposite of the previous.
+    * @param animation <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods.		The following properties are supported:</p>. <dl>.   <dt>duration</dt>.   <dd>The duration of the animation in milliseconds.</dd>. <dt>easing</dt>. <dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>. </dl>. <p>. Due to poor performance, animation is disabled in old IE browsers for column charts and polar charts.</p>
+    * @param borderColor The color of the border surrounding each tree map item.
+    * @param borderWidth The width of the border surrounding each column or bar.
+    * @param color The main color of the series. In heat maps this color is rarely used, as we mostly use the color to denote the value of each point. Unless options are set in the <a href="#colorAxis">colorAxis</a>, the default value is pulled from the <a href="#colors">options.colors</a> array.
+    * @param colorByPoint When using automatic point colors pulled from the <code>options.colors</code>.  collection, this option determines whether the chart should receive .  one color per series or one color per point.
+    * @param colors A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
+    * @param cropThreshold When the series contains less points than the crop threshold, all points are drawn, event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
+    * @param cursor You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
+    * @param data An array of data points for the series. For the <code>treemap</code> series type, points can be given in the following ways:.  <ol>.  	<li>An array of numerical values. In this case, the numerical values will .  	be interpreted as <code>value</code> options.  Example:. <pre>data: [0, 5, 3, 5]</pre>.  	</li>.  <li><p>An array of objects with named values. The objects are.  	point configuration objects as seen below. If the total number of data points exceeds the series' <a href='#series<treemap>.turboThreshold'>turboThreshold</a>, this option is not available.</p>. . <pre>data: [{.     value: 7,.     name: "Point2",.     color: "#00FF00". }, {.     value: 2,.     name: "Point1",.     color: "#FF00FF". }]</pre></li>.  </ol>
+    * @param enableMouseTracking Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
+    * @param getExtremesFromAll Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
+    * @param id An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
+    * @param index The index of the series in the chart, affecting the internal index in the <code>chart.series</code> array, the visible Z index as well as the order in the legend.
+    * @param interactByLeaf This option decides if the user can interact with the parent nodes or just the leaf nodes. When this option is undefined, it will be true by default. However when allowDrillToNode is true, then it will be false by default.
+    * @param keys An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
+    * @param layoutAlgorithm This option decides which algorithm is used for setting position and dimensions of the points. Can be one of <code>sliceAndDice</code>, <code>stripes</code>, <code>squarified</code> or <code>strip</code>. 
+    * @param layoutStartingDirection Defines which direction the layout algorithm will start drawing. Possible values are "vertical" and "horizontal".
+    * @param legendIndex The sequential index of the series in the legend.  <div class="demo">Try it:  	<a href="http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/series/legendindex/" target="_blank">Legend in opposite order</a> </div>.
+    * @param levelIsConstant Used together with the levels and allowDrillToNode options. When set to false the first level visible when drilling is considered to be level one. Otherwise the level will be the same as the tree structure.
+    * @param levels Set options on specific levels. Takes precedence over series options, but not point options.
+    * @param linkedTo The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
+    * @param maxPointWidth The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
+    * @param name The name of the series as shown in the legend, tooltip etc.
+    * @param point Properties for each single point
+    * @param selected Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
+    * @param shadow Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
+    * @param showCheckbox If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
+    * @param showInLegend Whether to display this series type or specific series item in the legend.
+    * @param sortIndex The sort index of the point inside the treemap level. 
+    * @param states A wrapper object for all the series options in specific states.
+    * @param stickyTracking Sticky tracking of mouse events. When true, the <code>mouseOut</code> event.  on a series isn't triggered until the mouse moves over another series, or out.  of the plot area. When false, the <code>mouseOut</code> event on a series is.  triggered when the mouse leaves the area around the series' graph or markers..  This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the .  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
+    * @param turboThreshold When a series contains a data array that is longer than this, only one dimensional arrays of numbers,.  or two dimensional arrays with x and y values are allowed. Also, only the first.  point is tested, and the rest are assumed to be the same format. This saves expensive.  data checking and indexing in long series. Set it to <code>0</code> disable.
+    * @param `type` The type of series. Can be one of <code>area</code>, <code>areaspline</code>,.  <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>,.  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
+    * @param visible Set the initial visibility of the series.
+    * @param xAxis When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first.
+    * @param yAxis When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first.
+    * @param zIndex Define the visual z index of the series.
+    * @param zoneAxis Defines the Axis on which the zones are applied.
+    * @param zones An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.
+    */
+  def apply(allowDrillToNode: js.UndefOr[Boolean] = js.undefined, allowPointSelect: js.UndefOr[Boolean] = js.undefined, alternateStartingDirection: js.UndefOr[Boolean] = js.undefined, animation: js.UndefOr[Boolean] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, colorByPoint: js.UndefOr[Boolean] = js.undefined, colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined, cropThreshold: js.UndefOr[Double] = js.undefined, cursor: js.UndefOr[String] = js.undefined, data: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapData] | Double]] = js.undefined, dataLabels: js.UndefOr[CleanJsObject[SeriesTreemapDataLabels]] = js.undefined, enableMouseTracking: js.UndefOr[Boolean] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesTreemapEvents]] = js.undefined, getExtremesFromAll: js.UndefOr[Boolean] = js.undefined, id: js.UndefOr[String] = js.undefined, index: js.UndefOr[Double] = js.undefined, interactByLeaf: js.UndefOr[Boolean] = js.undefined, keys: js.UndefOr[js.Array[String]] = js.undefined, layoutAlgorithm: js.UndefOr[String] = js.undefined, layoutStartingDirection: js.UndefOr[String] = js.undefined, legendIndex: js.UndefOr[Double] = js.undefined, levelIsConstant: js.UndefOr[Boolean] = js.undefined, levels: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapLevels]]] = js.undefined, linkedTo: js.UndefOr[String] = js.undefined, maxPointWidth: js.UndefOr[Double] = js.undefined, name: js.UndefOr[String] = js.undefined, point: js.UndefOr[CleanJsObject[SeriesTreemapPoint]] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, showCheckbox: js.UndefOr[Boolean] = js.undefined, showInLegend: js.UndefOr[Boolean] = js.undefined, sortIndex: js.UndefOr[Double] = js.undefined, states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined, stickyTracking: js.UndefOr[Boolean] = js.undefined, tooltip: js.UndefOr[CleanJsObject[SeriesTreemapTooltip]] = js.undefined, turboThreshold: js.UndefOr[Double] = js.undefined, `type`: String = "treemap", visible: js.UndefOr[Boolean] = js.undefined, xAxis: js.UndefOr[Double | String] = js.undefined, yAxis: js.UndefOr[Double | String] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined, zoneAxis: js.UndefOr[String] = js.undefined, zones: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapZones]]] = js.undefined): SeriesTreemap = {
+    val allowDrillToNodeOuter: js.UndefOr[Boolean] = allowDrillToNode
+    val allowPointSelectOuter: js.UndefOr[Boolean] = allowPointSelect
+    val alternateStartingDirectionOuter: js.UndefOr[Boolean] = alternateStartingDirection
+    val animationOuter: js.UndefOr[Boolean] = animation
+    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val colorByPointOuter: js.UndefOr[Boolean] = colorByPoint
+    val colorsOuter: js.UndefOr[js.Array[String | js.Object]] = colors
+    val cropThresholdOuter: js.UndefOr[Double] = cropThreshold
+    val cursorOuter: js.UndefOr[String] = cursor
+    val dataOuter: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapData] | Double]] = data
+    val dataLabelsOuter: js.UndefOr[CleanJsObject[SeriesTreemapDataLabels]] = dataLabels
+    val enableMouseTrackingOuter: js.UndefOr[Boolean] = enableMouseTracking
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesTreemapEvents]] = events
+    val getExtremesFromAllOuter: js.UndefOr[Boolean] = getExtremesFromAll
+    val idOuter: js.UndefOr[String] = id
+    val indexOuter: js.UndefOr[Double] = index
+    val interactByLeafOuter: js.UndefOr[Boolean] = interactByLeaf
+    val keysOuter: js.UndefOr[js.Array[String]] = keys
+    val layoutAlgorithmOuter: js.UndefOr[String] = layoutAlgorithm
+    val layoutStartingDirectionOuter: js.UndefOr[String] = layoutStartingDirection
+    val legendIndexOuter: js.UndefOr[Double] = legendIndex
+    val levelIsConstantOuter: js.UndefOr[Boolean] = levelIsConstant
+    val levelsOuter: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapLevels]]] = levels
+    val linkedToOuter: js.UndefOr[String] = linkedTo
+    val maxPointWidthOuter: js.UndefOr[Double] = maxPointWidth
+    val nameOuter: js.UndefOr[String] = name
+    val pointOuter: js.UndefOr[CleanJsObject[SeriesTreemapPoint]] = point
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val shadowOuter: js.UndefOr[Boolean | js.Object] = shadow
+    val showCheckboxOuter: js.UndefOr[Boolean] = showCheckbox
+    val showInLegendOuter: js.UndefOr[Boolean] = showInLegend
+    val sortIndexOuter: js.UndefOr[Double] = sortIndex
+    val statesOuter: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = states
+    val stickyTrackingOuter: js.UndefOr[Boolean] = stickyTracking
+    val tooltipOuter: js.UndefOr[CleanJsObject[SeriesTreemapTooltip]] = tooltip
+    val turboThresholdOuter: js.UndefOr[Double] = turboThreshold
+    val typeOuter: String = `type`
+    val visibleOuter: js.UndefOr[Boolean] = visible
+    val xAxisOuter: js.UndefOr[Double | String] = xAxis
+    val yAxisOuter: js.UndefOr[Double | String] = yAxis
+    val zIndexOuter: js.UndefOr[Double] = zIndex
+    val zoneAxisOuter: js.UndefOr[String] = zoneAxis
+    val zonesOuter: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapZones]]] = zones
+    new SeriesTreemap {
+      override val allowDrillToNode: js.UndefOr[Boolean] = allowDrillToNodeOuter
+      override val allowPointSelect: js.UndefOr[Boolean] = allowPointSelectOuter
+      override val alternateStartingDirection: js.UndefOr[Boolean] = alternateStartingDirectionOuter
+      override val animation: js.UndefOr[Boolean] = animationOuter
+      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val colorByPoint: js.UndefOr[Boolean] = colorByPointOuter
+      override val colors: js.UndefOr[js.Array[String | js.Object]] = colorsOuter
+      override val cropThreshold: js.UndefOr[Double] = cropThresholdOuter
+      override val cursor: js.UndefOr[String] = cursorOuter
+      override val data: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapData] | Double]] = dataOuter
+      override val dataLabels: js.UndefOr[CleanJsObject[SeriesTreemapDataLabels]] = dataLabelsOuter
+      override val enableMouseTracking: js.UndefOr[Boolean] = enableMouseTrackingOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesTreemapEvents]] = eventsOuter
+      override val getExtremesFromAll: js.UndefOr[Boolean] = getExtremesFromAllOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val index: js.UndefOr[Double] = indexOuter
+      override val interactByLeaf: js.UndefOr[Boolean] = interactByLeafOuter
+      override val keys: js.UndefOr[js.Array[String]] = keysOuter
+      override val layoutAlgorithm: js.UndefOr[String] = layoutAlgorithmOuter
+      override val layoutStartingDirection: js.UndefOr[String] = layoutStartingDirectionOuter
+      override val legendIndex: js.UndefOr[Double] = legendIndexOuter
+      override val levelIsConstant: js.UndefOr[Boolean] = levelIsConstantOuter
+      override val levels: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapLevels]]] = levelsOuter
+      override val linkedTo: js.UndefOr[String] = linkedToOuter
+      override val maxPointWidth: js.UndefOr[Double] = maxPointWidthOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val point: js.UndefOr[CleanJsObject[SeriesTreemapPoint]] = pointOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val shadow: js.UndefOr[Boolean | js.Object] = shadowOuter
+      override val showCheckbox: js.UndefOr[Boolean] = showCheckboxOuter
+      override val showInLegend: js.UndefOr[Boolean] = showInLegendOuter
+      override val sortIndex: js.UndefOr[Double] = sortIndexOuter
+      override val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = statesOuter
+      override val stickyTracking: js.UndefOr[Boolean] = stickyTrackingOuter
+      override val tooltip: js.UndefOr[CleanJsObject[SeriesTreemapTooltip]] = tooltipOuter
+      override val turboThreshold: js.UndefOr[Double] = turboThresholdOuter
+      override val `type`: String = typeOuter
+      override val visible: js.UndefOr[Boolean] = visibleOuter
+      override val xAxis: js.UndefOr[Double | String] = xAxisOuter
+      override val yAxis: js.UndefOr[Double | String] = yAxisOuter
+      override val zIndex: js.UndefOr[Double] = zIndexOuter
+      override val zoneAxis: js.UndefOr[String] = zoneAxisOuter
+      override val zones: js.UndefOr[js.Array[CleanJsObject[SeriesTreemapZones]]] = zonesOuter
+    }
+  }
+}

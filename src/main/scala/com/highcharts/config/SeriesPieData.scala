@@ -75,3 +75,42 @@ class SeriesPieData extends js.Object {
     */
   val y: js.UndefOr[Double] = js.undefined
 }
+
+object SeriesPieData {
+  /**
+    * @param color Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
+    * @param dataLabels Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a>
+    * @param drilldown The <code>id</code> of a series in the <a href="#drilldown.series">drilldown.series</a> array to use for a drilldown for this point.
+    * @param events Individual point events
+    * @param id An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
+    * @param legendIndex The sequential index of the data point in the legend.
+    * @param name <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>. . <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
+    * @param selected Whether the data point is selected initially.
+    * @param sliced Whether to display a slice offset from the center.
+    * @param y The y value of the point.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dataLabels: js.UndefOr[js.Object] = js.undefined, drilldown: js.UndefOr[String] = js.undefined, events: js.UndefOr[CleanJsObject[SeriesPieDataEvents]] = js.undefined, id: js.UndefOr[String] = js.undefined, legendIndex: js.UndefOr[Double] = js.undefined, name: js.UndefOr[String] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, sliced: js.UndefOr[Boolean] = js.undefined, y: js.UndefOr[Double] = js.undefined): SeriesPieData = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dataLabelsOuter: js.UndefOr[js.Object] = dataLabels
+    val drilldownOuter: js.UndefOr[String] = drilldown
+    val eventsOuter: js.UndefOr[CleanJsObject[SeriesPieDataEvents]] = events
+    val idOuter: js.UndefOr[String] = id
+    val legendIndexOuter: js.UndefOr[Double] = legendIndex
+    val nameOuter: js.UndefOr[String] = name
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val slicedOuter: js.UndefOr[Boolean] = sliced
+    val yOuter: js.UndefOr[Double] = y
+    new SeriesPieData {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dataLabels: js.UndefOr[js.Object] = dataLabelsOuter
+      override val drilldown: js.UndefOr[String] = drilldownOuter
+      override val events: js.UndefOr[CleanJsObject[SeriesPieDataEvents]] = eventsOuter
+      override val id: js.UndefOr[String] = idOuter
+      override val legendIndex: js.UndefOr[Double] = legendIndexOuter
+      override val name: js.UndefOr[String] = nameOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val sliced: js.UndefOr[Boolean] = slicedOuter
+      override val y: js.UndefOr[Double] = yOuter
+    }
+  }
+}

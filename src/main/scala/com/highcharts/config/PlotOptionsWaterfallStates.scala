@@ -20,3 +20,15 @@ class PlotOptionsWaterfallStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[PlotOptionsWaterfallStatesHover]] = js.undefined
 }
+
+object PlotOptionsWaterfallStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsWaterfallStatesHover]] = js.undefined): PlotOptionsWaterfallStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsWaterfallStatesHover]] = hover
+    new PlotOptionsWaterfallStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsWaterfallStatesHover]] = hoverOuter
+    }
+  }
+}

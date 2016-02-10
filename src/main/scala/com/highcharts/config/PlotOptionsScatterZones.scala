@@ -40,3 +40,24 @@ class PlotOptionsScatterZones extends js.Object {
     */
   val value: js.UndefOr[Double] = js.undefined
 }
+
+object PlotOptionsScatterZones {
+  /**
+    * @param color Defines the color of the series.
+    * @param dashStyle A name for the dash style to use for the graph.
+    * @param fillColor Defines the fill color for the series (in area type series)
+    * @param value The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
+    */
+  def apply(color: js.UndefOr[String | js.Object] = js.undefined, dashStyle: js.UndefOr[String] = js.undefined, fillColor: js.UndefOr[String | js.Object] = js.undefined, value: js.UndefOr[Double] = js.undefined): PlotOptionsScatterZones = {
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val dashStyleOuter: js.UndefOr[String] = dashStyle
+    val fillColorOuter: js.UndefOr[String | js.Object] = fillColor
+    val valueOuter: js.UndefOr[Double] = value
+    new PlotOptionsScatterZones {
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val dashStyle: js.UndefOr[String] = dashStyleOuter
+      override val fillColor: js.UndefOr[String | js.Object] = fillColorOuter
+      override val value: js.UndefOr[Double] = valueOuter
+    }
+  }
+}

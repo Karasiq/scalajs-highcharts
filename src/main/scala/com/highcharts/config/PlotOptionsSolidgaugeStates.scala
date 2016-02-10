@@ -20,3 +20,15 @@ class PlotOptionsSolidgaugeStates extends js.Object {
     */
   val hover: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugeStatesHover]] = js.undefined
 }
+
+object PlotOptionsSolidgaugeStates {
+  /**
+    * @param hover Options for the hovered series
+    */
+  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugeStatesHover]] = js.undefined): PlotOptionsSolidgaugeStates = {
+    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugeStatesHover]] = hover
+    new PlotOptionsSolidgaugeStates {
+      override val hover: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugeStatesHover]] = hoverOuter
+    }
+  }
+}
