@@ -6,7 +6,6 @@ import com.highcharts.config._
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
-import scala.scalajs.js.{UndefOr, |}
 
 /**
   * Example 3D pie chart config
@@ -14,57 +13,30 @@ import scala.scalajs.js.{UndefOr, |}
   */
 @ScalaJSDefined
 class Test3dPieChartConfig extends HighchartsConfig {
-  override val chart: Cfg[Chart] = new Chart {
-    override val `type`: UndefOr[String] = "pie"
+  override val chart: Cfg[Chart] = Chart(`type` = "pie", options3d = ChartOptions3d(alpha = 45, beta = 0, enabled = true))
 
-    override val options3d: Cfg[ChartOptions3d] = new ChartOptions3d {
-      override val alpha: UndefOr[Double] = 45
-      override val beta: UndefOr[Double] = 0
-      override val enabled: UndefOr[Boolean] = true
-    }
-  }
+  override val title: Cfg[Title] = Title(text = "Browser market shares at a specific website, 2014")
 
-  override val title: Cfg[Title] = new Title {
-    override val text: UndefOr[String] = "Browser market shares at a specific website, 2014"
-  }
+  override val tooltip: Cfg[Tooltip] = Tooltip(pointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>")
 
-  override val tooltip: Cfg[Tooltip] = new Tooltip {
-    override val pointFormat: UndefOr[String] = "{series.name}: <b>{point.percentage:.1f}%</b>"
-  }
+  override val plotOptions: Cfg[PlotOptions] = PlotOptions(pie = PlotOptionsPie(
+    allowPointSelect = true,
+    cursor = "pointer",
+    depth = 35,
+    dataLabels = PlotOptionsPieDataLabels(enabled = true, format = "{point.name}"),
+    size = "100%"
+  ))
 
-  override val plotOptions: Cfg[PlotOptions] = new PlotOptions {
-    override val pie: Cfg[PlotOptionsPie] = new PlotOptionsPie {
-      override val allowPointSelect: UndefOr[Boolean] = true
-      override val cursor: UndefOr[String] = "pointer"
-      override val depth: UndefOr[Double] = 35
-      override val dataLabels: Cfg[PlotOptionsPieDataLabels] = new PlotOptionsPieDataLabels {
-        override val enabled: UndefOr[Boolean] = true
-        override val format: UndefOr[String] = "{point.name}"
-      }
-      override val size: UndefOr[String | Double] = "100%"
-    }
-  }
+  private def mkData(str: String, value: Double): SeriesPieData = SeriesPieData(y = value, name = str)
 
-  private def mkData(str: String, value: Double): SeriesPieData = new SeriesPieData {
-    override val y: UndefOr[Double] = value
-    override val name: UndefOr[String] = str
-  }
-
-  override val series: SeriesCfg = js.Array[AnySeries](new SeriesPie {
-    override val name: UndefOr[String] = "Browser share"
-
-    override val data: SeriesPieCfgData = js.Array[SeriesPieData](
+  override val series: SeriesCfg = js.Array[AnySeries](
+    SeriesPie(name = "Browser share", data = js.Array[SeriesPieData](
       mkData("Firefox", 45),
       mkData("IE", 26.8),
-      new SeriesPieData {
-        override val y: UndefOr[Double] = 12.8
-        override val name: UndefOr[String] = "Chrome"
-        override val sliced: UndefOr[Boolean] = true
-        override val selected: UndefOr[Boolean] = true
-      },
+      SeriesPieData(y = 12.8, name = "Chrome", sliced = true, selected = true),
       mkData("Safari", 8.5),
       mkData("Opera", 6.2),
       mkData("Others", 0.7)
-    )
-  })
+    ))
+  )
 }

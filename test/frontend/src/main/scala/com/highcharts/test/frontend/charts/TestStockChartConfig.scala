@@ -16,17 +16,11 @@ import scala.scalajs.js.{UndefOr, |}
   */
 @ScalaJSDefined
 class TestStockChartConfig(sampleData: js.Array[js.Array[js.Any]]) extends HighstockConfig {
-  override val title: Cfg[Title] = new Title {
-    override val text: UndefOr[String] = "AAPL stock price by minute"
-  }
+  override val title: Cfg[Title] = Title(text = "AAPL stock price by minute")
 
-  override val subtitle: Cfg[Subtitle] = new Subtitle {
-    override val text: UndefOr[String] = "Using ordinal X axis"
-  }
+  override val subtitle: Cfg[Subtitle] = Subtitle(text = "Using ordinal X axis")
 
-  override val xAxis: Cfg[XAxis] = new XAxis {
-    override val gridLineWidth: UndefOr[Double] = 0
-  }
+  override val xAxis: Cfg[XAxis] = XAxis(gridLineWidth = 0)
 
   override val rangeSelector: Cfg[RangeSelector] = new RangeSelector {
     override val buttons: UndefOr[js.Array[js.Any]] = js.Array(
