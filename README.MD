@@ -45,7 +45,7 @@ jQuery("#container").highcharts(new HighchartsConfig {
 })
 ```
 
-# Full example with backend
+# Full example
 * [Project test server](https://github.com/Karasiq/scalajs-highcharts/tree/master/test) (see also [build.sbt configuration](https://github.com/Karasiq/scalajs-highcharts/blob/master/build.sbt#L59))
 
 # License
