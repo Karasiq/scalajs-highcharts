@@ -1,8 +1,9 @@
 # scalajs-highcharts [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.7.svg)](http://scala-js.org) [![Version](http://img.shields.io/badge/version-1.1.2-blue.svg?style=flat)](https://github.com/Karasiq/scalajs-highcharts/releases) [![GitHub license](https://img.shields.io/github/license/Karasiq/scalajs-highcharts.svg)](https://opensource.org/licenses/MIT)
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
-# Demo page
-https://karasiq.github.io/scalajs-highcharts/
+# Links
+* [Demo page](https://karasiq.github.io/scalajs-highcharts/)
+* [API Reference](https://karasiq.github.io/scalajs-highcharts/api/index.html)
 
 # How to use
 Add dependency to your `build.sbt`
@@ -44,7 +45,7 @@ jQuery("#container").highcharts(new HighchartsConfig {
 })
 ```
 
-# Full example with backend
+# Full example
 * [Project test server](https://github.com/Karasiq/scalajs-highcharts/tree/master/test) (see also [build.sbt configuration](https://github.com/Karasiq/scalajs-highcharts/blob/master/build.sbt#L59))
 
 # License
