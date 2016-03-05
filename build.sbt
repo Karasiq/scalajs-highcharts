@@ -7,7 +7,7 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
   isSnapshot := false,
-  version := "1.1.1",
+  version := "1.1.2",
   scalaVersion := "2.11.7",
   publishMavenStyle := true,
   publishTo := {
@@ -51,7 +51,7 @@ lazy val generatorSettings = Seq(
 
 lazy val librarySettings = Seq(
   libraryDependencies ++= Seq(
-    "be.doeraene" %%% "scalajs-jquery" % "0.8.1"
+    "be.doeraene" %%% "scalajs-jquery" % "0.9.0"
   ),
   name := "scalajs-highcharts"
 )
@@ -107,7 +107,7 @@ lazy val libraryTestFrontendSettings = Seq(
   persistLauncher in Compile := true,
   name := "scalajs-highcharts-test-frontend",
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %%% "scalatags" % "0.5.3"
+    "com.lihaoyi" %%% "scalatags" % "0.5.4"
   )
 )
 

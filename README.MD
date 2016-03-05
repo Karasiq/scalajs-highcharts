@@ -1,4 +1,4 @@
-# scalajs-highcharts [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.5.svg)](http://scala-js.org) [![Version](http://img.shields.io/badge/version-1.1.1-blue.svg?style=flat)](https://github.com/Karasiq/scalajs-highcharts/releases) [![GitHub license](https://img.shields.io/github/license/Karasiq/scalajs-highcharts.svg)](https://opensource.org/licenses/MIT)
+# scalajs-highcharts [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.7.svg)](http://scala-js.org) [![Version](http://img.shields.io/badge/version-1.1.2-blue.svg?style=flat)](https://github.com/Karasiq/scalajs-highcharts/releases) [![GitHub license](https://img.shields.io/github/license/Karasiq/scalajs-highcharts.svg)](https://opensource.org/licenses/MIT)
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
 # Demo page
@@ -7,7 +7,7 @@ https://karasiq.github.io/scalajs-highcharts/
 # How to use
 Add dependency to your `build.sbt`
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.1"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.2"
 ```
 
 Include the JavaScript files in the `<head>` section of your web page as shown below

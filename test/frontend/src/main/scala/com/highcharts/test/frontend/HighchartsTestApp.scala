@@ -22,7 +22,7 @@ object HighchartsTestApp extends JSApp {
   }
 
   private def fixChartSizes(): Unit = {
-    jQuery("div[data-highcharts-chart]").each { (v: js.Any, e: dom.Element) ⇒
+    jQuery("div[data-highcharts-chart]").each { (_: Int, e: dom.Element) ⇒
       jQuery(e).highcharts().foreach(_.reflow()).asInstanceOf[js.Any]
     }
   }
