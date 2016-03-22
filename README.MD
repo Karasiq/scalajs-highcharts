@@ -1,4 +1,4 @@
-# scalajs-highcharts [![Build Status](https://travis-ci.org/Karasiq/scalajs-highcharts.svg?branch=master)](https://travis-ci.org/Karasiq/scalajs-highcharts) [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.6.svg)](http://scala-js.org) [![Version](http://img.shields.io/badge/version-1.1.2-blue.svg?style=flat)](https://github.com/Karasiq/scalajs-highcharts/releases) [![GitHub license](https://img.shields.io/github/license/Karasiq/scalajs-highcharts.svg)](https://opensource.org/licenses/MIT)
+# scalajs-highcharts [![Build Status](https://travis-ci.org/Karasiq/scalajs-highcharts.svg?branch=master)](https://travis-ci.org/Karasiq/scalajs-highcharts) [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.6.svg)](http://scala-js.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11)
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
 # Links
