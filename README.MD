@@ -1,4 +1,4 @@
-# scalajs-highcharts [![Build Status](https://travis-ci.org/Karasiq/scalajs-highcharts.svg?branch=master)](https://travis-ci.org/Karasiq/scalajs-highcharts) [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.6.svg)](http://scala-js.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11) [![Scaladoc](http://javadoc-badge.appspot.com/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11.svg?label=scaladoc)](http://javadoc-badge.appspot.com/com.github.karasiq/scalajs-highcharts_sjs0.6_2.11)
+# scalajs-highcharts [![Build Status](https://travis-ci.org/Karasiq/scalajs-highcharts.svg?branch=master)](https://travis-ci.org/Karasiq/scalajs-highcharts) [![Scala.js](http://scala-js.org/assets/badges/scalajs-0.6.14.svg)](http://scala-js.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.karasiq/scalajs-highcharts_sjs0.6_2.12) [![Scaladoc](http://javadoc-badge.appspot.com/com.github.karasiq/scalajs-highcharts_sjs0.6_2.12.svg?label=scaladoc)](http://javadoc-badge.appspot.com/com.github.karasiq/scalajs-highcharts_sjs0.6_2.12)
 [Scala.JS](http://scala-js.org/) static typed facades for [Highcharts](http://www.highcharts.com) library
 
 # Links
@@ -8,7 +8,7 @@
 # How to use
 Add dependency to your `build.sbt`
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.2"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.3"
 ```
 
 Include the JavaScript files in the `<head>` section of your web page as shown below

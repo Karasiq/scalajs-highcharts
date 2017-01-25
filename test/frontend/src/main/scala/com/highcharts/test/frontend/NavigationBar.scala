@@ -12,9 +12,9 @@ case class NavigationTab(name: String, id: String, icon: String, content: dom.El
   * @param tabs Navbar tabs
   */
 final class NavigationBar(barId: String, tabs: NavigationTab*) {
-  private val nav = "nav".tag
-  private val `data-toggle` = "data-toggle".attr
-  private val `data-target` = "data-target".attr
+  private val nav = tag("nav")
+  private val `data-toggle` = attr("data-toggle")
+  private val `data-target` = attr("data-target")
 
   def navbar(brand: String): Tag = {
     def renderTab(tab: NavigationTab): Tag = {

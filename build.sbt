@@ -6,9 +6,9 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 // Settings
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
-  isSnapshot := false,
-  version := "1.1.2",
-  scalaVersion := "2.11.7",
+  version := "1.1.3",
+  isSnapshot := version.value.endsWith("SNAPSHOT"),
+  scalaVersion := "2.11.8",
   publishMavenStyle := true,
   publishTo := {
     val nexus = "https://oss.sonatype.org/"
@@ -50,8 +50,10 @@ lazy val generatorSettings = Seq(
 )
 
 lazy val librarySettings = Seq(
+  scalaVersion := "2.12.1",
+  crossScalaVersions := Seq("2.11.8", "2.12.1"),
   libraryDependencies ++= Seq(
-    "be.doeraene" %%% "scalajs-jquery" % "0.9.0"
+    "be.doeraene" %%% "scalajs-jquery" % "0.9.1"
   ),
   name := "scalajs-highcharts",
   scalacOptions ++= (if (isSnapshot.value) Seq.empty else Seq({
@@ -101,17 +103,18 @@ lazy val libraryTestSettings = Seq(
       Script from url("https://raw.githubusercontent.com/highcharts/highcharts/v4.2.1/js/highcharts-3d.src.js"),
 
       // Scala.js app
-      Script from file("test") / "frontend" / "target" / "scala-2.11" / "scalajs-highcharts-test-frontend-opt.js",
-      Script from file("test") / "frontend" / "target" / "scala-2.11" / "scalajs-highcharts-test-frontend-launcher.js"
+      Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-opt.js",
+      Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-launcher.js"
     )
   }
 )
 
 lazy val libraryTestFrontendSettings = Seq(
+  scalaVersion := "2.12.1",
   persistLauncher in Compile := true,
   name := "scalajs-highcharts-test-frontend",
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %%% "scalatags" % "0.5.4"
+    "com.lihaoyi" %%% "scalatags" % "0.6.2"
   )
 )
 
