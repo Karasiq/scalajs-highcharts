@@ -9,7 +9,6 @@ import org.scalajs.jquery.jQuery
 import scala.concurrent.{Future, Promise}
 import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
-import scala.scalajs.js.{UndefOr, |}
 
 /**
   * @see [[http://www.highcharts.com/stock/demo/intraday-area]]
@@ -20,36 +19,32 @@ class TestStockChartConfig(sampleData: js.Array[js.Array[js.Any]]) extends Highs
 
   override val subtitle: Cfg[Subtitle] = Subtitle(text = "Using ordinal X axis")
 
-  override val xAxis: Cfg[XAxis] = XAxis(gridLineWidth = 0)
+  override val xAxis: CfgArray[XAxis] = js.Array(XAxis(gridLineWidth = 0))
 
-  override val rangeSelector: Cfg[RangeSelector] = new RangeSelector {
-    override val buttons: UndefOr[js.Array[js.Any]] = js.Array(
-      js.Dynamic.literal(`type` = "hour", count = 1, text = "1H"),
-      js.Dynamic.literal(`type` = "day", count = 1, text = "1D"),
-      js.Dynamic.literal(`type` = "all", count = 1, text = "All")
-    )
-    override val selected: UndefOr[Double] = 1
-    override val inputEnabled: UndefOr[Boolean] = false
-  }
-
-  override val series: SeriesCfg = js.Array[AnySeries](
-    new SeriesArea {
-      override val name: UndefOr[String] = "AAPL"
-      override val data: SeriesCfgData[SeriesAreaData] = sampleData
-      override val gapSize: UndefOr[Double] = 5
-      override val tooltip: Cfg[SeriesAreaTooltip] = new SeriesAreaTooltip {
-        override val valueDecimals: UndefOr[Double] = 2
-      }
-      override val threshold: UndefOr[Double] = null
-      override val color: UndefOr[String | js.Object] = js.Dynamic.literal(
-        linearGradient = js.Dynamic.literal(x1 = 0, y1 = 0, x2 = 0, y2 = 1),
-        stops = js.Array(
-          js.Array(0, defaultColor(0)),
-          js.Array(1, mkColor(defaultColor(0)).setOpacity(0).get("rgba"))
-        )
-      )
-    }
+  override val rangeSelector: Cfg[RangeSelector] = RangeSelector(
+    buttons = js.Array(
+      RangeSelectorButtons(`type` = "hour", count = 1, text = "1H"),
+      RangeSelectorButtons(`type` = "day", count = 1, text = "1D"),
+      RangeSelectorButtons(`type` = "all", count = 1, text = "All")
+    ),
+    selected = 1,
+    inputEnabled = false
   )
+
+  override val series: SeriesCfg = js.Array[AnySeries](SeriesArea(
+    name = "AAPL",
+    data = sampleData,
+    gapSize = 5,
+    tooltip = SeriesAreaTooltip(valueDecimals = 2),
+    threshold = null,
+    color = js.Dynamic.literal(
+      linearGradient = js.Dynamic.literal(x1 = 0, y1 = 0, x2 = 0, y2 = 1),
+      stops = js.Array(
+        js.Array(0, defaultColor(0)),
+        js.Array(1, mkColor(defaultColor(0)).setOpacity(0).get("rgba"))
+      )
+    )
+  ))
 }
 
 object TestStockChartConfig {
@@ -58,9 +53,7 @@ object TestStockChartConfig {
     val xhr = jQuery.getJSON("https://www.highcharts.com/samples/data/jsonp.php?filename=new-intraday.json&callback=?", (data: js.Array[js.Array[js.Any]]) ⇒ {
       promise.trySuccess(data)
     })
-    xhr.onerror = { e: ErrorEvent ⇒
-      promise.tryFailure(new Exception(e.message))
-    }
+    xhr.asInstanceOf[js.Dynamic].onerror = (e: ErrorEvent) ⇒ promise.tryFailure(new Exception(e.message))
     promise.future
   }
 }
