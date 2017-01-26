@@ -8,7 +8,7 @@
 # How to use
 Add dependency to your `build.sbt`
 ```scala
-libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.1.3"
+libraryDependencies += "com.github.karasiq" %%% "scalajs-highcharts" % "1.2.0"
 ```
 
 Include the JavaScript files in the `<head>` section of your web page as shown below
@@ -32,10 +32,10 @@ jQuery("#container").highcharts(new HighchartsConfig {
   override val title: Cfg[Title] = Title(text = "Demo bar chart")
 
   // X Axis settings
-  override val xAxis: Cfg[XAxis] = XAxis(categories = js.Array("Apples", "Bananas", "Oranges"))
+  override val xAxis: CfgArray[XAxis] = js.Array(XAxis(categories = js.Array("Apples", "Bananas", "Oranges")))
 
   // Y Axis settings
-  override val yAxis: Cfg[YAxis] = YAxis(title = YAxisTitle(text = "Fruit eaten"))
+  override val yAxis: CfgArray[YAxis] = js.Array(YAxis(title = YAxisTitle(text = "Fruit eaten")))
 
   // Series
   override val series: SeriesCfg = js.Array[AnySeries](
