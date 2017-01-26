@@ -29,7 +29,7 @@ class YAxisBreaks extends js.Object {
 
   /**
     * Defines an interval after which the break appears again. By default the breaks do not repeat.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/axisbreak/break-repeated/">Repeated Break</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-repeated/">Repeated Break</a>
     * @since 4.1.0
     */
   val repeat: js.UndefOr[Double] = js.undefined

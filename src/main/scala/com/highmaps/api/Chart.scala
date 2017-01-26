@@ -24,16 +24,8 @@ The Axis options, as documented under <a href="#xAxis">xAxis</a> and <a href="#y
   def addAxis(options: js.Object = ???, isX: Boolean = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
   /**
-    * Add a series to the chart after render time. Using this method is discouraged when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initiated, add the series as a configuration option instead.
-    * @param options 
-The series options, as documented under <a href="#plotOptions.series">plotOptions.series</a> and under the plotOptions for each series type.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/chart-addseries/" target="_blank">Add a series from a button</a>
-    */
-  def addSeries(options: js.Object = ???, redraw: Boolean = ???, animation: js.Any = ???): CleanJsObject[Series] = js.native
-
-  /**
     * Removes the chart and purges memory. This method should be called before writing a new chart into the same container. It is called internally on window unload to prevent leaks. It is also called internally before adding another chart to the same container.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/chart-destroy/" target="_blank">Destroy the chart from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/chart-destroy/" target="_blank">Destroy the chart from a button</a>
     */
   def destroy(): Unit = js.native
 
@@ -54,7 +46,7 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
   /**
     * Get an axis, series or point by its <code>id</code> as given in the configuration options.
     * @param id The id of the axis, series or point to get.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/series/data-id/" target="_blank">Highlight a point by id</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/series/data-id/" target="_blank">Highlight a point by id</a>
     */
   def get(id: String = ???): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
 
@@ -64,24 +56,8 @@ The series options, as documented under <a href="#plotOptions.series">plotOption
   def getSelectedSeries(): js.Array[CleanJsObject[Series]] = js.native
 
   /**
-    * Zoom in or out of the map. See also <a href="#Point.zoomTo">Point.zoomTo</a>.
-    * @param howMuch 
-How much to zoom the map. Values less than 1 zooms in. 0.5 zooms in to half the current view. 2 zooms to twice the current view.
-    */
-  def mapZoom(howMuch: Double = ???, centerX: Double = ???, centerY: Double = ???, mouseX: Double = ???, mouseY: Double = ???): Unit = js.native
-
-  /**
-    * Resize the chart to a given width and height.
-    * @param width The new pixel width of the chart.
-    * @param height The new pixel height of the chart.
-    * @param animation Defaults to true. When true, the resize will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/maps/members/chart-setsize-jquery-resizable/" target="_blank">Resize by jQuery UI resizable</a>
-    */
-  def setSize(width: Double = ???, height: Double = ???, animation: js.Any = ???): Unit = js.native
-
-  /**
     * Returns an array of all currently selected points in the chart. Points can be selected either programmatically by the <a href="#Point.select()">Point.select()</a> method or by clicking when <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> is enabled.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">Get selected points</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">Get selected points</a>
     */
   def getSelectedPoints(): js.Array[CleanJsObject[Point]] = js.native
 
@@ -104,7 +80,7 @@ How much to zoom the map. Values less than 1 zooms in. 0.5 zooms in to half the 
     * Calculate latitude/longitude values for a point. Returns an object with the numeric properties <code>lat</code> and <code>lon</code>.
     * @param point 
 A <a href="#Point">point</a> object, or any object containing the properties <code>x</code> and <code>y</code> with numeric values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/latlon-advanced/" target="_blank">Advanced lat/lon demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/" target="_blank">Advanced lat/lon demo</a>
     * @since 1.1.0
     */
   def fromPointToLatLon(point: js.Object = ???): js.Object = js.native
@@ -115,6 +91,13 @@ A <a href="#Point">point</a> object, or any object containing the properties <co
   def exportChartLocal(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
 
   /**
+    * The chart title. The title has an <code>update</code> method that points back to <a href="#Chart.setTitle">Chart.setTitle</code>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/title-update/" target="_blank">Updating titles</a>.
+    * @since 5.0.0
+    */
+  val title: js.Any = js.native
+
+  /**
     * When the chart is drilled down to a child series, calling <code>chart.drillUp()</code> will drill up to the parent series.
     */
   def drillUp(): Unit = js.native
@@ -123,14 +106,14 @@ A <a href="#Point">point</a> object, or any object containing the properties <co
     * Add a series to the chart as drilldown from a specific point in the parent series. This method is used for async drilldown, when clicking a point in a series should result in loading and displaying a more high-resolution series, for instance when zooming in from a world map to countries with regions. When <i>not</i> async, the setup is simpler using the <a href="#drilldown.series">drilldown.series</a> options structure.
     * @param point 
 The existing Point object from which the drilldown will start.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/map-drilldown/" target="_blank">Map drilldown</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/map-drilldown/" target="_blank">Map drilldown</a>
     */
   def addSeriesAsDrilldown(point: js.Object = ???, seriesOptions: js.Object = ???): Unit = js.native
 
   /**
-    * Set a new title or subtitle for the chart
+    * Set a new title or subtitle for the chart.
     * @param title A configuration object for the new title as defined at <a class="internal" href="#title">#title</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Use setTitle to write dynamic information in the subtitle</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Use setTitle to write dynamic information in the subtitle</a>
     */
   def setTitle(title: js.Object = ???, subtitle: js.Any = ???, redraw: Boolean = ???): Unit = js.native
 
@@ -167,7 +150,7 @@ The existing Point object from which the drilldown will start.
 
   /**
     * Reflows the chart to its container. By default, the chart reflows automatically to its container following a <code>window.resize</code> event, as per the <a href="#chart.reflow">chart.reflow</a> option. However, there are no reliable events for div resize, so if the container is resized without a window resize event, this must be called explicitly. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/chart-reflow/" target="_blank">Resize div and reflow</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/events-container/" target="_blank">pop up and reflow</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/chart-reflow/" target="_blank">Resize div and reflow</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">pop up and reflow</a>
     */
   def reflow(): Unit = js.native
 
@@ -175,7 +158,7 @@ The existing Point object from which the drilldown will start.
     * Get point from latLon using specified transform definition.
     * @param latLon 
 An object containing the properties <code>lat</code> and <code>lon</code> with numeric values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/series/latlon-transform/" target="_blank">Use specific transformation for lat/lon</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/series/latlon-transform/" target="_blank">Use specific transformation for lat/lon</a>
     * @since 1.1.0
     */
   def transformFromLatLon(latLon: js.Object = ???, transform: js.Object = ???): CleanJsObject[Point] = js.native
@@ -184,7 +167,7 @@ An object containing the properties <code>lat</code> and <code>lon</code> with n
     * Get latLon from point using specified transform definition. The method returns an object with the numeric properties <code>lat</code> and <code>lon</code>.
     * @param point 
 A <a href="#Point">point</a> object, or any object containing the properties <code>x</code> and <code>y</code> with numeric values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/series/latlon-transform/" target="_blank">Use specific transformation for lat/lon</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/series/latlon-transform/" target="_blank">Use specific transformation for lat/lon</a>
     * @since 1.1.0
     */
   def transformToLatLon(point: js.Object = ???, transform: js.Object = ???): js.Object = js.native
@@ -193,7 +176,7 @@ A <a href="#Point">point</a> object, or any object containing the properties <co
     * Get chart values from latitude/longitude. Returns an object with <code>x</code> and <code>y</code> values.
     * @param latLon 
 An object containing the properties <code>lat</code> and <code>lon</code> with numeric values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/series/latlon-to-point/" target="_blank">Find point from lat/lon</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/series/latlon-to-point/" target="_blank">Find point from lat/lon</a>
     * @since 1.1.0
     */
   def fromLatLonToPoint(latLon: js.Object = ???): CleanJsObject[Point] = js.native
@@ -203,4 +186,57 @@ An object containing the properties <code>lat</code> and <code>lon</code> with n
     * @param animation Defaults to true. When true, the update will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
     */
   def redraw(animation: js.Any = ???): Unit = js.native
+
+  /**
+    * Add a series to the chart after render time. Using this method is discouraged when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initiated, add the series as a configuration option instead. With multiple axes, the <a href="/highcharts#xAxis.offset">offset</a> is dynamically adjusted
+    * @param options 
+The series options, as documented under <a href="#plotOptions.series">plotOptions.series</a> and under the plotOptions for each series type.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/chart-addseries/" target="_blank">Add a series from a button</a>
+    */
+  def addSeries(options: js.Object = ???, redraw: Boolean = ???, animation: js.Any = ???): CleanJsObject[Series] = js.native
+
+  /**
+    * Resize the chart to a given width and height. In order to set the width only, the height argument can be skipped. To set the height only, pass <code>undefined</code> for the width.
+    * @param width 
+The new pixel width of the chart. Since v4.2.6, the argument can be <code>undefined</code> in order to preserve the current value (when setting height only), or <code>null</code> to adapt to the width of the containing element.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/chart-setsize-jquery-resizable/" target="_blank">Resize by jQuery UI resizable</a>
+    */
+  def setSize(width: Double = ???, height: Double = ???, animation: js.Any = ???): Unit = js.native
+
+  val subtitle: js.Any = js.native
+
+  /**
+    * Set a new credits label for the chart.
+    * @param options A configuration object for the credits as defined at <a class="internal" href="#credits">credits</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
+    * @since 5.0.0
+    */
+  def addCredits(options: js.Object = ???): Unit = js.native
+
+  /**
+    * <p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+    * <p>A special case is configuration objects that take arrays, for example <a href="#xAxis">xAxis</a>, <a href="#yAxis">yAxis</a> or <a href="#series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same <code>id</code> is not found, the first item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart's first series to be updated.</p>
+    * <p>See also <a href="#responsive">the responsive option set</a>. Switching between <a href="#responsive.rules">responsive.rules</a> basically runs <code>chart.update</code> under the hood.</p>
+    * @param options A configuration object for the new chart options as defined in the <em>options</em> section of the API.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/" target="_blank">Update chart geometry</a>.
+
+
+
+    * @since 5.0.0
+    */
+  def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
+
+  /**
+    * The chart's credits label. The label has an <code>update</code> method that allows setting new options as per <a href="#credits">the credits option set</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
+    * @since 5.0.0
+    */
+  val credits: js.Any = js.native
+
+  /**
+    * Zoom in or out of the map. See also <a href="#Point.zoomTo">Point.zoomTo</a>.
+    * @param howMuch 
+How much to zoom the map. Values less than 1 zooms in. 0.5 zooms in to half the current view. 2 zooms to twice the current view. If omitted, the zoom is reset.
+    */
+  def mapZoom(howMuch: Double = ???, centerX: Double = ???, centerY: Double = ???, mouseX: Double = ???, mouseY: Double = ???): Unit = js.native
 }

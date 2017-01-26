@@ -22,7 +22,7 @@ class YAxisCrosshairLabel extends js.Object {
   val align: js.UndefOr[String] = js.undefined
 
   /**
-    * The background color for the label. Defaults to the related series color, or <code>gray</code> if that is not available.
+    * The background color for the label. Defaults to the related series color, or <code>#666666</code> if that is not available.
     * @since 2.1
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
@@ -79,7 +79,7 @@ class YAxisCrosshairLabel extends js.Object {
 object YAxisCrosshairLabel {
   /**
     * @param align Alignment of the label compared to the axis. Defaults to <code>left</code> for right-side axes, <code>right</code> for left-side axes and <code>center</code> for horizontal axes.
-    * @param backgroundColor The background color for the label. Defaults to the related series color, or <code>gray</code> if that is not available.
+    * @param backgroundColor The background color for the label. Defaults to the related series color, or <code>#666666</code> if that is not available.
     * @param borderColor The border color for the crosshair label
     * @param borderRadius The border corner radius of the crosshair label.
     * @param borderWidth The border width for the crosshair label.

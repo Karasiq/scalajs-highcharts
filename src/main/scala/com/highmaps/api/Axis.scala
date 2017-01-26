@@ -23,7 +23,7 @@ trait Axis extends js.Object {
     * @param max The new maximum value
     * @param redraw Defaults to <code>true</code>. Whether to redraw the chart or wait for an explicit call to <code>chart.redraw()</code>.
     * @param animation Defaults to true. When true, the resize will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/axis-setextremes/" target="_blank">Set extremes from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-setextremes/" target="_blank">Set extremes from a button</a>
     */
   def setExtremes(min: Double = ???, max: Double = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
@@ -33,12 +33,6 @@ trait Axis extends js.Object {
     * @param redraw Whether to redraw the chart now or hold until the next chart.redraw()
     */
   def setTitle(title: js.Object = ???, redraw: Boolean = ???): Unit = js.native
-
-  /**
-    * Get the current extremes for the axis.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Report extremes by click on a button</a>
-    */
-  def getExtremes(): js.Object = js.native
 
   /**
     * Remove an axis from the chart. Usually in maps we have only one X and one Y axis which are defined from start, so this method is not used.
@@ -65,7 +59,27 @@ A pixel position along the axis.
     * Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.
     * @param options 
 The new options that will be merged in with existing options on the axis.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/members/axis-update/" target="_blank">Toggle options on color axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-update/" target="_blank">Toggle options on color axis</a>
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
+
+  /**
+    * Get the current extremes for the axis. The returned object contains:
+    * 
+    * <dl>
+    *   <dt>dataMax:</dt>
+    *   <dd>The maximum value of the axis' associated series.</dd>
+    * 
+    *   <dt>dataMin:</dt>
+    *   <dd>The minimum value of the axis' associated series.</dd>
+    * 
+    *   <dt>max:</dt>
+    *   <dd>The maximum axis value, either automatic or set manually. If the <code>max</code> option is not set, <code>maxPadding</code> is 0 and <code>endOnTick</code> is <code>false</code>, this value will be the same as <code>dataMax</code>.</dd>
+    * 
+    *   <dt>min:</dt>
+    *   <dd>The minimum axis value, either automatic or set manually. If the <code>min</code> option is not set, <code>minPadding</code> is 0 and <code>startOnTick</code> is <code>false</code>, this value will be the same as <code>dataMin</code>.</dd>
+    * </dl>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Report extremes by click on a button</a>
+    */
+  def getExtremes(): js.Object = js.native
 }

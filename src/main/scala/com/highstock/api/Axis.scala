@@ -19,7 +19,7 @@ trait Axis extends js.Object {
     * Set the <a href="#plotOptions.series.compare">compare</a> mode on all series belonging to an Y axis after render time. 
     * @param compare 
 The compare mode, can be one of <code>null</code>, <code>"value"</code> or <code>"percent"</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/members/axis-setcompare/" target="_blank">Set compare</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/axis-setcompare/" target="_blank">Set compare</a>
     * @since 1.3
     */
   def setCompare(compare: String = ???, redraw: Boolean = ???): Unit = js.native
@@ -30,7 +30,7 @@ The compare mode, can be one of <code>null</code>, <code>"value"</code> or <code
     * @param max The new maximum value
     * @param redraw Defaults to <code>true</code>. Whether to redraw the chart or wait for an explicit call to <code>chart.redraw()</code>.
     * @param animation Defaults to true. When true, the resize will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/members/axis-setextremes/" target="_blank">Set extremes from button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/axis-setextremes/" target="_blank">Set extremes from button</a>
     */
   def setExtremes(min: Double = ???, max: Double = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
@@ -54,7 +54,7 @@ A pixel position along the axis.
     * Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.
     * @param options 
 The new options that will be merged in with existing options on the axis.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-update/" target="_blank">Axis update demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/axis-update/" target="_blank">Axis update demo</a>
     * @since 3.0
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
@@ -74,11 +74,6 @@ A dataGrouping configuration like shown at <a href="#plotOptions.series.dataGrou
   def setDataGrouping(dataGrouping: js.Object = ???, redraw: Boolean = ???): Unit = js.native
 
   /**
-    * Get the current extremes for the axis.
-    */
-  def getExtremes(): js.Object = js.native
-
-  /**
     * Remove a plot band by its <code>id</code>.
     * @param id The plot band's <code>id</code> as given in the original configuration object or in the addPlotBand method.
     */
@@ -95,4 +90,23 @@ A dataGrouping configuration like shown at <a href="#plotOptions.series.dataGrou
     * @param options A configuration object consisting of the same members as <a class="internal" href="#xAxis.plotBands">options.xAxis.plotBands</a>
     */
   def addPlotBand(options: js.Object = ???): Unit = js.native
+
+  /**
+    * Get the current extremes for the axis. The returned object contains:
+    * 
+    * <dl>
+    *   <dt>dataMax:</dt>
+    *   <dd>The maximum value of the axis' associated series.</dd>
+    * 
+    *   <dt>dataMin:</dt>
+    *   <dd>The minimum value of the axis' associated series.</dd>
+    * 
+    *   <dt>max:</dt>
+    *   <dd>The maximum axis value, either automatic or set manually. If the <code>max</code> option is not set, <code>maxPadding</code> is 0 and <code>endOnTick</code> is <code>false</code>, this value will be the same as <code>dataMax</code>.</dd>
+    * 
+    *   <dt>min:</dt>
+    *   <dd>The minimum axis value, either automatic or set manually. If the <code>min</code> option is not set, <code>minPadding</code> is 0 and <code>startOnTick</code> is <code>false</code>, this value will be the same as <code>dataMin</code>.</dd>
+    * </dl>
+    */
+  def getExtremes(): js.Object = js.native
 }

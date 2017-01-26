@@ -16,7 +16,7 @@ import com.highcharts.HighchartsUtils._
 class PlotOptionsTreemapLevels extends js.Object {
 
   /**
-    * Can set borderColor on all points which lies on the same level.
+    * Can set a <code>borderColor</code> on all points which lies on the same level.
     * @since 4.1.0
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
@@ -61,7 +61,7 @@ class PlotOptionsTreemapLevels extends js.Object {
 
   /**
     * Decides which level takes effect from the options set in the levels object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling of both levels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling of both levels</a>
     * @since 4.1.0
     */
   val level: js.UndefOr[Double] = js.undefined
@@ -69,7 +69,7 @@ class PlotOptionsTreemapLevels extends js.Object {
 
 object PlotOptionsTreemapLevels {
   /**
-    * @param borderColor Can set borderColor on all points which lies on the same level.
+    * @param borderColor Can set a <code>borderColor</code> on all points which lies on the same level.
     * @param borderDashStyle Set the dash style of the border of all the point which lies on the level.. See <a href"#plotOptions.scatter.dashStyle">plotOptions.scatter.dashStyle</a> for possible options.
     * @param borderWidth Can set the borderWidth on all points which lies on the same level.
     * @param color Can set a color on all points which lies on the same level.

@@ -37,7 +37,9 @@ class XAxisTitle extends js.Object {
   val rotation: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
+    * <p>CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is given in the <code>.highcharts-axis-title</code> class.</p>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
@@ -53,7 +55,7 @@ object XAxisTitle {
     * @param margin The pixel distance between the axis labels or line and the title. Defaults to 0 for horizontal axes, 10 for vertical
     * @param offset The distance of the axis title from the axis line. By default, this distance is  computed from the offset width of the labels, the labels' distance from  the axis and the title's margin. However when the offset option is set, it overrides all this.
     * @param rotation The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top.
-    * @param style CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
+    * @param style <p>CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is given in the <code>.highcharts-axis-title</code> class.</p>
     * @param text The actual text of the axis title. It can contain basic HTML text markup like &lt;b&gt;, &lt;i&gt; and spans with style.
     */
   def apply(align: js.UndefOr[String] = js.undefined, margin: js.UndefOr[Double] = js.undefined, offset: js.UndefOr[Double] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, text: js.UndefOr[String] = js.undefined): XAxisTitle = {

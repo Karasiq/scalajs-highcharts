@@ -17,7 +17,7 @@ class XAxisTitle extends js.Object {
 
   /**
     * Alignment of the title relative to the axis values. Possible values are "low", "middle" or "high".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/title-align/" target="_blank">Aligned to "high" value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/title-align/" target="_blank">Aligned to "high" value</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
@@ -28,7 +28,7 @@ class XAxisTitle extends js.Object {
 
   /**
     * The distance of the axis title from the axis line. By default, this distance is  computed from the offset width of the labels, the labels' distance from  the axis and the title's margin. However when the offset option is set, it overrides all this.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/yaxis/title-offset/" target="_blank">Place the axis title on top of the Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/yaxis/title-offset/" target="_blank">Place the axis title on top of the Y axis</a>
     * @since 1.1
     */
   val offset: js.UndefOr[Double] = js.undefined
@@ -39,13 +39,15 @@ class XAxisTitle extends js.Object {
   val rotation: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
+    * <p>CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is given in the <code>.highcharts-axis-title</code> class.</p>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The actual text of the axis title. It can contain basic HTML text markup like &lt;b&gt;, &lt;i&gt; and spans with style.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/title-text/" target="_blank">Titles for both axes</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/title-text/" target="_blank">Titles for both axes</a>
     */
   val text: js.UndefOr[String] = js.undefined
 
@@ -67,7 +69,7 @@ object XAxisTitle {
     * @param margin The pixel distance between the axis labels or line and the title. Defaults to 0 for horizontal axes, 10 for vertical
     * @param offset The distance of the axis title from the axis line. By default, this distance is  computed from the offset width of the labels, the labels' distance from  the axis and the title's margin. However when the offset option is set, it overrides all this.
     * @param rotation The rotation of the text in degrees. 0 is horizontal, 270 is vertical reading from bottom to top.
-    * @param style CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.
+    * @param style <p>CSS styles for the title. When titles are rotated they are rendered using vector graphic techniques and not all styles are applicable.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is given in the <code>.highcharts-axis-title</code> class.</p>
     * @param text The actual text of the axis title. It can contain basic HTML text markup like &lt;b&gt;, &lt;i&gt; and spans with style.
     * @param x Horizontal pixel offset of the title position.
     * @param y Vertical pixel offset of the title position.

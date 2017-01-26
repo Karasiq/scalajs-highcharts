@@ -67,4 +67,14 @@ trait Point extends js.Object {
     * @param animation Defaults to true. When true, the update will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
     */
   def update(options: js.Any = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
+
+  /**
+    * If a point object is created by data grouping, it doesn't reflect actual points in the raw data. In this case, the <code>dataGroup</code> property holds information that points back to the raw data:
+    * <ul>
+    * <li><code>dataGroup.start</code> is the index of the first raw data point in the group.</li>
+    * <li><code>dataGroup.length</code> is the amount of points in the group.</li>
+    * </ul>
+    * @since 4.2.4
+    */
+  val dataGroup: js.Object = js.native
 }

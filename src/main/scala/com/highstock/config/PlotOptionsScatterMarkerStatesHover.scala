@@ -37,7 +37,7 @@ class PlotOptionsScatterMarkerStatesHover extends js.Object {
 
   /**
     * The additional line width for a hovered point.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">2 pixels wider on hover</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">2 pixels wider on hover</a>
     * @since 2.0.3
     */
   val lineWidthPlus: js.UndefOr[Double] = js.undefined
@@ -49,7 +49,7 @@ class PlotOptionsScatterMarkerStatesHover extends js.Object {
 
   /**
     * The number of pixels to increase the radius of the hovered point.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">5 pixels greater radius on hover</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">5 pixels greater radius on hover</a>
     * @since 2.0.3
     */
   val radiusPlus: js.UndefOr[Double] = js.undefined

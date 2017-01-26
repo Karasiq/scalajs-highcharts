@@ -16,40 +16,29 @@ import com.highcharts.HighchartsUtils._
 class Navigation extends js.Object {
 
   /**
-    * A collection of options for buttons appearing in the exporting module.
+    * <p>A collection of options for buttons appearing in the exporting module.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the buttons are styled with the <code>.highcharts-contextbutton</code> and <code>.highcharts-button-symbol</code> class.</p>
     */
   val buttonOptions: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = js.undefined
 
   /**
-    * CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to 
-    * <pre>menuItemHoverStyle: {
-    * 	background: '#4572A5',
-    * 	color: '#FFFFFF'
-    * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/navigation/menuitemhoverstyle/" target="_blank">Bold text on hover</a>
+    * CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemhoverstyle/" target="_blank">Bold text on hover</a>
     * @since 2.0
     */
   val menuItemHoverStyle: js.UndefOr[js.Object] = js.undefined
 
   /**
-    * CSS styles for the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to 
-    * <pre>menuItemStyle: {
-    * 	padding: '0 5px',
-    * 	background: NONE,
-    * 	color: '#303030'
-    * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/navigation/menuitemstyle/" target="_blank">Add a grey stripe to the left</a>
+    * CSS styles for the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/menuitemstyle/" target="_blank">Add a grey stripe to the left</a>
     * @since 2.0
     */
   val menuItemStyle: js.UndefOr[js.Object] = js.undefined
 
   /**
-    * CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML. Defaults to 
-    * <pre>menuStyle: {
-    * 	border: '1px solid #A0A0A0',
-    * 	background: '#FFFFFF'
-    * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/navigation/menustyle/" target="_blank">Light gray menu background</a>
+    * CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/navigation/menustyle/" target="_blank">Light gray menu background</a>
     * @since 2.0
     */
   val menuStyle: js.UndefOr[js.Object] = js.undefined
@@ -57,10 +46,10 @@ class Navigation extends js.Object {
 
 object Navigation {
   /**
-    * @param buttonOptions A collection of options for buttons appearing in the exporting module.
-    * @param menuItemHoverStyle CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to . <pre>menuItemHoverStyle: {. 	background: '#4572A5',. 	color: '#FFFFFF'. }</pre>
-    * @param menuItemStyle CSS styles for the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML. Defaults to . <pre>menuItemStyle: {. 	padding: '0 5px',. 	background: NONE,. 	color: '#303030'. }</pre>
-    * @param menuStyle CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML. Defaults to . <pre>menuStyle: {. 	border: '1px solid #A0A0A0',. 	background: '#FFFFFF'. }</pre>
+    * @param buttonOptions <p>A collection of options for buttons appearing in the exporting module.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the buttons are styled with the <code>.highcharts-contextbutton</code> and <code>.highcharts-button-symbol</code> class.</p>
+    * @param menuItemHoverStyle CSS styles for the hover state of the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML.
+    * @param menuItemStyle CSS styles for the individual items within the popup menu appearing by  default when the export icon is clicked. The menu items are rendered in HTML.
+    * @param menuStyle CSS styles for the popup menu appearing by default when the export icon is clicked. This menu is rendered in HTML.
     */
   def apply(buttonOptions: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = js.undefined, menuItemHoverStyle: js.UndefOr[js.Object] = js.undefined, menuItemStyle: js.UndefOr[js.Object] = js.undefined, menuStyle: js.UndefOr[js.Object] = js.undefined): Navigation = {
     val buttonOptionsOuter: js.UndefOr[CleanJsObject[NavigationButtonOptions]] = buttonOptions

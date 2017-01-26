@@ -17,13 +17,13 @@ class PlotOptionsMapbubble extends js.Object {
 
   /**
     * Whether all areas of the map defined in <code>mapData</code> should be rendered. If <code>true</code>, areas which don't correspond to a data point, are rendered as <code>null</code> points. If <code>false</code>, those areas are skipped.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allareas-false/" target="_blank">All areas set to false</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allareas-false/" target="_blank">All areas set to false</a>
     */
   val allAreas: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Allow this series' points to be selected by clicking on the shapes. Selected points can be read through the <a href="#Chart.getSelectedPoints()">Chart.getSelectedPoints()</a> method.
-    * @example Allow select on <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">map area</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/" target="_blank">map bubble</a>
+    * @example Allow select on <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">map area</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/" target="_blank">map bubble</a>
     */
   val allowPointSelect: js.UndefOr[Boolean] = js.undefined
 
@@ -33,38 +33,71 @@ class PlotOptionsMapbubble extends js.Object {
     *   <dt>duration</dt>
     *   <dd>The duration of the animation in milliseconds.</dd>
     * <dt>easing</dt>
-    * <dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>
+    * <dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>
     * </dl>
     * <p>Due to poor performance, animation is disabled in old IE browsers for map series, but enabled on mapbubble series.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-animation-true/" target="_blank">Animation enabled on map series</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-animation-false/" target="_blank">disabled on mapbubble series</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/" target="_blank">Animation enabled on map series</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/" target="_blank">disabled on mapbubble series</a>
     */
   val animation: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * The border color of the map areas.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Borders demo</a>
+    * For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>.
+    */
+  val animationLimit: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The border color of the map areas.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the border stroke is given in the <code>.highcharts-point</code> class.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Borders demo</a>
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
-    * The border width of each map area.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Borders demo</a>
+    * <p>The border width of each map area.</p>
+    * 
+    * <p><p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the border stroke width is given in the <code>.highcharts-point</code> class.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Borders demo</a>
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
+    * A class name to apply to the series' graphical elements.
+    * @since 5.0.0
+    */
+  val className: js.UndefOr[String] = js.undefined
+
+  /**
     * The main color of the series. This color affects both the fill and the stroke of the bubble. For enhanced control, use <code>marker</code> options.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-color/" target="_blank">Pink bubbles</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-color/" target="_blank">Pink bubbles</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
+    * Set this option to <code>false</code> to prevent a series from connecting to the global color axis. This will cause the series to have its own legend item.
+    */
+  val colorAxis: js.UndefOr[Boolean] = js.undefined
+
+  /**
     * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
-    * @example Pointer cursor on <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">map area</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/" target="_blank">map bubble</a>
+    * @example Pointer cursor on <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">map area</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/" target="_blank">map bubble</a>
     */
   val cursor: js.UndefOr[String] = js.undefined
 
+  /**
+    * <p>Options for the series data labels, appearing next to each data point.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the data labels can be styled wtih the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names (<a href=#http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/">see example</a>).</p>
+    */
   val dataLabels: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleDataLabels]] = js.undefined
+
+  /**
+    * <p><i>Requires Accessibility module</i></p>
+    * <p>A description of the series to add to the screen reader information about the series.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/">Accessible stock chart</a>
+    * @since 5.0.0
+    */
+  val description: js.UndefOr[String] = js.undefined
 
   /**
     * Whether to display negative sized bubbles. The threshold is given by the <a href="#plotOptions.bubble.zThreshold">zThreshold</a> option, and negative bubbles can be visualized by setting <a href="#plotOptions.bubble.negativeColor">negativeColor</a>.
@@ -73,7 +106,7 @@ class PlotOptionsMapbubble extends js.Object {
 
   /**
     * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
     */
   val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
 
@@ -85,25 +118,25 @@ class PlotOptionsMapbubble extends js.Object {
     * <p>The joinBy option can also be an array of two values, where the first points to a key in the <code>mapData</code>, and the second points to another key in the <code>data</code>.</p>
     * 
     * <p>When joinBy is <code>null</code>, the map  items are joined by their position in the array, which performs much better in maps with many data points. This is the recommended option if you are printing more than a thousand data points and have a backend that can preprocess the data into a parallel array of the mapData.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Joined by "code"</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/geojson/" target="_blank">GeoJSON joined by an array</a>, <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/series/joinby-null/" target="_blank">simple data joined by null</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/" target="_blank">Joined by "code"</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/geojson/" target="_blank">GeoJSON joined by an array</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/series/joinby-null/" target="_blank">simple data joined by null</a>.
     */
   val joinBy: js.UndefOr[String | js.Array[String]] = js.undefined
 
   /**
     * Maximum bubble size. Bubbles will automatically size between the <code>minSize</code> and <code>maxSize</code> to reflect the <code>z</code> value of each bubble. Can be either pixels (when no unit is given), or a percentage of the smallest one of the plot width and height. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/map-bubble/" target="_blank">Bubble size</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/map-bubble/" target="_blank">Bubble size</a>
     */
   val maxSize: js.UndefOr[String] = js.undefined
 
   /**
     * Minimum bubble size. Bubbles will automatically size between the <code>minSize</code> and <code>maxSize</code> to reflect the <code>z</code> value of each bubble. Can be either pixels (when no unit is given), or a percentage of the smallest one of the plot width and height. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/map-bubble/" target="_blank">Bubble size</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/map-bubble/" target="_blank">Bubble size</a>
     */
   val minSize: js.UndefOr[String] = js.undefined
 
   /**
     * When a point's Z value is below the <a href="#plotOptions.bubble.zThreshold">zThreshold</a> setting, this color is used.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-negativecolor/" target="_blank">Negative color below a threshold</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-negativecolor/" target="_blank">Negative color below a threshold</a>
     */
   val negativeColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -139,7 +172,7 @@ class PlotOptionsMapbubble extends js.Object {
 
   /**
     * When this is true, the absolute value of z determines the size of the bubble. This means that with the default <code>zThreshold</code> of 0, a bubble of value -1 will have the same size as a bubble of value 1, while a bubble of value 0 will have a smaller size according to <code>minSize</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/bubble-sizebyabsolutevalue/" target="_blank">Size by absolute value, various thresholds</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-sizebyabsolutevalue/" target="_blank">Size by absolute value, various thresholds</a>.
     * @since 1.1.9
     */
   val sizeByAbsoluteValue: js.UndefOr[Boolean] = js.undefined
@@ -176,21 +209,21 @@ class PlotOptionsMapbubble extends js.Object {
 
   /**
     * The minimum for the Z value range. Defaults to the highest Z value in the data.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/" target="_blank">Z has a possible range of 0-100</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/" target="_blank">Z has a possible range of 0-100</a>
     * @since 1.0.3
     */
   val zMax: js.UndefOr[Double] = js.undefined
 
   /**
     * The minimum for the Z value range. Defaults to the lowest Z value in the data.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/" target="_blank">Z has a possible range of 0-100</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/bubble-zmin-zmax/" target="_blank">Z has a possible range of 0-100</a>
     * @since 1.0.3
     */
   val zMin: js.UndefOr[Double] = js.undefined
 
   /**
     * When <a href="#plotOptions.bubble.displayNegative">displayNegative</a> is <code>false</code>, bubbles with lower Z values are skipped. When <code>displayNegative</code> is <code>true</code> and a <a href="#plotOptions.bubble.negativeColor">negativeColor</a> is given, points with lower Z is colored.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/mapbubble-negativecolor/" target="_blank">Negative color below a threshold</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-negativecolor/" target="_blank">Negative color below a threshold</a>
     */
   val zThreshold: js.UndefOr[Double] = js.undefined
 }
@@ -199,11 +232,16 @@ object PlotOptionsMapbubble {
   /**
     * @param allAreas Whether all areas of the map defined in <code>mapData</code> should be rendered. If <code>true</code>, areas which don't correspond to a data point, are rendered as <code>null</code> points. If <code>false</code>, those areas are skipped.
     * @param allowPointSelect Allow this series' points to be selected by clicking on the shapes. Selected points can be read through the <a href="#Chart.getSelectedPoints()">Chart.getSelectedPoints()</a> method.
-    * @param animation <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods.		The following properties are supported:</p>. <dl>.   <dt>duration</dt>.   <dd>The duration of the animation in milliseconds.</dd>. <dt>easing</dt>. <dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>. </dl>. <p>Due to poor performance, animation is disabled in old IE browsers for map series, but enabled on mapbubble series.</p>
-    * @param borderColor The border color of the map areas.
-    * @param borderWidth The border width of each map area.
+    * @param animation <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods.		The following properties are supported:</p>. <dl>.   <dt>duration</dt>.   <dd>The duration of the animation in milliseconds.</dd>. <dt>easing</dt>. <dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>. </dl>. <p>Due to poor performance, animation is disabled in old IE browsers for map series, but enabled on mapbubble series.</p>
+    * @param animationLimit For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>.
+    * @param borderColor <p>The border color of the map areas.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the border stroke is given in the <code>.highcharts-point</code> class.</p>
+    * @param borderWidth <p>The border width of each map area.</p>. . <p><p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the border stroke width is given in the <code>.highcharts-point</code> class.</p>
+    * @param className A class name to apply to the series' graphical elements.
     * @param color The main color of the series. This color affects both the fill and the stroke of the bubble. For enhanced control, use <code>marker</code> options.
+    * @param colorAxis Set this option to <code>false</code> to prevent a series from connecting to the global color axis. This will cause the series to have its own legend item.
     * @param cursor You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
+    * @param dataLabels <p>Options for the series data labels, appearing next to each data point.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the data labels can be styled wtih the <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names (<a href=#http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/">see example</a>).</p>
+    * @param description <p><i>Requires Accessibility module</i></p>. <p>A description of the series to add to the screen reader information about the series.</p>
     * @param displayNegative Whether to display negative sized bubbles. The threshold is given by the <a href="#plotOptions.bubble.zThreshold">zThreshold</a> option, and negative bubbles can be visualized by setting <a href="#plotOptions.bubble.negativeColor">negativeColor</a>.
     * @param enableMouseTracking Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
     * @param joinBy <p>What property to join the <code>mapData</code> to the value data. For example, if joinBy is "code", the mapData items with a specific code is merged into the data with the same code. For maps loaded from GeoJSON, the keys may be held in each point's <code>properties</code> object.</p>. . <p>The joinBy option can also be an array of two values, where the first points to a key in the <code>mapData</code>, and the second points to another key in the <code>data</code>.</p>. . <p>When joinBy is <code>null</code>, the map  items are joined by their position in the array, which performs much better in maps with many data points. This is the recommended option if you are printing more than a thousand data points and have a backend that can preprocess the data into a parallel array of the mapData.</p>
@@ -226,15 +264,19 @@ object PlotOptionsMapbubble {
     * @param zMin The minimum for the Z value range. Defaults to the lowest Z value in the data.
     * @param zThreshold When <a href="#plotOptions.bubble.displayNegative">displayNegative</a> is <code>false</code>, bubbles with lower Z values are skipped. When <code>displayNegative</code> is <code>true</code> and a <a href="#plotOptions.bubble.negativeColor">negativeColor</a> is given, points with lower Z is colored.
     */
-  def apply(allAreas: js.UndefOr[Boolean] = js.undefined, allowPointSelect: js.UndefOr[Boolean] = js.undefined, animation: js.UndefOr[Boolean] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, cursor: js.UndefOr[String] = js.undefined, dataLabels: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleDataLabels]] = js.undefined, displayNegative: js.UndefOr[Boolean] = js.undefined, enableMouseTracking: js.UndefOr[Boolean] = js.undefined, events: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleEvents]] = js.undefined, joinBy: js.UndefOr[String | js.Array[String]] = js.undefined, maxSize: js.UndefOr[String] = js.undefined, minSize: js.UndefOr[String] = js.undefined, negativeColor: js.UndefOr[String | js.Object] = js.undefined, point: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePoint]] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, showCheckbox: js.UndefOr[Boolean] = js.undefined, showInLegend: js.UndefOr[Boolean] = js.undefined, sizeBy: js.UndefOr[String] = js.undefined, sizeByAbsoluteValue: js.UndefOr[Boolean] = js.undefined, states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined, stickyTracking: js.UndefOr[Boolean] = js.undefined, tooltip: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleTooltip]] = js.undefined, visible: js.UndefOr[Boolean] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined, zMax: js.UndefOr[Double] = js.undefined, zMin: js.UndefOr[Double] = js.undefined, zThreshold: js.UndefOr[Double] = js.undefined): PlotOptionsMapbubble = {
+  def apply(allAreas: js.UndefOr[Boolean] = js.undefined, allowPointSelect: js.UndefOr[Boolean] = js.undefined, animation: js.UndefOr[Boolean] = js.undefined, animationLimit: js.UndefOr[Double] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, className: js.UndefOr[String] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, colorAxis: js.UndefOr[Boolean] = js.undefined, cursor: js.UndefOr[String] = js.undefined, dataLabels: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleDataLabels]] = js.undefined, description: js.UndefOr[String] = js.undefined, displayNegative: js.UndefOr[Boolean] = js.undefined, enableMouseTracking: js.UndefOr[Boolean] = js.undefined, events: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleEvents]] = js.undefined, joinBy: js.UndefOr[String | js.Array[String]] = js.undefined, maxSize: js.UndefOr[String] = js.undefined, minSize: js.UndefOr[String] = js.undefined, negativeColor: js.UndefOr[String | js.Object] = js.undefined, point: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePoint]] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, showCheckbox: js.UndefOr[Boolean] = js.undefined, showInLegend: js.UndefOr[Boolean] = js.undefined, sizeBy: js.UndefOr[String] = js.undefined, sizeByAbsoluteValue: js.UndefOr[Boolean] = js.undefined, states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined, stickyTracking: js.UndefOr[Boolean] = js.undefined, tooltip: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleTooltip]] = js.undefined, visible: js.UndefOr[Boolean] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined, zMax: js.UndefOr[Double] = js.undefined, zMin: js.UndefOr[Double] = js.undefined, zThreshold: js.UndefOr[Double] = js.undefined): PlotOptionsMapbubble = {
     val allAreasOuter: js.UndefOr[Boolean] = allAreas
     val allowPointSelectOuter: js.UndefOr[Boolean] = allowPointSelect
     val animationOuter: js.UndefOr[Boolean] = animation
+    val animationLimitOuter: js.UndefOr[Double] = animationLimit
     val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
     val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val classNameOuter: js.UndefOr[String] = className
     val colorOuter: js.UndefOr[String | js.Object] = color
+    val colorAxisOuter: js.UndefOr[Boolean] = colorAxis
     val cursorOuter: js.UndefOr[String] = cursor
     val dataLabelsOuter: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleDataLabels]] = dataLabels
+    val descriptionOuter: js.UndefOr[String] = description
     val displayNegativeOuter: js.UndefOr[Boolean] = displayNegative
     val enableMouseTrackingOuter: js.UndefOr[Boolean] = enableMouseTracking
     val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleEvents]] = events
@@ -261,11 +303,15 @@ object PlotOptionsMapbubble {
       override val allAreas: js.UndefOr[Boolean] = allAreasOuter
       override val allowPointSelect: js.UndefOr[Boolean] = allowPointSelectOuter
       override val animation: js.UndefOr[Boolean] = animationOuter
+      override val animationLimit: js.UndefOr[Double] = animationLimitOuter
       override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
       override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val className: js.UndefOr[String] = classNameOuter
       override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val colorAxis: js.UndefOr[Boolean] = colorAxisOuter
       override val cursor: js.UndefOr[String] = cursorOuter
       override val dataLabels: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleDataLabels]] = dataLabelsOuter
+      override val description: js.UndefOr[String] = descriptionOuter
       override val displayNegative: js.UndefOr[Boolean] = displayNegativeOuter
       override val enableMouseTracking: js.UndefOr[Boolean] = enableMouseTrackingOuter
       override val events: js.UndefOr[CleanJsObject[PlotOptionsMapbubbleEvents]] = eventsOuter

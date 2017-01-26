@@ -19,7 +19,7 @@ class PlotOptions extends js.Object {
 
   /**
     * The area range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highcharts-more.js</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/arearange/">Arearange example</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange/">Arearange example</a>
     * @since 2.3.0
     */
   val arearange: js.UndefOr[CleanJsObject[PlotOptionsArearange]] = js.undefined
@@ -50,7 +50,7 @@ class PlotOptions extends js.Object {
 
   /**
     * The column range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highcharts-more.js</code>. To display horizontal bars, set <a href="#chart.inverted">chart.inverted</a> to <code>true</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/columnrange/" target="_blank">Inverted column range</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/" target="_blank">Inverted column range</a>
     * @since 2.3.0
     */
   val columnrange: js.UndefOr[CleanJsObject[PlotOptionsColumnrange]] = js.undefined
@@ -63,7 +63,7 @@ class PlotOptions extends js.Object {
 
   /**
     * Funnel charts are a type of chart often used to visualize stages in a sales project, where the top are the initial stages with the most clients. It requires that the <code>modules/funnel.js</code> file is loaded.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/funnel/" target="_blank">Funnel demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/" target="_blank">Funnel demo</a>
     * @since 3.0
     */
   val funnel: js.UndefOr[CleanJsObject[PlotOptionsFunnel]] = js.undefined
@@ -86,22 +86,22 @@ class PlotOptions extends js.Object {
 
   /**
     * A pie chart is a circular chart divided into sectors, illustrating numerical proportion.
-    * @example  <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-basic/" target="_blank">Pie chart</a>,  
+    * @example  <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pie-basic/" target="_blank">Pie chart</a>,  
 
-<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/3d-pie/" target="_blank">3D pie</a>
+<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/3d-pie/" target="_blank">3D pie</a>
     */
   val pie: js.UndefOr[CleanJsObject[PlotOptionsPie]] = js.undefined
 
   /**
     * A polygon series can be used to draw any freeform shape in the cartesian coordinate system. A fill is applied with the <code>color</code> option, and stroke is applied through <code>lineWidth</code> and <code>lineColor</code> options. Requires the <code>highcharts-more.js</code> file.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/polygon/" target="_blank">Polygon</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/polygon/" target="_blank">Polygon</a>
     * @since 4.1.0
     */
   val polygon: js.UndefOr[CleanJsObject[PlotOptionsPolygon]] = js.undefined
 
   /**
     * A pyramid chart consists of a single pyramid with item heights corresponding to each point value. Technically it is the same as a reversed funnel chart without a neck.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pyramid/" target="_blank">Pyramid chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/pyramid/" target="_blank">Pyramid chart</a>
     * @since 3.0.10
     */
   val pyramid: js.UndefOr[CleanJsObject[PlotOptionsPyramid]] = js.undefined
@@ -115,7 +115,7 @@ class PlotOptions extends js.Object {
 
   /**
     * A gauge showing values using a filled arc with colors indicating the value. The solid gauge plots values against the <code>yAxis</code>, which is extended with some color options, <a href="#yAxis.minColor">minColor</a>, <a href="#yAxis.maxColor">maxColor</a> and <a href="#yAxis.stops">stops</a>, to control the color of the gauge itself.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/gauge-solid/" target="_blank">Solid gauge</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/gauge-solid/" target="_blank">Solid gauge</a>
     * @since 4.0
     */
   val solidgauge: js.UndefOr[CleanJsObject[PlotOptionsSolidgauge]] = js.undefined
@@ -131,7 +131,9 @@ class PlotOptions extends js.Object {
 
   /**
     * Options for the waterfall series type.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/waterfall/" target="_blank">Waterfall chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/waterfall/" target="_blank">Waterfall chart</a>.
+
+<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/waterfall/" target="_blank">Waterfall in styled mode</a>.
     * @since 3.0
     */
   val waterfall: js.UndefOr[CleanJsObject[PlotOptionsWaterfall]] = js.undefined

@@ -17,7 +17,7 @@ class XAxisPlotBandsLabel extends js.Object {
 
   /**
     * Horizontal alignment of the label. Can be one of "left", "center" or "right".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
@@ -27,7 +27,9 @@ class XAxisPlotBandsLabel extends js.Object {
   val rotation: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for the text label.
+    * <p>CSS styles for the text label.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
@@ -44,19 +46,19 @@ class XAxisPlotBandsLabel extends js.Object {
 
   /**
     * Vertical alignment of the label relative to the plot band. Can be one of "top", "middle" or "bottom".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val verticalAlign: js.UndefOr[String] = js.undefined
 
   /**
     * Horizontal position relative the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * Vertical position of the text baseline relative to the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 }
@@ -65,7 +67,7 @@ object XAxisPlotBandsLabel {
   /**
     * @param align Horizontal alignment of the label. Can be one of "left", "center" or "right".
     * @param rotation Rotation of the text label in degrees .
-    * @param style CSS styles for the text label.
+    * @param style <p>CSS styles for the text label.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p>
     * @param textAlign The text alignment for the label. While <code>align</code> determines where the texts anchor point is placed within the plot band, <code>textAlign</code> determines how the text is aligned against its anchor point. Possible values are "left", "center" and "right". Defaults to the same as the <code>align</code> option.
     * @param useHTML <p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the labels.
     * @param verticalAlign Vertical alignment of the label relative to the plot band. Can be one of "top", "middle" or "bottom".

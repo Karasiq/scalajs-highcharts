@@ -22,7 +22,7 @@ class Loading extends js.Object {
 
   /**
     * CSS styles for the loading label <code>span</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/loading/general/" target="_blank">Label styles</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Label styles</a>
     */
   val labelStyle: js.UndefOr[js.Object] = js.undefined
 
@@ -32,14 +32,8 @@ class Loading extends js.Object {
   val showDuration: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for the loading screen that covers the plot area. Defaults to:
-    * <pre>style: {
-    * 	position: 'absolute',
-    * 	backgroundColor: 'white',
-    * 	opacity: 0.5,
-    * 	textAlign: 'center'
-    * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/loading/general/" target="_blank">Gray plot area, white text</a>
+    * CSS styles for the loading screen that covers the plot area.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Gray plot area, white text</a>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 }
@@ -49,7 +43,7 @@ object Loading {
     * @param hideDuration The duration in milliseconds of the fade out effect.
     * @param labelStyle CSS styles for the loading label <code>span</code>.
     * @param showDuration The duration in milliseconds of the fade in effect.
-    * @param style CSS styles for the loading screen that covers the plot area. Defaults to:. <pre>style: {. 	position: 'absolute',. 	backgroundColor: 'white',. 	opacity: 0.5,. 	textAlign: 'center'. }</pre>
+    * @param style CSS styles for the loading screen that covers the plot area.
     */
   def apply(hideDuration: js.UndefOr[Double] = js.undefined, labelStyle: js.UndefOr[js.Object] = js.undefined, showDuration: js.UndefOr[Double] = js.undefined, style: js.UndefOr[js.Object] = js.undefined): Loading = {
     val hideDurationOuter: js.UndefOr[Double] = hideDuration

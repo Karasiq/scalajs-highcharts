@@ -25,7 +25,7 @@ class NoData extends js.Object {
     * The position of the no-data label, relative to the plot area. 
     * @since 3.0.8
     */
-  val position: js.UndefOr[js.Object] = js.undefined
+  val position: js.UndefOr[CleanJsObject[NoDataPosition]] = js.undefined
 
   /**
     * CSS styles for the no-data label. 
@@ -47,14 +47,14 @@ object NoData {
     * @param style CSS styles for the no-data label. 
     * @param useHTML Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.
     */
-  def apply(attr: js.UndefOr[js.Object] = js.undefined, position: js.UndefOr[js.Object] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined): NoData = {
+  def apply(attr: js.UndefOr[js.Object] = js.undefined, position: js.UndefOr[CleanJsObject[NoDataPosition]] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined): NoData = {
     val attrOuter: js.UndefOr[js.Object] = attr
-    val positionOuter: js.UndefOr[js.Object] = position
+    val positionOuter: js.UndefOr[CleanJsObject[NoDataPosition]] = position
     val styleOuter: js.UndefOr[js.Object] = style
     val useHTMLOuter: js.UndefOr[Boolean] = useHTML
     new NoData {
       override val attr: js.UndefOr[js.Object] = attrOuter
-      override val position: js.UndefOr[js.Object] = positionOuter
+      override val position: js.UndefOr[CleanJsObject[NoDataPosition]] = positionOuter
       override val style: js.UndefOr[js.Object] = styleOuter
       override val useHTML: js.UndefOr[Boolean] = useHTMLOuter
     }

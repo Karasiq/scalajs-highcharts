@@ -16,8 +16,7 @@ import com.highcharts.HighchartsUtils._
 class YAxisLabels extends js.Object {
 
   /**
-    * What part of the string the given position is anchored to. 
-    * 		Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>.
+    * What part of the string the given position is anchored to.  Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>. The exact position also depends on the <code>labels.x</code> setting.
     */
   val align: js.UndefOr[String] = js.undefined
 
@@ -32,13 +31,14 @@ class YAxisLabels extends js.Object {
   val format: js.UndefOr[String] = js.undefined
 
   /**
-    * Callback JavaScript function to format the label. The value is 
-    *  given by <code>this.value</code>. Additional properties for <code>this</code> are
-    *  <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>.
-    *  Defaults to: 
+    * <p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are
+    *  <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. The value of the default label formatter can be retrieved by calling <code>this.axis.defaultLabelFormatter.call(this)</code> within the function.</p>
+    * 
+    * <p>Defaults to: 
     * <pre>function() {
     * 	return this.value;
     * }</pre>
+    * </p>
     */
   val formatter: js.UndefOr[js.Function] = js.undefined
 
@@ -95,10 +95,10 @@ class YAxisLabels extends js.Object {
 
 object YAxisLabels {
   /**
-    * @param align What part of the string the given position is anchored to. . 		Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>.
+    * @param align What part of the string the given position is anchored to.  Can be one of <code>"left"</code>, <code>"center"</code> or <code>"right"</code>. The exact position also depends on the <code>labels.x</code> setting.
     * @param enabled Enable or disable the axis labels.
     * @param format A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the axis label. 
-    * @param formatter Callback JavaScript function to format the label. The value is .  given by <code>this.value</code>. Additional properties for <code>this</code> are.  <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>..  Defaults to: . <pre>function() {. 	return this.value;. }</pre>
+    * @param formatter <p>Callback JavaScript function to format the label. The value is given by <code>this.value</code>. Additional properties for <code>this</code> are.  <code>axis</code>, <code>chart</code>, <code>isFirst</code> and <code>isLast</code>. The value of the default label formatter can be retrieved by calling <code>this.axis.defaultLabelFormatter.call(this)</code> within the function.</p>. . <p>Defaults to: . <pre>function() {. 	return this.value;. }</pre>. </p>
     * @param maxStaggerLines Horizontal axis only. When <code>staggerLines</code> is not set, <code>maxStaggerLines</code> defines how many lines the axis is allowed to add to automatically avoid overlapping X labels. Set to <code>1</code> to disable overlap detection. 
     * @param overflow How to handle overflowing labels on horizontal axis. Can be undefined or "justify". If "justify", labels will not render outside the plot area. If there is room to move it, it will be aligned to the edge, else it will be removed.
     * @param rotation Rotation of the labels in degrees.

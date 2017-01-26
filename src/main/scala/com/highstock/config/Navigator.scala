@@ -16,63 +16,67 @@ import com.highcharts.HighchartsUtils._
 class Navigator extends js.Object {
 
   /**
-    * Whether the navigator and scrollbar should adapt to updated data in the base X axis. This should be false when loading data asynchronously, to prevent circular loading.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/demo/lazy-loading/" target="_blank">Set to false with async data loading</a>
+    * Whether the navigator and scrollbar should adapt to updated data in the base X axis. When loading data async, as in the demo below, this should be <code>false</code>. Otherwise new data will trigger navigator redraw, which will cause unwanted looping. In the demo below, the data in the navigator is set only once. On navigating, only the main chart content is updated.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/demo/lazy-loading/" target="_blank">Set to false with async data loading</a>
     */
   val adaptToUpdatedData: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * An integer identifying the index to use for the base series, or a string representing the id of the series.
+    * <p>An integer identifying the index to use for the base series, or a string representing the id of the series.</p>
+    * 
+    * <p><b>Note</b>: As of Highcharts 5.0, this is now a deprecated option. Prefer <a href="#plotOptions.series.showInNavigator">series.showInNavigator</a>.</p>
     */
   val baseSeries: js.Any = js.undefined
 
   /**
     * Enable or disable the navigator.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/enabled/" target="_blank">Disable the navigator</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/enabled/" target="_blank">Disable the navigator</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * Options for the handles for dragging the zoomed area.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/handles/" target="_blank">Colored handles</a>
+    * <p>Options for the handles for dragging the zoomed area.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the navigator handles are styled with the <code>.highcharts-navigator-handle</code>, <code>.highcharts-navigator-handle-left</code> and <code>.highcharts-navigator-handle-right</code> classes.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/handles/" target="_blank">Colored handles</a>
     */
   val handles: js.UndefOr[CleanJsObject[NavigatorHandles]] = js.undefined
 
   /**
     * The height of the navigator.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/height/" target="_blank">A higher navigator</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/height/" target="_blank">A higher navigator</a>
     */
   val height: js.UndefOr[Double] = js.undefined
 
   /**
     * The distance from the nearest element, the X axis or X axis labels.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/margin/" target="_blank">A margin of 2 draws the
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/margin/" target="_blank">A margin of 2 draws the
 				navigator closer to the X axis labels</a>
     */
   val margin: js.UndefOr[Double] = js.undefined
 
   /**
     * The color of the mask covering the areas of the navigator series that are currently not visible in the main series. The default color is bluish with an opacity of 0.3 to see the series below.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/maskfill/" target="_blank">Blue, semi transparent mask</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/maskfill/" target="_blank">Blue, semi transparent mask</a>
     */
   val maskFill: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * Whether the mask should be inside the range marking the zoomed range, or outside. In Highstock 1.x it was always <code>false</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/maskinside-false/" target="_blank">False, mask outside</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/maskinside-false/" target="_blank">False, mask outside</a>
     * @since 2.0
     */
   val maskInside: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The color of the line marking the currently zoomed area in the navigator.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/outline/" target="_blank">2px blue outline</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/outline/" target="_blank">2px blue outline</a>
     */
   val outlineColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The width of the line marking the currently zoomed area in the navigator.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/outline/" target="_blank">2px blue outline</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/outline/" target="_blank">2px blue outline</a>
     */
   val outlineWidth: js.UndefOr[Double] = js.undefined
 
@@ -94,8 +98,8 @@ class Navigator extends js.Object {
     * 		enabled: false
     * 	}
     * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/series-data/" target="_blank">Using a separate data set for the navigator</a>;
-			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/navigator/series/" target="_blank">A green navigator series</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/series-data/" target="_blank">Using a separate data set for the navigator</a>;
+			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/navigator/series/" target="_blank">A green navigator series</a>
     */
   val series: js.UndefOr[js.Object] = js.undefined
 
@@ -140,10 +144,10 @@ class Navigator extends js.Object {
 
 object Navigator {
   /**
-    * @param adaptToUpdatedData Whether the navigator and scrollbar should adapt to updated data in the base X axis. This should be false when loading data asynchronously, to prevent circular loading.
-    * @param baseSeries An integer identifying the index to use for the base series, or a string representing the id of the series.
+    * @param adaptToUpdatedData Whether the navigator and scrollbar should adapt to updated data in the base X axis. When loading data async, as in the demo below, this should be <code>false</code>. Otherwise new data will trigger navigator redraw, which will cause unwanted looping. In the demo below, the data in the navigator is set only once. On navigating, only the main chart content is updated.
+    * @param baseSeries <p>An integer identifying the index to use for the base series, or a string representing the id of the series.</p>. . <p><b>Note</b>: As of Highcharts 5.0, this is now a deprecated option. Prefer <a href="#plotOptions.series.showInNavigator">series.showInNavigator</a>.</p>
     * @param enabled Enable or disable the navigator.
-    * @param handles Options for the handles for dragging the zoomed area.
+    * @param handles <p>Options for the handles for dragging the zoomed area.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the navigator handles are styled with the <code>.highcharts-navigator-handle</code>, <code>.highcharts-navigator-handle-left</code> and <code>.highcharts-navigator-handle-right</code> classes.</p>
     * @param height The height of the navigator.
     * @param margin The distance from the nearest element, the X axis or X axis labels.
     * @param maskFill The color of the mask covering the areas of the navigator series that are currently not visible in the main series. The default color is bluish with an opacity of 0.3 to see the series below.

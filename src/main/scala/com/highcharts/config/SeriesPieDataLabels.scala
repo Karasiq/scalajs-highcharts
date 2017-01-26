@@ -17,55 +17,71 @@ class SeriesPieDataLabels extends js.Object {
 
   /**
     * The background color or gradient for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border color for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border radius in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderRadius: js.UndefOr[Double] = js.undefined
 
   /**
     * The border width in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
+    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
+    * @since 5.0.0
+    */
+  val className: js.UndefOr[String] = js.undefined
+
+  /**
     * The text color for the data labels. Defaults to <code>null</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-color/" target="_blank">Red data labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/" target="_blank">Red data labels</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
-    * The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/" target="_blank">Blue connectors</a>
+    * <p>The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/" target="_blank">Blue connectors</a>.
+
+<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
     * @since 2.1
     */
   val connectorColor: js.UndefOr[String] = js.undefined
 
   /**
     * The distance from the data label to the connector.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/" target="_blank">No padding</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/" target="_blank">No padding</a>
     * @since 2.1
     */
   val connectorPadding: js.UndefOr[Double] = js.undefined
 
   /**
-    * The width of the line connecting the data label to the pie slice.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/" target="_blank">Disable the connector</a>
+    * <p>The width of the line connecting the data label to the pie slice.</p>
+    * 
+    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/" target="_blank">Disable the connector</a>.
+
+
+<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
     * @since 2.1
     */
   val connectorWidth: js.UndefOr[Double] = js.undefined
@@ -84,7 +100,7 @@ class SeriesPieDataLabels extends js.Object {
 
   /**
     * The distance of the data label from the pie's edge. Negative numbers put the data label on top of the pie slices. Connectors are only shown for data labels outside the pie.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/" target="_blank">Data labels on top of the pie</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/" target="_blank">Data labels on top of the pie</a>
     * @since 2.1
     */
   val distance: js.UndefOr[Double] = js.undefined
@@ -97,7 +113,7 @@ class SeriesPieDataLabels extends js.Object {
 
   /**
     * A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the data label. Available variables are the same as for <code>formatter</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-format/" target="_blank">Add a unit</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/" target="_blank">Add a unit</a>
     * @since 3.0
     */
   val format: js.UndefOr[String] = js.undefined
@@ -149,49 +165,42 @@ class SeriesPieDataLabels extends js.Object {
 
   /**
     * When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, this		is the padding within the box.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val padding: js.UndefOr[Double] = js.undefined
 
   /**
-    * Whether to reserve space for the labels. This can be turned off when for example the labels are rendered inside the plot area instead of outside.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/labels-reservespace/" target="_blank">No reserved space, labels inside plot</a>.
-    * @since 4.1.10
-    */
-  val reserveSpace: js.UndefOr[Boolean] = js.undefined
-
-  /**
     * Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical labels</a>
     */
   val rotation: js.UndefOr[Double] = js.undefined
 
   /**
     * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations</a>
     * @since 4.1.2
     */
   val shape: js.UndefOr[String] = js.undefined
 
   /**
     * Whether to render the connector as a soft arc or a line with sharp break.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/" target="_blank">Soft</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/" target="_blank">non soft</a> connectors.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/" target="_blank">Soft</a>,
+			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/" target="_blank">non soft</a> connectors.
     * @since 2.1.7
     */
   val softConnector: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Styles for the label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-style/" target="_blank">Bold labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/" target="_blank">Bold labels</a>
     * @since 4.1.0
     */
   val style: js.UndefOr[js.Object] = js.undefined
@@ -209,13 +218,13 @@ class SeriesPieDataLabels extends js.Object {
 
   /**
     * The x position offset of the label relative to the point. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * The y position offset of the label relative to the point. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 
@@ -232,10 +241,11 @@ object SeriesPieDataLabels {
     * @param borderColor The border color for the data label. Defaults to <code>undefined</code>.
     * @param borderRadius The border radius in pixels for the data label.
     * @param borderWidth The border width in pixels for the data label.
+    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
     * @param color The text color for the data labels. Defaults to <code>null</code>.
-    * @param connectorColor The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.
+    * @param connectorColor <p>The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
     * @param connectorPadding The distance from the data label to the connector.
-    * @param connectorWidth The width of the line connecting the data label to the pie slice.
+    * @param connectorWidth <p>The width of the line connecting the data label to the pie slice.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
     * @param crop Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the <a href="#plotOptions.series.dataLabels.overflow">overflow</a> option.
     * @param defer Whether to defer displaying the data labels until the initial series animation has finished.
     * @param distance The distance of the data label from the pie's edge. Negative numbers put the data label on top of the pie slices. Connectors are only shown for data labels outside the pie.
@@ -245,7 +255,6 @@ object SeriesPieDataLabels {
     * @param inside For points with an extent, like columns, whether to align the data label inside the box or to the actual value point. Defaults to <code>false</code> in most cases, <code>true</code> in stacked columns.
     * @param overflow How to handle data labels that flow outside the plot area. The default is <code>justify</code>, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set <code>crop</code> to <code>false</code> and <code>overflow</code> to <code>"none"</code>.
     * @param padding When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, this		is the padding within the box.
-    * @param reserveSpace Whether to reserve space for the labels. This can be turned off when for example the labels are rendered inside the plot area instead of outside.
     * @param rotation Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
     * @param shadow The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @param shape The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
@@ -257,11 +266,12 @@ object SeriesPieDataLabels {
     * @param y The y position offset of the label relative to the point. 
     * @param zIndex The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.
     */
-  def apply(backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderRadius: js.UndefOr[Double] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, connectorColor: js.UndefOr[String] = js.undefined, connectorPadding: js.UndefOr[Double] = js.undefined, connectorWidth: js.UndefOr[Double] = js.undefined, crop: js.UndefOr[Boolean] = js.undefined, defer: js.UndefOr[Boolean] = js.undefined, distance: js.UndefOr[Double] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, format: js.UndefOr[String] = js.undefined, formatter: js.UndefOr[js.Function] = js.undefined, inside: js.UndefOr[Boolean] = js.undefined, overflow: js.UndefOr[String] = js.undefined, padding: js.UndefOr[Double] = js.undefined, reserveSpace: js.UndefOr[Boolean] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, shape: js.UndefOr[String] = js.undefined, softConnector: js.UndefOr[Boolean] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, verticalAlign: js.UndefOr[String] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined): SeriesPieDataLabels = {
+  def apply(backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderRadius: js.UndefOr[Double] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, className: js.UndefOr[String] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, connectorColor: js.UndefOr[String] = js.undefined, connectorPadding: js.UndefOr[Double] = js.undefined, connectorWidth: js.UndefOr[Double] = js.undefined, crop: js.UndefOr[Boolean] = js.undefined, defer: js.UndefOr[Boolean] = js.undefined, distance: js.UndefOr[Double] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, format: js.UndefOr[String] = js.undefined, formatter: js.UndefOr[js.Function] = js.undefined, inside: js.UndefOr[Boolean] = js.undefined, overflow: js.UndefOr[String] = js.undefined, padding: js.UndefOr[Double] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, shape: js.UndefOr[String] = js.undefined, softConnector: js.UndefOr[Boolean] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, verticalAlign: js.UndefOr[String] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined): SeriesPieDataLabels = {
     val backgroundColorOuter: js.UndefOr[String | js.Object] = backgroundColor
     val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
     val borderRadiusOuter: js.UndefOr[Double] = borderRadius
     val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val classNameOuter: js.UndefOr[String] = className
     val colorOuter: js.UndefOr[String | js.Object] = color
     val connectorColorOuter: js.UndefOr[String] = connectorColor
     val connectorPaddingOuter: js.UndefOr[Double] = connectorPadding
@@ -275,7 +285,6 @@ object SeriesPieDataLabels {
     val insideOuter: js.UndefOr[Boolean] = inside
     val overflowOuter: js.UndefOr[String] = overflow
     val paddingOuter: js.UndefOr[Double] = padding
-    val reserveSpaceOuter: js.UndefOr[Boolean] = reserveSpace
     val rotationOuter: js.UndefOr[Double] = rotation
     val shadowOuter: js.UndefOr[Boolean | js.Object] = shadow
     val shapeOuter: js.UndefOr[String] = shape
@@ -291,6 +300,7 @@ object SeriesPieDataLabels {
       override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
       override val borderRadius: js.UndefOr[Double] = borderRadiusOuter
       override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val className: js.UndefOr[String] = classNameOuter
       override val color: js.UndefOr[String | js.Object] = colorOuter
       override val connectorColor: js.UndefOr[String] = connectorColorOuter
       override val connectorPadding: js.UndefOr[Double] = connectorPaddingOuter
@@ -304,7 +314,6 @@ object SeriesPieDataLabels {
       override val inside: js.UndefOr[Boolean] = insideOuter
       override val overflow: js.UndefOr[String] = overflowOuter
       override val padding: js.UndefOr[Double] = paddingOuter
-      override val reserveSpace: js.UndefOr[Boolean] = reserveSpaceOuter
       override val rotation: js.UndefOr[Double] = rotationOuter
       override val shadow: js.UndefOr[Boolean | js.Object] = shadowOuter
       override val shape: js.UndefOr[String] = shapeOuter

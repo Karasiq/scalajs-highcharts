@@ -17,7 +17,7 @@ class PlotOptionsMaplineStatesNormal extends js.Object {
 
   /**
     * Animation options for the fill color when returning from hover state to normal state. The animation adds some latency in order to reduce the effect of flickering when hovering in and out of for example an uneven coastline.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-states-animation-false/" target="_blank">No animation of fill color</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-animation-false/" target="_blank">No animation of fill color</a>
     */
   val animation: js.UndefOr[js.Object | Boolean] = js.undefined
 }

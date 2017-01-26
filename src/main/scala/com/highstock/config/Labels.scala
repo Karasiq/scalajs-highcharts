@@ -21,10 +21,7 @@ class Labels extends js.Object {
   val items: js.UndefOr[CleanJsObject[LabelsItems]] = js.undefined
 
   /**
-    * Shared CSS styles for all labels. Defaults to:
-    * <pre>style: {
-    * 	color: '#3E576F'
-    * }</pre>
+    * Shared CSS styles for all labels.
     */
   val style: js.UndefOr[js.Object] = js.undefined
 }
@@ -32,7 +29,7 @@ class Labels extends js.Object {
 object Labels {
   /**
     * @param items A HTML label that can be positioned anywhere in the chart area.
-    * @param style Shared CSS styles for all labels. Defaults to:. <pre>style: {. 	color: '#3E576F'. }</pre>
+    * @param style Shared CSS styles for all labels.
     */
   def apply(items: js.UndefOr[CleanJsObject[LabelsItems]] = js.undefined, style: js.UndefOr[js.Object] = js.undefined): Labels = {
     val itemsOuter: js.UndefOr[CleanJsObject[LabelsItems]] = items

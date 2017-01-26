@@ -31,13 +31,7 @@ class Loading extends js.Object {
   val showDuration: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for the loading screen that covers the plot area. Defaults to:
-    * <pre>style: {
-    * 	position: 'absolute',
-    * 	backgroundColor: 'white',
-    * 	opacity: 0.5,
-    * 	textAlign: 'center'
-    * }</pre>
+    * CSS styles for the loading screen that covers the plot area.
     */
   val style: js.UndefOr[js.Object] = js.undefined
 }
@@ -47,7 +41,7 @@ object Loading {
     * @param hideDuration The duration in milliseconds of the fade out effect.
     * @param labelStyle CSS styles for the loading label <code>span</code>.
     * @param showDuration The duration in milliseconds of the fade in effect.
-    * @param style CSS styles for the loading screen that covers the plot area. Defaults to:. <pre>style: {. 	position: 'absolute',. 	backgroundColor: 'white',. 	opacity: 0.5,. 	textAlign: 'center'. }</pre>
+    * @param style CSS styles for the loading screen that covers the plot area.
     */
   def apply(hideDuration: js.UndefOr[Double] = js.undefined, labelStyle: js.UndefOr[js.Object] = js.undefined, showDuration: js.UndefOr[Double] = js.undefined, style: js.UndefOr[js.Object] = js.undefined): Loading = {
     val hideDurationOuter: js.UndefOr[Double] = hideDuration

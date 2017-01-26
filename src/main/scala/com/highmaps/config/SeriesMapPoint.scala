@@ -91,13 +91,13 @@ class SeriesMappoint extends js.Object {
 
   /**
     * An array of objects containing a <code>path</code> definition and optionally a code or property to join in the data as per the <code>joinBy</code> option. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/category-map/" target="_blank">Map data and joinBy</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/category-map/" target="_blank">Map data and joinBy</a>
     */
   val mapData: js.UndefOr[js.Array[js.Object]] = js.undefined
 
   /**
     * The name of the series as shown in the legend, tooltip etc.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/category-map/" target="_blank">Series name</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/category-map/" target="_blank">Series name</a>
     */
   val name: js.UndefOr[String] = js.undefined
 
@@ -105,7 +105,7 @@ class SeriesMappoint extends js.Object {
     * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
     *  <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>,
     *  <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/mapline-mappoint/" target="_blank">Multiple types in the same map</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/mapline-mappoint/" target="_blank">Multiple types in the same map</a>
     */
   val `type`: String = "mappoint"
 }

@@ -17,19 +17,20 @@ class SeriesMaplineDataLabels extends js.Object {
 
   /**
     * The alignment of the data label compared to the point.  If <code>right</code>, the right side of the label should be touching the point. For points with an extent, like map areas, the alignments also dictates how to align it inside the box, as given with the <a href="#plotOptions.column.dataLabels.inside">inside</a> option. Can be one of "left", "center" or "right".
+    * @example <a href="http://jsfiddle.net/highcharts/72sbw0Lz/">Understand alignment to boxes, lines and points</a>.
     */
   val align: js.UndefOr[String] = js.undefined
 
   /**
     * Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the <a href="#plotOptions.series.dataLabels.padding">dataLabels.padding</a> can be set to 0.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/" target="_blank">Don't allow overlap</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/" target="_blank">Don't allow overlap</a>
     * @since 1.1.0
     */
   val allowOverlap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The background color or gradient for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -40,7 +41,7 @@ class SeriesMaplineDataLabels extends js.Object {
 
   /**
     * The border radius in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val borderRadius: js.UndefOr[Double] = js.undefined
 
@@ -50,8 +51,15 @@ class SeriesMaplineDataLabels extends js.Object {
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
+    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
+    * @since 5.0.0
+    */
+  val className: js.UndefOr[String] = js.undefined
+
+  /**
     * The text color for the data labels. Defaults to <code>null</code>. Note that data labels in Highmaps by default have a <code>style.HcTextStroke</code> in order to make the text readable against any background. When the color is changed, it is also recommended to change this.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/color-axis/" target="_blank">White data labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">White data labels</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -62,13 +70,13 @@ class SeriesMaplineDataLabels extends js.Object {
 
   /**
     * Enable or disable the data labels.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/color-axis/" target="_blank">Data labels enabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Data labels enabled</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the data label. Available variables are the same as for <code>formatter</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value in the data label</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value in the data label</a>
     */
   val format: js.UndefOr[String] = js.undefined
 
@@ -87,7 +95,7 @@ class SeriesMaplineDataLabels extends js.Object {
     * through <code>this.series.name</code>.</td>
     * </tr>
     * </tbody></table>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value</a>
     */
   val formatter: js.UndefOr[js.Function] = js.undefined
 
@@ -98,7 +106,7 @@ class SeriesMaplineDataLabels extends js.Object {
 
   /**
     * When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, this		is the padding within the box.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val padding: js.UndefOr[Double] = js.undefined
 
@@ -114,14 +122,14 @@ class SeriesMaplineDataLabels extends js.Object {
 
   /**
     * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations (Highcharts demo)</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations (Highcharts demo)</a>
     * @since 1.1.2
     */
   val shape: js.UndefOr[String] = js.undefined
 
   /**
     * Styles for the label. Note that changes in the text color should be accompanied with changes in <code>HcTextStroke</code> in order for the text to stand out against the background.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/color-axis/" target="_blank">Bold labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Bold labels</a>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
@@ -159,6 +167,7 @@ object SeriesMaplineDataLabels {
     * @param borderColor The border color for the data label. Defaults to <code>undefined</code>.
     * @param borderRadius The border radius in pixels for the data label.
     * @param borderWidth The border width in pixels for the data label.
+    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
     * @param color The text color for the data labels. Defaults to <code>null</code>. Note that data labels in Highmaps by default have a <code>style.HcTextStroke</code> in order to make the text readable against any background. When the color is changed, it is also recommended to change this.
     * @param crop Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the <a href="#plotOptions.series.dataLabels.overflow">overflow</a> option.
     * @param enabled Enable or disable the data labels.
@@ -176,13 +185,14 @@ object SeriesMaplineDataLabels {
     * @param y The y position offset of the label relative to the point. 
     * @param zIndex The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.
     */
-  def apply(align: js.UndefOr[String] = js.undefined, allowOverlap: js.UndefOr[Boolean] = js.undefined, backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderRadius: js.UndefOr[Double] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, crop: js.UndefOr[Boolean] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, format: js.UndefOr[String] = js.undefined, formatter: js.UndefOr[js.Function] = js.undefined, overflow: js.UndefOr[String] = js.undefined, padding: js.UndefOr[Double] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, shape: js.UndefOr[String] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, verticalAlign: js.UndefOr[js.Any] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined): SeriesMaplineDataLabels = {
+  def apply(align: js.UndefOr[String] = js.undefined, allowOverlap: js.UndefOr[Boolean] = js.undefined, backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderRadius: js.UndefOr[Double] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, className: js.UndefOr[String] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, crop: js.UndefOr[Boolean] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, format: js.UndefOr[String] = js.undefined, formatter: js.UndefOr[js.Function] = js.undefined, overflow: js.UndefOr[String] = js.undefined, padding: js.UndefOr[Double] = js.undefined, rotation: js.UndefOr[Double] = js.undefined, shadow: js.UndefOr[Boolean | js.Object] = js.undefined, shape: js.UndefOr[String] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, verticalAlign: js.UndefOr[js.Any] = js.undefined, x: js.UndefOr[Double] = js.undefined, y: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined): SeriesMaplineDataLabels = {
     val alignOuter: js.UndefOr[String] = align
     val allowOverlapOuter: js.UndefOr[Boolean] = allowOverlap
     val backgroundColorOuter: js.UndefOr[String | js.Object] = backgroundColor
     val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
     val borderRadiusOuter: js.UndefOr[Double] = borderRadius
     val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val classNameOuter: js.UndefOr[String] = className
     val colorOuter: js.UndefOr[String | js.Object] = color
     val cropOuter: js.UndefOr[Boolean] = crop
     val enabledOuter: js.UndefOr[Boolean] = enabled
@@ -206,6 +216,7 @@ object SeriesMaplineDataLabels {
       override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
       override val borderRadius: js.UndefOr[Double] = borderRadiusOuter
       override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val className: js.UndefOr[String] = classNameOuter
       override val color: js.UndefOr[String | js.Object] = colorOuter
       override val crop: js.UndefOr[Boolean] = cropOuter
       override val enabled: js.UndefOr[Boolean] = enabledOuter

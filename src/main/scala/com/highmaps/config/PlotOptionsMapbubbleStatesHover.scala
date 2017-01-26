@@ -16,7 +16,7 @@ import com.highcharts.HighchartsUtils._
 class PlotOptionsMapbubbleStatesHover extends js.Object {
 
   /**
-    * The border color of the point in this state
+    * The border color of the point in this state.
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -32,7 +32,7 @@ class PlotOptionsMapbubbleStatesHover extends js.Object {
 
   /**
     * The color of the shape in this state
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-states-hover/" target="_blank">Hover options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/" target="_blank">Hover options</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -44,7 +44,7 @@ class PlotOptionsMapbubbleStatesHover extends js.Object {
 
 object PlotOptionsMapbubbleStatesHover {
   /**
-    * @param borderColor The border color of the point in this state
+    * @param borderColor The border color of the point in this state.
     * @param borderWidth The border width of the point in this state
     * @param brightness The relative brightness of the point when hovered, relative to the normal point color.
     * @param color The color of the shape in this state
