@@ -29,7 +29,7 @@ class ResponsiveRulesCondition extends js.Object {
 
   /**
     * The responsive rule applies if the chart width is less than this.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">Max width is 500</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">Max width is 500</a>
     * @since 5.0.0
     */
   val maxWidth: js.UndefOr[Double] = js.undefined

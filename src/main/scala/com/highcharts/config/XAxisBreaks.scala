@@ -29,7 +29,7 @@ class XAxisBreaks extends js.Object {
 
   /**
     * Defines an interval after which the break appears again. By default the breaks do not repeat.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-repeated/">Repeated Break</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-repeated/">Repeated Break</a>
     * @since 4.1.0
     */
   val repeat: js.UndefOr[Double] = js.undefined

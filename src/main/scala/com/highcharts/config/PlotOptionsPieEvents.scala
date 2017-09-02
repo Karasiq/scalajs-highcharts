@@ -17,27 +17,27 @@ class PlotOptionsPieEvents extends js.Object {
 
   /**
     * Fires after the series has finished its initial animation, or in case animation is disabled, immediately as the series is displayed.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/" target="_blank">Show label after animate</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/" target="_blank">Show label after animate</a>
     * @since 4.0
     */
   val afterAnimate: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the checkbox next to the point name in the legend is clicked. One parameter, event, is passed to the function. The state of the checkbox is found by event.checked. The checked item is found by event.item. Return false to prevent the default action which is to toggle the select state of the series.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/" target="_blank">Alert checkbox status</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-checkboxclick/" target="_blank">Alert checkbox status</a>
     * @since 1.2.0
     */
   val checkboxClick: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the series is clicked. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts. Additionally, <code>event.point</code> holds a pointer to the nearest point on the graph.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-click/" target="_blank">Alert click info</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-click/" target="_blank">Alert click info</a>
     */
   val click: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the series is hidden after chart generation time, either by clicking the legend item or by calling <code>.hide()</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/" target="_blank">Alert when the series is hidden by clicking 
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-hide/" target="_blank">Alert when the series is hidden by clicking 
 			the legend item</a>
     * @since 1.2.0
     */
@@ -51,23 +51,23 @@ class PlotOptionsPieEvents extends js.Object {
 
   /**
     * Fires when the mouse leaves the graph. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts. If the  <a class="internal" href="#plotOptions.series">stickyTracking</a> option is true, <code>mouseOut</code> doesn't happen before the mouse enters another graph or leaves the plot area.
-    * @example Log mouse over and out <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-sticky/" target="_blank">with sticky tracking
+    * @example Log mouse over and out <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-sticky/" target="_blank">with sticky tracking
 			by default</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-no-sticky/" target="_blank">without sticky tracking</a>
+			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-no-sticky/" target="_blank">without sticky tracking</a>
     */
   val mouseOut: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the mouse enters the graph. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.
-    * @example Log mouse over and out <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-sticky/" target="_blank">with sticky tracking
+    * @example Log mouse over and out <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-sticky/" target="_blank">with sticky tracking
 			by default</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-no-sticky/" target="_blank">without sticky tracking</a>
+			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-mouseover-no-sticky/" target="_blank">without sticky tracking</a>
     */
   val mouseOver: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the series is shown after chart generation time, either by clicking the legend item or by calling <code>.show()</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/" target="_blank">Alert when the series is shown by clicking 
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-show/" target="_blank">Alert when the series is shown by clicking 
 			the legend item.</a>
     * @since 1.2.0
     */

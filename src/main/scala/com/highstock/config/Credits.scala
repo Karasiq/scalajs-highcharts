@@ -17,7 +17,7 @@ class Credits extends js.Object {
 
   /**
     * Whether to show the credits text.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/credits/enabled/" target="_blank">Credits disabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/credits/enabled/" target="_blank">Credits disabled</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 

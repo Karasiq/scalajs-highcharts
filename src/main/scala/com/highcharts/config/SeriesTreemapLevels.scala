@@ -61,7 +61,7 @@ class SeriesTreemapLevels extends js.Object {
 
   /**
     * Decides which level takes effect from the options set in the levels object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling of both levels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/" target="_blank">Styling of both levels</a>
     * @since 4.1.0
     */
   val level: js.UndefOr[Double] = js.undefined

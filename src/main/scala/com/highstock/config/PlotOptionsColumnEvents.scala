@@ -17,7 +17,7 @@ class PlotOptionsColumnEvents extends js.Object {
 
   /**
     * Fires after the series has finished its initial animation, or in case animation is disabled, immediately as the series is displayed.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/" target="_blank">Show label after animate</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-events-afteranimate/" target="_blank">Show label after animate</a>
     * @since 2.0
     */
   val afterAnimate: js.UndefOr[js.Function] = js.undefined
@@ -29,7 +29,7 @@ class PlotOptionsColumnEvents extends js.Object {
 
   /**
     * Fires when the series is clicked. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts. Additionally, <code>event.point</code> holds a pointer to the nearest point on the graph.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-events-click/" target="_blank">Alert click info</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-events-click/" target="_blank">Alert click info</a>
     */
   val click: js.UndefOr[js.Function] = js.undefined
 

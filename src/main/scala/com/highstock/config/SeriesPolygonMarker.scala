@@ -17,7 +17,7 @@ class SeriesPolygonMarker extends js.Object {
 
   /**
     * Enable or disable the point marker. If <code>null</code>, the markers are hidden when the data is dense, and shown for more widespread data points.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-marker/" target="_blank">Enabled markers</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-marker/" target="_blank">Enabled markers</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
@@ -28,7 +28,7 @@ class SeriesPolygonMarker extends js.Object {
 
   /**
     * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/" target="_blank">Fixed width and height</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/" target="_blank">Fixed width and height</a>
     * @since 2.0.4
     */
   val height: js.UndefOr[Double] = js.undefined
@@ -56,13 +56,13 @@ class SeriesPolygonMarker extends js.Object {
     * <p>Additionally, the URL to a graphic can be given on this form:  "url(graphic.png)". Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server.</p>
     * 
     * <p>Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code>. The callback is then used by its method name, as shown in the demo.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-symbol/" target="_blank">Predefined, graphic and custom markers</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-symbol/" target="_blank">Predefined, graphic and custom markers</a>
     */
   val symbol: js.UndefOr[String] = js.undefined
 
   /**
     * Image markers only. Set the image width explicitly. When using this option, a <code>height</code> must also be set.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/" target="_blank">Fixed width and height</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/" target="_blank">Fixed width and height</a>
     * @since 2.0.4
     */
   val width: js.UndefOr[Double] = js.undefined

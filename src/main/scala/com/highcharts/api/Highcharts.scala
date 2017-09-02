@@ -31,7 +31,7 @@ trait Highcharts extends js.Object {
 
   /**
     * A hook for defining additional date format specifiers. New specifiers are defined as key-value pairs by using the specifier as key, and a function which takes the timestamp as value. This function returns the formatted portion of the date.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/dateformats/" target="_blank">Adding support for week number</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/dateformats/" target="_blank">Adding support for week number</a>
     * @since 3.0
     */
   val dateFormats: js.Any = js.native
@@ -39,7 +39,7 @@ trait Highcharts extends js.Object {
   /**
     * Sets the options globally for all charts created after this has been called. Takes an options JavaScript object structure as the argument. These options are merged with the default options and the result is returned.
     * @param options The chart configuration object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-false/" target="_blank">Setting a global option</a>,<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/setoptions/" target="_blank">applying a general theme</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-false/" target="_blank">Setting a global option</a>,<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/setoptions/" target="_blank">applying a general theme</a>
     */
   def setOptions(options: js.Object = ???): js.Object = js.native
 
@@ -49,7 +49,7 @@ trait Highcharts extends js.Object {
     * @param decimals The desired number of decimals.
     * @param decimalPoint The decimal point. Defaults to "." or to the string specified globally in options.lang.decimalPoint.
     * @param thousandsSep The thousands separator. Defaults to " " or to the string specified globally in options.lang.thousandsSep.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
     */
   def numberFormat(number: Double = ???, decimals: Double = ???, decimalPoint: String = ???, thousandsSep: String = ???): String = js.native
 
@@ -66,7 +66,7 @@ trait Highcharts extends js.Object {
 
   /**
     * The error handler function. By default is provides error messages for debugging, with links to the descriptions on Highcharts website. This function can be redefined to catch errors in client applications.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
     * @since 5.0.6
     */
   def error(code: Double | String = ???, fatal: Boolean = ???): Unit = js.native

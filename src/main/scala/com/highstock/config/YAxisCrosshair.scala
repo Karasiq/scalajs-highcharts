@@ -23,14 +23,14 @@ class YAxisCrosshair extends js.Object {
 
   /**
     * The color of the crosshair.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
     * @since 2.1
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash style for the crosshair. See <a href="#plotOptions.series.dashStyle">series.dashStyle</a> for possible values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/" target="_blank">Dashed X axis crosshair</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-dashed/" target="_blank">Dashed X axis crosshair</a>
     * @since 2.1
     */
   val dashStyle: js.UndefOr[String] = js.undefined
@@ -39,23 +39,23 @@ class YAxisCrosshair extends js.Object {
     * <p>A label on the axis next to the crosshair.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the label is styled with the <code>.highcharts-crosshair-label</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-label/" target="_blank">Crosshair labels</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/crosshair-label/" target="_blank">Crosshair labels</a>.
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/crosshair-label/" target="_blank">Style mode</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/crosshair-label/" target="_blank">Style mode</a>.
     * @since 2.1
     */
   val label: js.UndefOr[CleanJsObject[YAxisCrosshairLabel]] = js.undefined
 
   /**
     * Whether the crosshair should snap to the point or follow the pointer independent of points.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/" target="_blank">True by default</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-snap-false/" target="_blank">True by default</a>
     * @since 2.1
     */
   val snap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The pixel width of the crosshair.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
     * @since 2.1
     */
   val width: js.UndefOr[Double] = js.undefined

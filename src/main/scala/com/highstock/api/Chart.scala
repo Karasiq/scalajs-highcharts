@@ -24,15 +24,9 @@ trait Chart extends js.Object {
 <code>type</code>: the MIME type of the converted image, 
 <code>sourceWidth</code>: the width of the source (in-page) chart, 
 <code>sourceHeight</code>: the height of the source chart.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-exportchart/" target="_blank">Export chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-exportchart/" target="_blank">Export chart</a>
     */
   def exportChart(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
-
-  /**
-    * Get an axis, series or point by its <code>id</code> as given in the configuration options.
-    * @param id The id of the axis, series or point to get.
-    */
-  def get(id: String = ???): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
 
   /**
     * Exporting module required. Get an SVG string representing the chart.
@@ -42,7 +36,7 @@ trait Chart extends js.Object {
 
   /**
     * Removes the chart and purges memory. This method should be called before writing a new chart into the same container. It is called internally on window unload to prevent leaks.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-destroy/" target="_blank">Destroy the chart from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-destroy/" target="_blank">Destroy the chart from a button</a>
     */
   def destroy(): Unit = js.native
 
@@ -76,13 +70,13 @@ trait Chart extends js.Object {
 
   /**
     * Exporting module required. Clears away other elements in the page and prints the chart as it is displayed. By default, when the exporting module is enabled, a button at the upper right calls this method.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/chart-print/" target="_blank">Print from a HTML button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-print/" target="_blank">Print from a HTML button</a>
     */
   def print(): Unit = js.native
 
   /**
     * Dim the chart's plot area and show a loading label text. Options for the loading screen are defined at <a class="internal" href="#loading">options.loading</a>. A custom text can be given as a parameter for loading.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-show-hide-loading/" target="_blank">Show and hide loading from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-show-hide-loading/" target="_blank">Show and hide loading from a button</a>
     */
   def showLoading(str: String = ???): Unit = js.native
 
@@ -98,7 +92,7 @@ trait Chart extends js.Object {
 
   /**
     * Hide the loading screen. Options for the loading screen are defined at <a class="internal" href="#loading">options.loading</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-show-hide-loading/" target="_blank">Show and hide loading from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-show-hide-loading/" target="_blank">Show and hide loading from a button</a>
     */
   def hideLoading(): Unit = js.native
 
@@ -109,7 +103,7 @@ trait Chart extends js.Object {
 
   /**
     * Reflows the chart to its container. By default, the chart reflows automatically to its container following a <code>window.resize</code> event, as per the <a href="#chart.reflow">chart.reflow</a> option. However, there are no reliable events for div resize, so if the container is resized without a window resize event, this must be called explicitly. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/chart-reflow/" target="_blank">Resize div and reflow</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">pop up and reflow</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-reflow/" target="_blank">Resize div and reflow</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">pop up and reflow</a>
     */
   def reflow(): Unit = js.native
 
@@ -125,10 +119,10 @@ trait Chart extends js.Object {
   def exportChartLocal(options: js.Object = ???, chartOptions: js.Object = ???): Unit = js.native
 
   /**
-    * Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initiated, add the series as a configuration option instead. In a StockChart with the navigator enabled, the base series can't be added dynamically. With multiple axes, the <a href="/highcharts#xAxis.offset">offset</a> is dynamically adjusted
+    * Add a series to the chart after render time. Note that this method should never be used when adding data synchronously at chart render time, as it adds expense to the calculations and rendering. When adding data at the same time as the chart is initialized, add the series as a configuration option instead. In a StockChart with the navigator enabled, the base series can't be added dynamically. With multiple axes, the <a href="/highcharts#xAxis.offset">offset</a> is dynamically adjusted
     * @param options The series options, as documented under <a class="internal" href="#plotOptions.series">plotOptions.series</a> and under the plotOptions for each series type.
     * @param animation Defaults to true. When true, the series' updating will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-addseries/" target="_blank">Add series from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-addseries/" target="_blank">Add series from a button</a>
     */
   def addSeries(options: js.Object = ???, redraw: Boolean = ???, animation: js.Any = ???): CleanJsObject[Series] = js.native
 
@@ -136,13 +130,13 @@ trait Chart extends js.Object {
     * Resize the chart to a given width and height. In order to set the width only, the height argument can be skipped. To set the height only, pass <code>undefined</code> for the width.
     * @param width 
 The new pixel width of the chart. Since v4.2.6, the argument can be <code>undefined</code> in order to preserve the current value (when setting height only), or <code>null</code> to adapt to the width of the containing element.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/members/chart-setsize/" target="_blank">Set the size from a jQuery UI resizable</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/members/chart-setsize/" target="_blank">Set the size from a jQuery UI resizable</a>
     */
   def setSize(width: Double = ???, height: Double = ???, animation: js.Any = ???): Unit = js.native
 
   /**
     * The chart title. The title has an <code>update</code> method that points back to <a href="#Chart.setTitle">Chart.setTitle</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/title-update/" target="_blank">Updating titles</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/title-update/" target="_blank">Updating titles</a>.
     * @since 5.0.0
     */
   val title: js.Any = js.native
@@ -150,28 +144,34 @@ The new pixel width of the chart. Since v4.2.6, the argument can be <code>undefi
   /**
     * Set a new credits label for the chart.
     * @param options A configuration object for the credits as defined at <a class="internal" href="#credits">credits</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
     * @since 5.0.0
     */
   def addCredits(options: js.Object = ???): Unit = js.native
 
   /**
+    * The chart's credits label. The label has an <code>update</code> method that allows setting new options as per <a href="#credits">the credits option set</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
+    * @since 5.0.0
+    */
+  val credits: js.Any = js.native
+
+  /**
+    * Get an axis, series or point by its <code>id</code> as given in the configuration options. Returns <code>undefined</code> if no item is found.
+    * @param id The id of the axis, series or point to get.
+    */
+  def get(id: String = ???): CleanJsObject[Axis] | CleanJsObject[Series] | CleanJsObject[Point] = js.native
+
+  /**
     * <p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
-    * <p>A special case is configuration objects that take arrays, for example <a href="#xAxis">xAxis</a>, <a href="#yAxis">yAxis</a> or <a href="#series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same <code>id</code> is not found, the first item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart's first series to be updated.</p>
+    * <p>A special case is configuration objects that take arrays, for example <a href="#xAxis">xAxis</a>, <a href="#yAxis">yAxis</a> or <a href="#series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same <code>id</code> is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart's series with the same index in the series array to be updated.</p>
     * <p>See also <a href="#responsive">the responsive option set</a>. Switching between <a href="#responsive.rules">responsive.rules</a> basically runs <code>chart.update</code> under the hood.</p>
     * @param options A configuration object for the new chart options as defined in the <em>options</em> section of the API.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/" target="_blank">Update chart geometry</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/" target="_blank">Update chart geometry</a>.
 
 
 
     * @since 5.0.0
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
-
-  /**
-    * The chart's credits label. The label has an <code>update</code> method that allows setting new options as per <a href="#credits">the credits option set</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/credits-update/" target="_blank">Add and update credits</a>.
-    * @since 5.0.0
-    */
-  val credits: js.Any = js.native
 }

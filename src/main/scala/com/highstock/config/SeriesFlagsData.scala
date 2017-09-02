@@ -23,7 +23,7 @@ class SeriesFlagsData extends js.Object {
   /**
     * <p><i>Requires Accessibility module</i></p>
     * <p>A description of the point to add to the screen reader information about the point.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/">Accessible map</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/">Accessible map</a>
     * @since 5.0.0
     */
   val description: js.UndefOr[String] = js.undefined

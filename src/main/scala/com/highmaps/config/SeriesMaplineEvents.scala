@@ -22,7 +22,7 @@ class SeriesMaplineEvents extends js.Object {
 
   /**
     * Fires when the series is clicked. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts. Additionally, <code>event.point</code> holds a pointer to the nearest point on the graph.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-events-click/" target="_blank">Display click info in subtitle</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-events-click/" target="_blank">Display click info in subtitle</a>
     */
   val click: js.UndefOr[js.Function] = js.undefined
 

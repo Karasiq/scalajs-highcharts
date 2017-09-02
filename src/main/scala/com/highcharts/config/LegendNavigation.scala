@@ -17,7 +17,7 @@ class LegendNavigation extends js.Object {
 
   /**
     * The color for the active up or down arrow in the legend page navigation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
@@ -25,7 +25,7 @@ class LegendNavigation extends js.Object {
 
   /**
     * How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  .
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
@@ -33,7 +33,7 @@ class LegendNavigation extends js.Object {
 
   /**
     * The pixel size of the up and down arrows in the legend paging navigation.  .
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
@@ -49,7 +49,7 @@ class LegendNavigation extends js.Object {
 
   /**
     * The color of the inactive up or down arrow in the legend page navigation.  .
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */
@@ -57,7 +57,7 @@ class LegendNavigation extends js.Object {
 
   /**
     * Text styles for the legend page navigation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/" target="_blank">
 				Legend page navigation demonstrated</a>
     * @since 2.2.4
     */

@@ -17,7 +17,7 @@ class PlotOptionsCandlestickZones extends js.Object {
 
   /**
     * <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">Styled mode</a> only. A custom class name for the zone.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/" target="_blank">Zones styled by class name</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/" target="_blank">Zones styled by class name</a>.
     * @since 5.0.0
     */
   val className: js.UndefOr[String] = js.undefined
@@ -30,7 +30,7 @@ class PlotOptionsCandlestickZones extends js.Object {
 
   /**
     * A name for the dash style to use for the graph.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/" target="_blank">Dashed line indicates prognosis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/" target="_blank">Dashed line indicates prognosis</a>
     * @since 2.1.0
     */
   val dashStyle: js.UndefOr[String] = js.undefined

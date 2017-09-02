@@ -17,7 +17,7 @@ class MapNavigation extends js.Object {
 
   /**
     * General options for the map navigation buttons. Individual options can be given from the <a href="#mapNavigation.buttons">mapNavigation.buttons</a> option set.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/" target="_blank">Theming the navigation buttons</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/" target="_blank">Theming the navigation buttons</a>
     */
   val buttonOptions: js.UndefOr[CleanJsObject[MapNavigationButtonOptions]] = js.undefined
 
@@ -38,7 +38,7 @@ class MapNavigation extends js.Object {
 
   /**
     * Whether to zoom in on an area when that area is double clicked.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/mapnavigation/doubleclickzoomto/" target="_blank">Enable double click zoom to</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/doubleclickzoomto/" target="_blank">Enable double click zoom to</a>
     */
   val enableDoubleClickZoomTo: js.UndefOr[Boolean] = js.undefined
 

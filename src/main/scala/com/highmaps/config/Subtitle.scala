@@ -29,7 +29,7 @@ class Subtitle extends js.Object {
     * <p>CSS styles for the title.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the subtitle style is given in the <code>.highcharts-subtitle</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/titles/" target="_blank">Styled mode</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/" target="_blank">Styled mode</a>.
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
@@ -50,7 +50,7 @@ class Subtitle extends js.Object {
 
   /**
     * Adjustment made to the subtitle width, normally to reserve space for the exporting burger menu.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/" target="_blank">Wider menu, greater padding</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/" target="_blank">Wider menu, greater padding</a>
     * @since 4.2.5
     */
   val widthAdjust: js.UndefOr[Double] = js.undefined

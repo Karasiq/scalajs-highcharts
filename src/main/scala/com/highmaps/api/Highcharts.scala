@@ -26,7 +26,7 @@ trait Highcharts extends js.Object {
   /**
     * Sets the options globally for all charts created after this has been called. Takes an options JavaScript object structure as the argument. These options are merged with the default options and the result is returned.
     * @param options The chart configuration object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/setoptions/" target="_blank">Apply a general theme</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/setoptions/" target="_blank">Apply a general theme</a>
     */
   def setOptions(options: js.Object = ???): js.Object = js.native
 
@@ -34,7 +34,7 @@ trait Highcharts extends js.Object {
     * Restructure a GeoJSON object in preparation to be read directly by the <a href="#series.mapData">series.mapData</a> option. The GeoJSON will be broken down to fit a specific Highcharts type, either <code>map</code>, <code>mapline</code> or <code>mappoint</code>. Meta data in GeoJSON's <code>properties</code> object will be copied directly over to <code>point.properties</code> in Highmaps.
     * @param geojson 
 The GeoJSON structure to parse, represented as a JavaScript object rather than a JSON string.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/geojson/" target="_blank">Simple areas</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/geojson-multiple-types/" target="_blank">multiple types</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/geojson/" target="_blank">Simple areas</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/geojson-multiple-types/" target="_blank">multiple types</a>
     */
   def geojson(geojson: js.Object = ???, hType: String = ???): js.Object = js.native
 
@@ -49,7 +49,7 @@ The GeoJSON structure to parse, represented as a JavaScript object rather than a
     * @param decimals The desired number of decimals.
     * @param decimalPoint The decimal point. Defaults to "." or to the string specified globally in options.lang.decimalPoint.
     * @param thousandsSep The thousands separator. Defaults to " " or to the string specified globally in options.lang.thousandsSep.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
     */
   def numberFormat(number: Double = ???, decimals: Double = ???, decimalPoint: String = ???, thousandsSep: String = ???): String = js.native
 
@@ -77,7 +77,7 @@ The GeoJSON structure to parse, represented as a JavaScript object rather than a
 
   /**
     * The error handler function. By default is provides error messages for debugging, with links to the descriptions on Highcharts website. This function can be redefined to catch errors in client applications.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
     * @since 5.0.6
     */
   def error(code: Double | String = ???, fatal: Boolean = ???): Unit = js.native

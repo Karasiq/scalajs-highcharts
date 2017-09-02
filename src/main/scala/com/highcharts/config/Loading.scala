@@ -17,28 +17,28 @@ class Loading extends js.Object {
 
   /**
     * The duration in milliseconds of the fade out effect.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
     * @since 1.2.0
     */
   val hideDuration: js.UndefOr[Double] = js.undefined
 
   /**
     * CSS styles for the loading label <code>span</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/" target="_blank">Vertically centered</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/labelstyle/" target="_blank">Vertically centered</a>
     * @since 1.2.0
     */
   val labelStyle: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The duration in milliseconds of the fade in effect.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/hideduration/" target="_blank">Fade in and out over a second</a>
     * @since 1.2.0
     */
   val showDuration: js.UndefOr[Double] = js.undefined
 
   /**
     * CSS styles for the loading screen that covers the plot area.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/loading/style/" target="_blank">Gray plot area, white text</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/loading/style/" target="_blank">Gray plot area, white text</a>
     * @since 1.2.0
     */
   val style: js.UndefOr[js.Object] = js.undefined

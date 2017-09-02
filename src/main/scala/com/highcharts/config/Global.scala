@@ -39,7 +39,7 @@ class Global extends js.Object {
 
   /**
     * A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries. 
-    * @example  <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/" target="_blank">Use moment.js to draw Oslo time regardless of browser locale</a>
+    * @example  <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/" target="_blank">Use moment.js to draw Oslo time regardless of browser locale</a>
     * @since 4.1.0
     */
   val getTimezoneOffset: js.UndefOr[js.Function] = js.undefined
@@ -53,16 +53,16 @@ class Global extends js.Object {
 
   /**
     * The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset">getTimezoneOffset</a> method. Use this to display UTC based data in a predefined time zone. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/timezoneoffset/" target="_blank">Timezone offset</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/timezoneoffset/" target="_blank">Timezone offset</a>
     * @since 3.0.8
     */
   val timezoneOffset: js.UndefOr[Double] = js.undefined
 
   /**
     * Whether to use UTC time for axis scaling, tickmark placement and time display in  <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent's time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-true/" target="_blank">True by default</a> - the starting point which is 
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-true/" target="_blank">True by default</a> - the starting point which is 
 			at 00:00 UTC, is displayed as 00:00 in the axis labels and in the tooltip. 
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-false/" target="_blank">False</a> - the starting point which is 
+			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/useutc-false/" target="_blank">False</a> - the starting point which is 
 			at 00:00 UTC, is displayed as your local browser time in the axis labels and in 
 			the tooltip.
     */

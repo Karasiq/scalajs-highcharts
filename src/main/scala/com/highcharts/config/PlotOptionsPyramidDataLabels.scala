@@ -17,42 +17,42 @@ class PlotOptionsPyramidDataLabels extends js.Object {
 
   /**
     * The background color or gradient for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border color for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The border radius in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderRadius: js.UndefOr[Double] = js.undefined
 
   /**
     * The border width in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
-    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
+    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
     * @since 5.0.0
     */
   val className: js.UndefOr[String] = js.undefined
 
   /**
     * The text color for the data labels. Defaults to <code>null</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/" target="_blank">Red data labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-color/" target="_blank">Red data labels</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -60,16 +60,16 @@ class PlotOptionsPyramidDataLabels extends js.Object {
     * <p>The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/" target="_blank">Blue connectors</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorcolor/" target="_blank">Blue connectors</a>.
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
     * @since 2.1
     */
   val connectorColor: js.UndefOr[String] = js.undefined
 
   /**
     * The distance from the data label to the connector.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/" target="_blank">No padding</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorpadding/" target="_blank">No padding</a>
     * @since 2.1
     */
   val connectorPadding: js.UndefOr[Double] = js.undefined
@@ -78,10 +78,10 @@ class PlotOptionsPyramidDataLabels extends js.Object {
     * <p>The width of the line connecting the data label to the pie slice.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke width is given in the <code>.highcharts-data-label-connector</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/" target="_blank">Disable the connector</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-connectorwidth-disabled/" target="_blank">Disable the connector</a>.
 
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pie-point/" target="_blank">Styled connectors</a>.
     * @since 2.1
     */
   val connectorWidth: js.UndefOr[Double] = js.undefined
@@ -100,7 +100,7 @@ class PlotOptionsPyramidDataLabels extends js.Object {
 
   /**
     * The distance of the data label from the pie's edge. Negative numbers put the data label on top of the pie slices. Connectors are only shown for data labels outside the pie.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/" target="_blank">Data labels on top of the pie</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-distance/" target="_blank">Data labels on top of the pie</a>
     * @since 2.1
     */
   val distance: js.UndefOr[Double] = js.undefined
@@ -113,7 +113,7 @@ class PlotOptionsPyramidDataLabels extends js.Object {
 
   /**
     * A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the data label. Available variables are the same as for <code>formatter</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/" target="_blank">Add a unit</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/" target="_blank">Add a unit</a>
     * @since 3.0
     */
   val format: js.UndefOr[String] = js.undefined
@@ -165,42 +165,42 @@ class PlotOptionsPyramidDataLabels extends js.Object {
 
   /**
     * When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, this		is the padding within the box.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val padding: js.UndefOr[Double] = js.undefined
 
   /**
     * Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical labels</a>
     */
   val rotation: js.UndefOr[Double] = js.undefined
 
   /**
     * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     * @since 2.2.1
     */
   val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
     * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations</a>
     * @since 4.1.2
     */
   val shape: js.UndefOr[String] = js.undefined
 
   /**
     * Whether to render the connector as a soft arc or a line with sharp break.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/" target="_blank">Soft</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/" target="_blank">non soft</a> connectors.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-true/" target="_blank">Soft</a>,
+			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/" target="_blank">non soft</a> connectors.
     * @since 2.1.7
     */
   val softConnector: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * Styles for the label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/" target="_blank">Bold labels</a>
+    * Styles for the label. The default <code>color</code> setting is <code>"contrast"</code>, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the bar in a bar chart. The <code>textOutline</code> is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn't work well, in which cases it can be disabled by setting it to <code>"none"</code>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-style/" target="_blank">Bold labels</a>
     * @since 4.1.0
     */
   val style: js.UndefOr[js.Object] = js.undefined
@@ -218,13 +218,13 @@ class PlotOptionsPyramidDataLabels extends js.Object {
 
   /**
     * The x position offset of the label relative to the point. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * The y position offset of the label relative to the point. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/" target="_blank">Vertical and positioned</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 
@@ -241,7 +241,7 @@ object PlotOptionsPyramidDataLabels {
     * @param borderColor The border color for the data label. Defaults to <code>undefined</code>.
     * @param borderRadius The border radius in pixels for the data label.
     * @param borderWidth The border width in pixels for the data label.
-    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
     * @param color The text color for the data labels. Defaults to <code>null</code>.
     * @param connectorColor <p>The color of the line connecting the data label to the pie slice. The default color is the same as the point's color.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the connector stroke is given in the <code>.highcharts-data-label-connector</code> class.</p>
     * @param connectorPadding The distance from the data label to the connector.
@@ -259,7 +259,7 @@ object PlotOptionsPyramidDataLabels {
     * @param shadow The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @param shape The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
     * @param softConnector Whether to render the connector as a soft arc or a line with sharp break.
-    * @param style Styles for the label.
+    * @param style Styles for the label. The default <code>color</code> setting is <code>"contrast"</code>, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the bar in a bar chart. The <code>textOutline</code> is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn't work well, in which cases it can be disabled by setting it to <code>"none"</code>.
     * @param useHTML Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the labels.
     * @param verticalAlign The vertical alignment of a data label. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. The default value depends on the data, for instance in a column chart, the label is above positive values and below negative values.
     * @param x The x position offset of the label relative to the point. 

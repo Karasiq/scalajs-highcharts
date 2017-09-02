@@ -17,7 +17,7 @@ class ZAxisEvents extends js.Object {
 
   /**
     * An event fired after the breaks have rendered.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event//" target="_blank">afterBreak Event</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-event//" target="_blank">afterBreak Event</a>
     * @since 4.1.0
     */
   val afterBreaks: js.UndefOr[js.Function] = js.undefined
@@ -34,7 +34,7 @@ class ZAxisEvents extends js.Object {
 
   /**
     * An event fired when a break from this axis occurs on a point.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/" target="_blank">Visualization of a Break</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/" target="_blank">Visualization of a Break</a>
     * @since 4.1.0
     */
   val pointBreak: js.UndefOr[js.Function] = js.undefined

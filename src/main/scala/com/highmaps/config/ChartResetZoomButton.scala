@@ -17,7 +17,7 @@ class ChartResetZoomButton extends js.Object {
 
   /**
     * The position of the button.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/" target="_blank">Above the plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/" target="_blank">Above the plot area</a>
     * @since 2.2
     */
   val position: js.UndefOr[CleanJsObject[ChartResetZoomButtonPosition]] = js.undefined

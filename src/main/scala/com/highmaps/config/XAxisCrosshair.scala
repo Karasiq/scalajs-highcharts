@@ -23,28 +23,28 @@ class XAxisCrosshair extends js.Object {
 
   /**
     * The color of the crosshair.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
     * @since 1.1
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The dash style for the crosshair. See <a href="#plotOptions.series.dashStyle">series.dashStyle</a> for possible values.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/" target="_blank">Dotted crosshair</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-dotted/" target="_blank">Dotted crosshair</a>
     * @since 1.1
     */
   val dashStyle: js.UndefOr[String] = js.undefined
 
   /**
     * Whether the crosshair should snap to the point or follow the pointer independent of points.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/" target="_blank">Snap is false</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/latlon-advanced/" target="_blank">Snap is false</a>
     * @since 1.1
     */
   val snap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The pixel width of the crosshair. Defaults to 1 for numeric or datetime axes, and for one category width for category axes.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-customized/" target="_blank">Customized crosshairs</a>.
     * @since 1.1
     */
   val width: js.UndefOr[Double] = js.undefined

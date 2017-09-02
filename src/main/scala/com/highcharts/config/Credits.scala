@@ -17,19 +17,19 @@ class Credits extends js.Object {
 
   /**
     * Whether to show the credits text.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/" target="_blank">Credits disabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/enabled-false/" target="_blank">Credits disabled</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The URL for the credits label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
     */
   val href: js.UndefOr[String] = js.undefined
 
   /**
     * Position configuration for the credits label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/" target="_blank">Left aligned</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/position-left/" target="_blank">Left aligned</a>
     * @since 2.1
     */
   val position: js.UndefOr[CleanJsObject[CreditsPosition]] = js.undefined
@@ -41,7 +41,7 @@ class Credits extends js.Object {
 
   /**
     * The text for the credits label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/credits/href/" target="_blank">Custom URL and text</a>
     */
   val text: js.UndefOr[String] = js.undefined
 }

@@ -73,7 +73,7 @@ class HighmapsConfig extends js.Object {
     * <p>Options for drill down, the concept of inspecting increasingly high resolution data through clicking on chart items like columns or pie slices.</p>
     * 
     * <p>The drilldown feature requires the <code>drilldown.js</code> file to be loaded, found in the <code>modules</code> directory of the download package, or online at <a href="http://code.highcharts.com/modules/drilldown.js">code.highcharts.com/modules/drilldown.js</a>.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/map-drilldown/" target="_blank">Map drilldown</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/map-drilldown/" target="_blank">Map drilldown</a>
     */
   val drilldown: js.UndefOr[CleanJsObject[Drilldown]] = js.undefined
 
@@ -154,20 +154,20 @@ class HighmapsConfig extends js.Object {
 
   /**
     * Allows setting a set of rules to apply for different screen or chart sizes. Each rule specifies additional chart options.
-    * @example Responsive <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">axis</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/" target="_blank">legend</a> and <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/" target="_blank">class name</a>.
+    * @example Responsive <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">axis</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/legend/" target="_blank">legend</a> and <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/classname/" target="_blank">class name</a>.
     * @since 5.0.0
     */
   val responsive: js.UndefOr[CleanJsObject[Responsive]] = js.undefined
 
   /**
     * The chart's subtitle. This can be used both to display a subtitle below the main title, and to display random text anywhere in the chart. The subtitle can be updated after chart initialization through the <code>Chart.setTitle()</code> method.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/title/subtitle/" target="_blank">Subtitle options demonstrated</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/title/subtitle/" target="_blank">Subtitle options demonstrated</a>
     */
   val subtitle: js.UndefOr[CleanJsObject[Subtitle]] = js.undefined
 
   /**
     * The chart's main title.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/title/title/" target="_blank">Title options demonstrated</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/title/title/" target="_blank">Title options demonstrated</a>
     */
   val title: js.UndefOr[CleanJsObject[Title]] = js.undefined
 

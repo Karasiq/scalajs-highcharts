@@ -22,7 +22,7 @@ class Loading extends js.Object {
 
   /**
     * CSS styles for the loading label <code>span</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Label styles</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Label styles</a>
     */
   val labelStyle: js.UndefOr[js.Object] = js.undefined
 
@@ -33,7 +33,7 @@ class Loading extends js.Object {
 
   /**
     * CSS styles for the loading screen that covers the plot area.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Gray plot area, white text</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/loading/general/" target="_blank">Gray plot area, white text</a>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 }

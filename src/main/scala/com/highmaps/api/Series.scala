@@ -35,7 +35,7 @@ trait Series extends js.Object {
   /**
     * Select or unselect the series. This means its <code>selected</code> property is set,the checkbox in the legend is toggled and when selected, the series is returned in the <code>chart.getSelectedSeries()</code> method.
     */
-  def select(`selected|null`: Boolean = ???): Unit = js.native
+  def select(selected: Boolean = ???): Unit = js.native
 
   /**
     * Remove the series from the chart.
@@ -45,7 +45,7 @@ trait Series extends js.Object {
 
   /**
     * Add a point to the series after render time.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/series-addpoint/" target="_blank">Add point</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/series-addpoint/" target="_blank">Add point</a>
     */
   def addPoint(options: js.Object = ???, redraw: Boolean = ???, shift: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
@@ -98,9 +98,9 @@ trait Series extends js.Object {
     * <p>Apply a new set of data to the series and optionally redraw it. The new data array is passed by reference (except in case of <code>updatePoints</code>), and may later be mutated when updating the chart data.</p>
     * 
     * <p>Note the difference in behaviour when setting the same amount of points, or a different amount of points, as handled by the <code>updatePoints</code> parameter. </p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/series-setdata/" target="_blank">Set new data from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/series-setdata/" target="_blank">Set new data from a button</a>
     */
-  def setData(data: js.Any = ???, redraw: Boolean = ???, animation: js.Any = ???, updatePoints: Boolean = ???): Unit = js.native
+  def setData(data: js.Array[js.Any] = ???, redraw: Boolean = ???, animation: js.Any = ???, updatePoints: Boolean = ???): Unit = js.native
 
   /**
     * Update the series with a new set of options. For a clean and precise handling of new options, all methods and elements from the series are removed, and it is initiated from scratch. Therefore, this method is more performance expensive than some other utility methods like <code>setData</code> or <code>setVisible</code>.
@@ -108,7 +108,7 @@ trait Series extends js.Object {
 New options that will be merged into the series' existing options.
 
 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/series-update/" target="_blank">Updating series options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/series-update/" target="_blank">Updating series options</a>
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
 }

@@ -57,7 +57,7 @@ class Accessibility extends js.Object {
 
   /**
     * <p>Formatter function to use instead of the default for point descriptions. Receives one argument, <code>point</code>, referring to the point to describe. Should return a String with the description of the point for a screen reader user.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/">Complex accessible chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/">Complex accessible chart</a>
     * @since 5.0.0
     */
   val pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined
@@ -65,7 +65,7 @@ class Accessibility extends js.Object {
   /**
     * <p>When a series contains more points than this, we no longer expose information about individual points to screen readers.</p>
     * <p>Set to <code>false</code> to disable.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/">Accessible stock chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/">Accessible stock chart</a>
     * @since 5.0.0
     */
   val pointDescriptionThreshold: js.UndefOr[Double | Boolean] = js.undefined
@@ -79,7 +79,7 @@ class Accessibility extends js.Object {
 
   /**
     * <p>Formatter function to use instead of the default for series descriptions. Receives one argument, <code>series</code>, referring to the series to describe. Should return a String with the description of the series for a screen reader user.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/">Accessible complex chart</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible/">Accessible complex chart</a>
     * @since 5.0.0
     */
   val seriesDescriptionFormatter: js.UndefOr[js.Function] = js.undefined

@@ -19,7 +19,7 @@ trait Legend extends js.Object {
     * Update the legend with new options.
     * @param options 
 The new legend options as documented under <a href="#legend">legend</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/legend-update/" target="_blank">Legend update</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/legend-update/" target="_blank">Legend update</a>
     * @since 5.0.0
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native

@@ -23,7 +23,7 @@ class SeriesErrorbarData extends js.Object {
 
   /**
     * Individual color for the point. By default the color is pulled from the global <code>colors</code> array.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/color/" target="_blank">Mark the highest point</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/color/" target="_blank">Mark the highest point</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -36,7 +36,7 @@ class SeriesErrorbarData extends js.Object {
   /**
     * <p><i>Requires Accessibility module</i></p>
     * <p>A description of the point to add to the screen reader information about the point.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/">Accessible map</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/accessibility/accessible-map/">Accessible map</a>
     * @since 5.0.0
     */
   val description: js.UndefOr[String] = js.undefined
@@ -53,7 +53,7 @@ class SeriesErrorbarData extends js.Object {
 
   /**
     * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/point/id/" target="_blank">Remove an id'd point</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/id/" target="_blank">Remove an id'd point</a>
     * @since 1.2.0
     */
   val id: js.UndefOr[String] = js.undefined
@@ -72,7 +72,7 @@ class SeriesErrorbarData extends js.Object {
     * <p>The name of the point as shown in the legend, tooltip, dataLabel etc.</p>
     * 
     * <p>If the <a href="#xAxis.type">xAxis.type</a> is set to <code>category</code>, and no <a href="#xAxis.categories">categories</a> option exists, the category will be pulled from the <code>point.name</code> of the last series defined. For multiple series, best practice however is to define <code>xAxis.categories</code>.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank">Point names</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-array-of-objects/" target="_blank">Point names</a>
     */
   val name: js.UndefOr[String] = js.undefined
 

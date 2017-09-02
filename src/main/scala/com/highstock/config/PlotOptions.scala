@@ -19,7 +19,7 @@ class PlotOptions extends js.Object {
 
   /**
     * The area range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highcharts-more.js</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange/">Arearange example</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange/">Arearange example</a>
     * @since 1.2.0
     */
   val arearange: js.UndefOr[CleanJsObject[PlotOptionsArearange]] = js.undefined
@@ -38,7 +38,7 @@ class PlotOptions extends js.Object {
 
   /**
     * The column range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highcharts-more.js</code>. To display horizontal bars, set <a href="#chart.inverted">chart.inverted</a> to <code>true</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/" target="_blank">Inverted column range</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/columnrange/" target="_blank">Inverted column range</a>
     * @since 1.2.0
     */
   val columnrange: js.UndefOr[CleanJsObject[PlotOptionsColumnrange]] = js.undefined
@@ -51,7 +51,7 @@ class PlotOptions extends js.Object {
 
   /**
     * A polygon series can be used to draw any freeform shape in the cartesian coordinate system. A fill is applied with the <code>color</code> option, and stroke is applied through <code>lineWidth</code> and <code>lineColor</code> options. Requires the <code>highcharts-more.js</code> file.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/demo/polygon/" target="_blank">Polygon</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polygon/" target="_blank">Polygon</a>
     * @since 2.1.0
     */
   val polygon: js.UndefOr[CleanJsObject[PlotOptionsPolygon]] = js.undefined

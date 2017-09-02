@@ -17,21 +17,21 @@ class ChartEvents extends js.Object {
 
   /**
     * Fires when a series is added to the chart after load time, using the <code>addSeries</code> method. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts. Through <code>event.options</code> you can access the series options that was passed to the <code>addSeries</code>  method. Returning false prevents the series from being added.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/" target="_blank">Alert on add series</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-addseries/" target="_blank">Alert on add series</a>
     * @since 1.2.0
     */
   val addSeries: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires after a chart is printed through the context menu item or the <code>Chart.print</code> method. Requires the exporting module.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
     * @since 4.1.0
     */
   val afterPrint: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires before a chart is printed through the context menu item or the <code>Chart.print</code> method. Requires the exporting module.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
     * @since 4.1.0
     */
   val beforePrint: js.UndefOr[js.Function] = js.undefined
@@ -44,7 +44,7 @@ class ChartEvents extends js.Object {
     * 		e.yAxis[0].value
     * 	)
     * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-click/" target="_blank">Alert coordinates on click</a>. <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">Alternatively, attach event to container</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-click/" target="_blank">Alert coordinates on click</a>. <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">Alternatively, attach event to container</a>
     * @since 1.2.0
     */
   val click: js.UndefOr[js.Function] = js.undefined
@@ -72,7 +72,7 @@ class ChartEvents extends js.Object {
     *   <dd>Options for the new series</dd>
     * 
     * </dl>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/" target="_blank">Async drilldown</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/async/" target="_blank">Async drilldown</a>
     * @since 3.0.8
     */
   val drilldown: js.UndefOr[js.Function] = js.undefined
@@ -93,13 +93,13 @@ class ChartEvents extends js.Object {
     * <p>Fires when the chart is finished loading. Since v4.2.2, it also waits for images to be loaded, for example from point markers. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.</p>
     * 
     * <p>There is also a second parameter to the chart constructor where a callback function can be passed to be executed on chart.load.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/" target="_blank">Alert on chart load</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/" target="_blank">Alert on chart load</a>
     */
   val load: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the chart is redrawn, either after a call to chart.redraw() or after an axis, series or point is modified with the <code>redraw</code> option set to true. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/" target="_blank">Alert on chart redraw</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/" target="_blank">Alert on chart redraw</a>
     * @since 1.2.0
     */
   val redraw: js.UndefOr[js.Function] = js.undefined
@@ -121,7 +121,7 @@ class ChartEvents extends js.Object {
     * 	// log the min and max of the y axis
     * 	console.log(event.yAxis[0].min, event.yAxis[0].max);
     * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/" target="_blank">Report on selection and reset</a>, <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/" target="_blank">select a range of points through a drag selection</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection/" target="_blank">Report on selection and reset</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-selection-points/" target="_blank">select a range of points through a drag selection</a>.
     */
   val selection: js.UndefOr[js.Function] = js.undefined
 }

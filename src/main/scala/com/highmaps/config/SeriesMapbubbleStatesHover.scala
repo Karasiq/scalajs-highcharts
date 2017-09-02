@@ -32,7 +32,7 @@ class SeriesMapbubbleStatesHover extends js.Object {
 
   /**
     * The color of the shape in this state
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/" target="_blank">Hover options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/" target="_blank">Hover options</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 

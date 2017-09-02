@@ -33,7 +33,7 @@ class XAxisPlotBands extends js.Object {
 
   /**
     * The color of the plot band.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -44,13 +44,13 @@ class XAxisPlotBands extends js.Object {
 
   /**
     * The start position of the plot band in axis units.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
     */
   val from: js.UndefOr[Double] = js.undefined
 
   /**
     * An id used for identifying the plot band in Axis.removePlotBand.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-id/" target="_blank">Remove plot band by id</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-id/" target="_blank">Remove plot band by id</a>
     */
   val id: js.UndefOr[String] = js.undefined
 
@@ -61,7 +61,7 @@ class XAxisPlotBands extends js.Object {
 
   /**
     * The end position of the plot band in axis units.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands/" target="_blank">Plot band on Y axis</a>
     */
   val to: js.UndefOr[Double] = js.undefined
 

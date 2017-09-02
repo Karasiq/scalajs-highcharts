@@ -18,7 +18,7 @@ trait Element extends js.Object {
   /**
     * Add the element to the renderer canvas.
     * @param parent The element can be added to a <code>g</code> (group) element.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-g/" target="_blank">Elements added to a group</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-g/" target="_blank">Elements added to a group</a>
     */
   def add(parent: js.Object = ???): CleanJsObject[Element] = js.native
 
@@ -29,20 +29,20 @@ trait Element extends js.Object {
     * 
     * <p>Attributes frequently used in Highcharts are <code>fill</code>, <code>stroke</code>, <code>stroke-width</code>.</p>
     * @param hash A set of attributes to apply.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-rect/" target="_blank">Setting some attributes</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-rect/" target="_blank">Setting some attributes</a>
     */
   def attr(hash: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Apply numeric attributes to the SVG/VML element by animation. See <a href="#Element.attr()">Element.attr()</a> for more information on setting attributes.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/element-on/" target="_blank">Setting some attributes by animation</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/element-on/" target="_blank">Setting some attributes by animation</a>
     */
   def animate(attributes: js.Object = ???, animation: js.Object = ???): CleanJsObject[Element] = js.native
 
   /**
     * Apply some CSS properties to the element
     * @param hash The object literal of CSS properties to apply. Properties should be camelCased, not hyphenated.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-text-on-chart/" target="_blank">Styled text</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-text-on-chart/" target="_blank">Styled text</a>
     */
   def css(hash: js.Object = ???): CleanJsObject[Element] = js.native
 
@@ -53,7 +53,7 @@ trait Element extends js.Object {
 
   /**
     * Get the bounding box of the element
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-on-chart/" target="_blank">Draw a rectangle based on a text's bounding box</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/renderer-on-chart/" target="_blank">Draw a rectangle based on a text's bounding box</a>.
     */
   val getBBox: js.Object = js.native
 
@@ -61,13 +61,13 @@ trait Element extends js.Object {
     * Apply an event handler to the element
     * @param eventType The event type to attach, for example 'click', 'mouseover', 'touch'.
     * @param handler The event handler function.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/element-on/" target="_blank">A clickable rectangle</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/element-on/" target="_blank">A clickable rectangle</a>.
     */
   def on(eventType: String = ???, handler: js.Function = ???): CleanJsObject[Element] = js.native
 
   /**
     * Bring the element to the front. Alternatively, a zIndex attribute can be given.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/element-tofront/" target="_blank">Click an element to bring it to front</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/element-tofront/" target="_blank">Click an element to bring it to front</a>.
     */
   val toFront: CleanJsObject[Element] = js.native
 }

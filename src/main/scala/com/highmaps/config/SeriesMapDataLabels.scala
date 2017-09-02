@@ -23,14 +23,14 @@ class SeriesMapDataLabels extends js.Object {
 
   /**
     * Whether to allow data labels to overlap. To make the labels less sensitive for overlapping, the <a href="#plotOptions.series.dataLabels.padding">dataLabels.padding</a> can be set to 0.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/" target="_blank">Don't allow overlap</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-allowoverlap-false/" target="_blank">Don't allow overlap</a>
     * @since 1.1.0
     */
   val allowOverlap: js.UndefOr[Boolean] = js.undefined
 
   /**
     * The background color or gradient for the data label. Defaults to <code>undefined</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -41,7 +41,7 @@ class SeriesMapDataLabels extends js.Object {
 
   /**
     * The border radius in pixels for the data label.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val borderRadius: js.UndefOr[Double] = js.undefined
 
@@ -51,15 +51,15 @@ class SeriesMapDataLabels extends js.Object {
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
-    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
+    * A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels/" target="_blank">Styling by CSS</a>.
     * @since 5.0.0
     */
   val className: js.UndefOr[String] = js.undefined
 
   /**
     * The text color for the data labels. Defaults to <code>null</code>. Note that data labels in Highmaps by default have a <code>style.HcTextStroke</code> in order to make the text readable against any background. When the color is changed, it is also recommended to change this.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">White data labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">White data labels</a>
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
@@ -70,13 +70,13 @@ class SeriesMapDataLabels extends js.Object {
 
   /**
     * Enable or disable the data labels.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Data labels enabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Data labels enabled</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
     * A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the data label. Available variables are the same as for <code>formatter</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value in the data label</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value in the data label</a>
     */
   val format: js.UndefOr[String] = js.undefined
 
@@ -95,7 +95,7 @@ class SeriesMapDataLabels extends js.Object {
     * through <code>this.series.name</code>.</td>
     * </tr>
     * </tbody></table>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-format/" target="_blank">Formatted value</a>
     */
   val formatter: js.UndefOr[js.Function] = js.undefined
 
@@ -106,7 +106,7 @@ class SeriesMapDataLabels extends js.Object {
 
   /**
     * When either the <code>borderWidth</code> or the <code>backgroundColor</code> is set, this		is the padding within the box.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-datalabels-box/" target="_blank">Data labels box options</a>
     */
   val padding: js.UndefOr[Double] = js.undefined
 
@@ -122,14 +122,14 @@ class SeriesMapDataLabels extends js.Object {
 
   /**
     * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations (Highcharts demo)</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-shape/" target="_blank">A callout for annotations (Highcharts demo)</a>
     * @since 1.1.2
     */
   val shape: js.UndefOr[String] = js.undefined
 
   /**
-    * Styles for the label. Note that changes in the text color should be accompanied with changes in <code>HcTextStroke</code> in order for the text to stand out against the background.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Bold labels</a>
+    * Styles for the label. The default <code>color</code> setting is <code>"contrast"</code>, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the area in a map. The <code>textOutline</code> is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn't work well, in which cases it can be disabled by setting it to <code>"none"</code>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/color-axis/" target="_blank">Bold labels</a>
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
@@ -167,7 +167,7 @@ object SeriesMapDataLabels {
     * @param borderColor The border color for the data label. Defaults to <code>undefined</code>.
     * @param borderRadius The border radius in pixels for the data label.
     * @param borderWidth The border width in pixels for the data label.
-    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
+    * @param className A class name for the data label. Particularly in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/data-label-contrast/">contrast text shadow</a>.
     * @param color The text color for the data labels. Defaults to <code>null</code>. Note that data labels in Highmaps by default have a <code>style.HcTextStroke</code> in order to make the text readable against any background. When the color is changed, it is also recommended to change this.
     * @param crop Whether to hide data labels that are outside the plot area. By default, the data label is moved inside the plot area according to the <a href="#plotOptions.series.dataLabels.overflow">overflow</a> option.
     * @param enabled Enable or disable the data labels.
@@ -178,7 +178,7 @@ object SeriesMapDataLabels {
     * @param rotation Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.
     * @param shadow The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. The shadow can also be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
     * @param shape The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
-    * @param style Styles for the label. Note that changes in the text color should be accompanied with changes in <code>HcTextStroke</code> in order for the text to stand out against the background.
+    * @param style Styles for the label. The default <code>color</code> setting is <code>"contrast"</code>, which is a pseudo color that Highcharts picks up and applies the maximum contrast to the underlying point item, for example the area in a map. The <code>textOutline</code> is a pseudo property that applies an outline of the given width with the given color, which by default is the maximum contrast to the text. So a bright text color will result in a black text outline for maximum readability on a mixed background. In some cases, especially with grayscale text, the text outline doesn't work well, in which cases it can be disabled by setting it to <code>"none"</code>.
     * @param useHTML Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the labels.
     * @param verticalAlign The vertical alignment of a data label. Can be one of <code>top</code>, <code>middle</code> or <code>bottom</code>. 
     * @param x The x position offset of the label relative to the point. 

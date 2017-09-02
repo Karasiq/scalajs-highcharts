@@ -27,7 +27,7 @@ class PlotOptionsHeatmapStates extends js.Object {
 
   /**
     * Specific options for point in selected states, after being selected by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or programmatically. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">Allow point select demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/" target="_blank">Allow point select demo</a>
     */
   val select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = js.undefined
 }

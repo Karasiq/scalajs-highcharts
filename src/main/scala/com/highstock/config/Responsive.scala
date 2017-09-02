@@ -17,7 +17,7 @@ class Responsive extends js.Object {
 
   /**
     * A set of rules for responsive settings. The rules are executed from the top down.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">Axis changes</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">Axis changes</a>
     * @since 5.0.0
     */
   val rules: js.UndefOr[js.Array[CleanJsObject[ResponsiveRules]]] = js.undefined

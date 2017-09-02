@@ -24,22 +24,22 @@ class Tooltip extends js.Object {
     * <p>The background color or gradient for the tooltip.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is set in the <code>.highcharts-tooltip-box</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>.
 
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/" target="_blank">Tooltip in styled mode</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/" target="_blank">Tooltip in styled mode</a>.
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the tooltip border. When <code>null</code>, the border takes the color of the corresponding series or point.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The radius of the rounded border corners.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>
     */
   val borderRadius: js.UndefOr[Double] = js.undefined
 
@@ -47,9 +47,9 @@ class Tooltip extends js.Object {
     * <p>The pixel width of the tooltip border.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the stroke width is set in the <code>.highcharts-tooltip-box</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>.	
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/background-border/" target="_blank">Background and border demo</a>.	
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/" target="_blank">Tooltip in styled mode</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/" target="_blank">Tooltip in styled mode</a>.
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
@@ -76,7 +76,7 @@ class Tooltip extends js.Object {
 
   /**
     * A string to append to the tooltip format.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
     */
   val footerFormat: js.UndefOr[String] = js.undefined
 
@@ -95,7 +95,7 @@ class Tooltip extends js.Object {
     * 
     * 
     * </dl>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/" target="_blank">String formatting</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/formatter/" target="_blank">String formatting</a>
     */
   val formatter: js.UndefOr[js.Function] = js.undefined
 
@@ -103,7 +103,7 @@ class Tooltip extends js.Object {
     * <p>The HTML of the tooltip header line. Variables are enclosed by curly brackets. Available variables			are <code>point.name</code>, <code>series.name</code>, <code>series.color</code> and other members from the <code>point</code> and <code>series</code> objects.</p>
     *  
     * <p>Defaults to <code>&lt;span style="font-size: 10px"&gt;{point.key}&lt;/span&gt;&lt;br/&gt;</code></p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
     */
   val headerFormat: js.UndefOr[String] = js.undefined
 
@@ -121,7 +121,7 @@ class Tooltip extends js.Object {
   /**
     * <p>The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are point.value, series.name and series.color and other properties on the same form. Furthermore,  point.value can be extended by the <code>tooltip.valuePrefix</code> and <code>tooltip.valueSuffix</code> variables. This can also be overridden for each series, which makes it a good hook for displaying units.</p>
     *  <p>For maps it defaults to <code>'{point.name}: {point.value}&lt;br/&gt;'</code></p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/format/" target="_blank">Format demo</a>
     */
   val pointFormat: js.UndefOr[String] = js.undefined
 
@@ -135,20 +135,20 @@ class Tooltip extends js.Object {
     * <p>A callback function to place the tooltip in a default position. The callback receives three parameters: <code>labelWidth</code>, <code>labelHeight</code> and <code>point</code>, where point contains values for <code>plotX</code> and <code>plotY</code> telling where the reference point is in the plot area. Add <code>chart.plotLeft</code> and <code>chart.plotTop</code> to get the full coordinates.</p>
     * 
     * <p>The return should be an object containing x and y values, for example <code>{ x: 100, y: 100 }</code>.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/" target="_blank">
 				A fixed tooltip position</a>
     */
   val positioner: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Whether to apply a drop shadow to the tooltip.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/" target="_blank">Fixed tooltip position, border and shadow disabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/positioner/" target="_blank">Fixed tooltip position, border and shadow disabled</a>
     */
   val shadow: js.UndefOr[Boolean] = js.undefined
 
   /**
     * Split the tooltip into one label per series, with the header close to the axis. This is recommended over <a href="#tooltip.shared">shared</a> tooltips for charts with multiple line series, generally making them easier to read.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/" target="_blank">Split tooltip</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/split/" target="_blank">Split tooltip</a>
     * @since 5.0.0
     */
   val split: js.UndefOr[Boolean] = js.undefined
@@ -161,25 +161,25 @@ class Tooltip extends js.Object {
 
   /**
     * Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows advanced formatting like tables and images in the tooltip. It is also recommended for rtl languages as it works around rtl bugs in early Firefox.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/" target="_blank">Pure HTML tooltip</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/usehtml/" target="_blank">Pure HTML tooltip</a>
     */
   val useHTML: js.UndefOr[Boolean] = js.undefined
 
   /**
     * How many decimals to show in each series'  value. This is overridable in each series' tooltip options object. The default is to preserve all decimals.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
     */
   val valueDecimals: js.UndefOr[Double] = js.undefined
 
   /**
     * A string to prepend to each series' value. Overridable in each series' tooltip options object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
     */
   val valuePrefix: js.UndefOr[String] = js.undefined
 
   /**
     * A string to append to each series' value. Overridable in each series' tooltip options object.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/tooltip/valuedecimals/" target="_blank">Set decimals, prefix and suffix for the value</a>
     */
   val valueSuffix: js.UndefOr[String] = js.undefined
 }

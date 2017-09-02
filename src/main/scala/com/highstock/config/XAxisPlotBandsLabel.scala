@@ -17,7 +17,7 @@ class XAxisPlotBandsLabel extends js.Object {
 
   /**
     * Horizontal alignment of the label. Can be one of "left", "center" or "right".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
@@ -46,19 +46,19 @@ class XAxisPlotBandsLabel extends js.Object {
 
   /**
     * Vertical alignment of the label relative to the plot band. Can be one of "top", "middle" or "bottom".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val verticalAlign: js.UndefOr[String] = js.undefined
 
   /**
     * Horizontal position relative the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * Vertical position of the text baseline relative to the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotbands-label/" target="_blank">Plot band with labels</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 }

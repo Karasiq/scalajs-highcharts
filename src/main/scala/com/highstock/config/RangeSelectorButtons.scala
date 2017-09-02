@@ -22,7 +22,7 @@ class RangeSelectorButtons extends js.Object {
 
   /**
     * A custom data grouping object for each button.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/datagrouping/" target="_blank">Data grouping by range selector buttons</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/datagrouping/" target="_blank">Data grouping by range selector buttons</a>.
     */
   val dataGrouping: js.UndefOr[js.Object] = js.undefined
 

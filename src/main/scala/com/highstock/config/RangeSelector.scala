@@ -17,7 +17,7 @@ class RangeSelector extends js.Object {
 
   /**
     * Whether to enable all buttons from the start. By default buttons are only enabled if the corresponding time range exists on the X axis, but enabling all buttons allows for dynamically loading different time ranges.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/allbuttonsenabled-true/" target="_blank">All buttons enabled</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/allbuttonsenabled-true/" target="_blank">All buttons enabled</a>
     * @since 2.0.3
     */
   val allButtonsEnabled: js.UndefOr[Boolean] = js.undefined
@@ -40,7 +40,7 @@ class RangeSelector extends js.Object {
     * <p>CSS styles for the text label.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the buttons are styled by the <code>.highcharts-range-selector-buttons .highcharts-button</code> rule with its different states.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>.
     */
   val buttonTheme: js.UndefOr[js.Object] = js.undefined
 
@@ -71,13 +71,13 @@ class RangeSelector extends js.Object {
     * 	type: 'all',
     * 	text: 'All'
     * }]</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/datagrouping/" target="_blank">Data grouping by buttons</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/datagrouping/" target="_blank">Data grouping by buttons</a>
     */
   val buttons: js.UndefOr[js.Array[CleanJsObject[RangeSelectorButtons]]] = js.undefined
 
   /**
     * Enable or disable the range selector.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/enabled/" target="_blank">Disable the range selector</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/enabled/" target="_blank">Disable the range selector</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
@@ -89,27 +89,27 @@ class RangeSelector extends js.Object {
 
   /**
     * The border color of the date input boxes.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     * @since 1.3.7
     */
   val inputBoxBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The pixel height of the date input boxes.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     * @since 1.3.7
     */
   val inputBoxHeight: js.UndefOr[Double] = js.undefined
 
   /**
     * CSS for the container DIV holding the input boxes. Deprecated as of 1.2.5. Use <a href="#rangeSelector.inputPosition">inputPosition</a> instead.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     */
   val inputBoxStyle: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The pixel width of the date input boxes. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     * @since 1.3.7
     */
   val inputBoxWidth: js.UndefOr[Double] = js.undefined
@@ -117,13 +117,13 @@ class RangeSelector extends js.Object {
   /**
     * The date format in the input boxes when not selected for editing.
     * 		 Defaults to <code>%b %e, %Y</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
     */
   val inputDateFormat: js.UndefOr[String] = js.undefined
 
   /**
     * A custom callback function to parse values entered in the input boxes and return a valid JavaScript time as milliseconds since 1970.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
     * @since 1.3.3
     */
   val inputDateParser: js.UndefOr[js.Function] = js.undefined
@@ -131,13 +131,13 @@ class RangeSelector extends js.Object {
   /**
     * The date format in the input boxes when they are selected for editing. This must be a format that
     *  is recognized by JavaScript Date.parse.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-format/" target="_blank">Milliseconds in the range selector</a>
     */
   val inputEditDateFormat: js.UndefOr[String] = js.undefined
 
   /**
     * Enable or disable the date input boxes. Defaults to enabled when there is enough space, disabled if not (typically mobile).
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-datepicker/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/input-datepicker/" target="_blank">
 				Extending the input with a jQuery UI datepicker</a>
     */
   val inputEnabled: js.UndefOr[Boolean] = js.undefined
@@ -152,7 +152,7 @@ class RangeSelector extends js.Object {
     * <p>CSS for the HTML inputs in the range selector.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the inputs are styled by the <code>.highcharts-range-input text</code> rule in SVG mode, and <code>input.highcharts-range-selector</code> when active.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     */
   val inputStyle: js.UndefOr[js.Object] = js.undefined
 
@@ -160,7 +160,7 @@ class RangeSelector extends js.Object {
     * <p>CSS styles for the labels - the Zoom, From and To texts.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-range-label</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/rangeselector/styling/" target="_blank">Styling the buttons and inputs</a>
     */
   val labelStyle: js.UndefOr[js.Object] = js.undefined
 

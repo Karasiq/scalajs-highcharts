@@ -22,14 +22,14 @@ class ChartEvents extends js.Object {
 
   /**
     * Fires after a chart is printed through the context menu item or the <code>Chart.print</code> method. Requires the exporting module.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
     * @since 1.1.0
     */
   val afterPrint: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires before a chart is printed through the context menu item or the <code>Chart.print</code> method. Requires the exporting module.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-beforeprint-afterprint/" target="_blank">Rescale the chart to print</a>
     * @since 1.1.0
     */
   val beforePrint: js.UndefOr[js.Function] = js.undefined
@@ -42,7 +42,7 @@ class ChartEvents extends js.Object {
     * 		e.yAxis[0].value
     * 	)
     * }</pre>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/chart/events-click/" target="_blank">Record coordinates on click</a>. <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">Alternatively, attach event to container</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-click/" target="_blank">Record coordinates on click</a>. <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-container/" target="_blank">Alternatively, attach event to container</a>
     */
   val click: js.UndefOr[js.Function] = js.undefined
 
@@ -87,13 +87,13 @@ class ChartEvents extends js.Object {
     * <p>Fires when the chart is finished loading. Since v4.2.2, it also waits for images to be loaded, for example from point markers. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.</p>
     * 
     * <p>There is also a second parameter to the chart constructor where a callback function can be passed to be executed on chart.load.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/chart/events-load/" target="_blank">Add series on chart load</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-load/" target="_blank">Add series on chart load</a>
     */
   val load: js.UndefOr[js.Function] = js.undefined
 
   /**
     * Fires when the chart is redrawn, either after a call to chart.redraw() or after an axis, series or point is modified with the <code>redraw</code> option set to true. One parameter, <code>event</code>, is passed to the function. This contains common event information based on jQuery or MooTools depending on  which library is used as the base for Highcharts.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/" target="_blank">Set subtitle on chart redraw</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/chart/events-redraw/" target="_blank">Set subtitle on chart redraw</a>
     */
   val redraw: js.UndefOr[js.Function] = js.undefined
 

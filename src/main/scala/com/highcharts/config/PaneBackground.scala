@@ -35,7 +35,7 @@ class PaneBackground extends js.Object {
 
   /**
     * The class name for this background.
-    * @example  <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/pane/" target="_blank">Panes styled by CSS</a> in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>
+    * @example  <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/pane/" target="_blank">Panes styled by CSS</a> in <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>
     * @since 5.0.0
     */
   val className: js.UndefOr[String] = js.undefined

@@ -48,7 +48,7 @@ class MapNavigationButtonOptions extends js.Object {
 
   /**
     * A configuration object for the button theme. The object accepts SVG properties like <code>stroke-width</code>, <code>stroke</code> and <code>fill</code>. Tri-state button styles are supported by the <code>states.hover</code> and <code>states.select</code> objects.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/" target="_blank">Themed navigation buttons</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/" target="_blank">Themed navigation buttons</a>
     */
   val theme: js.UndefOr[js.Object] = js.undefined
 

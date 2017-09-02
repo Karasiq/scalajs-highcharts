@@ -23,7 +23,7 @@ trait Axis extends js.Object {
     * @param max The new maximum value
     * @param redraw Defaults to <code>true</code>. Whether to redraw the chart or wait for an explicit call to <code>chart.redraw()</code>.
     * @param animation Defaults to true. When true, the resize will be animated with default animation options. The animation can also be a configuration object with properties <code>duration</code> and <code>easing</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-setextremes/" target="_blank">Set extremes from a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/axis-setextremes/" target="_blank">Set extremes from a button</a>
     */
   def setExtremes(min: Double = ???, max: Double = ???, redraw: Boolean = ???, animation: js.Any = ???): Unit = js.native
 
@@ -59,7 +59,7 @@ A pixel position along the axis.
     * Update an axis object with a new set of options. The options are merged with the existing options, so only new or altered options need to be specified.
     * @param options 
 The new options that will be merged in with existing options on the axis.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-update/" target="_blank">Toggle options on color axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/axis-update/" target="_blank">Toggle options on color axis</a>
     */
   def update(options: js.Object = ???, redraw: Boolean = ???): Unit = js.native
 
@@ -79,7 +79,7 @@ The new options that will be merged in with existing options on the axis.
     *   <dt>min:</dt>
     *   <dd>The minimum axis value, either automatic or set manually. If the <code>min</code> option is not set, <code>minPadding</code> is 0 and <code>startOnTick</code> is <code>false</code>, this value will be the same as <code>dataMin</code>.</dd>
     * </dl>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Report extremes by click on a button</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/members/axis-getextremes/" target="_blank">Report extremes by click on a button</a>
     */
   def getExtremes(): js.Object = js.native
 }

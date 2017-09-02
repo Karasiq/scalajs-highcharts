@@ -17,13 +17,13 @@ class Subtitle extends js.Object {
 
   /**
     * The horizontal alignment of the subtitle. Can be one of "left", "center" and "right".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at bottom right of plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at bottom right of plot area</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
   /**
     * When the subtitle is floating, the plot area will not move to make space for it.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote floating at bottom right of plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote floating at bottom right of plot area</a>
     */
   val floating: js.UndefOr[Boolean] = js.undefined
 
@@ -31,16 +31,16 @@ class Subtitle extends js.Object {
     * <p>CSS styles for the title.</p>
     * 
     * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the subtitle style is given in the <code>.highcharts-subtitle</code> class.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-style" target="_blank">Custom color and weight</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-style" target="_blank">Custom color and weight</a>.
 
-<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/css/titles/" target="_blank">Styled mode</a>.
+<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/titles/" target="_blank">Styled mode</a>.
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
   /**
     * The subtitle of the chart.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text" target="_blank">Custom subtitle</a>,
-			<a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text-formatted" target="_blank">formatted and linked text.</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text" target="_blank">Custom subtitle</a>,
+			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-text-formatted" target="_blank">formatted and linked text.</a>
     */
   val text: js.UndefOr[String] = js.undefined
 
@@ -51,26 +51,26 @@ class Subtitle extends js.Object {
 
   /**
     * The vertical alignment of the title. Can be one of "top", "middle" and "bottom". When a value is given, the title behaves as floating.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
     */
   val verticalAlign: js.UndefOr[String] = js.undefined
 
   /**
     * Adjustment made to the subtitle width, normally to reserve space for the exporting burger menu.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/" target="_blank">Wider menu, greater padding</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/widthadjust/" target="_blank">Wider menu, greater padding</a>
     * @since 4.2.5
     */
   val widthAdjust: js.UndefOr[Double] = js.undefined
 
   /**
     * The x position of the subtitle relative to the alignment within chart.spacingLeft and chart.spacingRight.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * The y position of the subtitle relative to the alignment within chart.spacingTop and chart.spacingBottom. By default the subtitle is laid out below the title unless the title is floating.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/chart/subtitle-footnote" target="_blank">Footnote at the bottom right of plot area</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 }

@@ -17,7 +17,7 @@ class YAxisScrollbar extends js.Object {
 
   /**
     * The background color of the scrollbar itself.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val barBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -28,49 +28,49 @@ class YAxisScrollbar extends js.Object {
 
   /**
     * The border rounding radius of the bar.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val barBorderRadius: js.UndefOr[Double] = js.undefined
 
   /**
     * The width of the bar's border.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val barBorderWidth: js.UndefOr[Double] = js.undefined
 
   /**
     * The color of the small arrow inside the scrollbar buttons.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val buttonArrowColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of scrollbar buttons.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val buttonBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the border of the scrollbar buttons.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val buttonBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the scrollbar buttons.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val buttonBorderRadius: js.UndefOr[Double] = js.undefined
 
   /**
     * The border width of the scrollbar buttons.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val buttonBorderWidth: js.UndefOr[Double] = js.undefined
 
   /**
     * Enable the scrollbar on the Y axis.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/yaxis/scrollbar/" target="_blank">Enabled on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/yaxis/scrollbar/" target="_blank">Enabled on Y axis</a>
     * @since 4.2.6
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
@@ -112,25 +112,25 @@ class YAxisScrollbar extends js.Object {
 
   /**
     * The color of the track background.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val trackBackgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the border of the scrollbar track.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val trackBorderColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The corner radius of the border of the scrollbar track.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val trackBorderRadius: js.UndefOr[Double] = js.undefined
 
   /**
     * The width of the border of the scrollbar track.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/scrollbar/style/" target="_blank">Scrollbar styling</a>
     */
   val trackBorderWidth: js.Any = js.undefined
 

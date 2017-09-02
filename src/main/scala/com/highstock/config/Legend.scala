@@ -19,19 +19,19 @@ class Legend extends js.Object {
     * <p>The horizontal alignment of the legend box within the chart area. Valid values are <code>left</code>, <code>center</code> and <code>right</code>.</p>
     * 
     * <p>In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
   /**
     * The background color of the legend.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
     * The color of the drawn border around the legend.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val borderColor: js.UndefOr[String | js.Object] = js.undefined
 
@@ -42,13 +42,13 @@ class Legend extends js.Object {
 
   /**
     * The width of the drawn border around the legend.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
     * Enable or disable the legend.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
@@ -59,7 +59,7 @@ class Legend extends js.Object {
 
   /**
     * In a legend with horizontal layout, the itemDistance defines the pixel distance between each item. 
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/" target="_blank">50px item distance</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/layout-horizontal/" target="_blank">50px item distance</a>
     * @since 1.3.3
     */
   val itemDistance: js.UndefOr[Double] = js.undefined
@@ -76,7 +76,7 @@ class Legend extends js.Object {
 
   /**
     * The pixel bottom margin for each legend item.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
 				Padding and item margins demonstrated</a>
     * @since 1.1
     */
@@ -84,14 +84,14 @@ class Legend extends js.Object {
 
   /**
     * The pixel top margin for each legend item.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
 				Padding and item margins demonstrated</a>
     * @since 1.1
     */
   val itemMarginTop: js.UndefOr[Double] = js.undefined
 
   /**
-    * CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text.
+    * CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default <code>textOverflow</code> property makes long texts truncate. Set it to <code>null</code> to wrap text instead. A <code>width</code> property can be added to control the text width.
     */
   val itemStyle: js.UndefOr[js.Object] = js.undefined
 
@@ -113,7 +113,7 @@ class Legend extends js.Object {
 
   /**
     * The layout of the legend items. Can be one of "horizontal" or "vertical".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/layout-horizontal/" target="_blank">Horizontal by default</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/layout-horizontal/" target="_blank">Horizontal by default</a>
     */
   val layout: js.UndefOr[String] = js.undefined
 
@@ -135,7 +135,7 @@ class Legend extends js.Object {
 
   /**
     * The inner padding of the legend box.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/padding-itemmargin/" target="_blank">
 				Padding and item margins demonstrated</a>
     * @since 1.1
     */
@@ -149,7 +149,7 @@ class Legend extends js.Object {
   /**
     * Whether to apply a drop shadow to the legend. A <code>backgroundColor</code>
     *  also needs to be applied for this to take effect. Since 1.1.7 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val shadow: js.UndefOr[Boolean | js.Object] = js.undefined
 
@@ -177,7 +177,7 @@ class Legend extends js.Object {
 
   /**
     * The border radius of the symbol for series types that use a rectangle in the legend. Defaults to half the <code>symbolHeight</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/" target="_blank">Round symbols</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolradius/" target="_blank">Round symbols</a>
     */
   val symbolRadius: js.UndefOr[Double] = js.undefined
 
@@ -201,7 +201,7 @@ class Legend extends js.Object {
     * <p>The vertical alignment of the legend box. Can be one of <code>top</code>, <code>middle</code> or  <code>bottom</code>. Vertical position can be further determined by the <code>y</code> option.</p>
     * 
     * <p>In the case that the legend is aligned in a corner position, the <code>layout</code> option will determine whether to place it above/below or on the side of the plot area.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val verticalAlign: js.UndefOr[String] = js.undefined
 
@@ -217,7 +217,7 @@ class Legend extends js.Object {
 
   /**
     * The vertical offset of the legend relative to it's vertical alignment <code>verticalAlign</code> within chart.spacingTop and chart.spacingBottom. Negative y moves it up, positive y moves it down.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/legend/align/" target="_blank">Various legend options</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 }
@@ -236,7 +236,7 @@ object Legend {
     * @param itemHoverStyle CSS styles for each legend item in hover mode. Only a subset of CSS is supported, notably those options related to text. Properties are inherited from <code>style</code> unless overridden here.
     * @param itemMarginBottom The pixel bottom margin for each legend item.
     * @param itemMarginTop The pixel top margin for each legend item.
-    * @param itemStyle CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text.
+    * @param itemStyle CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default <code>textOverflow</code> property makes long texts truncate. Set it to <code>null</code> to wrap text instead. A <code>width</code> property can be added to control the text width.
     * @param itemWidth The width for each legend item. This is useful in a horizontal layout with many items when you want the items to align vertically.  .
     * @param labelFormat A <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for each legend label. Available variables relates to properties on the series, or the point in case of pies.
     * @param labelFormatter Callback function to format each of the series' labels. The <em>this</em> keyword refers to the series object, or the point object in case of pie charts. By default the series or point name is printed.

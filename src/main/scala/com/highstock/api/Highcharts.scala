@@ -53,7 +53,7 @@ trait Highcharts extends js.Object {
     * @param decimals The desired number of decimals.
     * @param decimalPoint The decimal point. Defaults to "." or to the string specified globally in options.lang.decimalPoint.
     * @param thousandsSep The thousands separator. Defaults to " " or to the string specified globally in options.lang.thousandsSep.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat/" target="_blank">Custom number format</a>
     */
   def numberFormat(number: Double = ???, decimals: Double = ???, decimalPoint: String = ???, thousandsSep: String = ???): String = js.native
 
@@ -69,7 +69,7 @@ trait Highcharts extends js.Object {
 
   /**
     * The error handler function. By default is provides error messages for debugging, with links to the descriptions on Highcharts website. This function can be redefined to catch errors in client applications.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/highcharts-error/" target="_blank">Custom error handler</a>.
     * @since 5.0.6
     */
   def error(code: Double | String = ???, fatal: Boolean = ???): Unit = js.native

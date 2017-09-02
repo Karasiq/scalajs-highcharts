@@ -17,7 +17,7 @@ class YAxisPlotLinesLabel extends js.Object {
 
   /**
     * Horizontal alignment of the label. Can be one of "left", "center" or "right".
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
     */
   val align: js.UndefOr[String] = js.undefined
 
@@ -51,13 +51,13 @@ class YAxisPlotLinesLabel extends js.Object {
 
   /**
     * Horizontal position relative the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
     */
   val x: js.UndefOr[Double] = js.undefined
 
   /**
     * Vertical position of the text baseline relative to the alignment. Default varies by orientation.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
+    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/xaxis/plotlines/" target="_blank">Plot line on Y axis</a>
     */
   val y: js.UndefOr[Double] = js.undefined
 }
