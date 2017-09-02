@@ -6,7 +6,7 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 // Settings
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
-  version := "1.2.0",
+  version := "1.2.1",
   isSnapshot := version.value.endsWith("SNAPSHOT"),
   scalaVersion := "2.11.8",
   publishMavenStyle := true,
