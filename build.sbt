@@ -103,15 +103,14 @@ lazy val libraryTestSettings = Seq(
       Script from url("https://code.highcharts.com/stock/5.0.14/highcharts-3d.src.js"),
 
       // Scala.js app
-      Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-opt.js",
-      Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-launcher.js"
+      Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-opt.js"
     )
   }
 )
 
 lazy val libraryTestFrontendSettings = Seq(
   scalaVersion := "2.12.1",
-  persistLauncher in Compile := true,
+  scalaJSUseMainModuleInitializer := true,
   name := "scalajs-highcharts-test-frontend",
   libraryDependencies ++= Seq(
     "com.lihaoyi" %%% "scalatags" % "0.6.2"
