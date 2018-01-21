@@ -6,7 +6,7 @@ lazy val generate = taskKey[Unit]("Generates Scala.js sources")
 // Settings
 lazy val commonSettings = Seq(
   organization := "com.github.karasiq",
-  version := "1.2.1",
+  version := "1.2.2-SNAPSHOT",
   isSnapshot := version.value.endsWith("SNAPSHOT"),
   scalaVersion := "2.11.8",
   publishMavenStyle := true,
@@ -21,10 +21,7 @@ lazy val commonSettings = Seq(
   pomIncludeRepository := { _ ⇒ false },
   licenses := Seq("The MIT License" → url("http://opensource.org/licenses/MIT")),
   homepage := Some(url("https://github.com/Karasiq/scalajs-highcharts")),
-  pomExtra := <scm>
-    <url>git@github.com:Karasiq/scalajs-highcharts.git</url>
-    <connection>scm:git:git@github.com:Karasiq/scalajs-highcharts.git</connection>
-  </scm>
+  pomExtra :=
     <developers>
       <developer>
         <id>karasiq</id>
@@ -51,15 +48,16 @@ lazy val generatorSettings = Seq(
 
 lazy val librarySettings = Seq(
   scalaVersion := "2.12.1",
-  crossScalaVersions := Seq("2.11.8", "2.12.1"),
+  crossScalaVersions := Seq("2.11.8", scalaVersion.value),
   libraryDependencies ++= Seq(
     "be.doeraene" %%% "scalajs-jquery" % "0.9.1"
   ),
   name := "scalajs-highcharts",
-  scalacOptions ++= (if (isSnapshot.value) Seq.empty else Seq({
-    val g = s"https://raw.githubusercontent.com/Karasiq/${name.value}"
-    s"-P:scalajs:mapSourceURI:${baseDirectory.value.toURI}->$g/v${version.value}/"
-  }))
+  scalacOptions += {
+    val local = file("").toURI
+    val remote = s"https://raw.githubusercontent.com/Karasiq/scalajs-highcharts/${git.gitHeadCommit.value.get}/"
+    s"-P:scalajs:mapSourceURI:$local->$remote"
+  }
 )
 
 lazy val libraryTestSettings = Seq(
@@ -77,7 +75,7 @@ lazy val libraryTestSettings = Seq(
   },
   mainClass in Compile := Some("com.karasiq.highcharts.test.backend.HighchartsTestApp"),
   scalaJsBundlerInline in Compile := true,
-  scalaJsBundlerCompile in Compile <<= (scalaJsBundlerCompile in Compile).dependsOn(fullOptJS in Compile in libraryTestFrontend),
+  scalaJsBundlerCompile in Compile <<= (scalaJsBundlerCompile in Compile).dependsOn(fullOptJS in Compile in `scalajs-highcharts-test-frontend`),
   scalaJsBundlerAssets in Compile += {
     import com.karasiq.scalajsbundler.dsl._
 
@@ -119,18 +117,18 @@ lazy val libraryTestFrontendSettings = Seq(
 )
 
 // Projects
-lazy val generator = Project("generator", file("generator"))
+lazy val generator = project
   .settings(commonSettings, generatorSettings)
 
-lazy val library = Project("scalajs-library", file("."))
+lazy val `scalajs-library` = (project in file("."))
   .settings(commonSettings, librarySettings)
   .enablePlugins(ScalaJSPlugin)
 
-lazy val libraryTest = Project("scalajs-highcharts-test", file("test"))
+lazy val `scalajs-highcharts-test` = (project in file("test"))
   .settings(commonSettings, libraryTestSettings)
   .enablePlugins(ScalaJSBundlerPlugin)
 
-lazy val libraryTestFrontend = Project("scalajs-highcharts-test-frontend", file("test") / "frontend")
+lazy val `scalajs-highcharts-test-frontend` = (project in file("test") / "frontend")
   .settings(commonSettings, libraryTestFrontendSettings)
   .enablePlugins(ScalaJSPlugin)
-  .dependsOn(library)
+  .dependsOn(`scalajs-library`)
