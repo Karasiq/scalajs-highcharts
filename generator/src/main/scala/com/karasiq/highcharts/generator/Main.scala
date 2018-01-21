@@ -4,20 +4,22 @@ import java.io.{BufferedWriter, FileOutputStream, OutputStreamWriter, PrintWrite
 import java.nio.file._
 import java.nio.file.attribute.BasicFileAttributes
 
-import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder}
-
 import scala.util.control.Exception
 import scalaj.http.{Http, HttpOptions}
+
+import com.karasiq.highcharts.generator.writers.{ScalaClassWriter, ScalaJsClassBuilder}
 
 case class HighchartsApiDoc(library: String) {
   private val defaultPackage = System.getProperty(s"highcharts-generator.$library.package", s"com.$library")
 
   private def httpGet(url: String): List[ConfigurationObject] = {
     val page = Http.get(url)
-      .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0")
+      .header("User-Agent", "Mozilla/5.0 (X11; OpenBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36")
+      .header("Accept", "application/json")
       .options(HttpOptions.connTimeout(10000), HttpOptions.readTimeout(10000))
 
-    ConfigurationObject.fromJson(page.asString)
+    val json = page.asString
+    ConfigurationObject.fromJson(json)
   }
 
   private def writeFiles(pkg: String, configs: List[ConfigurationObject], rootObject: Option[String] = None): Unit = {
@@ -65,18 +67,19 @@ case class HighchartsApiDoc(library: String) {
   }
 
   def writeConfigs(): Unit = {
-    val configs = httpGet(s"http://api.highcharts.com/$library/option/dump.json")
-    writeFiles(s"$defaultPackage.config", configs, Some(s"${library.head.toUpper + library.tail}Config"))
+    val configs = httpGet(s"https://api.highcharts.com/$library/dump.json")
+    writeFiles(s"$defaultPackage.config", configs, Some(s"${library.capitalize}Config"))
   }
 
   def writeApis(): Unit = {
-    val configs = httpGet(s"http://api.highcharts.com/$library/object/dump.json")
+    val configs = httpGet(s"https://api.highcharts.com/$library/object/dump.json")
     writeFiles(s"$defaultPackage.api", configs)
   }
 
   def writeAll(): Unit = {
+    // TODO: https://github.com/highcharts/highcharts/issues/7227
     writeConfigs()
-    writeApis()
+    // writeApis() // TODO: 404
   }
 }
 

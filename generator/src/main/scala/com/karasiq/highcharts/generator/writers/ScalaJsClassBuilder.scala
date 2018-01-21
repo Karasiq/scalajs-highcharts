@@ -1,8 +1,11 @@
 package com.karasiq.highcharts.generator.writers
 
+import scala.annotation.tailrec
+
+import org.apache.commons.lang3.StringEscapeUtils
+
 import com.karasiq.highcharts.generator.ConfigurationObject
 import com.karasiq.highcharts.generator.ast.{ScalaJsClass, ScalaJsDefinition, ScalaJsMethod, ScalaJsValue}
-import org.apache.commons.lang3.StringEscapeUtils
 
 object ScalaJsClassBuilder {
   def classNameFor(jsName: String): String = {
@@ -35,11 +38,27 @@ object ScalaJsClassBuilder {
 
 class ScalaJsClassBuilder {
   private def scalaType(classes: Set[String], tpe: Option[String], selfClass: Option[String] = None): Option[String] = {
-    val array = """Array<(.+)>""".r
+    // val array = """^Array\.<(.+?)>$""".r
+    object TypedArray {
+      def unapply(str: String): Option[String] = {
+        @tailrec def parseTypeRec(str: Seq[Char], parentheses: Int = 1, result: StringBuilder = new StringBuilder): Option[String] = str match {
+          case Nil ⇒ None
+          case _ if parentheses == 0 ⇒ None
+          case '>' +: Nil if parentheses == 1 ⇒ Some(result.result())
+          case '>' +: rest ⇒ parseTypeRec(rest, parentheses - 1, result += '>')
+          case '<' +: rest ⇒ parseTypeRec(rest, parentheses + 1, result += '<')
+          case char +: rest ⇒ parseTypeRec(rest, parentheses, result += char)
+        }
+
+        val prefix = "Array.<"
+        if (!str.startsWith(prefix)) None else parseTypeRec(str.drop(prefix.length))
+      }
+    }
+
 
     val selfTypeObject: PartialFunction[String, String] = {
       case "" | "Object" if selfClass.nonEmpty ⇒
-//        println(selfClass)
+        // println(selfClass)
         s"CleanJsObject[${selfClass.get}]"
     }
 
@@ -50,7 +69,7 @@ class ScalaJsClassBuilder {
       case "String" ⇒
         "String"
 
-      case "Function" ⇒
+      case "Function" | "function" ⇒
         "js.Function"
 
       case "CSSObject" | "Object" ⇒
@@ -62,7 +81,11 @@ class ScalaJsClassBuilder {
       case "Boolean" ⇒
         "Boolean"
 
-      case array(t) ⇒
+      case "Mixed" ⇒
+        "js.Any"
+
+      case TypedArray(t) ⇒
+        // println("Array " + t)
         val tpe: String = if (stdTypes.isDefinedAt(t)) {
           stdTypes(t)
         } else if (selfClass.nonEmpty) {
@@ -76,10 +99,12 @@ class ScalaJsClassBuilder {
         "js.Array[js.Any]"
 
       case t if t.contains("|") ⇒ // Union type
-        val tokens: Array[String] = t.split("\\|")
+        val t1 = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
+        val tokens: Array[String] = t1.split("\\|")
           .map(_.trim)
           .filter(_.nonEmpty)
           .collect(stdTypes)
+        // println(t + " " + tokens.toList)
         ScalaJsClassBuilder.unionType(tokens.toList)
 
       case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
