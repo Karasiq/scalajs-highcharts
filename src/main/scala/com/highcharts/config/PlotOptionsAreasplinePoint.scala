@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-areaspline-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsAreasplinePoint extends js.Object {
+class PlotOptionsAreasplinePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsAreasplinePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = js.undefined): PlotOptionsAreasplinePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = events
-    new PlotOptionsAreasplinePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsAreasplinePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsAreasplinePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsAreasplinePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

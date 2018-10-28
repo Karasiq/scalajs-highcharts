@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-line-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsLinePoint extends js.Object {
+class PlotOptionsLinePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsLinePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = js.undefined): PlotOptionsLinePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = events
-    new PlotOptionsLinePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsLinePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsLinePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsLinePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

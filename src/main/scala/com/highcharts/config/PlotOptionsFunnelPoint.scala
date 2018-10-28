@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-funnel-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsFunnelPoint extends js.Object {
+class PlotOptionsFunnelPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsFunnelPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = js.undefined): PlotOptionsFunnelPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = events
-    new PlotOptionsFunnelPoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsFunnelPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsFunnelPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsFunnelPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

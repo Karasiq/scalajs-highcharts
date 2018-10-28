@@ -13,30 +13,30 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>labels</code>
   */
 @js.annotation.ScalaJSDefined
-class Labels extends js.Object {
+class Labels extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * A HTML label that can be positioned anywhere in the chart area.
-    */
-  val items: js.UndefOr[js.Array[CleanJsObject[LabelsItems]]] = js.undefined
-
-  /**
-    * Shared CSS styles for all labels.
+    * <p>Shared CSS styles for all labels.</p>
     */
   val style: js.UndefOr[js.Object] = js.undefined
+
+  /**
+    * <p>An HTML label that can be positioned anywhere in the chart area.</p>
+    */
+  val items: js.UndefOr[js.Array[js.Any]] = js.undefined
 }
 
 object Labels {
   /**
-    * @param items A HTML label that can be positioned anywhere in the chart area.
-    * @param style Shared CSS styles for all labels.
+    * @param style <p>Shared CSS styles for all labels.</p>
+    * @param items <p>An HTML label that can be positioned anywhere in the chart area.</p>
     */
-  def apply(items: js.UndefOr[js.Array[CleanJsObject[LabelsItems]]] = js.undefined, style: js.UndefOr[js.Object] = js.undefined): Labels = {
-    val itemsOuter: js.UndefOr[js.Array[CleanJsObject[LabelsItems]]] = items
+  def apply(style: js.UndefOr[js.Object] = js.undefined, items: js.UndefOr[js.Array[js.Any]] = js.undefined): Labels = {
     val styleOuter: js.UndefOr[js.Object] = style
-    new Labels {
-      override val items: js.UndefOr[js.Array[CleanJsObject[LabelsItems]]] = itemsOuter
+    val itemsOuter: js.UndefOr[js.Array[js.Any]] = items
+    com.highcharts.HighchartsGenericObject.toCleanObject(new Labels {
       override val style: js.UndefOr[js.Object] = styleOuter
-    }
+      override val items: js.UndefOr[js.Array[js.Any]] = itemsOuter
+    })
   }
 }

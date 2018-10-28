@@ -13,74 +13,74 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;columnrange&gt;-states-hover</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesColumnrangeStatesHover extends js.Object {
+class SeriesColumnrangeStatesHover extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Animation setting for hovering the graph in line-type series.
+    * <p>How much to brighten the point on interaction. Requires the main
+    * color to be defined in hex or rgb(a) format.</p>
+    * <p>In styled mode, the hover brightening is by default replaced
+    * with a fill-opacity set in the <code>.highcharts-point:hover</code> rule.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/">Brighten by 0.5</a>
+    */
+  val brightness: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>A specific border color for the hovered point. Defaults to
+    * inherit the normal state border color.</p>
+    */
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>A specific color for the hovered point.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/">Hover options</a>
+    */
+  val color: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>Animation setting for hovering the graph in line-type series.</p>
     * @since 5.0.8
     */
   val animation: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
-    * Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-    * @example Disable hover on <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/" target="_blank">line</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/" target="_blank">column</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/" target="_blank">pie</a>
+    * <p>Enable separate styles for the hovered series to visualize that
+    * the user hovers either the series itself or the legend. .</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/">Line</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/">Column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/">Pie</a>
     * @since 1.2
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * <p>Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.</p>
-    * 
-    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/halo/" target="_blank">Halo options</a>
-    * @since 4.0
+    * <p>The border width of the point in this state</p>
     */
-  val halo: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverHalo]] = js.undefined
-
-  /**
-    * Pixel with of the graph line.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/" target="_blank">5px line on hover</a>
-    */
-  val lineWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * The additional line width for the graph of a hovered series.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/" target="_blank">5 pixels wider</a>
-    * @since 4.0.3
-    */
-  val lineWidthPlus: js.UndefOr[Double] = js.undefined
-
-  /**
-    * In Highcharts 1.0, the appearance of all markers belonging to the hovered series. For settings on the hover state of the individual point, see <a href="#plotOptions.series.marker.states.hover">marker.states.hover</a>.
-    */
-  val marker: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverMarker]] = js.undefined
+  val borderWidth: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesColumnrangeStatesHover {
   /**
-    * @param animation Animation setting for hovering the graph in line-type series.
-    * @param enabled Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-    * @param halo <p>Options for the halo appearing around the hovered point in line-type series as well as outside the hovered slice in pie charts. By default the halo is filled by the current point or series color with an opacity of 0.25. The halo can be disabled by setting the <code>halo</code> option to <code>false</code>.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p>
-    * @param lineWidth Pixel with of the graph line.
-    * @param lineWidthPlus The additional line width for the graph of a hovered series.
-    * @param marker In Highcharts 1.0, the appearance of all markers belonging to the hovered series. For settings on the hover state of the individual point, see <a href="#plotOptions.series.marker.states.hover">marker.states.hover</a>.
+    * @param brightness <p>How much to brighten the point on interaction. Requires the main. color to be defined in hex or rgb(a) format.</p>. <p>In styled mode, the hover brightening is by default replaced. with a fill-opacity set in the <code>.highcharts-point:hover</code> rule.</p>
+    * @param borderColor <p>A specific border color for the hovered point. Defaults to. inherit the normal state border color.</p>
+    * @param color <p>A specific color for the hovered point.</p>
+    * @param animation <p>Animation setting for hovering the graph in line-type series.</p>
+    * @param enabled <p>Enable separate styles for the hovered series to visualize that. the user hovers either the series itself or the legend. .</p>
+    * @param borderWidth <p>The border width of the point in this state</p>
     */
-  def apply(animation: js.UndefOr[Boolean | js.Object] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, halo: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverHalo]] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, lineWidthPlus: js.UndefOr[Double] = js.undefined, marker: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverMarker]] = js.undefined): SeriesColumnrangeStatesHover = {
+  def apply(brightness: js.UndefOr[Double] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, animation: js.UndefOr[Boolean | js.Object] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined): SeriesColumnrangeStatesHover = {
+    val brightnessOuter: js.UndefOr[Double] = brightness
+    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+    val colorOuter: js.UndefOr[String | js.Object] = color
     val animationOuter: js.UndefOr[Boolean | js.Object] = animation
     val enabledOuter: js.UndefOr[Boolean] = enabled
-    val haloOuter: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverHalo]] = halo
-    val lineWidthOuter: js.UndefOr[Double] = lineWidth
-    val lineWidthPlusOuter: js.UndefOr[Double] = lineWidthPlus
-    val markerOuter: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverMarker]] = marker
-    new SeriesColumnrangeStatesHover {
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesColumnrangeStatesHover {
+      override val brightness: js.UndefOr[Double] = brightnessOuter
+      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
       override val animation: js.UndefOr[Boolean | js.Object] = animationOuter
       override val enabled: js.UndefOr[Boolean] = enabledOuter
-      override val halo: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverHalo]] = haloOuter
-      override val lineWidth: js.UndefOr[Double] = lineWidthOuter
-      override val lineWidthPlus: js.UndefOr[Double] = lineWidthPlusOuter
-      override val marker: js.UndefOr[CleanJsObject[SeriesColumnrangeStatesHoverMarker]] = markerOuter
-    }
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+    })
   }
 }

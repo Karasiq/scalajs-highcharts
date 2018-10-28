@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;gauge&gt;-point</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesGaugePoint extends js.Object {
+class SeriesGaugePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object SeriesGaugePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = js.undefined): SeriesGaugePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = events
-    new SeriesGaugePoint {
-      override val events: js.UndefOr[CleanJsObject[SeriesGaugePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): SeriesGaugePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesGaugePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

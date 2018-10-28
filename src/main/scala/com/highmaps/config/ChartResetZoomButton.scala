@@ -13,40 +13,53 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>chart-resetZoomButton</code>
   */
 @js.annotation.ScalaJSDefined
-class ChartResetZoomButton extends js.Object {
+class ChartResetZoomButton extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * The position of the button.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/" target="_blank">Above the plot area</a>
+    * <p>A collection of attributes for the button. The object takes SVG
+    * attributes like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the
+    * border radius. The theme also supports <code>style</code>, a collection of
+    * CSS properties for the text. Equivalent attributes for the hover
+    * state are given in <code>theme.states.hover</code>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-theme/">Theming the button</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-theme/">Theming the button</a>
     * @since 2.2
     */
-  val position: js.UndefOr[CleanJsObject[ChartResetZoomButtonPosition]] = js.undefined
+  val theme: js.Any = js.undefined
 
   /**
-    * What frame the button should be placed related to. Can be either "plot" or "chart".
+    * <p>The position of the button.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/">Above the plot area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/">Above the plot area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/">Above the plot area</a>
+    * @since 2.2
+    */
+  val position: js.Any = js.undefined
+
+  /**
+    * <p>What frame the button should be placed related to. Can be either
+    * <code>plot</code> or <code>chart</code></p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-relativeto/">Relative to the chart</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-relativeto/">Relative to the chart</a>
+    * @since 2.2
     */
   val relativeTo: js.UndefOr[String] = js.undefined
-
-  /**
-    * A collection of attributes for the button. The object takes SVG attributes like  <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the border radius. The theme also supports <code>style</code>, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in <code>theme.states.hover</code>.
-    */
-  val theme: js.UndefOr[js.Object] = js.undefined
 }
 
 object ChartResetZoomButton {
   /**
-    * @param position The position of the button.
-    * @param relativeTo What frame the button should be placed related to. Can be either "plot" or "chart".
-    * @param theme A collection of attributes for the button. The object takes SVG attributes like  <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the border radius. The theme also supports <code>style</code>, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in <code>theme.states.hover</code>.
+    * @param theme <p>A collection of attributes for the button. The object takes SVG. attributes like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the. border radius. The theme also supports <code>style</code>, a collection of. CSS properties for the text. Equivalent attributes for the hover. state are given in <code>theme.states.hover</code>.</p>
+    * @param position <p>The position of the button.</p>
+    * @param relativeTo <p>What frame the button should be placed related to. Can be either. <code>plot</code> or <code>chart</code></p>
     */
-  def apply(position: js.UndefOr[CleanJsObject[ChartResetZoomButtonPosition]] = js.undefined, relativeTo: js.UndefOr[String] = js.undefined, theme: js.UndefOr[js.Object] = js.undefined): ChartResetZoomButton = {
-    val positionOuter: js.UndefOr[CleanJsObject[ChartResetZoomButtonPosition]] = position
+  def apply(theme: js.UndefOr[js.Any] = js.undefined, position: js.UndefOr[js.Any] = js.undefined, relativeTo: js.UndefOr[String] = js.undefined): ChartResetZoomButton = {
+    val themeOuter: js.Any = theme
+    val positionOuter: js.Any = position
     val relativeToOuter: js.UndefOr[String] = relativeTo
-    val themeOuter: js.UndefOr[js.Object] = theme
-    new ChartResetZoomButton {
-      override val position: js.UndefOr[CleanJsObject[ChartResetZoomButtonPosition]] = positionOuter
+    com.highcharts.HighchartsGenericObject.toCleanObject(new ChartResetZoomButton {
+      override val theme: js.Any = themeOuter
+      override val position: js.Any = positionOuter
       override val relativeTo: js.UndefOr[String] = relativeToOuter
-      override val theme: js.UndefOr[js.Object] = themeOuter
-    }
+    })
   }
 }

@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;column&gt;-point</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesColumnPoint extends js.Object {
+class SeriesColumnPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[SeriesColumnPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object SeriesColumnPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[SeriesColumnPointEvents]] = js.undefined): SeriesColumnPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[SeriesColumnPointEvents]] = events
-    new SeriesColumnPoint {
-      override val events: js.UndefOr[CleanJsObject[SeriesColumnPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): SeriesColumnPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesColumnPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;waterfall&gt;-point</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesWaterfallPoint extends js.Object {
+class SeriesWaterfallPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object SeriesWaterfallPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = js.undefined): SeriesWaterfallPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = events
-    new SeriesWaterfallPoint {
-      override val events: js.UndefOr[CleanJsObject[SeriesWaterfallPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): SeriesWaterfallPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesWaterfallPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

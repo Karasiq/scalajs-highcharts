@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-errorbar-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsErrorbarPoint extends js.Object {
+class PlotOptionsErrorbarPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsErrorbarPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = js.undefined): PlotOptionsErrorbarPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = events
-    new PlotOptionsErrorbarPoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsErrorbarPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsErrorbarPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsErrorbarPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

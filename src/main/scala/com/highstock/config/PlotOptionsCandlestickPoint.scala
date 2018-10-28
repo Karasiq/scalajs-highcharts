@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-candlestick-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsCandlestickPoint extends js.Object {
+class PlotOptionsCandlestickPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsCandlestickPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = js.undefined): PlotOptionsCandlestickPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = events
-    new PlotOptionsCandlestickPoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsCandlestickPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsCandlestickPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsCandlestickPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

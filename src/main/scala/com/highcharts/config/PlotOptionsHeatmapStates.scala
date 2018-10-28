@@ -13,22 +13,42 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-heatmap-states</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsHeatmapStates extends js.Object {
+class PlotOptionsHeatmapStates extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Options for the hovered series
+    * <p>Options for the hovered series. These settings override the normal
+    * state options when a series is moused over or touched.</p>
     */
-  val hover: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = js.undefined
+  val hover: js.Any = js.undefined
+
+  /**
+    * <p>Overrides for the normal state.</p>
+    */
+  val normal: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = js.undefined
+
+  /**
+    * <p>Specific options for point in selected states, after being selected
+    * by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or
+    * programmatically.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">Allow point select demo</a>
+    */
+  val select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = js.undefined
 }
 
 object PlotOptionsHeatmapStates {
   /**
-    * @param hover Options for the hovered series
+    * @param hover <p>Options for the hovered series. These settings override the normal. state options when a series is moused over or touched.</p>
+    * @param normal <p>Overrides for the normal state.</p>
+    * @param select <p>Specific options for point in selected states, after being selected. by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or. programmatically.</p>
     */
-  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = js.undefined): PlotOptionsHeatmapStates = {
-    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = hover
-    new PlotOptionsHeatmapStates {
-      override val hover: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesHover]] = hoverOuter
-    }
+  def apply(hover: js.UndefOr[js.Any] = js.undefined, normal: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = js.undefined, select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = js.undefined): PlotOptionsHeatmapStates = {
+    val hoverOuter: js.Any = hover
+    val normalOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = normal
+    val selectOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = select
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsHeatmapStates {
+      override val hover: js.Any = hoverOuter
+      override val normal: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesNormal]] = normalOuter
+      override val select: js.UndefOr[CleanJsObject[PlotOptionsHeatmapStatesSelect]] = selectOuter
+    })
   }
 }

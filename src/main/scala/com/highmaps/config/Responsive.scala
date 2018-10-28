@@ -13,24 +13,27 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>responsive</code>
   */
 @js.annotation.ScalaJSDefined
-class Responsive extends js.Object {
+class Responsive extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * A set of rules for responsive settings. The rules are executed from the top down.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/" target="_blank">Axis changes</a>
+    * <p>A set of rules for responsive settings. The rules are executed from
+    * the top down.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis changes</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis changes</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/responsive/axis/">Axis changes</a>
     * @since 5.0.0
     */
-  val rules: js.UndefOr[js.Array[CleanJsObject[ResponsiveRules]]] = js.undefined
+  val rules: js.UndefOr[js.Array[js.Any]] = js.undefined
 }
 
 object Responsive {
   /**
-    * @param rules A set of rules for responsive settings. The rules are executed from the top down.
+    * @param rules <p>A set of rules for responsive settings. The rules are executed from. the top down.</p>
     */
-  def apply(rules: js.UndefOr[js.Array[CleanJsObject[ResponsiveRules]]] = js.undefined): Responsive = {
-    val rulesOuter: js.UndefOr[js.Array[CleanJsObject[ResponsiveRules]]] = rules
-    new Responsive {
-      override val rules: js.UndefOr[js.Array[CleanJsObject[ResponsiveRules]]] = rulesOuter
-    }
+  def apply(rules: js.UndefOr[js.Array[js.Any]] = js.undefined): Responsive = {
+    val rulesOuter: js.UndefOr[js.Array[js.Any]] = rules
+    com.highcharts.HighchartsGenericObject.toCleanObject(new Responsive {
+      override val rules: js.UndefOr[js.Array[js.Any]] = rulesOuter
+    })
   }
 }

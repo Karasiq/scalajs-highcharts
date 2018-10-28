@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-scatter-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsScatterPoint extends js.Object {
+class PlotOptionsScatterPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsScatterPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = js.undefined): PlotOptionsScatterPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = events
-    new PlotOptionsScatterPoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsScatterPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsScatterPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsScatterPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

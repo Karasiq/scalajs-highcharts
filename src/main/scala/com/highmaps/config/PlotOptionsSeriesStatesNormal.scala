@@ -13,23 +13,26 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-series-states-normal</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsSeriesStatesNormal extends js.Object {
+class PlotOptionsSeriesStatesNormal extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Animation options for the fill color when returning from hover state to normal state. The animation adds some latency in order to reduce the effect of flickering when hovering in and out of for example an uneven coastline.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-animation-false/" target="_blank">No animation of fill color</a>
+    * <p>Animation options for the fill color when returning from hover
+    * state to normal state. The animation adds some latency in order
+    * to reduce the effect of flickering when hovering in and out of
+    * for example an uneven coastline.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-animation-false/">No animation of fill color</a>
     */
   val animation: js.UndefOr[js.Object | Boolean] = js.undefined
 }
 
 object PlotOptionsSeriesStatesNormal {
   /**
-    * @param animation Animation options for the fill color when returning from hover state to normal state. The animation adds some latency in order to reduce the effect of flickering when hovering in and out of for example an uneven coastline.
+    * @param animation <p>Animation options for the fill color when returning from hover. state to normal state. The animation adds some latency in order. to reduce the effect of flickering when hovering in and out of. for example an uneven coastline.</p>
     */
   def apply(animation: js.UndefOr[js.Object | Boolean] = js.undefined): PlotOptionsSeriesStatesNormal = {
     val animationOuter: js.UndefOr[js.Object | Boolean] = animation
-    new PlotOptionsSeriesStatesNormal {
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsSeriesStatesNormal {
       override val animation: js.UndefOr[js.Object | Boolean] = animationOuter
-    }
+    })
   }
 }

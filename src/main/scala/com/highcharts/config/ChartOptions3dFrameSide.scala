@@ -13,16 +13,16 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>chart-options3d-frame-side</code>
   */
 @js.annotation.ScalaJSDefined
-class ChartOptions3dFrameSide extends js.Object {
+class ChartOptions3dFrameSide extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * The color of the panel.
+    * <p>The color of the panel.</p>
     * @since 4.0
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
-    * The thickness of the panel.
+    * <p>The thickness of the panel.</p>
     * @since 4.0
     */
   val size: js.UndefOr[Double] = js.undefined
@@ -30,15 +30,15 @@ class ChartOptions3dFrameSide extends js.Object {
 
 object ChartOptions3dFrameSide {
   /**
-    * @param color The color of the panel.
-    * @param size The thickness of the panel.
+    * @param color <p>The color of the panel.</p>
+    * @param size <p>The thickness of the panel.</p>
     */
   def apply(color: js.UndefOr[String | js.Object] = js.undefined, size: js.UndefOr[Double] = js.undefined): ChartOptions3dFrameSide = {
     val colorOuter: js.UndefOr[String | js.Object] = color
     val sizeOuter: js.UndefOr[Double] = size
-    new ChartOptions3dFrameSide {
+    com.highcharts.HighchartsGenericObject.toCleanObject(new ChartOptions3dFrameSide {
       override val color: js.UndefOr[String | js.Object] = colorOuter
       override val size: js.UndefOr[Double] = sizeOuter
-    }
+    })
   }
 }

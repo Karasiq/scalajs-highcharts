@@ -13,22 +13,24 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>exporting-buttons</code>
   */
 @js.annotation.ScalaJSDefined
-class ExportingButtons extends js.Object {
+class ExportingButtons extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Options for the export button.
+    * <p>Options for the export button.</p>
+    * <p>In styled mode, export button styles can be applied with the
+    * <code>.highcharts-contextbutton</code> class.</p>
     */
-  val contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = js.undefined
+  val contextButton: js.Any = js.undefined
 }
 
 object ExportingButtons {
   /**
-    * @param contextButton Options for the export button.
+    * @param contextButton <p>Options for the export button.</p>. <p>In styled mode, export button styles can be applied with the. <code>.highcharts-contextbutton</code> class.</p>
     */
-  def apply(contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = js.undefined): ExportingButtons = {
-    val contextButtonOuter: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = contextButton
-    new ExportingButtons {
-      override val contextButton: js.UndefOr[CleanJsObject[ExportingButtonsContextButton]] = contextButtonOuter
-    }
+  def apply(contextButton: js.UndefOr[js.Any] = js.undefined): ExportingButtons = {
+    val contextButtonOuter: js.Any = contextButton
+    com.highcharts.HighchartsGenericObject.toCleanObject(new ExportingButtons {
+      override val contextButton: js.Any = contextButtonOuter
+    })
   }
 }

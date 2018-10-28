@@ -13,90 +13,101 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>mapNavigation</code>
   */
 @js.annotation.ScalaJSDefined
-class MapNavigation extends js.Object {
+class MapNavigation extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * General options for the map navigation buttons. Individual options can be given from the <a href="#mapNavigation.buttons">mapNavigation.buttons</a> option set.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/" target="_blank">Theming the navigation buttons</a>
+    * <p>General options for the map navigation buttons. Individual options
+    * can be given from the <a href="#mapNavigation.buttons">mapNavigation.buttons</a>
+    * option set.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/button-theme/">Theming the navigation buttons</a>
     */
-  val buttonOptions: js.UndefOr[CleanJsObject[MapNavigationButtonOptions]] = js.undefined
+  val buttonOptions: js.Any = js.undefined
+
+  val buttons: js.Any = js.undefined
 
   /**
-    * The individual buttons for the map navigation. This usually includes the zoom in and zoom out buttons. Properties for each button is inherited from <a href="#mapNavigation.buttonOptions">mapNavigation.buttonOptions</a>, while individual options can be overridden. But default, the <code>onclick</code>, <code>text</code> and <code>y</code> options are individual.
+    * <p>Sensitivity of mouse wheel or trackpad scrolling. 1 is no sensitivity,
+    * while with 2, one mousewheel delta will zoom in 50%.</p>
+    * @since 4.2.4
     */
-  val buttons: js.UndefOr[CleanJsObject[MapNavigationButtons]] = js.undefined
+  val mouseWheelSensitivity: js.UndefOr[Double] = js.undefined
 
   /**
-    * Whether to enable navigation buttons. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
+    * <p>Whether to enable navigation buttons. By default it inherits the
+    * <a href="#mapNavigation.enabled">enabled</a> setting.</p>
     */
   val enableButtons: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * Enables zooming in on an area on double clicking in the map. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    */
-  val enableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * Whether to zoom in on an area when that area is double clicked.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/doubleclickzoomto/" target="_blank">Enable double click zoom to</a>
-    */
-  val enableDoubleClickZoomTo: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * Enables zooming by mouse wheel. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    */
-  val enableMouseWheelZoom: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * Whether to enable multitouch zooming. Note that if the chart covers the viewport, this prevents the user from using multitouch and touchdrag on the web page, so you should make sure the user is not trapped inside the chart. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    */
-  val enableTouchZoom: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * <p>Whether to enable map navigation. The default is not to enable navigation, as many choropleth maps are simple and don't need it. Additionally, when touch zoom and mousewheel zoom is enabled, it breaks the default behaviour of these interactions in the website, and the implementer should be aware of this.</p>
-    * <p>Individual interactions can be enabled separately, namely buttons, multitouch zoom, double click zoom, double click zoom to element and mousewheel zoom.</p>
+    * <p>Whether to enable map navigation. The default is not to enable
+    * navigation, as many choropleth maps are simple and don&#39;t need it.
+    * Additionally, when touch zoom and mousewheel zoom is enabled, it breaks
+    * the default behaviour of these interactions in the website, and the
+    * implementer should be aware of this.</p>
+    * <p>Individual interactions can be enabled separately, namely buttons,
+    * multitouch zoom, double click zoom, double click zoom to element and
+    * mousewheel zoom.</p>
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * Sensitivity of mouse wheel or trackpad scrolling. 1 is no sensitivity, while with 2, one mousewheel delta will zoom in 50%.
-    * @since 4.2.4
+    * <p>Enables zooming in on an area on double clicking in the map. By default
+    * it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.</p>
     */
-  val mouseWheelSensitivity: js.UndefOr[Double] = js.undefined
+  val enableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to zoom in on an area when that area is double clicked.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/mapnavigation/doubleclickzoomto/">Enable double click zoom to</a>
+    */
+  val enableDoubleClickZoomTo: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Enables zooming by mouse wheel. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.</p>
+    */
+  val enableMouseWheelZoom: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to enable multitouch zooming. Note that if the chart covers the
+    * viewport, this prevents the user from using multitouch and touchdrag on
+    * the web page, so you should make sure the user is not trapped inside the
+    * chart. By default it inherits the <a href="#mapNavigation.enabled">enabled</a>
+    * setting.</p>
+    */
+  val enableTouchZoom: js.UndefOr[Boolean] = js.undefined
 }
 
 object MapNavigation {
   /**
-    * @param buttonOptions General options for the map navigation buttons. Individual options can be given from the <a href="#mapNavigation.buttons">mapNavigation.buttons</a> option set.
-    * @param buttons The individual buttons for the map navigation. This usually includes the zoom in and zoom out buttons. Properties for each button is inherited from <a href="#mapNavigation.buttonOptions">mapNavigation.buttonOptions</a>, while individual options can be overridden. But default, the <code>onclick</code>, <code>text</code> and <code>y</code> options are individual.
-    * @param enableButtons Whether to enable navigation buttons. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    * @param enableDoubleClickZoom Enables zooming in on an area on double clicking in the map. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    * @param enableDoubleClickZoomTo Whether to zoom in on an area when that area is double clicked.
-    * @param enableMouseWheelZoom Enables zooming by mouse wheel. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    * @param enableTouchZoom Whether to enable multitouch zooming. Note that if the chart covers the viewport, this prevents the user from using multitouch and touchdrag on the web page, so you should make sure the user is not trapped inside the chart. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.
-    * @param enabled <p>Whether to enable map navigation. The default is not to enable navigation, as many choropleth maps are simple and don't need it. Additionally, when touch zoom and mousewheel zoom is enabled, it breaks the default behaviour of these interactions in the website, and the implementer should be aware of this.</p>. <p>Individual interactions can be enabled separately, namely buttons, multitouch zoom, double click zoom, double click zoom to element and mousewheel zoom.</p>
-    * @param mouseWheelSensitivity Sensitivity of mouse wheel or trackpad scrolling. 1 is no sensitivity, while with 2, one mousewheel delta will zoom in 50%.
+    * @param buttonOptions <p>General options for the map navigation buttons. Individual options. can be given from the <a href="#mapNavigation.buttons">mapNavigation.buttons</a>. option set.</p>
+    * @param mouseWheelSensitivity <p>Sensitivity of mouse wheel or trackpad scrolling. 1 is no sensitivity,. while with 2, one mousewheel delta will zoom in 50%.</p>
+    * @param enableButtons <p>Whether to enable navigation buttons. By default it inherits the. <a href="#mapNavigation.enabled">enabled</a> setting.</p>
+    * @param enabled <p>Whether to enable map navigation. The default is not to enable. navigation, as many choropleth maps are simple and don&#39;t need it.. Additionally, when touch zoom and mousewheel zoom is enabled, it breaks. the default behaviour of these interactions in the website, and the. implementer should be aware of this.</p>. <p>Individual interactions can be enabled separately, namely buttons,. multitouch zoom, double click zoom, double click zoom to element and. mousewheel zoom.</p>
+    * @param enableDoubleClickZoom <p>Enables zooming in on an area on double clicking in the map. By default. it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.</p>
+    * @param enableDoubleClickZoomTo <p>Whether to zoom in on an area when that area is double clicked.</p>
+    * @param enableMouseWheelZoom <p>Enables zooming by mouse wheel. By default it inherits the <a href="#mapNavigation.enabled">enabled</a> setting.</p>
+    * @param enableTouchZoom <p>Whether to enable multitouch zooming. Note that if the chart covers the. viewport, this prevents the user from using multitouch and touchdrag on. the web page, so you should make sure the user is not trapped inside the. chart. By default it inherits the <a href="#mapNavigation.enabled">enabled</a>. setting.</p>
     */
-  def apply(buttonOptions: js.UndefOr[CleanJsObject[MapNavigationButtonOptions]] = js.undefined, buttons: js.UndefOr[CleanJsObject[MapNavigationButtons]] = js.undefined, enableButtons: js.UndefOr[Boolean] = js.undefined, enableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined, enableDoubleClickZoomTo: js.UndefOr[Boolean] = js.undefined, enableMouseWheelZoom: js.UndefOr[Boolean] = js.undefined, enableTouchZoom: js.UndefOr[Boolean] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, mouseWheelSensitivity: js.UndefOr[Double] = js.undefined): MapNavigation = {
-    val buttonOptionsOuter: js.UndefOr[CleanJsObject[MapNavigationButtonOptions]] = buttonOptions
-    val buttonsOuter: js.UndefOr[CleanJsObject[MapNavigationButtons]] = buttons
+  def apply(buttonOptions: js.UndefOr[js.Any] = js.undefined, buttons: js.UndefOr[js.Any] = js.undefined, mouseWheelSensitivity: js.UndefOr[Double] = js.undefined, enableButtons: js.UndefOr[Boolean] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, enableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined, enableDoubleClickZoomTo: js.UndefOr[Boolean] = js.undefined, enableMouseWheelZoom: js.UndefOr[Boolean] = js.undefined, enableTouchZoom: js.UndefOr[Boolean] = js.undefined): MapNavigation = {
+    val buttonOptionsOuter: js.Any = buttonOptions
+    val buttonsOuter: js.Any = buttons
+    val mouseWheelSensitivityOuter: js.UndefOr[Double] = mouseWheelSensitivity
     val enableButtonsOuter: js.UndefOr[Boolean] = enableButtons
+    val enabledOuter: js.UndefOr[Boolean] = enabled
     val enableDoubleClickZoomOuter: js.UndefOr[Boolean] = enableDoubleClickZoom
     val enableDoubleClickZoomToOuter: js.UndefOr[Boolean] = enableDoubleClickZoomTo
     val enableMouseWheelZoomOuter: js.UndefOr[Boolean] = enableMouseWheelZoom
     val enableTouchZoomOuter: js.UndefOr[Boolean] = enableTouchZoom
-    val enabledOuter: js.UndefOr[Boolean] = enabled
-    val mouseWheelSensitivityOuter: js.UndefOr[Double] = mouseWheelSensitivity
-    new MapNavigation {
-      override val buttonOptions: js.UndefOr[CleanJsObject[MapNavigationButtonOptions]] = buttonOptionsOuter
-      override val buttons: js.UndefOr[CleanJsObject[MapNavigationButtons]] = buttonsOuter
+    com.highcharts.HighchartsGenericObject.toCleanObject(new MapNavigation {
+      override val buttonOptions: js.Any = buttonOptionsOuter
+      override val buttons: js.Any = buttonsOuter
+      override val mouseWheelSensitivity: js.UndefOr[Double] = mouseWheelSensitivityOuter
       override val enableButtons: js.UndefOr[Boolean] = enableButtonsOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
       override val enableDoubleClickZoom: js.UndefOr[Boolean] = enableDoubleClickZoomOuter
       override val enableDoubleClickZoomTo: js.UndefOr[Boolean] = enableDoubleClickZoomToOuter
       override val enableMouseWheelZoom: js.UndefOr[Boolean] = enableMouseWheelZoomOuter
       override val enableTouchZoom: js.UndefOr[Boolean] = enableTouchZoomOuter
-      override val enabled: js.UndefOr[Boolean] = enabledOuter
-      override val mouseWheelSensitivity: js.UndefOr[Double] = mouseWheelSensitivityOuter
-    }
+    })
   }
 }

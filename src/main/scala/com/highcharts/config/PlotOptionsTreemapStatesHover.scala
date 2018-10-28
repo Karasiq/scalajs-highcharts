@@ -13,71 +13,121 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-treemap-states-hover</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsTreemapStatesHover extends js.Object {
+class PlotOptionsTreemapStatesHover extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Animation setting for hovering the graph in line-type series.
+    * <p>The border color for the hovered state.</p>
+    */
+  val borderColor: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Brightness for the hovered point. Defaults to 0 if the heatmap
+    * series is loaded first, otherwise 0.1.</p>
+    */
+  val brightness: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The opacity of a point in treemap. When a point has children,
+    * the visibility of the children is determined by the opacity.</p>
+    * @since 4.2.4
+    */
+  val opacity: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The shadow option for hovered state.</p>
+    */
+  val shadow: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Animation setting for hovering the graph in line-type series.</p>
     * @since 5.0.8
     */
   val animation: js.UndefOr[Boolean | js.Object] = js.undefined
 
   /**
-    * A specific border color for the hovered point. Defaults to inherit the normal state border color.
+    * <p>The additional line width for the graph of a hovered series.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/">5 pixels wider</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidthplus/">5 pixels wider</a>
+    * @since 4.0.3
     */
-  val borderColor: js.UndefOr[String | js.Object] = js.undefined
+  val lineWidthPlus: js.UndefOr[Double] = js.undefined
 
   /**
-    * <p>How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.</p>
-    * 
-    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the hover brightening is by default replaced with a fill-opacity set in the <code>.highcharts-point:hover</code> rule.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-states-hover-brightness/" target="_blank">Brighten by 0.5</a>
+    * <p>In Highcharts 1.0, the appearance of all markers belonging to the
+    * hovered series. For settings on the hover state of the individual
+    * point, see
+    * <a href="#plotOptions.series.marker.states.hover">marker.states.hover</a>.</p>
     */
-  val brightness: js.UndefOr[Double] = js.undefined
+  val marker: js.UndefOr[CleanJsObject[PlotOptionsTreemapStatesHoverMarker]] = js.undefined
 
   /**
-    * A specific color for the hovered point.
-    */
-  val color: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-    * @example Disable hover on <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/" target="_blank">line</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/" target="_blank">column</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/" target="_blank">pie</a>
+    * <p>Enable separate styles for the hovered series to visualize that
+    * the user hovers either the series itself or the legend. .</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled/">Line</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-column/">Column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-enabled-pie/">Pie</a>
     * @since 1.2
     */
   val enabled: js.UndefOr[Boolean] = js.undefined
 
   /**
-    * The opacity of a point in treemap. When a point has children, the visibility of the children is determined by the opacity. 
-    * @since 4.2.4
+    * <p>Pixel width of the graph line. By default this property is
+    * undefined, and the <code>lineWidthPlus</code> property dictates how much
+    * to increase the linewidth from normal state.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-hover-linewidth/">5px line on hover</a>
     */
-  val opacity: js.UndefOr[Double] = js.undefined
+  val lineWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The color of the shape in this state</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-states-hover/">Hover options</a>
+    */
+  val color: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>The border width of the point in this state</p>
+    */
+  val borderWidth: js.UndefOr[Double] = js.undefined
 }
 
 object PlotOptionsTreemapStatesHover {
   /**
-    * @param animation Animation setting for hovering the graph in line-type series.
-    * @param borderColor A specific border color for the hovered point. Defaults to inherit the normal state border color.
-    * @param brightness <p>How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the hover brightening is by default replaced with a fill-opacity set in the <code>.highcharts-point:hover</code> rule.</p>
-    * @param color A specific color for the hovered point.
-    * @param enabled Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.			.
-    * @param opacity The opacity of a point in treemap. When a point has children, the visibility of the children is determined by the opacity. 
+    * @param borderColor <p>The border color for the hovered state.</p>
+    * @param brightness <p>Brightness for the hovered point. Defaults to 0 if the heatmap. series is loaded first, otherwise 0.1.</p>
+    * @param opacity <p>The opacity of a point in treemap. When a point has children,. the visibility of the children is determined by the opacity.</p>
+    * @param shadow <p>The shadow option for hovered state.</p>
+    * @param animation <p>Animation setting for hovering the graph in line-type series.</p>
+    * @param lineWidthPlus <p>The additional line width for the graph of a hovered series.</p>
+    * @param marker <p>In Highcharts 1.0, the appearance of all markers belonging to the. hovered series. For settings on the hover state of the individual. point, see. <a href="#plotOptions.series.marker.states.hover">marker.states.hover</a>.</p>
+    * @param enabled <p>Enable separate styles for the hovered series to visualize that. the user hovers either the series itself or the legend. .</p>
+    * @param lineWidth <p>Pixel width of the graph line. By default this property is. undefined, and the <code>lineWidthPlus</code> property dictates how much. to increase the linewidth from normal state.</p>
+    * @param color <p>The color of the shape in this state</p>
+    * @param borderWidth <p>The border width of the point in this state</p>
     */
-  def apply(animation: js.UndefOr[Boolean | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, brightness: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, opacity: js.UndefOr[Double] = js.undefined): PlotOptionsTreemapStatesHover = {
-    val animationOuter: js.UndefOr[Boolean | js.Object] = animation
-    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+  def apply(borderColor: js.UndefOr[String] = js.undefined, brightness: js.UndefOr[Double] = js.undefined, opacity: js.UndefOr[Double] = js.undefined, shadow: js.UndefOr[Boolean] = js.undefined, animation: js.UndefOr[Boolean | js.Object] = js.undefined, lineWidthPlus: js.UndefOr[Double] = js.undefined, marker: js.UndefOr[CleanJsObject[PlotOptionsTreemapStatesHoverMarker]] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined): PlotOptionsTreemapStatesHover = {
+    val borderColorOuter: js.UndefOr[String] = borderColor
     val brightnessOuter: js.UndefOr[Double] = brightness
-    val colorOuter: js.UndefOr[String | js.Object] = color
-    val enabledOuter: js.UndefOr[Boolean] = enabled
     val opacityOuter: js.UndefOr[Double] = opacity
-    new PlotOptionsTreemapStatesHover {
-      override val animation: js.UndefOr[Boolean | js.Object] = animationOuter
-      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+    val shadowOuter: js.UndefOr[Boolean] = shadow
+    val animationOuter: js.UndefOr[Boolean | js.Object] = animation
+    val lineWidthPlusOuter: js.UndefOr[Double] = lineWidthPlus
+    val markerOuter: js.UndefOr[CleanJsObject[PlotOptionsTreemapStatesHoverMarker]] = marker
+    val enabledOuter: js.UndefOr[Boolean] = enabled
+    val lineWidthOuter: js.UndefOr[Double] = lineWidth
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsTreemapStatesHover {
+      override val borderColor: js.UndefOr[String] = borderColorOuter
       override val brightness: js.UndefOr[Double] = brightnessOuter
-      override val color: js.UndefOr[String | js.Object] = colorOuter
-      override val enabled: js.UndefOr[Boolean] = enabledOuter
       override val opacity: js.UndefOr[Double] = opacityOuter
-    }
+      override val shadow: js.UndefOr[Boolean] = shadowOuter
+      override val animation: js.UndefOr[Boolean | js.Object] = animationOuter
+      override val lineWidthPlus: js.UndefOr[Double] = lineWidthPlusOuter
+      override val marker: js.UndefOr[CleanJsObject[PlotOptionsTreemapStatesHoverMarker]] = markerOuter
+      override val enabled: js.UndefOr[Boolean] = enabledOuter
+      override val lineWidth: js.UndefOr[Double] = lineWidthOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+    })
   }
 }

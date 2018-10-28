@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-mapbubble-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsMapbubblePoint extends js.Object {
+class PlotOptionsMapbubblePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsMapbubblePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePointEvents]] = js.undefined): PlotOptionsMapbubblePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePointEvents]] = events
-    new PlotOptionsMapbubblePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsMapbubblePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsMapbubblePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsMapbubblePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

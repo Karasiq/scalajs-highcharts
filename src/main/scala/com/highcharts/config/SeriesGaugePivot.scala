@@ -13,54 +13,56 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;gauge&gt;-pivot</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesGaugePivot extends js.Object {
+class SeriesGaugePivot extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * The background color or fill of the pivot.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
+    * <p>The pixel radius of the pivot.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/">Pivot options demonstrated</a>
     * @since 2.3.0
     */
-  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
+  val radius: js.UndefOr[Double] = js.undefined
 
   /**
-    * The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
-    * @since 2.3.0
-    */
-  val borderColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * The border or stroke width of the pivot.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
+    * <p>The border or stroke width of the pivot.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/">Pivot options demonstrated</a>
     * @since 2.3.0
     */
   val borderWidth: js.UndefOr[Double] = js.undefined
 
   /**
-    * The pixel radius of the pivot.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/" target="_blank">Pivot options demonstrated</a>
+    * <p>The border or stroke color of the pivot. In able to change this,
+    * the borderWidth must also be set to something other than the default
+    * 0.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/">Pivot options demonstrated</a>
     * @since 2.3.0
     */
-  val radius: js.UndefOr[Double] = js.undefined
+  val borderColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>The background color or fill of the pivot.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-pivot/">Pivot options demonstrated</a>
+    * @since 2.3.0
+    */
+  val backgroundColor: js.UndefOr[String | js.Object] = js.undefined
 }
 
 object SeriesGaugePivot {
   /**
-    * @param backgroundColor The background color or fill of the pivot.
-    * @param borderColor The border or stroke color of the pivot. In able to change this, the borderWidth must also be set to something other than the default 0.
-    * @param borderWidth The border or stroke width of the pivot.
-    * @param radius The pixel radius of the pivot.
+    * @param radius <p>The pixel radius of the pivot.</p>
+    * @param borderWidth <p>The border or stroke width of the pivot.</p>
+    * @param borderColor <p>The border or stroke color of the pivot. In able to change this,. the borderWidth must also be set to something other than the default. 0.</p>
+    * @param backgroundColor <p>The background color or fill of the pivot.</p>
     */
-  def apply(backgroundColor: js.UndefOr[String | js.Object] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, radius: js.UndefOr[Double] = js.undefined): SeriesGaugePivot = {
-    val backgroundColorOuter: js.UndefOr[String | js.Object] = backgroundColor
-    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
-    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+  def apply(radius: js.UndefOr[Double] = js.undefined, borderWidth: js.UndefOr[Double] = js.undefined, borderColor: js.UndefOr[String | js.Object] = js.undefined, backgroundColor: js.UndefOr[String | js.Object] = js.undefined): SeriesGaugePivot = {
     val radiusOuter: js.UndefOr[Double] = radius
-    new SeriesGaugePivot {
-      override val backgroundColor: js.UndefOr[String | js.Object] = backgroundColorOuter
-      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
-      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+    val borderWidthOuter: js.UndefOr[Double] = borderWidth
+    val borderColorOuter: js.UndefOr[String | js.Object] = borderColor
+    val backgroundColorOuter: js.UndefOr[String | js.Object] = backgroundColor
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesGaugePivot {
       override val radius: js.UndefOr[Double] = radiusOuter
-    }
+      override val borderWidth: js.UndefOr[Double] = borderWidthOuter
+      override val borderColor: js.UndefOr[String | js.Object] = borderColorOuter
+      override val backgroundColor: js.UndefOr[String | js.Object] = backgroundColorOuter
+    })
   }
 }

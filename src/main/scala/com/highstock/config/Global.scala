@@ -13,70 +13,88 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>global</code>
   */
 @js.annotation.ScalaJSDefined
-class Global extends js.Object {
+class Global extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * A custom <code>Date</code> class for advanced date handling. For example, <a href="https://github.com/tahajahangir/jdate">JDate</a> can be hooked in to handle Jalali dates.
-    * @since 2.0.4
-    */
-  val Date: js.UndefOr[js.Object] = js.undefined
-
-  /**
-    * Path to the pattern image required by VML browsers in order to draw radial gradients.
-    * @since 1.2.0
+    * <p>Path to the pattern image required by VML browsers in order to
+    * draw radial gradients.</p>
     */
   val VMLRadialGradientURL: js.UndefOr[String] = js.undefined
 
   /**
-    * A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries. 
-    * @example  <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/gettimezoneoffset/" target="_blank">Use moment.js to draw Oslo time regardless of browser locale</a>
-    * @since 2.1.0
+    * <p><em>Canvg rendering for Android 2.x is removed as of Highcharts 5.0.
+    * Use the <a href="#exporting.libURL">libURL</a> option to configure exporting.</em></p>
+    * <p>The URL to the additional file to lazy load for Android 2.x devices.
+    * These devices don&#39;t support SVG, so we download a helper file that
+    * contains <a href="http://code.google.com/p/canvg/">canvg</a>, its dependency
+    * rbcolor, and our own CanVG Renderer class. To avoid hotlinking to
+    * our site, you can install canvas-tools.js on your own server and
+    * change this option accordingly.</p>
+    */
+  val canvasToolsURL: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>This option is deprecated since v6.0.5. Instead, use
+    * <a href="#time.useUTC">time.useUTC</a> that supports individual time settings
+    * per chart.</p>
+    */
+  val useUTC: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>This option is deprecated since v6.0.5. Instead, use
+    * <a href="#time.Date">time.Date</a> that supports individual time settings
+    * per chart.</p>
+    */
+  val Date: js.UndefOr[js.Function] = js.undefined
+
+  /**
+    * <p>This option is deprecated since v6.0.5. Instead, use
+    * <a href="#time.getTimezoneOffset">time.getTimezoneOffset</a> that supports
+    * individual time settings per chart.</p>
     */
   val getTimezoneOffset: js.UndefOr[js.Function] = js.undefined
 
   /**
-    * Requires <a href="http://momentjs.com/">moment.js</a>. If the timezone option is specified, it creates a default <a href="#global.getTimezoneOffset">getTimezoneOffset</a> function that looks up the specified timezone in moment.js. If moment.js is not included, this throws a Highcharts error in the console, but does not crash the chart.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.0.0/highslide-software/highcharts.com/tree/master/samples/highcharts/global/timezone/" target="_blank">Europe/Oslo</a>
-    * @since 5.0.7
+    * <p>This option is deprecated since v6.0.5. Instead, use
+    * <a href="#time.timezone">time.timezone</a> that supports individual time
+    * settings per chart.</p>
     */
   val timezone: js.UndefOr[String] = js.undefined
 
   /**
-    * The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset">getTimezoneOffset</a> method. Use this to display UTC based data in a predefined time zone. 
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/global/timezoneoffset/" target="_blank">Timezone offset</a>
-    * @since 1.3.8
+    * <p>This option is deprecated since v6.0.5. Instead, use
+    * <a href="#time.timezoneOffset">time.timezoneOffset</a> that supports individual
+    * time settings per chart.</p>
     */
   val timezoneOffset: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Whether to use UTC time for axis scaling, tickmark placement and time display in  <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent's time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.
-    */
-  val useUTC: js.UndefOr[Boolean] = js.undefined
 }
 
 object Global {
   /**
-    * @param Date A custom <code>Date</code> class for advanced date handling. For example, <a href="https://github.com/tahajahangir/jdate">JDate</a> can be hooked in to handle Jalali dates.
-    * @param VMLRadialGradientURL Path to the pattern image required by VML browsers in order to draw radial gradients.
-    * @param getTimezoneOffset A callback to return the time zone offset for a given datetime. It takes the timestamp in terms of milliseconds since January 1 1970, and returns the timezone offset in minutes. This provides a hook for drawing time based charts in specific time zones using their local DST crossover dates, with the help of external libraries. 
-    * @param timezone Requires <a href="http://momentjs.com/">moment.js</a>. If the timezone option is specified, it creates a default <a href="#global.getTimezoneOffset">getTimezoneOffset</a> function that looks up the specified timezone in moment.js. If moment.js is not included, this throws a Highcharts error in the console, but does not crash the chart.
-    * @param timezoneOffset The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset">getTimezoneOffset</a> method. Use this to display UTC based data in a predefined time zone. 
-    * @param useUTC Whether to use UTC time for axis scaling, tickmark placement and time display in  <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent's time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.
+    * @param VMLRadialGradientURL <p>Path to the pattern image required by VML browsers in order to. draw radial gradients.</p>
+    * @param canvasToolsURL <p><em>Canvg rendering for Android 2.x is removed as of Highcharts 5.0.. Use the <a href="#exporting.libURL">libURL</a> option to configure exporting.</em></p>. <p>The URL to the additional file to lazy load for Android 2.x devices.. These devices don&#39;t support SVG, so we download a helper file that. contains <a href="http://code.google.com/p/canvg/">canvg</a>, its dependency. rbcolor, and our own CanVG Renderer class. To avoid hotlinking to. our site, you can install canvas-tools.js on your own server and. change this option accordingly.</p>
+    * @param useUTC <p>This option is deprecated since v6.0.5. Instead, use. <a href="#time.useUTC">time.useUTC</a> that supports individual time settings. per chart.</p>
+    * @param Date <p>This option is deprecated since v6.0.5. Instead, use. <a href="#time.Date">time.Date</a> that supports individual time settings. per chart.</p>
+    * @param getTimezoneOffset <p>This option is deprecated since v6.0.5. Instead, use. <a href="#time.getTimezoneOffset">time.getTimezoneOffset</a> that supports. individual time settings per chart.</p>
+    * @param timezone <p>This option is deprecated since v6.0.5. Instead, use. <a href="#time.timezone">time.timezone</a> that supports individual time. settings per chart.</p>
+    * @param timezoneOffset <p>This option is deprecated since v6.0.5. Instead, use. <a href="#time.timezoneOffset">time.timezoneOffset</a> that supports individual. time settings per chart.</p>
     */
-  def apply(Date: js.UndefOr[js.Object] = js.undefined, VMLRadialGradientURL: js.UndefOr[String] = js.undefined, getTimezoneOffset: js.UndefOr[js.Function] = js.undefined, timezone: js.UndefOr[String] = js.undefined, timezoneOffset: js.UndefOr[Double] = js.undefined, useUTC: js.UndefOr[Boolean] = js.undefined): Global = {
-    val DateOuter: js.UndefOr[js.Object] = Date
+  def apply(VMLRadialGradientURL: js.UndefOr[String] = js.undefined, canvasToolsURL: js.UndefOr[String] = js.undefined, useUTC: js.UndefOr[Boolean] = js.undefined, Date: js.UndefOr[js.Function] = js.undefined, getTimezoneOffset: js.UndefOr[js.Function] = js.undefined, timezone: js.UndefOr[String] = js.undefined, timezoneOffset: js.UndefOr[Double] = js.undefined): Global = {
     val VMLRadialGradientURLOuter: js.UndefOr[String] = VMLRadialGradientURL
+    val canvasToolsURLOuter: js.UndefOr[String] = canvasToolsURL
+    val useUTCOuter: js.UndefOr[Boolean] = useUTC
+    val DateOuter: js.UndefOr[js.Function] = Date
     val getTimezoneOffsetOuter: js.UndefOr[js.Function] = getTimezoneOffset
     val timezoneOuter: js.UndefOr[String] = timezone
     val timezoneOffsetOuter: js.UndefOr[Double] = timezoneOffset
-    val useUTCOuter: js.UndefOr[Boolean] = useUTC
-    new Global {
-      override val Date: js.UndefOr[js.Object] = DateOuter
+    com.highcharts.HighchartsGenericObject.toCleanObject(new Global {
       override val VMLRadialGradientURL: js.UndefOr[String] = VMLRadialGradientURLOuter
+      override val canvasToolsURL: js.UndefOr[String] = canvasToolsURLOuter
+      override val useUTC: js.UndefOr[Boolean] = useUTCOuter
+      override val Date: js.UndefOr[js.Function] = DateOuter
       override val getTimezoneOffset: js.UndefOr[js.Function] = getTimezoneOffsetOuter
       override val timezone: js.UndefOr[String] = timezoneOuter
       override val timezoneOffset: js.UndefOr[Double] = timezoneOffsetOuter
-      override val useUTC: js.UndefOr[Boolean] = useUTCOuter
-    }
+    })
   }
 }

@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-spline-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsSplinePoint extends js.Object {
+class PlotOptionsSplinePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsSplinePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsSplinePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsSplinePointEvents]] = js.undefined): PlotOptionsSplinePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsSplinePointEvents]] = events
-    new PlotOptionsSplinePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsSplinePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsSplinePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsSplinePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

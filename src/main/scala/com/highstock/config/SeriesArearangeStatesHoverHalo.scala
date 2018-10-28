@@ -13,41 +13,47 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;arearange&gt;-states-hover-halo</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesArearangeStatesHoverHalo extends js.Object {
+class SeriesArearangeStatesHoverHalo extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
+    * <p>The pixel size of the halo. For point markers this is the
+    * radius of the halo. For pie slices it is the width of the
+    * halo outside the slice. For bubbles it defaults to 5 and is
+    * the width of the halo outside the bubble.</p>
     * @since 4.0
     */
-  val attributes: js.UndefOr[js.Object] = js.undefined
+  val size: js.UndefOr[Double] = js.undefined
 
   /**
-    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
+    * <p>Opacity for the halo unless a specific fill is overridden
+    * using the <code>attributes</code> setting. Note that Highcharts is only
+    * able to apply opacity to colors of hex or rgb(a) formats.</p>
     * @since 4.0
     */
   val opacity: js.UndefOr[Double] = js.undefined
 
   /**
-    * The pixel size of the halo. For point markers this is the radius of the halo. For pie slices it is the width of the halo outside the slice. For bubbles it defaults to 5 and is the width of the halo outside the bubble.
+    * <p>A collection of SVG attributes to override the appearance of
+    * the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.</p>
     * @since 4.0
     */
-  val size: js.UndefOr[Double] = js.undefined
+  val attributes: js.UndefOr[js.Object] = js.undefined
 }
 
 object SeriesArearangeStatesHoverHalo {
   /**
-    * @param attributes A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.
-    * @param opacity Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats.
-    * @param size The pixel size of the halo. For point markers this is the radius of the halo. For pie slices it is the width of the halo outside the slice. For bubbles it defaults to 5 and is the width of the halo outside the bubble.
+    * @param size <p>The pixel size of the halo. For point markers this is the. radius of the halo. For pie slices it is the width of the. halo outside the slice. For bubbles it defaults to 5 and is. the width of the halo outside the bubble.</p>
+    * @param opacity <p>Opacity for the halo unless a specific fill is overridden. using the <code>attributes</code> setting. Note that Highcharts is only. able to apply opacity to colors of hex or rgb(a) formats.</p>
+    * @param attributes <p>A collection of SVG attributes to override the appearance of. the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>.</p>
     */
-  def apply(attributes: js.UndefOr[js.Object] = js.undefined, opacity: js.UndefOr[Double] = js.undefined, size: js.UndefOr[Double] = js.undefined): SeriesArearangeStatesHoverHalo = {
-    val attributesOuter: js.UndefOr[js.Object] = attributes
-    val opacityOuter: js.UndefOr[Double] = opacity
+  def apply(size: js.UndefOr[Double] = js.undefined, opacity: js.UndefOr[Double] = js.undefined, attributes: js.UndefOr[js.Object] = js.undefined): SeriesArearangeStatesHoverHalo = {
     val sizeOuter: js.UndefOr[Double] = size
-    new SeriesArearangeStatesHoverHalo {
-      override val attributes: js.UndefOr[js.Object] = attributesOuter
-      override val opacity: js.UndefOr[Double] = opacityOuter
+    val opacityOuter: js.UndefOr[Double] = opacity
+    val attributesOuter: js.UndefOr[js.Object] = attributes
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesArearangeStatesHoverHalo {
       override val size: js.UndefOr[Double] = sizeOuter
-    }
+      override val opacity: js.UndefOr[Double] = opacityOuter
+      override val attributes: js.UndefOr[js.Object] = attributesOuter
+    })
   }
 }

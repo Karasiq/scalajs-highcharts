@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;pie&gt;-point</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesPiePoint extends js.Object {
+class SeriesPiePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object SeriesPiePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = js.undefined): SeriesPiePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = events
-    new SeriesPiePoint {
-      override val events: js.UndefOr[CleanJsObject[SeriesPiePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): SeriesPiePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesPiePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

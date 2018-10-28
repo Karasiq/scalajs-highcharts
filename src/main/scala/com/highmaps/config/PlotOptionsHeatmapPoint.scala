@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-heatmap-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsHeatmapPoint extends js.Object {
+class PlotOptionsHeatmapPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsHeatmapPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = js.undefined): PlotOptionsHeatmapPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = events
-    new PlotOptionsHeatmapPoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsHeatmapPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsHeatmapPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsHeatmapPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

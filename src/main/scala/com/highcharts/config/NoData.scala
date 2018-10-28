@@ -13,50 +13,51 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>noData</code>
   */
 @js.annotation.ScalaJSDefined
-class NoData extends js.Object {
+class NoData extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * An object of additional SVG attributes for the no-data label.
-    * @since 3.0.8
-    */
-  val attr: js.UndefOr[js.Object] = js.undefined
-
-  /**
-    * The position of the no-data label, relative to the plot area. 
+    * <p>The position of the no-data label, relative to the plot area.</p>
     * @since 3.0.8
     */
   val position: js.UndefOr[CleanJsObject[NoDataPosition]] = js.undefined
 
   /**
-    * CSS styles for the no-data label. 
+    * <p>An object of additional SVG attributes for the no-data label.</p>
     * @since 3.0.8
     */
-  val style: js.UndefOr[js.Object] = js.undefined
+  val attr: js.UndefOr[js.Object] = js.undefined
 
   /**
-    * Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.
+    * <p>Whether to insert the label as HTML, or as pseudo-HTML rendered with
+    * SVG.</p>
     * @since 4.1.10
     */
   val useHTML: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>CSS styles for the no-data label.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line">Styled no-data text</a>
+    */
+  val style: js.Any = js.undefined
 }
 
 object NoData {
   /**
-    * @param attr An object of additional SVG attributes for the no-data label.
-    * @param position The position of the no-data label, relative to the plot area. 
-    * @param style CSS styles for the no-data label. 
-    * @param useHTML Whether to insert the label as HTML, or as pseudo-HTML rendered with SVG.
+    * @param position <p>The position of the no-data label, relative to the plot area.</p>
+    * @param attr <p>An object of additional SVG attributes for the no-data label.</p>
+    * @param useHTML <p>Whether to insert the label as HTML, or as pseudo-HTML rendered with. SVG.</p>
+    * @param style <p>CSS styles for the no-data label.</p>
     */
-  def apply(attr: js.UndefOr[js.Object] = js.undefined, position: js.UndefOr[CleanJsObject[NoDataPosition]] = js.undefined, style: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined): NoData = {
-    val attrOuter: js.UndefOr[js.Object] = attr
+  def apply(position: js.UndefOr[CleanJsObject[NoDataPosition]] = js.undefined, attr: js.UndefOr[js.Object] = js.undefined, useHTML: js.UndefOr[Boolean] = js.undefined, style: js.UndefOr[js.Any] = js.undefined): NoData = {
     val positionOuter: js.UndefOr[CleanJsObject[NoDataPosition]] = position
-    val styleOuter: js.UndefOr[js.Object] = style
+    val attrOuter: js.UndefOr[js.Object] = attr
     val useHTMLOuter: js.UndefOr[Boolean] = useHTML
-    new NoData {
-      override val attr: js.UndefOr[js.Object] = attrOuter
+    val styleOuter: js.Any = style
+    com.highcharts.HighchartsGenericObject.toCleanObject(new NoData {
       override val position: js.UndefOr[CleanJsObject[NoDataPosition]] = positionOuter
-      override val style: js.UndefOr[js.Object] = styleOuter
+      override val attr: js.UndefOr[js.Object] = attrOuter
       override val useHTML: js.UndefOr[Boolean] = useHTMLOuter
-    }
+      override val style: js.Any = styleOuter
+    })
   }
 }

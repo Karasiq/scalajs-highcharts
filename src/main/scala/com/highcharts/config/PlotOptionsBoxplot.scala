@@ -13,568 +13,1068 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-boxplot</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsBoxplot extends js.Object {
+class PlotOptionsBoxplot extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Allow this series' points to be selected by clicking on the markers, bars or pie slices.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/" target="_blank">Line</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/" target="_blank">column</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/" target="_blank">pie</a>
-    * @since 1.2.0
+    * <p>The draggable-points module allows points to be moved around or modified
+    * in the chart. In addition to the options mentioned under the <code>dragDrop</code>
+    * API structure, the module fires three events,
+    * <a href="plotOptions.series.point.events.dragStart">point.dragStart</a>,
+    * <a href="plotOptions.series.point.events.drag">point.drag</a> and
+    * <a href="plotOptions.series.point.events.drop">point.drop</a>.</p>
+    * <p>It requires the <code>modules/draggable-points.js</code> file to be loaded.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/resize-column">Draggable column and line series</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-bubble">Draggable bubbles</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Draggable X range series</a>
+    * @since 6.2.0
     */
-  val allowPointSelect: js.UndefOr[Boolean] = js.undefined
+  val dragDrop: js.Any = js.undefined
 
   /**
-    * For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>.
-    */
-  val animationLimit: js.UndefOr[Double] = js.undefined
-
-  /**
-    * A class name to apply to the series' graphical elements.
-    * @since 5.0.0
-    */
-  val className: js.UndefOr[String] = js.undefined
-
-  /**
-    * <p>The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.</p>
-    * 
-    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color can be defined by the <a href="#plotOptions.series.colorIndex">colorIndex</a> option. Also, the series color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>, <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or individual classes given by the <code>className</code> option.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/" target="_blank">General plot option</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/" target="_blank">one specific series</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/" target="_blank">area color</a>
-    */
-  val color: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * When using automatic point colors pulled from the <code>options.colors</code>
-    *  collection, this option determines whether the chart should receive 
-    *  one color per series or one color per point.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/" target="_blank">False by default</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/" target="_blank">true</a>
+    * <p>The Y axis value to serve as the base for the columns, for distinguishing
+    * between values above and below a threshold. If <code>null</code>, the columns
+    * extend from the padding Y axis minimum.</p>
     * @since 2.0
     */
-  val colorByPoint: js.UndefOr[Boolean] = js.undefined
+  val threshold: js.Any = js.undefined
 
   /**
-    * <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">Styled mode</a> only. A specific color index to use for the series, so its graphic representations are given the class name <code>highcharts-color-{n}</code>.
-    * @since 5.0.0
-    */
-  val colorIndex: js.UndefOr[Double] = js.undefined
-
-  /**
-    * A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
-    * @since 3.0
-    */
-  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
-
-  /**
-    * When true, each column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting <code>crisp</code> to <code>false</code> may look better, even though each column is rendered blurry.
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highslide-software/highcharts.com/tree/master/samples/highcharts/plotoptions/column-crisp-false/" target="_blank">Crisp is false</a>.
-    * @since 5.0.10
-    */
-  val crisp: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
-    * @example Pointer cursor <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/" target="_blank">on line graph</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/" target="_blank">on columns</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/" target="_blank">on scatter markers</a>
-    */
-  val cursor: js.UndefOr[String] = js.undefined
-
-  /**
-    * Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/3d/column/">Basic 3D column chart</a>
-    * @since 4.0
-    */
-  val depth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * <p><i>Requires Accessibility module</i></p>
-    * <p>A description of the series to add to the screen reader information about the series.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/accessibility/accessible-stock/">Accessible stock chart</a>
-    * @since 5.0.0
-    */
-  val description: js.UndefOr[String] = js.undefined
-
-  /**
-    * 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
-    */
-  val edgeColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * 3D columns only. The width of the colored edges.
-    */
-  val edgeWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/" target="_blank">No mouse tracking</a>
-    */
-  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
-
-  val events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotEvents]] = js.undefined
-
-  /**
-    * <p>By default, series are exposed to screen readers as regions. By enabling this option, the series element itself will be exposed in the same way as the data points. This is useful if the series is not used as a grouping entity in the chart, but you still want to attach a description to the series.</p>
-    * <p>Requires the Accessibility module.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/jquery/3.1.1/highslide-software/highcharts.com/tree/master/samples/highcharts/accessibility/art-grants/" target="_blank">Accessible data visualization</a>
-    * @since 5.0.12
-    */
-  val exposeElementToA11y: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * The fill color of the box.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>
-    * @since 3.0
-    */
-  val fillColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * <p>Determines whether the series should look for the nearest point in both dimensions or just the x-dimension when hovering the series. Defaults to <code>'xy'</code> for scatter series and <code>'x'</code> for most other series. If the data has duplicate x-values, it is recommended to set this to <code>'xy'</code> to allow hovering over all points.</p>
-    * <p>Applies only to series types using nearest neighbor search (not direct hover) for tooltip.</p> 
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highslide-software/highcharts.com/tree/master/samples/highcharts/series/findnearestpointby/" target="_blank">Different hover behaviors</a>
-    * @since 5.0.10
-    */
-  val findNearestPointBy: js.UndefOr[String] = js.undefined
-
-  /**
-    * Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
-    * @since 4.1.6
-    */
-  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * Padding between each value groups, in x axis units.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/" target="_blank">0.2 by default</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/" target="_blank">no group padding - all 
-			columns are evenly spaced</a>
-    */
-  val groupPadding: js.UndefOr[Double] = js.undefined
-
-  /**
-    * The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
-    * @since 4.0
-    */
-  val groupZPadding: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/" target="_blank">Grouping disabled</a>
-    * @since 2.3.0
-    */
-  val grouping: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/" target="_blank">An extended data array with keys</a>
-    * @since 4.1.6
-    */
-  val keys: js.UndefOr[js.Array[String]] = js.undefined
-
-  /**
-    * The width of the line surrounding the box. If any of <a href="#plotOptions.boxplot.stemWidth">stemWidth</a>, <a href="#plotOptions.boxplot.medianWidth">medianWidth</a> or <a href="#plotOptions.boxplot.whiskerWidth">whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
-    * @since 3.0
-    */
-  val lineWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/" target="_blank">Linked series</a>
-    * @since 3.0
-    */
-  val linkedTo: js.UndefOr[String] = js.undefined
-
-  /**
-    * The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/" target="_blank">Limited to 50</a>
-    * @since 4.1.8
-    */
-  val maxPointWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * The color of the median line. If <code>null</code>, the general series color applies.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
-    * @since 3.0
-    */
-  val medianColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * The pixel width of the median line. If <code>null</code>, the <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> is used.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>
-    * @since 3.0
-    */
-  val medianWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * The color for the parts of the graph or points that are below the <a href="#plotOptions.series.threshold">threshold</a>.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/" target="_blank">Spline, area and column</a> - <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/" target="_blank">arearange</a>.
-    * @since 3.0
-    */
-  val negativeColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * Properties for each single point
-    */
-  val point: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPoint]] = js.undefined
-
-  /**
-    * Same as <a href="#accessibility.pointDescriptionFormatter">accessibility.pointDescriptionFormatter</a>, but for an individual series. Overrides the chart wide configuration.
-    * @since 5.0.12
-    */
-  val pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined
-
-  /**
-    * <p>If no x values are given for the points in a series, pointInterval defines
-    *  the interval of the x values. For example, if a series contains one value
-    *  every decade starting from year 0, set pointInterval to 10.</p>
-    * <p>Since Highcharts 4.1, it can be combined with <code>pointIntervalUnit</code> to draw irregular intervals.</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/" target="_blank">Datetime X axis</a>
-    */
-  val pointInterval: js.UndefOr[Double] = js.undefined
-
-  /**
-    * On datetime series, this allows for setting the <a href="#plotOptions.series.pointInterval">pointInterval</a> to irregular time units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with <code>pointInterval</code> to draw weeks, quarters, 6 months, 10 years etc.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/" target="_blank">One point a month</a>
-    * @since 4.1.0
-    */
-  val pointIntervalUnit: js.UndefOr[String] = js.undefined
-
-  /**
-    * Padding between each column or bar, in x axis units.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/" target="_blank">0.1 by default</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/" target="_blank">0.25</a>, 
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/" target="_blank">0 for tightly packed columns</a>,
-    */
-  val pointPadding: js.UndefOr[Double] = js.undefined
-
-  /**
-    * <p>Possible values: <code>null</code>, <code>"on"</code>, <code>"between"</code>.</p>
-    * <p>In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p>
-    * <p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p>
-    * <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is computed, but for line-type series it needs to be set.</p>
-    * <p>Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/" target="_blank">Between in a column chart</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/" target="_blank">numeric placement for custom layout</a>.
-    * @since 2.3.0
-    */
-  val pointPlacement: js.UndefOr[String | Double] = js.undefined
-
-  /**
-    * The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/" target="_blank">Set the point range to one day on a data set with one week between the points</a>
+    * <p>A configuration object for the tooltip rendering of each single series.
+    * Properties are inherited from <a href="#tooltip">tooltip</a>, but only the
+    * following properties can be defined on a series level.</p>
     * @since 2.3
     */
-  val pointRange: js.UndefOr[Double] = js.undefined
+  val tooltip: js.Any = js.undefined
 
   /**
-    * If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/" target="_blank">Linear</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/" target="_blank">datetime</a> X axis
-    */
-  val pointStart: js.UndefOr[Double] = js.undefined
-
-  /**
-    * A pixel value specifying a fixed width for each column or bar. When <code>null</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/" target="_blank">20px wide columns regardless of chart width
-			or the amount of data points</a>
-    * @since 1.2.5
-    */
-  val pointWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/" target="_blank">One out of two series selected</a>
-    * @since 1.2.0
-    */
-  val selected: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/" target="_blank">Show select box</a>
-    * @since 1.2.0
-    */
-  val showCheckbox: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * Whether to display this particular series or series type in the legend. The default value is <code>true</code> for standalone series, <code>false</code> for linked series.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/" target="_blank">One series in the legend, one hidden</a>
-    */
-  val showInLegend: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * If set to <code>True</code>, the accessibility module will skip past the points in this series for keyboard navigation.
-    * @since 5.0.12
-    */
-  val skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * A wrapper object for all the series options in specific states.
-    */
-  val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined
-
-  /**
-    * The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
-    * @since 3.0
-    */
-  val stemColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * The dash style of the stem, the vertical line extending from the box to the whiskers.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
-    * @since 3.0
-    */
-  val stemDashStyle: js.UndefOr[String] = js.undefined
-
-  /**
-    * The width of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the width is inherited from the <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> option.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>, <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/" target="_blank">error bar styling</a>
-    * @since 3.0
-    */
-  val stemWidth: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
-    *  on a series isn't triggered until the mouse moves over another series, or out
-    *  of the plot area. When false, the <code>mouseOut</code> event on a series is
-    *  triggered when the mouse leaves the area around the series' graph or markers.
-    *  This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the 
-    *  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/" target="_blank">True by default</a>,
-			<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/" target="_blank">false</a>
-    * @since 2.0
-    */
-  val stickyTracking: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
-    * @since 2.3
-    */
-  val tooltip: js.UndefOr[CleanJsObject[PlotOptionsBoxplotTooltip]] = js.undefined
-
-  /**
-    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
-    *  or two dimensional arrays with x and y values are allowed. Also, only the first
-    *  point is tested, and the rest are assumed to be the same format. This saves expensive
-    *  data checking and indexing in long series. Set it to <code>0</code> disable.
-    * @since 2.2
-    */
-  val turboThreshold: js.UndefOr[Double] = js.undefined
-
-  /**
-    * Set the initial visibility of the series.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/" target="_blank">Two series, one hidden and one visible</a>
-    */
-  val visible: js.UndefOr[Boolean] = js.undefined
-
-  /**
-    * The color of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general series color is used.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>
-    * @since 3.0
-    */
-  val whiskerColor: js.UndefOr[String | js.Object] = js.undefined
-
-  /**
-    * The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">True by default</a>
+    * <p>The length of the whiskers, the horizontal lines marking low and
+    * high values. It can be a numerical pixel value, or a percentage
+    * value of the box width. Set <code>0</code> to disable whiskers.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">True by default</a>
     * @since 3.0
     */
   val whiskerLength: js.UndefOr[Double | String] = js.undefined
 
   /**
-    * The line width of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> applies.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/" target="_blank">Box plot styling</a>
+    * <p>The fill color of the box.</p>
+    * <p>In styled mode, the fill color can be set with the
+    * <code>.highcharts-boxplot-box</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+    * @since 3.0
+    */
+  val fillColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>The width of the line surrounding the box. If any of
+    * <a href="#plotOptions.boxplot.stemWidth">stemWidth</a>,
+    * <a href="#plotOptions.boxplot.medianWidth">medianWidth</a>
+    * or <a href="#plotOptions.boxplot.whiskerWidth">whiskerWidth</a> are <code>null</code>,
+    * the lineWidth also applies to these lines.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a>
+    * @since 3.0
+    */
+  val lineWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The pixel width of the median line. If <code>null</code>, the
+    * <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> is used.</p>
+    * <p>In styled mode, the median stroke width can be set with the
+    * <code>.highcharts-boxplot-median</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+    * @since 3.0
+    */
+  val medianWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The line width of the whiskers, the horizontal lines marking low and
+    * high values. When <code>null</code>, the general
+    * <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> applies.</p>
+    * <p>In styled mode, the whisker stroke width can be set with the
+    * <code>.highcharts-boxplot-whisker</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
     * @since 3.0
     */
   val whiskerWidth: js.UndefOr[Double] = js.undefined
 
   /**
-    * Defines the Axis on which the zones are applied.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/" target="_blank">Zones on the X-Axis</a>
+    * <p>The color of the median line. If <code>null</code>, the general series color
+    * applies.</p>
+    * <p>In styled mode, the median stroke width can be set with the
+    * <code>.highcharts-boxplot-median</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a>
+    * @since 3.0
+    */
+  val medianColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>The color of the stem, the vertical line extending from the box to
+    * the whiskers. If <code>null</code>, the series color is used.</p>
+    * <p>In styled mode, the stem stroke can be set with the
+    * <code>.highcharts-boxplot-stem</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a>
+    * @since 3.0
+    */
+  val stemColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>The dash style of the stem, the vertical line extending from the
+    * box to the whiskers.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a>
+    * @since 3.0
+    */
+  val stemDashStyle: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>The width of the stem, the vertical line extending from the box to
+    * the whiskers. If <code>null</code>, the width is inherited from the
+    * <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> option.</p>
+    * <p>In styled mode, the stem stroke width can be set with the
+    * <code>.highcharts-boxplot-stem</code> class.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/error-bar-styling/">Error bar styling</a>
+    * @since 3.0
+    */
+  val stemWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The color of the whiskers, the horizontal lines marking low and high
+    * values. When <code>null</code>, the general series color is used.</p>
+    * <p>In styled mode, the whisker stroke can be set with the
+    * <code>.highcharts-boxplot-whisker</code> class .</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/box-plot-styling/">Box plot styling</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/boxplot/">Box plot in styled mode</a>
+    * @since 3.0
+    */
+  val whiskerColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>When true, each column edge is rounded to its nearest pixel in order
+    * to render sharp on screen. In some cases, when there are a lot of
+    * densely packed columns, this leads to visible difference in column
+    * widths or distance between columns. In these cases, setting <code>crisp</code>
+    * to <code>false</code> may look better, even though each column is rendered
+    * blurry.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/">Crisp is false</a>
+    * @since 5.0.10
+    */
+  val crisp: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Padding between each value groups, in x axis units.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/">0.2 by default</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/">No group padding - all columns are evenly spaced</a>
+    */
+  val groupPadding: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Padding between each column or bar, in x axis units.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/">0.1 by default</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/">0.25</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/">0 for tightly packed columns</a>
+    */
+  val pointPadding: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The minimal height for a column or width for a bar. By default,
+    * 0 values are not shown. To visualize a 0 (or close to zero) point,
+    * set the minimal point length to a pixel value like 3. In stacked
+    * column charts, minPointLength might not be respected for tightly
+    * packed values.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/">Zero base value</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/">Positive and negative close to zero values</a>
+    */
+  val minPointLength: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>When the series contains less points than the crop threshold, all
+    * points are drawn, event if the points fall outside the visible plot
+    * area at the current zoom. The advantage of drawing all points (including
+    * markers and columns), is that animation is performed on updates.
+    * On the other hand, when the series contains more points than the
+    * crop threshold, the series data is cropped to only contain points
+    * that fall within the plot area. The advantage of cropping away invisible
+    * points is to increase performance on large series.</p>
+    * @since 2.2
+    */
+  val cropThreshold: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>The X axis range that each point is valid for. This determines the
+    * width of the column. On a categorized axis, the range will be 1
+    * by default (one category unit). On linear and datetime axes, the
+    * range will be computed as the distance between the two closest data
+    * points.</p>
+    * <p>The default <code>null</code> means it is computed automatically, but this option
+    * can be used to override the automatic value.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/">Set the point range to one day on a data set with one week between the points</a>
+    * @since 2.3
+    */
+  val pointRange: js.UndefOr[Double | Null] = js.undefined
+
+  /**
+    * <p>Options for the series data labels, appearing next to each data point.</p>
+    * <p>Since v6.2.0, multiple data labels can be applied to each single point by
+    * defining them as an array of configs.</p>
+    * <p>In styled mode, the data labels can be styled with the
+    * <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names
+    * (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels">see example</a>).</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled">Data labels enabled</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-multiple">Multiple data labels on a bar series</a>
+    */
+  val dataLabels: js.Any = js.undefined
+
+  /**
+    * <p>When this is true, the series will not cause the Y axis to cross
+    * the zero plane (or <a href="#plotOptions.series.threshold">threshold</a> option)
+    * unless the data actually crosses the plane.</p>
+    * <p>For example, if <code>softThreshold</code> is <code>false</code>, a series of 0, 1, 2,
+    * 3 will make the Y axis show negative values according to the <code>minPadding</code>
+    * option. If <code>softThreshold</code> is <code>true</code>, the Y axis starts at 0.</p>
+    * @since 4.1.9
+    */
+  val softThreshold: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
+    * on a series isn&#39;t triggered until the mouse moves over another series,
+    * or out of the plot area. When false, the <code>mouseOut</code> event on a
+    * series is triggered when the mouse leaves the area around the series&#39;
+    * graph or markers. This also implies the tooltip when not shared. When
+    * <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will
+    * be hidden when moving the mouse between series. Defaults to true for line
+    * and area type series, but to false for columns, pies etc.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/">False</a>
+    * @since 2.0
+    */
+  val stickyTracking: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>When using automatic point colors pulled from the global <a href="colors">colors</a>
+    * or series-specific <a href="series.colors">plotOptions.column.colors</a>
+    * collections, this option determines whether the chart should receive
+    * one color per series or one color per point.</p>
+    * <p>In styled mode, the <code>colors</code> or <code>series.colors</code> arrays are not supported,
+    * and instead this option gives the points individual color class names on
+    * the form <code>highcharts-color-{n}</code>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/">False by default</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/">True</a>
+    * @since 2.0
+    */
+  val colorByPoint: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>A series specific or series type specific color set to apply instead
+    * of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.</p>
+    * @since 3.0
+    */
+  val colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined
+
+  /**
+    * <p>Whether to group non-stacked columns or to let them render independent
+    * of each other. Non-grouped columns will be laid out individually
+    * and overlap each other.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/">Grouping disabled</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/">Grouping disabled</a>
+    * @since 2.3.0
+    */
+  val grouping: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>The maximum allowed pixel width for a column, translated to the height
+    * of a bar in a bar chart. This prevents the columns from becoming
+    * too wide when there is a small number of points in the chart.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/">Limited to 50</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/">Limited to 50</a>
+    * @since 4.1.8
+    */
+  val maxPointWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>A pixel value specifying a fixed width for each column or bar. When
+    * <code>null</code>, the width is calculated from the <code>pointPadding</code> and
+    * <code>groupPadding</code>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/">20px wide columns regardless of chart width or the amount of data points</a>
+    * @since 1.2.5
+    */
+  val pointWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Data grouping is the concept of sampling the data values into larger
+    * blocks in order to ease readability and increase performance of the
+    * JavaScript charts. Highstock by default applies data grouping when
+    * the points become closer than a certain pixel value, determined by
+    * the <code>groupPixelWidth</code> option.</p>
+    * <p>If data grouping is applied, the grouping information of grouped
+    * points can be read from the <a href="/class-reference/Highcharts.Point#.dataGroup">Point.dataGroup</a>. If point options other than
+    * the data itself are set, for example <code>name</code> or <code>color</code> or custom properties,
+    * the grouping logic doesn&#39;t know how to group it. In this case the options of
+    * the first point instance are copied over to the group point. This can be
+    * altered through a custom <code>approximation</code> callback function.</p>
+    */
+  val dataGrouping: js.Any = js.undefined
+
+  /**
+    * <p>Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.</p>
+    * @since 4.0
+    */
+  val depth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>3D columns only. The color of the edges. Similar to <code>borderColor</code>,
+    *  except it defaults to the same color as the column.</p>
+    */
+  val edgeColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>3D columns only. The width of the colored edges.</p>
+    */
+  val edgeWidth: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Set the point threshold for when a series should enter boost mode.</p>
+    * <p>Setting it to e.g. 2000 will cause the series to enter boost mode when there
+    * are 2000 or more points in the series.</p>
+    * <p>To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it
+    * to 1 will force boosting.</p>
+    * <p>Requires <code>modules/boost.js</code>.</p>
+    */
+  val boostThreshold: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Properties for each single point.</p>
+    */
+  val point: js.Any = js.undefined
+
+  /**
+    * <p>Series labels are placed as close to the series as possible in a
+    * natural way, seeking to avoid other series. The goal of this
+    * feature is to make the chart more easily readable, like if a
+    * human designer placed the labels in the optimal position.</p>
+    * <p>The series labels currently work with series types having a
+    * <code>graph</code> or an <code>area</code>.</p>
+    * <p>Requires the <code>series-label.js</code> module.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/line-chart">Line chart</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/streamgraph">Stream graph</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-label/stock-chart">Stock chart</a>
+    * @since 6.0.0
+    */
+  val label: js.Any = js.undefined
+
+  /**
+    * <p>Allow this series&#39; points to be selected by clicking on the graphic
+    * (columns, point markers, pie slices, map areas etc).</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-line/">Line</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-column/">Column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-allowpointselect-pie/">Pie</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">Map area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/">Map bubble</a>
+    * @since 1.2.0
+    */
+  val allowPointSelect: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>If true, a checkbox is displayed next to the legend item to allow
+    * selecting the series. The state of the checkbox is determined by
+    * the <code>selected</code> option.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showcheckbox-true/">Show select box</a>
+    * @since 1.2.0
+    */
+  val showCheckbox: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Enable or disable the initial animation when a series is displayed.
+    * The animation can also be set as a configuration object. Please
+    * note that this option only applies to the initial animation of the
+    * series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods. The
+    * following properties are supported:</p>
+    * <dl>
+    * 
+    * <dt>duration</dt>
+    * 
+    * <dd>The duration of the animation in milliseconds.</dd>
+    * 
+    * <dt>easing</dt>
+    * 
+    * <dd>Can be a string reference to an easing function set on the `Math`
+    * object or a function. See the _Custom easing function_ demo below.</dd>
+    * 
+    * </dl>
+    * 
+    * <p>Due to poor performance, animation is disabled in old IE browsers
+    * for several chart types.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-disabled/">Animation disabled</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-slower/">Slower animation</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">Custom easing function</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-slower/">Slower animation</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/animation-easing/">Custom easing function</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-animation-true/">Animation enabled on map series</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-animation-false/">Disabled on mapbubble series</a>
+    */
+  val animation: js.UndefOr[Boolean | js.Object] = js.undefined
+
+  /**
+    * <p>General event handlers for the series items. These event hooks can also
+    * be attached to the series at run time using the <code>Highcharts.addEvent</code>
+    * function.</p>
+    */
+  val events: js.Any = js.undefined
+
+  /**
+    * <p>When a series contains a data array that is longer than this, only
+    * one dimensional arrays of numbers, or two dimensional arrays with
+    * x and y values are allowed. Also, only the first point is tested,
+    * and the rest are assumed to be the same format. This saves expensive
+    * data checking and indexing in long series. Set it to <code>0</code> disable.</p>
+    * @since 2.2
+    */
+  val turboThreshold: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Determines whether the series should look for the nearest point
+    * in both dimensions or just the x-dimension when hovering the series.
+    * Defaults to <code>&#39;xy&#39;</code> for scatter series and <code>&#39;x&#39;</code> for most other
+    * series. If the data has duplicate x-values, it is recommended to
+    * set this to <code>&#39;xy&#39;</code> to allow hovering over all points.</p>
+    * <p>Applies only to series types using nearest neighbor search (not
+    * direct hover) for tooltip.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/">Different hover behaviors</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/">Different hover behaviors</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/findnearestpointby/">Different hover behaviors</a>
+    * @since 5.0.10
+    */
+  val findNearestPointBy: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>For some series, there is a limit that shuts down initial animation
+    * by default when the total number of points in the chart is too high.
+    * For example, for a column chart and its derivatives, animation doesn&#39;t
+    * run if there is more than 250 points totally. To disable this cap, set
+    * <code>animationLimit</code> to <code>Infinity</code>.</p>
+    */
+  val animationLimit: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>An additional class name to apply to the series&#39; graphical elements. This
+    * option does not replace default class names of the graphical element.</p>
+    * @since 5.0.0
+    */
+  val className: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Disable this option to allow series rendering in the whole plotting
+    * area.</p>
+    * <p><strong>Note:</strong> Clipping should be always enabled when
+    * <a href="#chart.zoomType">chart.zoomType</a> is set</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-clip/">Disabled clipping</a>
+    * @since 3.0.0
+    */
+  val clip: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>The main color of the series. In line type series it applies to the
+    * line and the point markers unless otherwise specified. In bar type
+    * series it applies to the bars unless a color is specified per point.
+    * The default value is pulled from the <code>options.colors</code> array.</p>
+    * <p>In styled mode, the color can be defined by the
+    * <a href="#plotOptions.series.colorIndex">colorIndex</a> option. Also, the series
+    * color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>,
+    * <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or
+    * individual classes given by the <code>className</code> option.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-general/">General plot option</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-specific/">One specific series</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-color-area/">Area color</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/infographic/">Pattern fill</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/category-map/">Category map by multiple series</a>
+    */
+  val color: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>Styled mode only. A specific color index to use for the series, so its
+    * graphic representations are given the class name <code>highcharts-color-{n}</code>.</p>
+    * @since 5.0.0
+    */
+  val colorIndex: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>You can set the cursor to &quot;pointer&quot; if you have click events attached
+    * to the series, to signal to the user that the points and lines can
+    * be clicked.</p>
+    * <p>In styled mode, the series cursor can be set with the same classes
+    * as listed under <a href="#plotOptions.series.color">series.color</a>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-line/">On line graph</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-column/">On columns</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-cursor-scatter/">On scatter markers</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/cursor/">Pointer on a line graph</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">Map area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/mapbubble-allowpointselect/">Map bubble</a>
+    */
+  val cursor: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Requires the Accessibility module.</p>
+    * <p>A description of the series to add to the screen reader information
+    * about the series.</p>
+    * @since 5.0.0
+    */
+  val description: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Enable or disable the mouse tracking for a specific series. This
+    * includes point tooltips and click events on graphs and points. For
+    * large datasets it improves performance.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-enablemousetracking-false/">No mouse tracking</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-enablemousetracking-false/">No mouse tracking</a>
+    */
+  val enableMouseTracking: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>By default, series are exposed to screen readers as regions. By enabling
+    * this option, the series element itself will be exposed in the same
+    * way as the data points. This is useful if the series is not used
+    * as a grouping entity in the chart, but you still want to attach a
+    * description to the series.</p>
+    * <p>Requires the Accessibility module.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/art-grants/">Accessible data visualization</a>
+    * @since 5.0.12
+    */
+  val exposeElementToA11y: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to use the Y extremes of the total chart width or only the
+    * zoomed area when zooming in on parts of the X axis. By default, the
+    * Y axis adjusts to the min and max of the visible data. Cartesian
+    * series only.</p>
+    * @since 4.1.6
+    */
+  val getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>An array specifying which option maps to which key in the data point
+    * array. This makes it convenient to work with unstructured data arrays
+    * from different sources.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/">An extended data array with keys</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-nested-keys/">Nested keys used to access object properties</a>
+    * @since 4.1.6
+    */
+  val keys: js.UndefOr[js.Array[String]] = js.undefined
+
+  /**
+    * <p>The <a href="#series.id">id</a> of another series to link to. Additionally,
+    * the value can be &quot;:previous&quot; to link to the previous series. When
+    * two series are linked, only the first one appears in the legend.
+    * Toggling the visibility of this also toggles the linked series.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arearange-line/">Linked series</a>
+    * @since 3.0
+    */
+  val linkedTo: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Options for the corresponding navigator series if <code>showInNavigator</code>
+    * is <code>true</code> for this series. Available options are the same as any
+    * series, documented at <a href="#plotOptions.series">plotOptions</a> and
+    * <a href="#series">series</a>.</p>
+    * <p>These options are merged with options in <a href="#navigator.series">navigator.series</a>, and will take precedence if the same option is
+    * defined both places.</p>
+    * @since 5.0.0
+    */
+  val navigatorOptions: js.Any = js.undefined
+
+  /**
+    * <p>The color for the parts of the graph or points that are below the
+    * <a href="#plotOptions.series.threshold">threshold</a>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/">Arearange</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-negative-color/">Styled mode</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/">Arearange</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-negative-color/">Spline, area and column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/arearange-negativecolor/">Arearange</a>
+    * @since 3.0
+    */
+  val negativeColor: js.UndefOr[String | js.Object] = js.undefined
+
+  /**
+    * <p>Same as <a href="#accessibility.pointDescriptionFormatter">accessibility.pointDescriptionFormatter</a>, but for an individual series.
+    * Overrides the chart wide configuration.</p>
+    * @since 5.0.12
+    */
+  val pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined
+
+  /**
+    * <p>If no x values are given for the points in a series, <code>pointInterval</code>
+    * defines the interval of the x values. For example, if a series contains
+    * one value every decade starting from year 0, set <code>pointInterval</code> to
+    * <code>10</code>. In true <code>datetime</code> axes, the <code>pointInterval</code> is set in
+    * milliseconds.</p>
+    * <p>It can be also be combined with <code>pointIntervalUnit</code> to draw irregular
+    * time intervals.</p>
+    * <p>Please note that this options applies to the <em>series data</em>, not the
+    * interval of the axis ticks, which is independent.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/">Datetime X axis</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/">Using pointStart and pointInterval</a>
+    */
+  val pointInterval: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>On datetime series, this allows for setting the
+    * <a href="#plotOptions.series.pointInterval">pointInterval</a> to irregular time
+    * units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours,
+    * but <code>pointIntervalUnit</code> also takes the DST crossover into consideration
+    * when dealing with local time. Combine this option with <code>pointInterval</code>
+    * to draw weeks, quarters, 6 months, 10 years etc.</p>
+    * <p>Please note that this options applies to the <em>series data</em>, not the
+    * interval of the axis ticks, which is independent.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/">One point a month</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/">One point a month</a>
+    * @since 4.1.0
+    */
+  val pointIntervalUnit: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Possible values: <code>&quot;on&quot;</code>, <code>&quot;between&quot;</code>, <code>number</code>.</p>
+    * <p>In a column chart, when pointPlacement is <code>&quot;on&quot;</code>, the point will
+    * not create any padding of the X axis. In a polar column chart this
+    * means that the first column points directly north. If the pointPlacement
+    * is <code>&quot;between&quot;</code>, the columns will be laid out between ticks. This
+    * is useful for example for visualising an amount between two points
+    * in time or in a certain sector of a polar chart.</p>
+    * <p>Since Highcharts 3.0.2, the point placement can also be numeric,
+    * where 0 is on the axis value, -0.5 is between this value and the
+    * previous, and 0.5 is between this value and the next. Unlike the
+    * textual options, numeric point placement options won&#39;t affect axis
+    * padding.</p>
+    * <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is
+    * computed, but for line-type series it needs to be set.</p>
+    * <p>For the <code>xrange</code> series type and gantt charts, if the Y axis is a
+    * category axis, the <code>pointPlacement</code> applies to the Y axis rather than
+    * the (typically datetime) X axis.</p>
+    * <p>Defaults to <code>undefined</code> in cartesian charts, <code>&quot;between&quot;</code> in polar charts.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-between/">Between in a column chart</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointplacement-numeric/">Numeric placement for custom layout</a>
+    * @since 2.3.0
+    */
+  val pointPlacement: js.UndefOr[String | Double] = js.undefined
+
+  /**
+    * <p>If no x values are given for the points in a series, pointStart defines
+    * on what value to start. For example, if a series contains one yearly
+    * value starting from 1945, set pointStart to 1945.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-linear/">Linear</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointstart-datetime/">Datetime</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/pointinterval-pointstart/">Using pointStart and pointInterval</a>
+    */
+  val pointStart: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Whether to select the series initially. If <code>showCheckbox</code> is true,
+    * the checkbox next to the series name in the legend will be checked for a
+    * selected series.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-selected/">One out of two series selected</a>
+    * @since 1.2.0
+    */
+  val selected: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
+    * can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>,
+    * <code>opacity</code> and <code>width</code>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-shadow/">Shadow enabled</a>
+    */
+  val shadow: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to display this particular series or series type in the legend.
+    * The default value is <code>true</code> for standalone series, <code>false</code> for linked
+    * series.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-showinlegend/">One series in the legend, one hidden</a>
+    */
+  val showInLegend: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether or not to show the series in the navigator. Takes precedence
+    * over <a href="#navigator.baseSeries">navigator.baseSeries</a> if defined.</p>
+    * @since 5.0.0
+    */
+  val showInNavigator: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>If set to <code>true</code>, the accessibility module will skip past the points
+    * in this series for keyboard navigation.</p>
+    * @since 5.0.12
+    */
+  val skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Whether to stack the values of each series on top of each other. Possible
+    * values are <code>undefined</code> to disable, <code>&quot;normal&quot;</code> to stack by value or
+    * <code>&quot;percent&quot;</code>. When stacking is enabled, data must be sorted in ascending
+    * X order. A special stacking option is with the streamgraph series type,
+    * where the stacking option is set to <code>&quot;stream&quot;</code>.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/">Line</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-column/">Column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-bar/">Bar</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-area/">Area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-line/">Line</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-column/">Column</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-bar/">Bar</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-percent-area/">Area</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/stacking/">Area</a>
+    */
+  val stacking: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Set the initial visibility of the series.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-visible/">Two series, one hidden and one visible</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-visibility/">Hidden series</a>
+    */
+  val visible: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Defines the Axis on which the zones are applied.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/">Zones on the X-Axis</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/">Zones on the X-Axis</a>
     * @since 4.1.0
     */
   val zoneAxis: js.UndefOr[String] = js.undefined
 
   /**
-    * <p>An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.</p>
-    * 
-    * <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p>
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/" target="_blank">Color zones</a>
+    * <p>An array defining zones within a series. Zones can be applied to
+    * the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code>
+    * option. The zone definitions have to be in ascending order regarding to
+    * the value.</p>
+    * <p>In styled mode, the color zones are styled with the
+    * <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code>
+    * option
+    * (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/">Color zones</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-simple/">Color zones</a>
     * @since 4.1.0
     */
-  val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsBoxplotZones]]] = js.undefined
+  val zones: js.UndefOr[js.Array[js.Any]] = js.undefined
+
+  /**
+    * <p>Compare the values of the series against the first non-null, non-
+    * zero value in the visible range. The y axis will show percentage
+    * or absolute change depending on whether <code>compare</code> is set to <code>&quot;percent&quot;</code>
+    * or <code>&quot;value&quot;</code>. When this is applied to multiple series, it allows
+    * comparing the development of the series against each other. Adds
+    * a <code>change</code> field to every point object.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-compare-percent/">Percent</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-compare-value/">Value</a>
+    * @since 1.0.1
+    */
+  val compare: js.UndefOr[String] = js.undefined
+
+  /**
+    * <p>Defines if comparison should start from the first point within the visible
+    * range or should start from the first point <b>before</b> the range.
+    * In other words, this flag determines if first point within the visible range
+    * will have 0% (<code>compareStart=true</code>) or should have been already calculated
+    * according to the previous point (<code>compareStart=false</code>).</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/stock/plotoptions/series-comparestart/">Calculate compare within visible range</a>
+    * @since 6.0.0
+    */
+  val compareStart: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>When <a href="#plotOptions.series.compare">compare</a> is <code>percent</code>, this option
+    * dictates whether to use 0 or 100 as the base of comparison.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples//">Compare base is 100</a>
+    * @since 5.0.6
+    */
+  val compareBase: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Define the z index of the series.</p>
+    */
+  val zIndex: js.UndefOr[Double] = js.undefined
+
+  /**
+    * <p>Whether all areas of the map defined in <code>mapData</code> should be rendered.
+    * If <code>true</code>, areas which don&#39;t correspond to a data point, are rendered
+    * as <code>null</code> points. If <code>false</code>, those areas are skipped.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allareas-false/">All areas set to false</a>
+    */
+  val allAreas: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>Set this option to <code>false</code> to prevent a series from connecting to
+    * the global color axis. This will cause the series to have its own
+    * legend item.</p>
+    */
+  val colorAxis: js.UndefOr[Boolean] = js.undefined
+
+  /**
+    * <p>What property to join the <code>mapData</code> to the value data. For example,
+    * if joinBy is &quot;code&quot;, the mapData items with a specific code is merged
+    * into the data with the same code. For maps loaded from GeoJSON, the
+    * keys may be held in each point&#39;s <code>properties</code> object.</p>
+    * <p>The joinBy option can also be an array of two values, where the first
+    * points to a key in the <code>mapData</code>, and the second points to another
+    * key in the <code>data</code>.</p>
+    * <p>When joinBy is <code>null</code>, the map items are joined by their position
+    * in the array, which performs much better in maps with many data points.
+    * This is the recommended option if you are printing more than a thousand
+    * data points and have a backend that can preprocess the data into
+    * a parallel array of the mapData.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-border/">Joined by "code"</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/geojson/">GeoJSON joined by an array</a>
+<a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/series/joinby-null/">Simple data joined by null</a>
+    */
+  val joinBy: js.UndefOr[String | js.Array[String]] = js.undefined
+
+  /**
+    * <p>Override Pathfinder options for a series. Requires Highcharts Gantt or the
+    * Pathfinder module.</p>
+    * @since 6.2.0
+    */
+  val pathfinder: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPathfinder]] = js.undefined
 }
 
 object PlotOptionsBoxplot {
   /**
-    * @param allowPointSelect Allow this series' points to be selected by clicking on the markers, bars or pie slices.
-    * @param animationLimit For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation doesn't run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>.
-    * @param className A class name to apply to the series' graphical elements.
-    * @param color <p>The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color can be defined by the <a href="#plotOptions.series.colorIndex">colorIndex</a> option. Also, the series color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>, <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or individual classes given by the <code>className</code> option.</p>
-    * @param colorByPoint When using automatic point colors pulled from the <code>options.colors</code>.  collection, this option determines whether the chart should receive .  one color per series or one color per point.
-    * @param colorIndex <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">Styled mode</a> only. A specific color index to use for the series, so its graphic representations are given the class name <code>highcharts-color-{n}</code>.
-    * @param colors A series specific or series type specific color set to apply instead of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.
-    * @param crisp When true, each column edge is rounded to its nearest pixel in order to render sharp on screen. In some cases, when there are a lot of densely packed columns, this leads to visible difference in column widths or distance between columns. In these cases, setting <code>crisp</code> to <code>false</code> may look better, even though each column is rendered blurry.
-    * @param cursor You can set the cursor to "pointer" if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
-    * @param depth Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.
-    * @param description <p><i>Requires Accessibility module</i></p>. <p>A description of the series to add to the screen reader information about the series.</p>
-    * @param edgeColor 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
-    * @param edgeWidth 3D columns only. The width of the colored edges.
-    * @param enableMouseTracking Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
-    * @param exposeElementToA11y <p>By default, series are exposed to screen readers as regions. By enabling this option, the series element itself will be exposed in the same way as the data points. This is useful if the series is not used as a grouping entity in the chart, but you still want to attach a description to the series.</p>. <p>Requires the Accessibility module.</p>
-    * @param fillColor The fill color of the box.
-    * @param findNearestPointBy <p>Determines whether the series should look for the nearest point in both dimensions or just the x-dimension when hovering the series. Defaults to <code>'xy'</code> for scatter series and <code>'x'</code> for most other series. If the data has duplicate x-values, it is recommended to set this to <code>'xy'</code> to allow hovering over all points.</p>. <p>Applies only to series types using nearest neighbor search (not direct hover) for tooltip.</p> 
-    * @param getExtremesFromAll Whether to use the Y extremes of the total chart width or only the zoomed area when zooming in on parts of the X axis. By default, the Y axis adjusts to the min and max of the visible data. Cartesian series only.
-    * @param groupPadding Padding between each value groups, in x axis units.
-    * @param groupZPadding The spacing between columns on the Z Axis in a 3D chart. Requires <code>highcharts-3d.js</code>.
-    * @param grouping Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
-    * @param keys An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources.
-    * @param lineWidth The width of the line surrounding the box. If any of <a href="#plotOptions.boxplot.stemWidth">stemWidth</a>, <a href="#plotOptions.boxplot.medianWidth">medianWidth</a> or <a href="#plotOptions.boxplot.whiskerWidth">whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
-    * @param linkedTo The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
-    * @param maxPointWidth The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.
-    * @param medianColor The color of the median line. If <code>null</code>, the general series color applies.
-    * @param medianWidth The pixel width of the median line. If <code>null</code>, the <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> is used.
-    * @param negativeColor The color for the parts of the graph or points that are below the <a href="#plotOptions.series.threshold">threshold</a>.
-    * @param point Properties for each single point
-    * @param pointDescriptionFormatter Same as <a href="#accessibility.pointDescriptionFormatter">accessibility.pointDescriptionFormatter</a>, but for an individual series. Overrides the chart wide configuration.
-    * @param pointInterval <p>If no x values are given for the points in a series, pointInterval defines.  the interval of the x values. For example, if a series contains one value.  every decade starting from year 0, set pointInterval to 10.</p>. <p>Since Highcharts 4.1, it can be combined with <code>pointIntervalUnit</code> to draw irregular intervals.</p>
-    * @param pointIntervalUnit On datetime series, this allows for setting the <a href="#plotOptions.series.pointInterval">pointInterval</a> to irregular time units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with <code>pointInterval</code> to draw weeks, quarters, 6 months, 10 years etc.
-    * @param pointPadding Padding between each column or bar, in x axis units.
-    * @param pointPlacement <p>Possible values: <code>null</code>, <code>"on"</code>, <code>"between"</code>.</p>. <p>In a column chart, when pointPlacement is <code>"on"</code>, the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is <code>"between"</code>, the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p>. <p>Since Highcharts 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p>. <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is computed, but for line-type series it needs to be set.</p>. <p>Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts.
-    * @param pointRange The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
-    * @param pointStart If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
-    * @param pointWidth A pixel value specifying a fixed width for each column or bar. When <code>null</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>.
-    * @param selected Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
-    * @param showCheckbox If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
-    * @param showInLegend Whether to display this particular series or series type in the legend. The default value is <code>true</code> for standalone series, <code>false</code> for linked series.
-    * @param skipKeyboardNavigation If set to <code>True</code>, the accessibility module will skip past the points in this series for keyboard navigation.
-    * @param states A wrapper object for all the series options in specific states.
-    * @param stemColor The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used.
-    * @param stemDashStyle The dash style of the stem, the vertical line extending from the box to the whiskers.
-    * @param stemWidth The width of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the width is inherited from the <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> option.
-    * @param stickyTracking Sticky tracking of mouse events. When true, the <code>mouseOut</code> event.  on a series isn't triggered until the mouse moves over another series, or out.  of the plot area. When false, the <code>mouseOut</code> event on a series is.  triggered when the mouse leaves the area around the series' graph or markers..  This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the .  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
-    * @param tooltip A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level.
-    * @param turboThreshold When a series contains a data array that is longer than this, only one dimensional arrays of numbers,.  or two dimensional arrays with x and y values are allowed. Also, only the first.  point is tested, and the rest are assumed to be the same format. This saves expensive.  data checking and indexing in long series. Set it to <code>0</code> disable.
-    * @param visible Set the initial visibility of the series.
-    * @param whiskerColor The color of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general series color is used.
-    * @param whiskerLength The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.
-    * @param whiskerWidth The line width of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> applies.
-    * @param zoneAxis Defines the Axis on which the zones are applied.
-    * @param zones <p>An array defining zones within a series. Zones can be applied to the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code> option.</p>. . <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p>
+    * @param dragDrop <p>The draggable-points module allows points to be moved around or modified. in the chart. In addition to the options mentioned under the <code>dragDrop</code>. API structure, the module fires three events,. <a href="plotOptions.series.point.events.dragStart">point.dragStart</a>,. <a href="plotOptions.series.point.events.drag">point.drag</a> and. <a href="plotOptions.series.point.events.drop">point.drop</a>.</p>. <p>It requires the <code>modules/draggable-points.js</code> file to be loaded.</p>
+    * @param threshold <p>The Y axis value to serve as the base for the columns, for distinguishing. between values above and below a threshold. If <code>null</code>, the columns. extend from the padding Y axis minimum.</p>
+    * @param tooltip <p>A configuration object for the tooltip rendering of each single series.. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the. following properties can be defined on a series level.</p>
+    * @param whiskerLength <p>The length of the whiskers, the horizontal lines marking low and. high values. It can be a numerical pixel value, or a percentage. value of the box width. Set <code>0</code> to disable whiskers.</p>
+    * @param fillColor <p>The fill color of the box.</p>. <p>In styled mode, the fill color can be set with the. <code>.highcharts-boxplot-box</code> class.</p>
+    * @param lineWidth <p>The width of the line surrounding the box. If any of. <a href="#plotOptions.boxplot.stemWidth">stemWidth</a>,. <a href="#plotOptions.boxplot.medianWidth">medianWidth</a>. or <a href="#plotOptions.boxplot.whiskerWidth">whiskerWidth</a> are <code>null</code>,. the lineWidth also applies to these lines.</p>
+    * @param medianWidth <p>The pixel width of the median line. If <code>null</code>, the. <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> is used.</p>. <p>In styled mode, the median stroke width can be set with the. <code>.highcharts-boxplot-median</code> class.</p>
+    * @param whiskerWidth <p>The line width of the whiskers, the horizontal lines marking low and. high values. When <code>null</code>, the general. <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> applies.</p>. <p>In styled mode, the whisker stroke width can be set with the. <code>.highcharts-boxplot-whisker</code> class.</p>
+    * @param medianColor <p>The color of the median line. If <code>null</code>, the general series color. applies.</p>. <p>In styled mode, the median stroke width can be set with the. <code>.highcharts-boxplot-median</code> class.</p>
+    * @param stemColor <p>The color of the stem, the vertical line extending from the box to. the whiskers. If <code>null</code>, the series color is used.</p>. <p>In styled mode, the stem stroke can be set with the. <code>.highcharts-boxplot-stem</code> class.</p>
+    * @param stemDashStyle <p>The dash style of the stem, the vertical line extending from the. box to the whiskers.</p>
+    * @param stemWidth <p>The width of the stem, the vertical line extending from the box to. the whiskers. If <code>null</code>, the width is inherited from the. <a href="#plotOptions.boxplot.lineWidth">lineWidth</a> option.</p>. <p>In styled mode, the stem stroke width can be set with the. <code>.highcharts-boxplot-stem</code> class.</p>
+    * @param whiskerColor <p>The color of the whiskers, the horizontal lines marking low and high. values. When <code>null</code>, the general series color is used.</p>. <p>In styled mode, the whisker stroke can be set with the. <code>.highcharts-boxplot-whisker</code> class .</p>
+    * @param crisp <p>When true, each column edge is rounded to its nearest pixel in order. to render sharp on screen. In some cases, when there are a lot of. densely packed columns, this leads to visible difference in column. widths or distance between columns. In these cases, setting <code>crisp</code>. to <code>false</code> may look better, even though each column is rendered. blurry.</p>
+    * @param groupPadding <p>Padding between each value groups, in x axis units.</p>
+    * @param pointPadding <p>Padding between each column or bar, in x axis units.</p>
+    * @param minPointLength <p>The minimal height for a column or width for a bar. By default,. 0 values are not shown. To visualize a 0 (or close to zero) point,. set the minimal point length to a pixel value like 3. In stacked. column charts, minPointLength might not be respected for tightly. packed values.</p>
+    * @param cropThreshold <p>When the series contains less points than the crop threshold, all. points are drawn, event if the points fall outside the visible plot. area at the current zoom. The advantage of drawing all points (including. markers and columns), is that animation is performed on updates.. On the other hand, when the series contains more points than the. crop threshold, the series data is cropped to only contain points. that fall within the plot area. The advantage of cropping away invisible. points is to increase performance on large series.</p>
+    * @param pointRange <p>The X axis range that each point is valid for. This determines the. width of the column. On a categorized axis, the range will be 1. by default (one category unit). On linear and datetime axes, the. range will be computed as the distance between the two closest data. points.</p>. <p>The default <code>null</code> means it is computed automatically, but this option. can be used to override the automatic value.</p>
+    * @param dataLabels <p>Options for the series data labels, appearing next to each data point.</p>. <p>Since v6.2.0, multiple data labels can be applied to each single point by. defining them as an array of configs.</p>. <p>In styled mode, the data labels can be styled with the. <code>.highcharts-data-label-box</code> and <code>.highcharts-data-label</code> class names. (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/series-datalabels">see example</a>).</p>
+    * @param softThreshold <p>When this is true, the series will not cause the Y axis to cross. the zero plane (or <a href="#plotOptions.series.threshold">threshold</a> option). unless the data actually crosses the plane.</p>. <p>For example, if <code>softThreshold</code> is <code>false</code>, a series of 0, 1, 2,. 3 will make the Y axis show negative values according to the <code>minPadding</code>. option. If <code>softThreshold</code> is <code>true</code>, the Y axis starts at 0.</p>
+    * @param stickyTracking <p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event. on a series isn&#39;t triggered until the mouse moves over another series,. or out of the plot area. When false, the <code>mouseOut</code> event on a. series is triggered when the mouse leaves the area around the series&#39;. graph or markers. This also implies the tooltip when not shared. When. <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will. be hidden when moving the mouse between series. Defaults to true for line. and area type series, but to false for columns, pies etc.</p>
+    * @param colorByPoint <p>When using automatic point colors pulled from the global <a href="colors">colors</a>. or series-specific <a href="series.colors">plotOptions.column.colors</a>. collections, this option determines whether the chart should receive. one color per series or one color per point.</p>. <p>In styled mode, the <code>colors</code> or <code>series.colors</code> arrays are not supported,. and instead this option gives the points individual color class names on. the form <code>highcharts-color-{n}</code>.</p>
+    * @param colors <p>A series specific or series type specific color set to apply instead. of the global <a href="#colors">colors</a> when <a href="#plotOptions.column.colorByPoint">colorByPoint</a> is true.</p>
+    * @param grouping <p>Whether to group non-stacked columns or to let them render independent. of each other. Non-grouped columns will be laid out individually. and overlap each other.</p>
+    * @param maxPointWidth <p>The maximum allowed pixel width for a column, translated to the height. of a bar in a bar chart. This prevents the columns from becoming. too wide when there is a small number of points in the chart.</p>
+    * @param pointWidth <p>A pixel value specifying a fixed width for each column or bar. When. <code>null</code>, the width is calculated from the <code>pointPadding</code> and. <code>groupPadding</code>.</p>
+    * @param dataGrouping <p>Data grouping is the concept of sampling the data values into larger. blocks in order to ease readability and increase performance of the. JavaScript charts. Highstock by default applies data grouping when. the points become closer than a certain pixel value, determined by. the <code>groupPixelWidth</code> option.</p>. <p>If data grouping is applied, the grouping information of grouped. points can be read from the <a href="/class-reference/Highcharts.Point#.dataGroup">Point.dataGroup</a>. If point options other than. the data itself are set, for example <code>name</code> or <code>color</code> or custom properties,. the grouping logic doesn&#39;t know how to group it. In this case the options of. the first point instance are copied over to the group point. This can be. altered through a custom <code>approximation</code> callback function.</p>
+    * @param depth <p>Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>.</p>
+    * @param edgeColor <p>3D columns only. The color of the edges. Similar to <code>borderColor</code>,.  except it defaults to the same color as the column.</p>
+    * @param edgeWidth <p>3D columns only. The width of the colored edges.</p>
+    * @param boostThreshold <p>Set the point threshold for when a series should enter boost mode.</p>. <p>Setting it to e.g. 2000 will cause the series to enter boost mode when there. are 2000 or more points in the series.</p>. <p>To disable boosting on the series, set the <code>boostThreshold</code> to 0. Setting it. to 1 will force boosting.</p>. <p>Requires <code>modules/boost.js</code>.</p>
+    * @param point <p>Properties for each single point.</p>
+    * @param label <p>Series labels are placed as close to the series as possible in a. natural way, seeking to avoid other series. The goal of this. feature is to make the chart more easily readable, like if a. human designer placed the labels in the optimal position.</p>. <p>The series labels currently work with series types having a. <code>graph</code> or an <code>area</code>.</p>. <p>Requires the <code>series-label.js</code> module.</p>
+    * @param allowPointSelect <p>Allow this series&#39; points to be selected by clicking on the graphic. (columns, point markers, pie slices, map areas etc).</p>
+    * @param showCheckbox <p>If true, a checkbox is displayed next to the legend item to allow. selecting the series. The state of the checkbox is determined by. the <code>selected</code> option.</p>
+    * @param animation <p>Enable or disable the initial animation when a series is displayed.. The animation can also be set as a configuration object. Please. note that this option only applies to the initial animation of the. series itself. For other animations, see <a href="#chart.animation">chart.animation</a> and the animation parameter under the API methods. The. following properties are supported:</p>. <dl>. . <dt>duration</dt>. . <dd>The duration of the animation in milliseconds.</dd>. . <dt>easing</dt>. . <dd>Can be a string reference to an easing function set on the `Math`. object or a function. See the _Custom easing function_ demo below.</dd>. . </dl>. . <p>Due to poor performance, animation is disabled in old IE browsers. for several chart types.</p>
+    * @param events <p>General event handlers for the series items. These event hooks can also. be attached to the series at run time using the <code>Highcharts.addEvent</code>. function.</p>
+    * @param turboThreshold <p>When a series contains a data array that is longer than this, only. one dimensional arrays of numbers, or two dimensional arrays with. x and y values are allowed. Also, only the first point is tested,. and the rest are assumed to be the same format. This saves expensive. data checking and indexing in long series. Set it to <code>0</code> disable.</p>
+    * @param findNearestPointBy <p>Determines whether the series should look for the nearest point. in both dimensions or just the x-dimension when hovering the series.. Defaults to <code>&#39;xy&#39;</code> for scatter series and <code>&#39;x&#39;</code> for most other. series. If the data has duplicate x-values, it is recommended to. set this to <code>&#39;xy&#39;</code> to allow hovering over all points.</p>. <p>Applies only to series types using nearest neighbor search (not. direct hover) for tooltip.</p>
+    * @param animationLimit <p>For some series, there is a limit that shuts down initial animation. by default when the total number of points in the chart is too high.. For example, for a column chart and its derivatives, animation doesn&#39;t. run if there is more than 250 points totally. To disable this cap, set. <code>animationLimit</code> to <code>Infinity</code>.</p>
+    * @param className <p>An additional class name to apply to the series&#39; graphical elements. This. option does not replace default class names of the graphical element.</p>
+    * @param clip <p>Disable this option to allow series rendering in the whole plotting. area.</p>. <p><strong>Note:</strong> Clipping should be always enabled when. <a href="#chart.zoomType">chart.zoomType</a> is set</p>
+    * @param color <p>The main color of the series. In line type series it applies to the. line and the point markers unless otherwise specified. In bar type. series it applies to the bars unless a color is specified per point.. The default value is pulled from the <code>options.colors</code> array.</p>. <p>In styled mode, the color can be defined by the. <a href="#plotOptions.series.colorIndex">colorIndex</a> option. Also, the series. color can be set with the <code>.highcharts-series</code>, <code>.highcharts-color-{n}</code>,. <code>.highcharts-{type}-series</code> or <code>.highcharts-series-{n}</code> class, or. individual classes given by the <code>className</code> option.</p>
+    * @param colorIndex <p>Styled mode only. A specific color index to use for the series, so its. graphic representations are given the class name <code>highcharts-color-{n}</code>.</p>
+    * @param cursor <p>You can set the cursor to &quot;pointer&quot; if you have click events attached. to the series, to signal to the user that the points and lines can. be clicked.</p>. <p>In styled mode, the series cursor can be set with the same classes. as listed under <a href="#plotOptions.series.color">series.color</a>.</p>
+    * @param description <p>Requires the Accessibility module.</p>. <p>A description of the series to add to the screen reader information. about the series.</p>
+    * @param enableMouseTracking <p>Enable or disable the mouse tracking for a specific series. This. includes point tooltips and click events on graphs and points. For. large datasets it improves performance.</p>
+    * @param exposeElementToA11y <p>By default, series are exposed to screen readers as regions. By enabling. this option, the series element itself will be exposed in the same. way as the data points. This is useful if the series is not used. as a grouping entity in the chart, but you still want to attach a. description to the series.</p>. <p>Requires the Accessibility module.</p>
+    * @param getExtremesFromAll <p>Whether to use the Y extremes of the total chart width or only the. zoomed area when zooming in on parts of the X axis. By default, the. Y axis adjusts to the min and max of the visible data. Cartesian. series only.</p>
+    * @param keys <p>An array specifying which option maps to which key in the data point. array. This makes it convenient to work with unstructured data arrays. from different sources.</p>
+    * @param linkedTo <p>The <a href="#series.id">id</a> of another series to link to. Additionally,. the value can be &quot;:previous&quot; to link to the previous series. When. two series are linked, only the first one appears in the legend.. Toggling the visibility of this also toggles the linked series.</p>
+    * @param navigatorOptions <p>Options for the corresponding navigator series if <code>showInNavigator</code>. is <code>true</code> for this series. Available options are the same as any. series, documented at <a href="#plotOptions.series">plotOptions</a> and. <a href="#series">series</a>.</p>. <p>These options are merged with options in <a href="#navigator.series">navigator.series</a>, and will take precedence if the same option is. defined both places.</p>
+    * @param negativeColor <p>The color for the parts of the graph or points that are below the. <a href="#plotOptions.series.threshold">threshold</a>.</p>
+    * @param pointDescriptionFormatter <p>Same as <a href="#accessibility.pointDescriptionFormatter">accessibility.pointDescriptionFormatter</a>, but for an individual series.. Overrides the chart wide configuration.</p>
+    * @param pointInterval <p>If no x values are given for the points in a series, <code>pointInterval</code>. defines the interval of the x values. For example, if a series contains. one value every decade starting from year 0, set <code>pointInterval</code> to. <code>10</code>. In true <code>datetime</code> axes, the <code>pointInterval</code> is set in. milliseconds.</p>. <p>It can be also be combined with <code>pointIntervalUnit</code> to draw irregular. time intervals.</p>. <p>Please note that this options applies to the <em>series data</em>, not the. interval of the axis ticks, which is independent.</p>
+    * @param pointIntervalUnit <p>On datetime series, this allows for setting the. <a href="#plotOptions.series.pointInterval">pointInterval</a> to irregular time. units, <code>day</code>, <code>month</code> and <code>year</code>. A day is usually the same as 24 hours,. but <code>pointIntervalUnit</code> also takes the DST crossover into consideration. when dealing with local time. Combine this option with <code>pointInterval</code>. to draw weeks, quarters, 6 months, 10 years etc.</p>. <p>Please note that this options applies to the <em>series data</em>, not the. interval of the axis ticks, which is independent.</p>
+    * @param pointPlacement <p>Possible values: <code>&quot;on&quot;</code>, <code>&quot;between&quot;</code>, <code>number</code>.</p>. <p>In a column chart, when pointPlacement is <code>&quot;on&quot;</code>, the point will. not create any padding of the X axis. In a polar column chart this. means that the first column points directly north. If the pointPlacement. is <code>&quot;between&quot;</code>, the columns will be laid out between ticks. This. is useful for example for visualising an amount between two points. in time or in a certain sector of a polar chart.</p>. <p>Since Highcharts 3.0.2, the point placement can also be numeric,. where 0 is on the axis value, -0.5 is between this value and the. previous, and 0.5 is between this value and the next. Unlike the. textual options, numeric point placement options won&#39;t affect axis. padding.</p>. <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is. computed, but for line-type series it needs to be set.</p>. <p>For the <code>xrange</code> series type and gantt charts, if the Y axis is a. category axis, the <code>pointPlacement</code> applies to the Y axis rather than. the (typically datetime) X axis.</p>. <p>Defaults to <code>undefined</code> in cartesian charts, <code>&quot;between&quot;</code> in polar charts.</p>
+    * @param pointStart <p>If no x values are given for the points in a series, pointStart defines. on what value to start. For example, if a series contains one yearly. value starting from 1945, set pointStart to 1945.</p>
+    * @param selected <p>Whether to select the series initially. If <code>showCheckbox</code> is true,. the checkbox next to the series name in the legend will be checked for a. selected series.</p>
+    * @param shadow <p>Whether to apply a drop shadow to the graph line. Since 2.3 the shadow. can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>,. <code>opacity</code> and <code>width</code>.</p>
+    * @param showInLegend <p>Whether to display this particular series or series type in the legend.. The default value is <code>true</code> for standalone series, <code>false</code> for linked. series.</p>
+    * @param showInNavigator <p>Whether or not to show the series in the navigator. Takes precedence. over <a href="#navigator.baseSeries">navigator.baseSeries</a> if defined.</p>
+    * @param skipKeyboardNavigation <p>If set to <code>true</code>, the accessibility module will skip past the points. in this series for keyboard navigation.</p>
+    * @param stacking <p>Whether to stack the values of each series on top of each other. Possible. values are <code>undefined</code> to disable, <code>&quot;normal&quot;</code> to stack by value or. <code>&quot;percent&quot;</code>. When stacking is enabled, data must be sorted in ascending. X order. A special stacking option is with the streamgraph series type,. where the stacking option is set to <code>&quot;stream&quot;</code>.</p>
+    * @param visible <p>Set the initial visibility of the series.</p>
+    * @param zoneAxis <p>Defines the Axis on which the zones are applied.</p>
+    * @param zones <p>An array defining zones within a series. Zones can be applied to. the X axis, Y axis or Z axis for bubbles, according to the <code>zoneAxis</code>. option. The zone definitions have to be in ascending order regarding to. the value.</p>. <p>In styled mode, the color zones are styled with the. <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code>. option. (<a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p>
+    * @param compare <p>Compare the values of the series against the first non-null, non-. zero value in the visible range. The y axis will show percentage. or absolute change depending on whether <code>compare</code> is set to <code>&quot;percent&quot;</code>. or <code>&quot;value&quot;</code>. When this is applied to multiple series, it allows. comparing the development of the series against each other. Adds. a <code>change</code> field to every point object.</p>
+    * @param compareStart <p>Defines if comparison should start from the first point within the visible. range or should start from the first point <b>before</b> the range.. In other words, this flag determines if first point within the visible range. will have 0% (<code>compareStart=true</code>) or should have been already calculated. according to the previous point (<code>compareStart=false</code>).</p>
+    * @param compareBase <p>When <a href="#plotOptions.series.compare">compare</a> is <code>percent</code>, this option. dictates whether to use 0 or 100 as the base of comparison.</p>
+    * @param zIndex <p>Define the z index of the series.</p>
+    * @param allAreas <p>Whether all areas of the map defined in <code>mapData</code> should be rendered.. If <code>true</code>, areas which don&#39;t correspond to a data point, are rendered. as <code>null</code> points. If <code>false</code>, those areas are skipped.</p>
+    * @param colorAxis <p>Set this option to <code>false</code> to prevent a series from connecting to. the global color axis. This will cause the series to have its own. legend item.</p>
+    * @param joinBy <p>What property to join the <code>mapData</code> to the value data. For example,. if joinBy is &quot;code&quot;, the mapData items with a specific code is merged. into the data with the same code. For maps loaded from GeoJSON, the. keys may be held in each point&#39;s <code>properties</code> object.</p>. <p>The joinBy option can also be an array of two values, where the first. points to a key in the <code>mapData</code>, and the second points to another. key in the <code>data</code>.</p>. <p>When joinBy is <code>null</code>, the map items are joined by their position. in the array, which performs much better in maps with many data points.. This is the recommended option if you are printing more than a thousand. data points and have a backend that can preprocess the data into. a parallel array of the mapData.</p>
+    * @param pathfinder <p>Override Pathfinder options for a series. Requires Highcharts Gantt or the. Pathfinder module.</p>
     */
-  def apply(allowPointSelect: js.UndefOr[Boolean] = js.undefined, animationLimit: js.UndefOr[Double] = js.undefined, className: js.UndefOr[String] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, colorByPoint: js.UndefOr[Boolean] = js.undefined, colorIndex: js.UndefOr[Double] = js.undefined, colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined, crisp: js.UndefOr[Boolean] = js.undefined, cursor: js.UndefOr[String] = js.undefined, depth: js.UndefOr[Double] = js.undefined, description: js.UndefOr[String] = js.undefined, edgeColor: js.UndefOr[String | js.Object] = js.undefined, edgeWidth: js.UndefOr[Double] = js.undefined, enableMouseTracking: js.UndefOr[Boolean] = js.undefined, events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotEvents]] = js.undefined, exposeElementToA11y: js.UndefOr[Boolean] = js.undefined, fillColor: js.UndefOr[String | js.Object] = js.undefined, findNearestPointBy: js.UndefOr[String] = js.undefined, getExtremesFromAll: js.UndefOr[Boolean] = js.undefined, groupPadding: js.UndefOr[Double] = js.undefined, groupZPadding: js.UndefOr[Double] = js.undefined, grouping: js.UndefOr[Boolean] = js.undefined, keys: js.UndefOr[js.Array[String]] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, linkedTo: js.UndefOr[String] = js.undefined, maxPointWidth: js.UndefOr[Double] = js.undefined, medianColor: js.UndefOr[String | js.Object] = js.undefined, medianWidth: js.UndefOr[Double] = js.undefined, negativeColor: js.UndefOr[String | js.Object] = js.undefined, point: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPoint]] = js.undefined, pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined, pointInterval: js.UndefOr[Double] = js.undefined, pointIntervalUnit: js.UndefOr[String] = js.undefined, pointPadding: js.UndefOr[Double] = js.undefined, pointPlacement: js.UndefOr[String | Double] = js.undefined, pointRange: js.UndefOr[Double] = js.undefined, pointStart: js.UndefOr[Double] = js.undefined, pointWidth: js.UndefOr[Double] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, showCheckbox: js.UndefOr[Boolean] = js.undefined, showInLegend: js.UndefOr[Boolean] = js.undefined, skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined, states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = js.undefined, stemColor: js.UndefOr[String | js.Object] = js.undefined, stemDashStyle: js.UndefOr[String] = js.undefined, stemWidth: js.UndefOr[Double] = js.undefined, stickyTracking: js.UndefOr[Boolean] = js.undefined, tooltip: js.UndefOr[CleanJsObject[PlotOptionsBoxplotTooltip]] = js.undefined, turboThreshold: js.UndefOr[Double] = js.undefined, visible: js.UndefOr[Boolean] = js.undefined, whiskerColor: js.UndefOr[String | js.Object] = js.undefined, whiskerLength: js.UndefOr[Double | String] = js.undefined, whiskerWidth: js.UndefOr[Double] = js.undefined, zoneAxis: js.UndefOr[String] = js.undefined, zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsBoxplotZones]]] = js.undefined): PlotOptionsBoxplot = {
-    val allowPointSelectOuter: js.UndefOr[Boolean] = allowPointSelect
-    val animationLimitOuter: js.UndefOr[Double] = animationLimit
-    val classNameOuter: js.UndefOr[String] = className
-    val colorOuter: js.UndefOr[String | js.Object] = color
-    val colorByPointOuter: js.UndefOr[Boolean] = colorByPoint
-    val colorIndexOuter: js.UndefOr[Double] = colorIndex
-    val colorsOuter: js.UndefOr[js.Array[String | js.Object]] = colors
-    val crispOuter: js.UndefOr[Boolean] = crisp
-    val cursorOuter: js.UndefOr[String] = cursor
-    val depthOuter: js.UndefOr[Double] = depth
-    val descriptionOuter: js.UndefOr[String] = description
-    val edgeColorOuter: js.UndefOr[String | js.Object] = edgeColor
-    val edgeWidthOuter: js.UndefOr[Double] = edgeWidth
-    val enableMouseTrackingOuter: js.UndefOr[Boolean] = enableMouseTracking
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsBoxplotEvents]] = events
-    val exposeElementToA11yOuter: js.UndefOr[Boolean] = exposeElementToA11y
+  def apply(dragDrop: js.UndefOr[js.Any] = js.undefined, threshold: js.UndefOr[js.Any] = js.undefined, tooltip: js.UndefOr[js.Any] = js.undefined, whiskerLength: js.UndefOr[Double | String] = js.undefined, fillColor: js.UndefOr[String | js.Object] = js.undefined, lineWidth: js.UndefOr[Double] = js.undefined, medianWidth: js.UndefOr[Double] = js.undefined, whiskerWidth: js.UndefOr[Double] = js.undefined, medianColor: js.UndefOr[String | js.Object] = js.undefined, stemColor: js.UndefOr[String | js.Object] = js.undefined, stemDashStyle: js.UndefOr[String] = js.undefined, stemWidth: js.UndefOr[Double] = js.undefined, whiskerColor: js.UndefOr[String | js.Object] = js.undefined, crisp: js.UndefOr[Boolean] = js.undefined, groupPadding: js.UndefOr[Double] = js.undefined, pointPadding: js.UndefOr[Double] = js.undefined, minPointLength: js.UndefOr[Double] = js.undefined, cropThreshold: js.UndefOr[Double] = js.undefined, pointRange: js.UndefOr[Double | Null] = js.undefined, dataLabels: js.UndefOr[js.Any] = js.undefined, softThreshold: js.UndefOr[Boolean] = js.undefined, stickyTracking: js.UndefOr[Boolean] = js.undefined, colorByPoint: js.UndefOr[Boolean] = js.undefined, colors: js.UndefOr[js.Array[String | js.Object]] = js.undefined, grouping: js.UndefOr[Boolean] = js.undefined, maxPointWidth: js.UndefOr[Double] = js.undefined, pointWidth: js.UndefOr[Double] = js.undefined, dataGrouping: js.UndefOr[js.Any] = js.undefined, depth: js.UndefOr[Double] = js.undefined, edgeColor: js.UndefOr[String | js.Object] = js.undefined, edgeWidth: js.UndefOr[Double] = js.undefined, boostThreshold: js.UndefOr[Double] = js.undefined, point: js.UndefOr[js.Any] = js.undefined, label: js.UndefOr[js.Any] = js.undefined, allowPointSelect: js.UndefOr[Boolean] = js.undefined, showCheckbox: js.UndefOr[Boolean] = js.undefined, animation: js.UndefOr[Boolean | js.Object] = js.undefined, events: js.UndefOr[js.Any] = js.undefined, turboThreshold: js.UndefOr[Double] = js.undefined, findNearestPointBy: js.UndefOr[String] = js.undefined, animationLimit: js.UndefOr[Double] = js.undefined, className: js.UndefOr[String] = js.undefined, clip: js.UndefOr[Boolean] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, colorIndex: js.UndefOr[Double] = js.undefined, cursor: js.UndefOr[String] = js.undefined, description: js.UndefOr[String] = js.undefined, enableMouseTracking: js.UndefOr[Boolean] = js.undefined, exposeElementToA11y: js.UndefOr[Boolean] = js.undefined, getExtremesFromAll: js.UndefOr[Boolean] = js.undefined, keys: js.UndefOr[js.Array[String]] = js.undefined, linkedTo: js.UndefOr[String] = js.undefined, navigatorOptions: js.UndefOr[js.Any] = js.undefined, negativeColor: js.UndefOr[String | js.Object] = js.undefined, pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined, pointInterval: js.UndefOr[Double] = js.undefined, pointIntervalUnit: js.UndefOr[String] = js.undefined, pointPlacement: js.UndefOr[String | Double] = js.undefined, pointStart: js.UndefOr[Double] = js.undefined, selected: js.UndefOr[Boolean] = js.undefined, shadow: js.UndefOr[Boolean] = js.undefined, showInLegend: js.UndefOr[Boolean] = js.undefined, showInNavigator: js.UndefOr[Boolean] = js.undefined, skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined, stacking: js.UndefOr[String] = js.undefined, visible: js.UndefOr[Boolean] = js.undefined, zoneAxis: js.UndefOr[String] = js.undefined, zones: js.UndefOr[js.Array[js.Any]] = js.undefined, compare: js.UndefOr[String] = js.undefined, compareStart: js.UndefOr[Boolean] = js.undefined, compareBase: js.UndefOr[Double] = js.undefined, zIndex: js.UndefOr[Double] = js.undefined, allAreas: js.UndefOr[Boolean] = js.undefined, colorAxis: js.UndefOr[Boolean] = js.undefined, joinBy: js.UndefOr[String | js.Array[String]] = js.undefined, pathfinder: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPathfinder]] = js.undefined): PlotOptionsBoxplot = {
+    val dragDropOuter: js.Any = dragDrop
+    val thresholdOuter: js.Any = threshold
+    val tooltipOuter: js.Any = tooltip
+    val whiskerLengthOuter: js.UndefOr[Double | String] = whiskerLength
     val fillColorOuter: js.UndefOr[String | js.Object] = fillColor
-    val findNearestPointByOuter: js.UndefOr[String] = findNearestPointBy
-    val getExtremesFromAllOuter: js.UndefOr[Boolean] = getExtremesFromAll
-    val groupPaddingOuter: js.UndefOr[Double] = groupPadding
-    val groupZPaddingOuter: js.UndefOr[Double] = groupZPadding
-    val groupingOuter: js.UndefOr[Boolean] = grouping
-    val keysOuter: js.UndefOr[js.Array[String]] = keys
     val lineWidthOuter: js.UndefOr[Double] = lineWidth
-    val linkedToOuter: js.UndefOr[String] = linkedTo
-    val maxPointWidthOuter: js.UndefOr[Double] = maxPointWidth
-    val medianColorOuter: js.UndefOr[String | js.Object] = medianColor
     val medianWidthOuter: js.UndefOr[Double] = medianWidth
-    val negativeColorOuter: js.UndefOr[String | js.Object] = negativeColor
-    val pointOuter: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPoint]] = point
-    val pointDescriptionFormatterOuter: js.UndefOr[js.Function] = pointDescriptionFormatter
-    val pointIntervalOuter: js.UndefOr[Double] = pointInterval
-    val pointIntervalUnitOuter: js.UndefOr[String] = pointIntervalUnit
-    val pointPaddingOuter: js.UndefOr[Double] = pointPadding
-    val pointPlacementOuter: js.UndefOr[String | Double] = pointPlacement
-    val pointRangeOuter: js.UndefOr[Double] = pointRange
-    val pointStartOuter: js.UndefOr[Double] = pointStart
-    val pointWidthOuter: js.UndefOr[Double] = pointWidth
-    val selectedOuter: js.UndefOr[Boolean] = selected
-    val showCheckboxOuter: js.UndefOr[Boolean] = showCheckbox
-    val showInLegendOuter: js.UndefOr[Boolean] = showInLegend
-    val skipKeyboardNavigationOuter: js.UndefOr[Boolean] = skipKeyboardNavigation
-    val statesOuter: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = states
+    val whiskerWidthOuter: js.UndefOr[Double] = whiskerWidth
+    val medianColorOuter: js.UndefOr[String | js.Object] = medianColor
     val stemColorOuter: js.UndefOr[String | js.Object] = stemColor
     val stemDashStyleOuter: js.UndefOr[String] = stemDashStyle
     val stemWidthOuter: js.UndefOr[Double] = stemWidth
-    val stickyTrackingOuter: js.UndefOr[Boolean] = stickyTracking
-    val tooltipOuter: js.UndefOr[CleanJsObject[PlotOptionsBoxplotTooltip]] = tooltip
-    val turboThresholdOuter: js.UndefOr[Double] = turboThreshold
-    val visibleOuter: js.UndefOr[Boolean] = visible
     val whiskerColorOuter: js.UndefOr[String | js.Object] = whiskerColor
-    val whiskerLengthOuter: js.UndefOr[Double | String] = whiskerLength
-    val whiskerWidthOuter: js.UndefOr[Double] = whiskerWidth
+    val crispOuter: js.UndefOr[Boolean] = crisp
+    val groupPaddingOuter: js.UndefOr[Double] = groupPadding
+    val pointPaddingOuter: js.UndefOr[Double] = pointPadding
+    val minPointLengthOuter: js.UndefOr[Double] = minPointLength
+    val cropThresholdOuter: js.UndefOr[Double] = cropThreshold
+    val pointRangeOuter: js.UndefOr[Double | Null] = pointRange
+    val dataLabelsOuter: js.Any = dataLabels
+    val softThresholdOuter: js.UndefOr[Boolean] = softThreshold
+    val stickyTrackingOuter: js.UndefOr[Boolean] = stickyTracking
+    val colorByPointOuter: js.UndefOr[Boolean] = colorByPoint
+    val colorsOuter: js.UndefOr[js.Array[String | js.Object]] = colors
+    val groupingOuter: js.UndefOr[Boolean] = grouping
+    val maxPointWidthOuter: js.UndefOr[Double] = maxPointWidth
+    val pointWidthOuter: js.UndefOr[Double] = pointWidth
+    val dataGroupingOuter: js.Any = dataGrouping
+    val depthOuter: js.UndefOr[Double] = depth
+    val edgeColorOuter: js.UndefOr[String | js.Object] = edgeColor
+    val edgeWidthOuter: js.UndefOr[Double] = edgeWidth
+    val boostThresholdOuter: js.UndefOr[Double] = boostThreshold
+    val pointOuter: js.Any = point
+    val labelOuter: js.Any = label
+    val allowPointSelectOuter: js.UndefOr[Boolean] = allowPointSelect
+    val showCheckboxOuter: js.UndefOr[Boolean] = showCheckbox
+    val animationOuter: js.UndefOr[Boolean | js.Object] = animation
+    val eventsOuter: js.Any = events
+    val turboThresholdOuter: js.UndefOr[Double] = turboThreshold
+    val findNearestPointByOuter: js.UndefOr[String] = findNearestPointBy
+    val animationLimitOuter: js.UndefOr[Double] = animationLimit
+    val classNameOuter: js.UndefOr[String] = className
+    val clipOuter: js.UndefOr[Boolean] = clip
+    val colorOuter: js.UndefOr[String | js.Object] = color
+    val colorIndexOuter: js.UndefOr[Double] = colorIndex
+    val cursorOuter: js.UndefOr[String] = cursor
+    val descriptionOuter: js.UndefOr[String] = description
+    val enableMouseTrackingOuter: js.UndefOr[Boolean] = enableMouseTracking
+    val exposeElementToA11yOuter: js.UndefOr[Boolean] = exposeElementToA11y
+    val getExtremesFromAllOuter: js.UndefOr[Boolean] = getExtremesFromAll
+    val keysOuter: js.UndefOr[js.Array[String]] = keys
+    val linkedToOuter: js.UndefOr[String] = linkedTo
+    val navigatorOptionsOuter: js.Any = navigatorOptions
+    val negativeColorOuter: js.UndefOr[String | js.Object] = negativeColor
+    val pointDescriptionFormatterOuter: js.UndefOr[js.Function] = pointDescriptionFormatter
+    val pointIntervalOuter: js.UndefOr[Double] = pointInterval
+    val pointIntervalUnitOuter: js.UndefOr[String] = pointIntervalUnit
+    val pointPlacementOuter: js.UndefOr[String | Double] = pointPlacement
+    val pointStartOuter: js.UndefOr[Double] = pointStart
+    val selectedOuter: js.UndefOr[Boolean] = selected
+    val shadowOuter: js.UndefOr[Boolean] = shadow
+    val showInLegendOuter: js.UndefOr[Boolean] = showInLegend
+    val showInNavigatorOuter: js.UndefOr[Boolean] = showInNavigator
+    val skipKeyboardNavigationOuter: js.UndefOr[Boolean] = skipKeyboardNavigation
+    val stackingOuter: js.UndefOr[String] = stacking
+    val visibleOuter: js.UndefOr[Boolean] = visible
     val zoneAxisOuter: js.UndefOr[String] = zoneAxis
-    val zonesOuter: js.UndefOr[js.Array[CleanJsObject[PlotOptionsBoxplotZones]]] = zones
-    new PlotOptionsBoxplot {
-      override val allowPointSelect: js.UndefOr[Boolean] = allowPointSelectOuter
-      override val animationLimit: js.UndefOr[Double] = animationLimitOuter
-      override val className: js.UndefOr[String] = classNameOuter
-      override val color: js.UndefOr[String | js.Object] = colorOuter
-      override val colorByPoint: js.UndefOr[Boolean] = colorByPointOuter
-      override val colorIndex: js.UndefOr[Double] = colorIndexOuter
-      override val colors: js.UndefOr[js.Array[String | js.Object]] = colorsOuter
-      override val crisp: js.UndefOr[Boolean] = crispOuter
-      override val cursor: js.UndefOr[String] = cursorOuter
-      override val depth: js.UndefOr[Double] = depthOuter
-      override val description: js.UndefOr[String] = descriptionOuter
-      override val edgeColor: js.UndefOr[String | js.Object] = edgeColorOuter
-      override val edgeWidth: js.UndefOr[Double] = edgeWidthOuter
-      override val enableMouseTracking: js.UndefOr[Boolean] = enableMouseTrackingOuter
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsBoxplotEvents]] = eventsOuter
-      override val exposeElementToA11y: js.UndefOr[Boolean] = exposeElementToA11yOuter
+    val zonesOuter: js.UndefOr[js.Array[js.Any]] = zones
+    val compareOuter: js.UndefOr[String] = compare
+    val compareStartOuter: js.UndefOr[Boolean] = compareStart
+    val compareBaseOuter: js.UndefOr[Double] = compareBase
+    val zIndexOuter: js.UndefOr[Double] = zIndex
+    val allAreasOuter: js.UndefOr[Boolean] = allAreas
+    val colorAxisOuter: js.UndefOr[Boolean] = colorAxis
+    val joinByOuter: js.UndefOr[String | js.Array[String]] = joinBy
+    val pathfinderOuter: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPathfinder]] = pathfinder
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsBoxplot {
+      override val dragDrop: js.Any = dragDropOuter
+      override val threshold: js.Any = thresholdOuter
+      override val tooltip: js.Any = tooltipOuter
+      override val whiskerLength: js.UndefOr[Double | String] = whiskerLengthOuter
       override val fillColor: js.UndefOr[String | js.Object] = fillColorOuter
-      override val findNearestPointBy: js.UndefOr[String] = findNearestPointByOuter
-      override val getExtremesFromAll: js.UndefOr[Boolean] = getExtremesFromAllOuter
-      override val groupPadding: js.UndefOr[Double] = groupPaddingOuter
-      override val groupZPadding: js.UndefOr[Double] = groupZPaddingOuter
-      override val grouping: js.UndefOr[Boolean] = groupingOuter
-      override val keys: js.UndefOr[js.Array[String]] = keysOuter
       override val lineWidth: js.UndefOr[Double] = lineWidthOuter
-      override val linkedTo: js.UndefOr[String] = linkedToOuter
-      override val maxPointWidth: js.UndefOr[Double] = maxPointWidthOuter
-      override val medianColor: js.UndefOr[String | js.Object] = medianColorOuter
       override val medianWidth: js.UndefOr[Double] = medianWidthOuter
-      override val negativeColor: js.UndefOr[String | js.Object] = negativeColorOuter
-      override val point: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPoint]] = pointOuter
-      override val pointDescriptionFormatter: js.UndefOr[js.Function] = pointDescriptionFormatterOuter
-      override val pointInterval: js.UndefOr[Double] = pointIntervalOuter
-      override val pointIntervalUnit: js.UndefOr[String] = pointIntervalUnitOuter
-      override val pointPadding: js.UndefOr[Double] = pointPaddingOuter
-      override val pointPlacement: js.UndefOr[String | Double] = pointPlacementOuter
-      override val pointRange: js.UndefOr[Double] = pointRangeOuter
-      override val pointStart: js.UndefOr[Double] = pointStartOuter
-      override val pointWidth: js.UndefOr[Double] = pointWidthOuter
-      override val selected: js.UndefOr[Boolean] = selectedOuter
-      override val showCheckbox: js.UndefOr[Boolean] = showCheckboxOuter
-      override val showInLegend: js.UndefOr[Boolean] = showInLegendOuter
-      override val skipKeyboardNavigation: js.UndefOr[Boolean] = skipKeyboardNavigationOuter
-      override val states: js.UndefOr[CleanJsObject[PlotOptionsSeriesStates]] = statesOuter
+      override val whiskerWidth: js.UndefOr[Double] = whiskerWidthOuter
+      override val medianColor: js.UndefOr[String | js.Object] = medianColorOuter
       override val stemColor: js.UndefOr[String | js.Object] = stemColorOuter
       override val stemDashStyle: js.UndefOr[String] = stemDashStyleOuter
       override val stemWidth: js.UndefOr[Double] = stemWidthOuter
-      override val stickyTracking: js.UndefOr[Boolean] = stickyTrackingOuter
-      override val tooltip: js.UndefOr[CleanJsObject[PlotOptionsBoxplotTooltip]] = tooltipOuter
-      override val turboThreshold: js.UndefOr[Double] = turboThresholdOuter
-      override val visible: js.UndefOr[Boolean] = visibleOuter
       override val whiskerColor: js.UndefOr[String | js.Object] = whiskerColorOuter
-      override val whiskerLength: js.UndefOr[Double | String] = whiskerLengthOuter
-      override val whiskerWidth: js.UndefOr[Double] = whiskerWidthOuter
+      override val crisp: js.UndefOr[Boolean] = crispOuter
+      override val groupPadding: js.UndefOr[Double] = groupPaddingOuter
+      override val pointPadding: js.UndefOr[Double] = pointPaddingOuter
+      override val minPointLength: js.UndefOr[Double] = minPointLengthOuter
+      override val cropThreshold: js.UndefOr[Double] = cropThresholdOuter
+      override val pointRange: js.UndefOr[Double | Null] = pointRangeOuter
+      override val dataLabels: js.Any = dataLabelsOuter
+      override val softThreshold: js.UndefOr[Boolean] = softThresholdOuter
+      override val stickyTracking: js.UndefOr[Boolean] = stickyTrackingOuter
+      override val colorByPoint: js.UndefOr[Boolean] = colorByPointOuter
+      override val colors: js.UndefOr[js.Array[String | js.Object]] = colorsOuter
+      override val grouping: js.UndefOr[Boolean] = groupingOuter
+      override val maxPointWidth: js.UndefOr[Double] = maxPointWidthOuter
+      override val pointWidth: js.UndefOr[Double] = pointWidthOuter
+      override val dataGrouping: js.Any = dataGroupingOuter
+      override val depth: js.UndefOr[Double] = depthOuter
+      override val edgeColor: js.UndefOr[String | js.Object] = edgeColorOuter
+      override val edgeWidth: js.UndefOr[Double] = edgeWidthOuter
+      override val boostThreshold: js.UndefOr[Double] = boostThresholdOuter
+      override val point: js.Any = pointOuter
+      override val label: js.Any = labelOuter
+      override val allowPointSelect: js.UndefOr[Boolean] = allowPointSelectOuter
+      override val showCheckbox: js.UndefOr[Boolean] = showCheckboxOuter
+      override val animation: js.UndefOr[Boolean | js.Object] = animationOuter
+      override val events: js.Any = eventsOuter
+      override val turboThreshold: js.UndefOr[Double] = turboThresholdOuter
+      override val findNearestPointBy: js.UndefOr[String] = findNearestPointByOuter
+      override val animationLimit: js.UndefOr[Double] = animationLimitOuter
+      override val className: js.UndefOr[String] = classNameOuter
+      override val clip: js.UndefOr[Boolean] = clipOuter
+      override val color: js.UndefOr[String | js.Object] = colorOuter
+      override val colorIndex: js.UndefOr[Double] = colorIndexOuter
+      override val cursor: js.UndefOr[String] = cursorOuter
+      override val description: js.UndefOr[String] = descriptionOuter
+      override val enableMouseTracking: js.UndefOr[Boolean] = enableMouseTrackingOuter
+      override val exposeElementToA11y: js.UndefOr[Boolean] = exposeElementToA11yOuter
+      override val getExtremesFromAll: js.UndefOr[Boolean] = getExtremesFromAllOuter
+      override val keys: js.UndefOr[js.Array[String]] = keysOuter
+      override val linkedTo: js.UndefOr[String] = linkedToOuter
+      override val navigatorOptions: js.Any = navigatorOptionsOuter
+      override val negativeColor: js.UndefOr[String | js.Object] = negativeColorOuter
+      override val pointDescriptionFormatter: js.UndefOr[js.Function] = pointDescriptionFormatterOuter
+      override val pointInterval: js.UndefOr[Double] = pointIntervalOuter
+      override val pointIntervalUnit: js.UndefOr[String] = pointIntervalUnitOuter
+      override val pointPlacement: js.UndefOr[String | Double] = pointPlacementOuter
+      override val pointStart: js.UndefOr[Double] = pointStartOuter
+      override val selected: js.UndefOr[Boolean] = selectedOuter
+      override val shadow: js.UndefOr[Boolean] = shadowOuter
+      override val showInLegend: js.UndefOr[Boolean] = showInLegendOuter
+      override val showInNavigator: js.UndefOr[Boolean] = showInNavigatorOuter
+      override val skipKeyboardNavigation: js.UndefOr[Boolean] = skipKeyboardNavigationOuter
+      override val stacking: js.UndefOr[String] = stackingOuter
+      override val visible: js.UndefOr[Boolean] = visibleOuter
       override val zoneAxis: js.UndefOr[String] = zoneAxisOuter
-      override val zones: js.UndefOr[js.Array[CleanJsObject[PlotOptionsBoxplotZones]]] = zonesOuter
-    }
+      override val zones: js.UndefOr[js.Array[js.Any]] = zonesOuter
+      override val compare: js.UndefOr[String] = compareOuter
+      override val compareStart: js.UndefOr[Boolean] = compareStartOuter
+      override val compareBase: js.UndefOr[Double] = compareBaseOuter
+      override val zIndex: js.UndefOr[Double] = zIndexOuter
+      override val allAreas: js.UndefOr[Boolean] = allAreasOuter
+      override val colorAxis: js.UndefOr[Boolean] = colorAxisOuter
+      override val joinBy: js.UndefOr[String | js.Array[String]] = joinByOuter
+      override val pathfinder: js.UndefOr[CleanJsObject[PlotOptionsBoxplotPathfinder]] = pathfinderOuter
+    })
   }
 }

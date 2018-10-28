@@ -13,27 +13,41 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-areaspline-marker-states</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsAreasplineMarkerStates extends js.Object {
-
-  val hover: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesHover]] = js.undefined
+class PlotOptionsAreasplineMarkerStates extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * The appearance of the point marker when selected. In order to allow a point to be 
-    * 		selected, set the <code>series.allowPointSelect</code> option to true.
+    * <p>The normal state of a single point marker. Currently only used
+    * for setting animation when returning to normal state from hover.</p>
     */
-  val select: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesSelect]] = js.undefined
+  val normal: js.Any = js.undefined
+
+  /**
+    * <p>The hover state for a single point marker.</p>
+    */
+  val hover: js.Any = js.undefined
+
+  /**
+    * <p>The appearance of the point marker when selected. In order to
+    * allow a point to be selected, set the <code>series.allowPointSelect</code>
+    * option to true.</p>
+    */
+  val select: js.Any = js.undefined
 }
 
 object PlotOptionsAreasplineMarkerStates {
   /**
-    * @param select The appearance of the point marker when selected. In order to allow a point to be . 		selected, set the <code>series.allowPointSelect</code> option to true.
+    * @param normal <p>The normal state of a single point marker. Currently only used. for setting animation when returning to normal state from hover.</p>
+    * @param hover <p>The hover state for a single point marker.</p>
+    * @param select <p>The appearance of the point marker when selected. In order to. allow a point to be selected, set the <code>series.allowPointSelect</code>. option to true.</p>
     */
-  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesHover]] = js.undefined, select: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesSelect]] = js.undefined): PlotOptionsAreasplineMarkerStates = {
-    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesHover]] = hover
-    val selectOuter: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesSelect]] = select
-    new PlotOptionsAreasplineMarkerStates {
-      override val hover: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesHover]] = hoverOuter
-      override val select: js.UndefOr[CleanJsObject[PlotOptionsAreasplineMarkerStatesSelect]] = selectOuter
-    }
+  def apply(normal: js.UndefOr[js.Any] = js.undefined, hover: js.UndefOr[js.Any] = js.undefined, select: js.UndefOr[js.Any] = js.undefined): PlotOptionsAreasplineMarkerStates = {
+    val normalOuter: js.Any = normal
+    val hoverOuter: js.Any = hover
+    val selectOuter: js.Any = select
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsAreasplineMarkerStates {
+      override val normal: js.Any = normalOuter
+      override val hover: js.Any = hoverOuter
+      override val select: js.Any = selectOuter
+    })
   }
 }

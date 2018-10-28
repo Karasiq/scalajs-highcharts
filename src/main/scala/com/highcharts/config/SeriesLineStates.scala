@@ -13,22 +13,42 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;line&gt;-states</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesLineStates extends js.Object {
+class SeriesLineStates extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Options for the hovered series
+    * <p>Overrides for the normal state.</p>
     */
-  val hover: js.UndefOr[CleanJsObject[SeriesLineStatesHover]] = js.undefined
+  val normal: js.UndefOr[CleanJsObject[SeriesLineStatesNormal]] = js.undefined
+
+  /**
+    * <p>Options for the hovered series. These settings override the normal
+    * state options when a series is moused over or touched.</p>
+    */
+  val hover: js.Any = js.undefined
+
+  /**
+    * <p>Specific options for point in selected states, after being selected
+    * by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or
+    * programmatically.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">Allow point select demo</a>
+    */
+  val select: js.UndefOr[CleanJsObject[SeriesLineStatesSelect]] = js.undefined
 }
 
 object SeriesLineStates {
   /**
-    * @param hover Options for the hovered series
+    * @param normal <p>Overrides for the normal state.</p>
+    * @param hover <p>Options for the hovered series. These settings override the normal. state options when a series is moused over or touched.</p>
+    * @param select <p>Specific options for point in selected states, after being selected. by <a href="#plotOptions.series.allowPointSelect">allowPointSelect</a> or. programmatically.</p>
     */
-  def apply(hover: js.UndefOr[CleanJsObject[SeriesLineStatesHover]] = js.undefined): SeriesLineStates = {
-    val hoverOuter: js.UndefOr[CleanJsObject[SeriesLineStatesHover]] = hover
-    new SeriesLineStates {
-      override val hover: js.UndefOr[CleanJsObject[SeriesLineStatesHover]] = hoverOuter
-    }
+  def apply(normal: js.UndefOr[CleanJsObject[SeriesLineStatesNormal]] = js.undefined, hover: js.UndefOr[js.Any] = js.undefined, select: js.UndefOr[CleanJsObject[SeriesLineStatesSelect]] = js.undefined): SeriesLineStates = {
+    val normalOuter: js.UndefOr[CleanJsObject[SeriesLineStatesNormal]] = normal
+    val hoverOuter: js.Any = hover
+    val selectOuter: js.UndefOr[CleanJsObject[SeriesLineStatesSelect]] = select
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesLineStates {
+      override val normal: js.UndefOr[CleanJsObject[SeriesLineStatesNormal]] = normalOuter
+      override val hover: js.Any = hoverOuter
+      override val select: js.UndefOr[CleanJsObject[SeriesLineStatesSelect]] = selectOuter
+    })
   }
 }

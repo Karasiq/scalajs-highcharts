@@ -13,48 +13,49 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;areasplinerange&gt;-zones</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesAreasplinerangeZones extends js.Object {
+class SeriesAreasplinerangeZones extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">Styled mode</a> only. A custom class name for the zone.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/" target="_blank">Zones styled by class name</a>.
+    * <p>Styled mode only. A custom class name for the zone.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">Zones styled by class name</a>
     * @since 5.0.0
     */
   val className: js.UndefOr[String] = js.undefined
 
   /**
-    * Defines the color of the series.
-    * @since 2.1.0
+    * <p>Defines the color of the series.</p>
+    * @since 4.1.0
     */
   val color: js.UndefOr[String | js.Object] = js.undefined
 
   /**
-    * A name for the dash style to use for the graph.
-    * @example <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/" target="_blank">Dashed line indicates prognosis</a>
-    * @since 2.1.0
+    * <p>A name for the dash style to use for the graph.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-dashstyle-dot/">Dashed line indicates prognosis</a>
+    * @since 4.1.0
     */
   val dashStyle: js.UndefOr[String] = js.undefined
 
   /**
-    * Defines the fill color for the series (in area type series)
-    * @since 2.1.0
+    * <p>Defines the fill color for the series (in area type series)</p>
+    * @since 4.1.0
     */
   val fillColor: js.UndefOr[String | js.Object] = js.undefined
 
   /**
-    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
-    * @since 2.1.0
+    * <p>The value up to where the zone extends, if undefined the zones stretches
+    * to the last value in the series.</p>
+    * @since 4.1.0
     */
   val value: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesAreasplinerangeZones {
   /**
-    * @param className <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">Styled mode</a> only. A custom class name for the zone.
-    * @param color Defines the color of the series.
-    * @param dashStyle A name for the dash style to use for the graph.
-    * @param fillColor Defines the fill color for the series (in area type series)
-    * @param value The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
+    * @param className <p>Styled mode only. A custom class name for the zone.</p>
+    * @param color <p>Defines the color of the series.</p>
+    * @param dashStyle <p>A name for the dash style to use for the graph.</p>
+    * @param fillColor <p>Defines the fill color for the series (in area type series)</p>
+    * @param value <p>The value up to where the zone extends, if undefined the zones stretches. to the last value in the series.</p>
     */
   def apply(className: js.UndefOr[String] = js.undefined, color: js.UndefOr[String | js.Object] = js.undefined, dashStyle: js.UndefOr[String] = js.undefined, fillColor: js.UndefOr[String | js.Object] = js.undefined, value: js.UndefOr[Double] = js.undefined): SeriesAreasplinerangeZones = {
     val classNameOuter: js.UndefOr[String] = className
@@ -62,12 +63,12 @@ object SeriesAreasplinerangeZones {
     val dashStyleOuter: js.UndefOr[String] = dashStyle
     val fillColorOuter: js.UndefOr[String | js.Object] = fillColor
     val valueOuter: js.UndefOr[Double] = value
-    new SeriesAreasplinerangeZones {
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesAreasplinerangeZones {
       override val className: js.UndefOr[String] = classNameOuter
       override val color: js.UndefOr[String | js.Object] = colorOuter
       override val dashStyle: js.UndefOr[String] = dashStyleOuter
       override val fillColor: js.UndefOr[String | js.Object] = fillColorOuter
       override val value: js.UndefOr[Double] = valueOuter
-    }
+    })
   }
 }

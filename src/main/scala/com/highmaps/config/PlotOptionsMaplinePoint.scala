@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-mapline-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsMaplinePoint extends js.Object {
+class PlotOptionsMaplinePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsMaplinePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = js.undefined): PlotOptionsMaplinePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = events
-    new PlotOptionsMaplinePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsMaplinePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsMaplinePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsMaplinePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

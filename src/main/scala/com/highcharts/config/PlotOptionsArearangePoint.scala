@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-arearange-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsArearangePoint extends js.Object {
+class PlotOptionsArearangePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsArearangePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsArearangePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsArearangePointEvents]] = js.undefined): PlotOptionsArearangePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsArearangePointEvents]] = events
-    new PlotOptionsArearangePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsArearangePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsArearangePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsArearangePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

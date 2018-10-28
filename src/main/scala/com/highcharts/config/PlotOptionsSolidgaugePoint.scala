@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-solidgauge-point</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsSolidgaugePoint extends js.Object {
+class PlotOptionsSolidgaugePoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object PlotOptionsSolidgaugePoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = js.undefined): PlotOptionsSolidgaugePoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = events
-    new PlotOptionsSolidgaugePoint {
-      override val events: js.UndefOr[CleanJsObject[PlotOptionsSolidgaugePointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): PlotOptionsSolidgaugePoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsSolidgaugePoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }

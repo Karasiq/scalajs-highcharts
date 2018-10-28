@@ -13,32 +13,32 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>legend-title</code>
   */
 @js.annotation.ScalaJSDefined
-class LegendTitle extends js.Object {
+class LegendTitle extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Generic CSS styles for the legend title.
-    * @since 1.3
+    * <p>Generic CSS styles for the legend title.</p>
+    * @since 3.0
     */
   val style: js.UndefOr[js.Object] = js.undefined
 
   /**
-    * A text or HTML string for the title. 
-    * @since 1.3
+    * <p>A text or HTML string for the title.</p>
+    * @since 3.0
     */
   val text: js.UndefOr[String] = js.undefined
 }
 
 object LegendTitle {
   /**
-    * @param style Generic CSS styles for the legend title.
-    * @param text A text or HTML string for the title. 
+    * @param style <p>Generic CSS styles for the legend title.</p>
+    * @param text <p>A text or HTML string for the title.</p>
     */
   def apply(style: js.UndefOr[js.Object] = js.undefined, text: js.UndefOr[String] = js.undefined): LegendTitle = {
     val styleOuter: js.UndefOr[js.Object] = style
     val textOuter: js.UndefOr[String] = text
-    new LegendTitle {
+    com.highcharts.HighchartsGenericObject.toCleanObject(new LegendTitle {
       override val style: js.UndefOr[js.Object] = styleOuter
       override val text: js.UndefOr[String] = textOuter
-    }
+    })
   }
 }

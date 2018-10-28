@@ -13,22 +13,41 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>plotOptions-column-states</code>
   */
 @js.annotation.ScalaJSDefined
-class PlotOptionsColumnStates extends js.Object {
+class PlotOptionsColumnStates extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Options for the hovered series
+    * <p>Options for the hovered point. These settings override the normal
+    * state options when a point is moused over or touched.</p>
     */
-  val hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = js.undefined
+  val hover: js.Any = js.undefined
+
+  /**
+    * <p>Options for the selected point. These settings override the normal
+    * state options when a point is selected.</p>
+    * @example <a href="https://jsfiddle.net/gh/library/pure/highcharts/highcharts/tree/master/samples/maps/plotoptions/series-allowpointselect/">Allow point select demo</a>
+    */
+  val select: js.Any = js.undefined
+
+  /**
+    * <p>Overrides for the normal state.</p>
+    */
+  val normal: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesNormal]] = js.undefined
 }
 
 object PlotOptionsColumnStates {
   /**
-    * @param hover Options for the hovered series
+    * @param hover <p>Options for the hovered point. These settings override the normal. state options when a point is moused over or touched.</p>
+    * @param select <p>Options for the selected point. These settings override the normal. state options when a point is selected.</p>
+    * @param normal <p>Overrides for the normal state.</p>
     */
-  def apply(hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = js.undefined): PlotOptionsColumnStates = {
-    val hoverOuter: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = hover
-    new PlotOptionsColumnStates {
-      override val hover: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesHover]] = hoverOuter
-    }
+  def apply(hover: js.UndefOr[js.Any] = js.undefined, select: js.UndefOr[js.Any] = js.undefined, normal: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesNormal]] = js.undefined): PlotOptionsColumnStates = {
+    val hoverOuter: js.Any = hover
+    val selectOuter: js.Any = select
+    val normalOuter: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesNormal]] = normal
+    com.highcharts.HighchartsGenericObject.toCleanObject(new PlotOptionsColumnStates {
+      override val hover: js.Any = hoverOuter
+      override val select: js.Any = selectOuter
+      override val normal: js.UndefOr[CleanJsObject[PlotOptionsColumnStatesNormal]] = normalOuter
+    })
   }
 }

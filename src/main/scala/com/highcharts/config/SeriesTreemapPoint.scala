@@ -13,22 +13,22 @@ import com.highcharts.HighchartsUtils._
   * @note JavaScript name: <code>series&lt;treemap&gt;-point</code>
   */
 @js.annotation.ScalaJSDefined
-class SeriesTreemapPoint extends js.Object {
+class SeriesTreemapPoint extends com.highcharts.HighchartsGenericObject {
 
   /**
-    * Events for each single point
+    * <p>Events for each single point.</p>
     */
-  val events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = js.undefined
+  val events: js.Any = js.undefined
 }
 
 object SeriesTreemapPoint {
   /**
-    * @param events Events for each single point
+    * @param events <p>Events for each single point.</p>
     */
-  def apply(events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = js.undefined): SeriesTreemapPoint = {
-    val eventsOuter: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = events
-    new SeriesTreemapPoint {
-      override val events: js.UndefOr[CleanJsObject[SeriesTreemapPointEvents]] = eventsOuter
-    }
+  def apply(events: js.UndefOr[js.Any] = js.undefined): SeriesTreemapPoint = {
+    val eventsOuter: js.Any = events
+    com.highcharts.HighchartsGenericObject.toCleanObject(new SeriesTreemapPoint {
+      override val events: js.Any = eventsOuter
+    })
   }
 }
