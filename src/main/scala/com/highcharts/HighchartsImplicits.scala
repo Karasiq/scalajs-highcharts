@@ -1,15 +1,27 @@
 package com.highcharts
 
-import com.highcharts.HighchartsAliases.SeriesCfgData
-
 import scala.language.implicitConversions
 import scala.scalajs.js
-import scala.scalajs.js.{UndefOr, `|`}
+import scala.scalajs.js.{`|`, UndefOr}
+
+import com.highcharts.HighchartsAliases.SeriesCfgData
 
 trait HighchartsImplicits {
   type Cfg[T <: js.Object] = UndefOr[CleanJsObject[T]]
 
   type CfgArray[T <: js.Object] = UndefOr[js.Array[CleanJsObject[T]]]
+
+  implicit def highchartsGenericObjectToJSAny[T](value: T)(implicit ev: T ⇒ HighchartsGenericObject): js.Any = {
+    HighchartsGenericObject.toCleanObject(ev(value)).asInstanceOf[js.Any]
+  }
+
+  implicit def highchartsUnionArray[V, U1, U2](obj: js.Array[V])(implicit ev: js.`|`.Evidence[V, U1 | U2]): js.Array[U1 | U2] = {
+    obj.asInstanceOf[js.Array[U1 | U2]]
+  }
+
+  implicit def highchartsUndefOrUnionArray[V, U1, U2](obj: js.Array[V])(implicit ev: js.`|`.Evidence[V, U1 | U2]): js.UndefOr[js.Array[U1 | U2]] = {
+    obj.asInstanceOf[js.Array[U1 | U2]]
+  }
 
   implicit def highchartsUnionCleanObject[V <: js.Object, U1, U2](obj: V)(implicit ev: js.`|`.Evidence[CleanJsObject[V], U1 | U2]): U1 | U2 = {
     CleanJsObject(obj).asInstanceOf[U1 | U2]

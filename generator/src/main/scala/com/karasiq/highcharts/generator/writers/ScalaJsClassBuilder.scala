@@ -38,6 +38,24 @@ object ScalaJsClassBuilder {
 
 class ScalaJsClassBuilder {
   private def scalaType(classes: Set[String], tpe: Option[String], selfClass: Option[String] = None): Option[String] = {
+
+    object Prefixed {
+      def unapplySeq(s: String): Option[Seq[String]] = {
+        Some(s.split('.'))
+      }
+    }
+
+    object Union {
+      def unapplySeq(t: String): Option[Seq[String]] = {
+        val t1 = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
+        val tokens: Array[String] = t1.split('|')
+          .map(_.trim)
+          .filter(_.nonEmpty)
+
+        if (tokens.length > 1) Some(tokens.toSeq) else None
+      }
+    }
+    
     // val array = """^Array\.<(.+?)>$""".r
     object TypedArray {
       def unapply(str: String): Option[String] = {
@@ -63,26 +81,32 @@ class ScalaJsClassBuilder {
     }
 
     def stdTypes: PartialFunction[String, String] = selfTypeObject.orElse {
-      case "Color" ⇒
+      case "Color" | "color" | Prefixed("Highcharts", "ColorString") ⇒
         "String | js.Object"
 
-      case "String" ⇒
+      case "String" | "string" ⇒
         "String"
 
       case "Function" | "function" ⇒
         "js.Function"
 
-      case "CSSObject" | "Object" ⇒
+      case "CSSObject" | "Object" | "object" | Prefixed("Highcharts", "CSSObject" | "SVGAttributes" | "AnimationOptionsObject") ⇒
         "js.Object"
 
-      case "Number" ⇒
+      case Prefixed("Highcharts", "Dictionary") | Prefixed("Highcharts", "Dictionary", _) ⇒
+        "js.Object"
+
+      case "Number" | "number" ⇒
         "Double"
 
-      case "Boolean" ⇒
+      case "Boolean" | "boolean" ⇒
         "Boolean"
 
-      case "Mixed" ⇒
+      case "Mixed" | "*" ⇒
         "js.Any"
+
+      case "null" ⇒
+        "Null"
 
       case TypedArray(t) ⇒
         // println("Array " + t)
@@ -95,17 +119,16 @@ class ScalaJsClassBuilder {
         }
         s"js.Array[$tpe]"
 
-      case "Array" ⇒
+      case "Array" | "array" ⇒
         "js.Array[js.Any]"
 
-      case t if t.contains("|") ⇒ // Union type
-        val t1 = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
-        val tokens: Array[String] = t1.split("\\|")
-          .map(_.trim)
-          .filter(_.nonEmpty)
-          .collect(stdTypes)
+      case Union(tokens @ _*) ⇒ // Union type
+        val recognized = tokens.collect(stdTypes)
         // println(t + " " + tokens.toList)
-        ScalaJsClassBuilder.unionType(tokens.toList)
+        ScalaJsClassBuilder.unionType(recognized.toList)
+
+      // case Prefixed("Highcharts", t) if classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
+      //  s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
 
       case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
         s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
@@ -139,7 +162,7 @@ class ScalaJsClassBuilder {
       if (value.trim == "null") {
         // Null value
         s"null.asInstanceOf[$scalaType]"
-      } else if (cfg.returnType.exists(_.contains("String")) || scalaType == "String") {
+      } else if (cfg.returnType.exists(_.toLowerCase.contains("string")) || scalaType == "String") {
         // String literal
         ScalaJsClassBuilder.escapeString(value)
       } else {
@@ -173,12 +196,17 @@ class ScalaJsClassBuilder {
     } */
 
     // Extract `type` field
-    val defaultValue = if (cfg.title.contains("type") && cfg.returnType.contains("String") && cfg.defaults.isEmpty) {
-      val compoundValueName = "(\\w+)<(\\w+)>".r
-      cfg.parent.collect {
-        case compoundValueName(baseName, typeArg) ⇒
-          wrapString(typeArg)
-      }
+    def isTypeField =
+      cfg.title.contains("type") &&
+      cfg.returnType.map(_.toLowerCase).contains("string")
+
+    val defaultValue = if (isTypeField) {
+      cfg.defaults
+        .map(wrapString)
+        .orElse {
+          val CompoundValueName = "(\\w+)<(\\w+)>".r
+          cfg.parent.collect { case CompoundValueName(_, typeArg) ⇒ wrapString(typeArg) }
+        }
     } else {
       None
     }

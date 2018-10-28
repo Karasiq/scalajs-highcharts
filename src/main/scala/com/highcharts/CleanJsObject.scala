@@ -13,6 +13,9 @@ object CleanJsObject {
     case und if js.isUndefined(und) ⇒
       js.undefined.asInstanceOf[js.Object]
 
+    case array if js.Array.isArray(array) ⇒ // Pass arrays
+      array 
+
     case obj ⇒
       val newObj: js.Object = new js.Object()
 
