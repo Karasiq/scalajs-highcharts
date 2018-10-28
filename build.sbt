@@ -40,6 +40,7 @@ lazy val generatorSettings = Seq(
   ),
   mainClass in Compile := Some("com.karasiq.highcharts.generator.Main"),
   fullRunTask(generate, Compile, "com.karasiq.highcharts.generator.Main"),
+  // fork in generate := true,
   javaOptions in generate ++= Seq(
     "-Dhighcharts-generator.output=src/main/scala",
     "-Dhighcharts-generator.package=com.highcharts"
@@ -97,8 +98,8 @@ lazy val libraryTestSettings = Seq(
       Static("fonts/glyphicons-halflings-regular.woff2") from url("https://raw.githubusercontent.com/twbs/bootstrap/v3.3.6/dist/fonts/glyphicons-halflings-regular.woff2"),
 
       // Highcharts
-      Script from url("https://code.highcharts.com/stock/5.0.14/highstock.src.js"),
-      Script from url("https://code.highcharts.com/stock/5.0.14/highcharts-3d.src.js"),
+      Script from url("https://code.highcharts.com/stock/6.2.0/highstock.src.js"),
+      Script from url("https://code.highcharts.com/stock/6.2.0/highcharts-3d.src.js"),
 
       // Scala.js app
       Script from file("test") / "frontend" / "target" / "scala-2.12" / "scalajs-highcharts-test-frontend-opt.js",
