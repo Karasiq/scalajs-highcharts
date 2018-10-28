@@ -14,14 +14,14 @@ import scala.scalajs.js.annotation.ScalaJSDefined
   * @see [[http://www.highcharts.com/stock/demo/intraday-area]]
   */
 @ScalaJSDefined
-class TestStockChartConfig(sampleData: js.Array[js.Array[js.Any]]) extends HighstockConfig {
-  override val title: Cfg[Title] = Title(text = "AAPL stock price by minute")
+class TestStockChartConfig(sampleData: TestStockChartConfig.SampleSeriesData) extends HighstockConfig {
+  override val title = Title(text = "AAPL stock price by minute")
 
-  override val subtitle: Cfg[Subtitle] = Subtitle(text = "Using ordinal X axis")
+  override val subtitle = Subtitle(text = "Using ordinal X axis")
 
-  override val xAxis: CfgArray[XAxis] = js.Array(XAxis(gridLineWidth = 0))
+  override val xAxis = XAxis(gridLineWidth = 0)
 
-  override val rangeSelector: Cfg[RangeSelector] = RangeSelector(
+  override val rangeSelector = RangeSelector(
     buttons = js.Array(
       RangeSelectorButtons(`type` = "hour", count = 1, text = "1H"),
       RangeSelectorButtons(`type` = "day", count = 1, text = "1D"),
@@ -48,9 +48,12 @@ class TestStockChartConfig(sampleData: js.Array[js.Array[js.Any]]) extends Highs
 }
 
 object TestStockChartConfig {
-  def loadSampleData(): Future[js.Array[js.Array[js.Any]]] = {
-    val promise = Promise[js.Array[js.Array[js.Any]]]()
-    val xhr = jQuery.getJSON("https://www.highcharts.com/samples/data/jsonp.php?filename=new-intraday.json&callback=?", (data: js.Array[js.Array[js.Any]]) ⇒ {
+  type SampleSeriesData = js.Array[js.Array[Double]]
+
+  def loadSampleData(): Future[SampleSeriesData] = {
+    val promise = Promise[SampleSeriesData]()
+    val xhr = jQuery.getJSON("https://www.highcharts.com/samples/data/jsonp.php?filename=new-intraday.json&callback=?", (data: SampleSeriesData) ⇒ {
+      org.scalajs.dom.console.log(data)
       promise.trySuccess(data)
     })
     xhr.asInstanceOf[js.Dynamic].onerror = (e: ErrorEvent) ⇒ promise.tryFailure(new Exception(e.message))

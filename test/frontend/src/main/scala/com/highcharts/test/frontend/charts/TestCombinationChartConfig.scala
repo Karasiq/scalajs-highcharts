@@ -13,13 +13,13 @@ import scala.scalajs.js.|
   */
 @ScalaJSDefined
 class TestCombinationChartConfig extends HighchartsConfig {
-  override val chart: Cfg[Chart] = Chart()
+  override val chart = Chart()
 
-  override val title: Cfg[Title] = Title(text = "Combination chart")
+  override val title = Title(text = "Combination chart")
 
-  override val xAxis: CfgArray[XAxis] = js.Array(XAxis(categories = js.Array("Apples", "Oranges", "Pears", "Bananas", "Plums")))
+  override val xAxis = XAxis(categories = js.Array("Apples", "Oranges", "Pears", "Bananas", "Plums"))
 
-  override val labels: Cfg[Labels] = Labels(items = js.Array(LabelsItems(html = "Total fruit consumption", style = js.Dynamic.literal(
+  override val labels = Labels(items = js.Array(LabelsItems(html = "Total fruit consumption", style = js.Dynamic.literal(
     left = "50px",
     top = "18px",
     color = fromHighchartsTheme("black")(_.textColor)
@@ -38,7 +38,7 @@ class TestCombinationChartConfig extends HighchartsConfig {
         SeriesPieData(name = "John", y = 23, color = defaultColor(1)),
         SeriesPieData(name = "Joe", y = 19, color = defaultColor(2))
       ),
-      center = js.Array[String | Double](100, 80),
+      center = js.Array[Double](100, 80),
       size = 100,
       showInLegend = false,
       dataLabels = SeriesPieDataLabels(enabled = false)

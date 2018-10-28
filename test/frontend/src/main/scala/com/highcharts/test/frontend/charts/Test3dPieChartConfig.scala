@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation.ScalaJSDefined
   */
 @ScalaJSDefined
 class Test3dPieChartConfig extends HighchartsConfig {
-  override val chart: Cfg[Chart] = Chart(`type` = "pie", options3d = ChartOptions3d(alpha = 45, beta = 0, enabled = true))
+  override val chart = Chart(`type` = "pie", options3d = ChartOptions3d(alpha = 45, beta = 0, enabled = true))
 
-  override val title: Cfg[Title] = Title(text = "Browser market shares at a specific website, 2014")
+  override val title = Title(text = "Browser market shares at a specific website, 2014")
 
-  override val tooltip: Cfg[Tooltip] = Tooltip(pointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>")
+  override val tooltip = Tooltip(pointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>")
 
-  override val plotOptions: Cfg[PlotOptions] = PlotOptions(pie = PlotOptionsPie(
+  override val plotOptions = PlotOptions(pie = PlotOptionsPie(
     allowPointSelect = true,
     cursor = "pointer",
     depth = 35,
@@ -30,7 +30,7 @@ class Test3dPieChartConfig extends HighchartsConfig {
   private def mkData(str: String, value: Double): SeriesPieData = SeriesPieData(y = value, name = str)
 
   override val series: SeriesCfg = js.Array[AnySeries](
-    SeriesPie(name = "Browser share", data = js.Array[SeriesPieData](
+    SeriesPie(name = "Browser share", data = js.Array(
       mkData("Firefox", 45),
       mkData("IE", 26.8),
       SeriesPieData(y = 12.8, name = "Chrome", sliced = true, selected = true),

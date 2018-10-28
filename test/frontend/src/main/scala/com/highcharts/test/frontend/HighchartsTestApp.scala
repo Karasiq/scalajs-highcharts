@@ -57,7 +57,9 @@ object HighchartsTestApp extends JSApp {
       body.appendChild(container)
 
       TestStockChartConfig.loadSampleData().foreach { data ⇒
-        jQuery(stockChart).highstock(new TestStockChartConfig(data))
+        val config: CleanJsObject[TestStockChartConfig] = new TestStockChartConfig(data)
+        dom.console.log(config)
+        jQuery(stockChart).highstock(config)
       }
 
       // Size fix

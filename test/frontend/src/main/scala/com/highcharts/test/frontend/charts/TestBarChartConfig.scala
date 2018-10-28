@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation.ScalaJSDefined
 @ScalaJSDefined
 class TestBarChartConfig extends HighchartsConfig {
   // Chart config
-  override val chart: Cfg[Chart] = Chart(`type` = "bar")
+  override val chart = Chart(`type` = "bar")
 
   // Chart title
-  override val title: Cfg[Title] = Title(text = "Demo bar chart")
+  override val title = Title(text = "Demo bar chart")
 
   // Y Axis settings
-  override val yAxis: CfgArray[YAxis] = js.Array(YAxis(title = YAxisTitle(text = "Fruit eaten")))
+  override val yAxis = YAxis(title = YAxisTitle(text = "Fruit eaten"))
 
   // X Axis settings
-  override val xAxis: CfgArray[XAxis] = js.Array(XAxis(categories = js.Array("Apples", "Bananas", "Oranges")))
+  override val xAxis = XAxis(categories = js.Array("Apples", "Bananas", "Oranges"))
 
   // Chart data
   override val series: SeriesCfg = js.Array[AnySeries](
