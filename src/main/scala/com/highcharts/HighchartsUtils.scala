@@ -1,12 +1,12 @@
 package com.highcharts
 
-import com.highcharts.config._
-import org.scalajs.jquery.JQuery
-
 import scala.language.implicitConversions
 import scala.scalajs.js
-import scala.scalajs.js.{UndefOr, `|`}
+import scala.scalajs.js.{`|`, UndefOr}
 import scala.util.Try
+
+import com.highcharts.config._
+import io.udash.wrappers.jquery.JQuery
 
 object HighchartsUtils extends HighchartsImplicits {
   /**

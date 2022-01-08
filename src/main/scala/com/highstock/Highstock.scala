@@ -1,14 +1,12 @@
 package com.highstock
 
-import scala.concurrent.duration._
-import scala.collection.JavaConversions._
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSName
+import scala.scalajs.js.annotation.JSImport
 
-/**
-  * Highstock API object
-  * @see [[http://api.highcharts.com/highstock]]
+/** Highstock API object
+  * @see
+  *   [[http://api.highcharts.com/highstock]]
   */
 @js.native
-@JSName("Highcharts")
+@JSImport("highcharts/highstock", JSImport.Default, "Highcharts")
 object Highstock extends api.Highcharts

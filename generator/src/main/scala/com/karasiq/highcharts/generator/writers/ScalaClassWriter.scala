@@ -38,7 +38,7 @@ class ScalaClassWriter extends ClassWriter {
         writer("@js.native")
         writer(s"trait ${validScalaName(className)} extends com.highcharts.HighchartsGenericObject {")
       } else {
-        writer("@js.annotation.ScalaJSDefined")
+        // writer("@js.annotation.ScalaJSDefined")
         writer(s"class ${validScalaName(className)} extends com.highcharts.HighchartsGenericObject {")
       }
 
