@@ -9,7 +9,8 @@ import com.karasiq.highcharts.generator.ast.{ScalaJsClass, ScalaJsDefinition, Sc
 
 object ScalaJsClassBuilder {
   def classNameFor(jsName: String): String = {
-    jsName.split("[-<>\\.]")
+    jsName
+      .split("[-<>\\.]")
       .filter(_.nonEmpty)
       .map(str ⇒ str.head.toUpper + str.tail)
       .mkString
@@ -27,11 +28,11 @@ object ScalaJsClassBuilder {
       type1
 
     case type1 :: type2 :: Nil ⇒
-      //s"js.`|`[$type1, $type2]"
+      // s"js.`|`[$type1, $type2]"
       s"$type1 | $type2"
 
     case type1 :: ts ⇒
-      //s"js.`|`[$type1, ${unionType(ts)}]"
+      // s"js.`|`[$type1, ${unionType(ts)}]"
       s"$type1 | ${unionType(ts)}"
   }
 }
@@ -39,40 +40,79 @@ object ScalaJsClassBuilder {
 class ScalaJsClassBuilder {
   private def scalaType(classes: Set[String], tpe: Option[String], selfClass: Option[String] = None): Option[String] = {
 
+    object AltType {
+      @tailrec def parseTypeRec(
+          str: Seq[Char],
+          parentheses: Int = 0,
+          splitter: Option[Char] = None,
+          token: String = "",
+          result: Seq[String] = Nil
+      ): Option[(Char, Seq[String])] = str match {
+        case ('(' | '<') +: rest ⇒
+          parseTypeRec(rest, parentheses + 1, splitter, token + '<', result)
+
+        case (')' | '>') +: rest ⇒
+          if (parentheses < 1) None
+          else parseTypeRec(rest, parentheses - 1, splitter, token + '>', result)
+
+        case (char @ (',' | '|')) +: rest ⇒
+          if (splitter.forall(_ == char) && parentheses == 0)
+            parseTypeRec(rest, parentheses, Some(char), "", result :+ token)
+          else
+            parseTypeRec(rest, parentheses, splitter, token + char, result)
+
+        case char +: rest ⇒ parseTypeRec(rest, parentheses, splitter, token + char, result)
+        case Nil          ⇒ splitter.map((_, result :+ token))
+      }
+    }
+
     object Prefixed {
       def unapplySeq(s: String): Option[Seq[String]] = {
-        Some(s.split('.'))
+        if (s.contains(".")) Some(s.split('.')) else None
+      }
+    }
+
+    object Tuple {
+      def unapplySeq(t: String): Option[Seq[String]] = {
+        val t1 = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
+        if (t1.contains(", ")) {
+          val parsed = AltType.parseTypeRec(t1)
+          parsed.collect { case (',', tokens) ⇒
+            tokens.map(_.trim)
+          }
+        } else None
       }
     }
 
     object Union {
       def unapplySeq(t: String): Option[Seq[String]] = {
-        val t1 = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
-        val tokens: Array[String] = t1.split('|')
-          .map(_.trim)
-          .filter(_.nonEmpty)
-
-        if (tokens.length > 1) Some(tokens.toSeq) else None
+        val t1     = if (t.startsWith("(") && t.endsWith(")")) t.drop(1).dropRight(1) else t
+        val parsed = AltType.parseTypeRec(t1)
+        parsed.collect { case ('|', tokens) ⇒
+          tokens.map(_.trim)
+        }
       }
     }
-    
-    // val array = """^Array\.<(.+?)>$""".r
-    object TypedArray {
-      def unapply(str: String): Option[String] = {
+
+    object TypedStruct {
+      private[this] val prefix = "^([\\w.]+)\\.<".r
+
+      def unapply(str: String): Option[(String, String)] = {
         @tailrec def parseTypeRec(str: Seq[Char], parentheses: Int = 1, result: StringBuilder = new StringBuilder): Option[String] = str match {
-          case Nil ⇒ None
-          case _ if parentheses == 0 ⇒ None
+          case Nil                            ⇒ None
+          case _ if parentheses == 0          ⇒ None
           case '>' +: Nil if parentheses == 1 ⇒ Some(result.result())
-          case '>' +: rest ⇒ parseTypeRec(rest, parentheses - 1, result += '>')
-          case '<' +: rest ⇒ parseTypeRec(rest, parentheses + 1, result += '<')
-          case char +: rest ⇒ parseTypeRec(rest, parentheses, result += char)
+          case '>' +: rest                    ⇒ parseTypeRec(rest, parentheses - 1, result += '>')
+          case '<' +: rest                    ⇒ parseTypeRec(rest, parentheses + 1, result += '<')
+          case char +: rest                   ⇒ parseTypeRec(rest, parentheses, result += char)
         }
 
-        val prefix = "Array.<"
-        if (!str.startsWith(prefix)) None else parseTypeRec(str.drop(prefix.length))
+        prefix.findFirstMatchIn(str) match {
+          case Some(m) ⇒ parseTypeRec(str.drop(m.group(0).length)).map((m.group(1), _))
+          case None    ⇒ None
+        }
       }
     }
-
 
     val selfTypeObject: PartialFunction[String, String] = {
       case "" | "Object" if selfClass.nonEmpty ⇒
@@ -80,21 +120,75 @@ class ScalaJsClassBuilder {
         s"CleanJsObject[${selfClass.get}]"
     }
 
+    val strTypes = Set(
+      "DataGroupingApproximationValue",
+      "DataGroupingAnchorExtremes",
+      "DataGroupingAnchor",
+      "SymbolKeyValue",
+      "AlignValue",
+      "VerticalAlignValue",
+      "TooltipShapeValue",
+      "CursorValue",
+      "DashStyleValue",
+      "ColorAxisTypeValue",
+      "SymbolKeyValue",
+      "ColorString"
+    )
+
+    val objTypes = Set(
+      "CSSObject",
+      "SVGAttributes",
+      "AnimationOptionsObject",
+      "GradientColorObject",
+      "PatternObject",
+      "ShadowOptionsObject",
+      "SeriesNetworkgraphDataLabelsOptionsObject",
+      "SeriesOptionsType",
+      "CurrentDateIndicatorOptions",
+      "SeriesSunburstDataLabelsOptionsObject",
+      "GeoJSON",
+      "AnnotationMockPointOptionsObject",
+      "SeriesOrganizationDataLabelsOptionsObject",
+      "SeriesSankeyDataLabelsOptionsObject",
+      "SeriesPackedBubbleDataLabelsOptionsObject"
+    )
+
     def stdTypes: PartialFunction[String, String] = selfTypeObject.orElse {
-      case "Color" | "color" | Prefixed("Highcharts", "ColorString") ⇒
+      case "*" ⇒
+        "js.Any"
+
+      case "Color" | "color" ⇒
         "String | js.Object"
 
       case "String" | "string" ⇒
         "String"
 
-      case "Function" | "function" ⇒
+      case quoted if quoted.startsWith("\"") && quoted.endsWith("\"") ⇒
+        "String"
+
+      case strType if strTypes.contains(strType) ⇒
+        "String"
+
+      case Prefixed("Highcharts", strType) if strTypes.contains(strType) ⇒
+        "String"
+
+      case "Function" | "function" | Prefixed("Highcharts", "AnnotationMockPointFunction") ⇒
         "js.Function"
 
-      case "CSSObject" | "Object" | "object" | Prefixed("Highcharts", "CSSObject" | "SVGAttributes" | "AnimationOptionsObject") ⇒
+      case "CSSObject" | "Object" | "object" ⇒
+        "js.Object"
+
+      case objType if objTypes.contains(objType) ⇒
+        "js.Object"
+
+      case Prefixed("Highcharts", objType) if objTypes.contains(objType) ⇒
         "js.Object"
 
       case Prefixed("Highcharts", "Dictionary") | Prefixed("Highcharts", "Dictionary", _) ⇒
         "js.Object"
+
+      case "HTMLDOMElement" | Prefixed("Highcharts", "HTMLDOMElement") | Prefixed("global", "HTMLElement") ⇒
+        "dom.Element"
 
       case "Number" | "number" ⇒
         "Double"
@@ -108,7 +202,7 @@ class ScalaJsClassBuilder {
       case "null" ⇒
         "Null"
 
-      case TypedArray(t) ⇒
+      case TypedStruct("Array", t) ⇒
         // println("Array " + t)
         val tpe: String = if (stdTypes.isDefinedAt(t)) {
           stdTypes(t)
@@ -119,16 +213,45 @@ class ScalaJsClassBuilder {
         }
         s"js.Array[$tpe]"
 
+      case TypedStruct("Partial", t) ⇒
+        if (stdTypes.isDefinedAt(t)) {
+          stdTypes(t)
+        } else if (selfClass.nonEmpty) {
+          selfClass.get
+        } else {
+          "js.Any"
+        }
+
+      case TypedStruct(t, _) ⇒
+        if (stdTypes.isDefinedAt(t)) {
+          stdTypes(t)
+        } else {
+          "js.Any"
+        }
+
       case "Array" | "array" ⇒
         "js.Array[js.Any]"
 
-      case Union(tokens @ _*) ⇒ // Union type
-        val recognized = tokens.collect(stdTypes)
-        // println(t + " " + tokens.toList)
-        ScalaJsClassBuilder.unionType(recognized.toList)
+      case Tuple(_*) ⇒
+        // TODO: Typed array?
+        "js.Array[js.Any]"
 
-      // case Prefixed("Highcharts", t) if classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
-      //  s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
+      case Union(tokens @ _*) ⇒ // Union type
+        tokens match {
+          case tokens if tokens.contains("undefined") ⇒
+            val tokens1    = tokens.filterNot(_ == "undefined")
+            val recognized = tokens1.collect(stdTypes)
+            if (recognized.length != tokens1.length) println(tokens1)
+            s"js.UndefOr[${ScalaJsClassBuilder.unionType(recognized.toList.distinct)}]"
+
+          case tokens ⇒
+            val recognized = tokens.collect(stdTypes)
+            if (recognized.length != tokens.length) println(tokens)
+            ScalaJsClassBuilder.unionType(recognized.toList.distinct)
+        }
+
+      case Prefixed("Highcharts", t) if classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
+        s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
 
       case t if t.nonEmpty && classes.contains(ScalaJsClassBuilder.classNameFor(t)) ⇒
         s"CleanJsObject[${ScalaJsClassBuilder.classNameFor(t)}]"
@@ -198,7 +321,7 @@ class ScalaJsClassBuilder {
     // Extract `type` field
     def isTypeField =
       cfg.title.contains("type") &&
-      cfg.returnType.map(_.toLowerCase).contains("string")
+        cfg.returnType.map(_.toLowerCase).contains("string")
 
     val defaultValue = if (isTypeField) {
       cfg.defaults
@@ -215,11 +338,13 @@ class ScalaJsClassBuilder {
   }
 
   private def methodArguments(classes: Set[String], cfg: ConfigurationObject): Seq[ScalaJsValue] = {
-    val jsParams: Seq[String] = cfg.params.map(_.replaceAll("[\\(\\)\\[\\]]", ""))
-      .toSeq.flatMap(_.split(", "))
+    val jsParams: Seq[String] = cfg.params
+      .map(_.replaceAll("[\\(\\)\\[\\]]", ""))
+      .toSeq
+      .flatMap(_.split(", "))
       .filter(_.nonEmpty)
 
-    val params: Seq[(String, String)] = for (jsParam <- jsParams) yield {
+    val params: Seq[(String, String)] = for (jsParam ← jsParams) yield {
       val (tpe, name) = jsParam.split(" ", 2) match {
         case Array(jsType, jsName) ⇒
           scalaType(classes, Some(jsType)).getOrElse("js.Any") → jsName
@@ -230,8 +355,7 @@ class ScalaJsClassBuilder {
       tpe → name
     }
 
-    for ((scalaType, scalaName) <- params) yield
-      ScalaJsValue(cfg, scalaName, scalaType, None)
+    for ((scalaType, scalaName) ← params) yield ScalaJsValue(cfg, scalaName, scalaType, None)
   }
 
   def parse(configObjects: Seq[ConfigurationObject], rootObject: Option[String] = None): Seq[ScalaJsClass] = {
@@ -242,12 +366,12 @@ class ScalaJsClassBuilder {
     val classNames = byClass.keys.map(ScalaJsClassBuilder.classNameFor).filter(_.nonEmpty).toSet
 
     // Classes AST
-    for ((jsClassName, parameters) <- byClass.toSeq if jsClassName.nonEmpty) yield {
+    for ((jsClassName, parameters) ← byClass.toSeq if jsClassName.nonEmpty) yield {
       // Scala class name
       val className: String = ScalaJsClassBuilder.classNameFor(jsClassName)
 
       // Scala class definitions
-      val definitions: Seq[ScalaJsDefinition] = for (cfg <- parameters; name <- cfg.title) yield {
+      val definitions: Seq[ScalaJsDefinition] = for (cfg ← parameters; name ← cfg.title) yield {
         val (tpe, value) = this.typeAndValue(classNames, cfg)
         if (cfg.params.exists(_.nonEmpty)) {
           ScalaJsMethod(cfg, name, tpe, methodArguments(classNames, cfg))

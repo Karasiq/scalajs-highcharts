@@ -38,7 +38,7 @@ class ScalaClassWriter extends ClassWriter {
         writer("@js.native")
         writer(s"trait ${validScalaName(className)} extends com.highcharts.HighchartsGenericObject {")
       } else {
-        writer("@js.annotation.ScalaJSDefined")
+        // writer("@js.annotation.ScalaJSDefined")
         writer(s"class ${validScalaName(className)} extends com.highcharts.HighchartsGenericObject {")
       }
 
@@ -56,13 +56,13 @@ class ScalaClassWriter extends ClassWriter {
         } else value match {
           case Some(v) ⇒
             // writer(tab + s"val $scalaName: $scalaType = $v")
-            writer(tab + s"val $scalaName: js.UndefOr[$scalaType] = $v")
+            writer(tab + s"var $scalaName: js.UndefOr[$scalaType] = $v")
 
           case None if scalaType == "js.Any" ⇒
-            writer(tab + s"val $scalaName: $scalaType = js.undefined")
+            writer(tab + s"var $scalaName: $scalaType = js.undefined")
 
           case None ⇒
-            writer(tab + s"val $scalaName: js.UndefOr[$scalaType] = js.undefined")
+            writer(tab + s"var $scalaName: js.UndefOr[$scalaType] = js.undefined")
         }
       }
 
@@ -125,18 +125,18 @@ class ScalaClassWriter extends ClassWriter {
             s"${validScalaName(argName)}: js.UndefOr[$argType] = js.undefined"
         }
         writer(tab + s"def apply(${args.mkString(", ")}): ${validScalaName(scalaClass.scalaName)} = {")
-        for (ScalaJsValue(_, scalaName, scalaType, value) <- parameters) {
+        /* for (ScalaJsValue(_, scalaName, scalaType, value) <- parameters) {
           val outer = validScalaName(scalaName + "Outer")
           val name = validScalaName(scalaName)
           val tpe = if (/* value.isDefined ||*/ scalaType == "js.Any") scalaType else s"js.UndefOr[$scalaType]"
           writer(tab + tab + s"val $outer: $tpe = $name")
-        }
+        } */
         writer(tab + tab + s"com.highcharts.HighchartsGenericObject.toCleanObject(new ${validScalaName(scalaClass.scalaName)} {")
         for (ScalaJsValue(_, scalaName, scalaType, value) <- parameters) {
           val name = validScalaName(scalaName)
-          val outer = validScalaName(scalaName + "Outer")
+          // val outer = validScalaName(scalaName + "Outer")
           val tpe = if (/*value.isDefined || */ scalaType == "js.Any") scalaType else s"js.UndefOr[$scalaType]"
-          writer(tab + tab + tab + s"override val $name: $tpe = $outer")
+          writer(tab + tab + tab + s"this.$name = $name")
         }
         writer(tab + tab + "})")
         writer(tab + "}")

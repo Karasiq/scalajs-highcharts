@@ -1,6 +1,6 @@
 package com.highcharts
 
-import com.highcharts.config._
+import com.highcharts.native.SeriesPieData
 
 import scala.scalajs.js
 import scala.scalajs.js.|
@@ -10,8 +10,8 @@ object HighchartsAliases extends AnySeriesDef {
 
   type CategoriesCfg = js.UndefOr[js.Array[String]]
 
-  // Copied from com.highcharts.config.HighchartsConfig
-  type AnySeries = SeriesArea | SeriesArearange | SeriesAreaspline | SeriesAreasplinerange | SeriesBar | SeriesBoxplot | SeriesBubble | SeriesColumn | SeriesColumnrange | SeriesErrorbar | SeriesFunnel | SeriesGauge | SeriesHeatmap | SeriesLine | SeriesPie | SeriesPolygon | SeriesPyramid | SeriesScatter | SeriesSolidgauge | SeriesSpline | SeriesTreemap | SeriesWaterfall
+  // Copied from com.highcharts.native.HighchartsConfig
+  type AnySeries = js.Any
 
   type SeriesPieCfgData = js.UndefOr[js.Array[CleanJsObject[SeriesPieData] | Double]]
 }
