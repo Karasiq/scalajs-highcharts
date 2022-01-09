@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.{`|`, UndefOr}
 import scala.util.Try
 
-import com.highcharts.config._
+import com.highcharts.native.{HighchartsConfig, Chart}
 import io.udash.wrappers.jquery.JQuery
 
 object HighchartsUtils extends HighchartsImplicits {
@@ -28,8 +28,8 @@ object HighchartsUtils extends HighchartsImplicits {
       jq.asInstanceOf[js.Dynamic].highcharts(config).asInstanceOf[JQuery]
     }
 
-    def highcharts(): UndefOr[com.highcharts.api.Chart] = {
-      jq.asInstanceOf[js.Dynamic].highcharts().asInstanceOf[UndefOr[com.highcharts.api.Chart]]
+    def highcharts(): UndefOr[Chart] = {
+      jq.asInstanceOf[js.Dynamic].highcharts().asInstanceOf[UndefOr[Chart]]
     }
 
     def highstock[T <: js.Object](config: CleanJsObject[T]): JQuery = {

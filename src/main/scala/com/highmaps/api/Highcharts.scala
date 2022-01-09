@@ -8,6 +8,7 @@ package com.highmaps.api
 import scalajs.js, js.`|`
 import com.highcharts.CleanJsObject
 import com.highcharts.HighchartsUtils._
+import com.highmaps.native.Chart
 
 /**
   * @note JavaScript name: <code>Highcharts</code>
