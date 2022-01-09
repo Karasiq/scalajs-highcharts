@@ -81,7 +81,7 @@ jobs:
                                            "${{ secrets.OSSRH_PASSWORD }}")' > ~/.sbt/1.0/sonatype.sbt
       - name: Release SBT package
         env:
-          JAVA_OPTS: -Xmx7G
+          JAVA_OPTS: -XX:+UseG1GC -Xmx7G
         run: |
           # See https://github.com/sbt/sbt-pgp/issues/173
           echo '#! /bin/sh

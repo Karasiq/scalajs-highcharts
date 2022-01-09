@@ -24,6 +24,6 @@ jobs:
           key: highcharts-sbt
       - name: Build project
         env:
-          JAVA_OPTS: -Xmx7G
+          JAVA_OPTS: -XX:+UseG1GC -Xmx7G
         run: |
           sbt +compile generator/compile testServer/compile

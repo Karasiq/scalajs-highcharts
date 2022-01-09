@@ -32,6 +32,8 @@ case class HighchartsApiDoc(library: String) {
           |package $pkg
           |
           |import scalajs.js, js.`|`
+          |import org.scalajs.dom
+          |
           |import com.highcharts.CleanJsObject
           |import com.highcharts.HighchartsUtils._
           |
@@ -52,7 +54,7 @@ case class HighchartsApiDoc(library: String) {
     val classWriter = new ScalaClassWriter
     classes.foreach { scalaJsClass ⇒
       val file = outputDir.resolve(scalaJsClass.scalaName + ".scala")
-      println(s"Writing $file...")
+      // println(s"Writing $file...")
       val writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file.toFile, true), "UTF-8")))
       Exception.allCatch.andFinally(writer.close()) {
         if (Files.size(file) == 0) {
@@ -68,18 +70,12 @@ case class HighchartsApiDoc(library: String) {
 
   def writeConfigs(): Unit = {
     val configs = httpGet(s"https://api.highcharts.com/$library/dump.json")
-    writeFiles(s"$defaultPackage.config", configs, Some(s"${library.capitalize}Config"))
-  }
-
-  def writeApis(): Unit = {
-    val configs = httpGet(s"https://api.highcharts.com/$library/object/dump.json")
-    writeFiles(s"$defaultPackage.api", configs)
+    writeFiles(s"$defaultPackage.native", configs, Some(s"${library.capitalize}Config"))
   }
 
   def writeAll(): Unit = {
     // TODO: https://github.com/highcharts/highcharts/issues/7227
     writeConfigs()
-    // writeApis() // TODO: 404
   }
 }
 
@@ -87,4 +83,5 @@ object Main extends App {
   HighchartsApiDoc("highcharts").writeAll()
   HighchartsApiDoc("highstock").writeAll()
   HighchartsApiDoc("highmaps").writeAll()
+  HighchartsApiDoc("gantt").writeAll()
 }
